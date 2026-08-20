@@ -53,7 +53,7 @@ changes. Fill in — do not let these stay TBD past launch:
 
 | Asset | Where | Owner / account | Notes |
 |---|---|---|---|
-| This repo | TBD (git host) | TBD | The archive itself |
+| This repo | github.com/victorvroeg/cedric-price-memory-bank | Victor Vroegindeweij | The archive itself; staging deploys to GitHub Pages via `tools/deploy-pages.sh` |
 | Domain `cedricprice.com` | TBD registrar | TBD | 2014 site still bound to it |
 | Streaming host | TBD (pinned at M2) | TBD | Holds transcodes, not masters |
 | Master films | TBD cold storage | TBD | Independent of streaming host |

@@ -33,11 +33,17 @@ of neglect. Those two facts drive everything:
 ## Commands
 
 ```
-npm ci             # install pinned dependencies
-npm run dev        # local preview
-npm run build      # validate content, then build the static site into dist/
-npm run validate   # content check alone
+npm ci                     # install pinned dependencies
+npm run dev                # local preview
+npm run build              # validate content, then build the static site into dist/
+npm run validate           # content check alone
+sh tools/deploy-pages.sh   # build for + deploy to the GitHub Pages staging URL
 ```
+
+**Staging:** https://victorvroeg.github.io/cedric-price-memory-bank/ —
+rebuilt by `tools/deploy-pages.sh` from whatever is committed locally.
+The production build (`npm run build`) targets the real domain at the
+root instead; the switch is `DEPLOY_TARGET` in `astro.config.mjs`.
 
 ## Status
 
