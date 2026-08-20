@@ -50,6 +50,7 @@ const enter = `${base}/topics/`;
 
 <script>
   import { DEV_FALLBACK_STREAM } from "../config";
+  import { makeBloom } from "../player/bloom";
 
   const video = document.querySelector<HTMLVideoElement>(".stage--intro .projection__video");
   const projection = document.querySelector<HTMLElement>(".stage--intro .projection");
@@ -83,14 +84,8 @@ const enter = `${base}/topics/`;
       });
     }
 
-    const ctx = bloom?.getContext("2d", { alpha: false });
-    if (bloom) { bloom.width = 96; bloom.height = 54; }
-    let dead = false;
-    const paint = () => {
-      if (!ctx || !bloom || dead || video.readyState < 2) return;
-      try { ctx.drawImage(video, 0, 0, bloom.width, bloom.height); }
-      catch { dead = true; }
-    };
+    const bloomer = makeBloom(bloom);
+    const paint = () => bloomer.paint(video);
     let timer: number | undefined;
 
     projection.querySelector(".projection__frame")?.addEventListener("click", () => {

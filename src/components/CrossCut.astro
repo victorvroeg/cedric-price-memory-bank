@@ -26,6 +26,13 @@ const clientData = {
 };
 ---
 
+{
+  /* the first playlist is wanted before any script runs */
+  playable.length > 0 && (
+    <link rel="preload" as="fetch" crossorigin href={playable[0].hls} />
+  )
+}
+
 <main class="void">
   <div class="stage stage--crosscut">
     <h1 class="title title--left" style={`color:${topic.colour}`}>{topic.label}</h1>

@@ -10,6 +10,7 @@
 // next film's 'playing') and logged; add ?debug to the URL for an overlay.
 
 import type Hls from "hls.js";
+import { makeBloom } from "./bloom";
 
 interface Item {
   slug: string;
@@ -259,19 +260,10 @@ function init(data: Data, root: HTMLElement) {
   addEventListener("keydown", (e) => { if (e.key === "Escape") closeCard(); });
 
   // --- bloom ---------------------------------------------------------------
-  const ctx = bloom?.getContext("2d", { alpha: false });
-  let bloomDead = false;
-  if (bloom) { bloom.width = 96; bloom.height = 54; }
+  const bloomer = makeBloom(bloom);
   function paintBloom(): void {
-    const el = els[active];
-    if (!ctx || !bloom || bloomDead || el.readyState < 2 || (reducedMotion && !el.paused)) return;
-    try {
-      ctx.drawImage(el, 0, 0, bloom.width, bloom.height);
-    } catch {
-      bloomDead = true;
-      ctx.fillStyle = "#181818";
-      ctx.fillRect(0, 0, bloom.width, bloom.height);
-    }
+    if (reducedMotion && !els[active].paused) return;
+    bloomer.paint(els[active]);
   }
 
   // --- input ---------------------------------------------------------------
@@ -354,6 +346,22 @@ function init(data: Data, root: HTMLElement) {
   for (const ev of ["pointerdown", "keydown"] as const) {
     addEventListener(ev, unmute, { once: true, capture: true });
   }
+
+  // Warm the rest of the cross-cut. Only the playlists — a few kB each — not
+  // the video: a cut starts at an in-point deep inside a film, so pulling
+  // anyone's opening seconds would buy nothing and cost real bandwidth. The
+  // picture itself is prepared one film ahead, by parking the standby element.
+  function warmPlaylists(): void {
+    const seen = new Set<string>([items[0]?.hls]);
+    for (const item of items.slice(1)) {
+      if (seen.has(item.hls)) continue;
+      seen.add(item.hls);
+      // @ts-expect-error - priority is not in every lib.dom yet
+      void fetch(item.hls, { priority: "low", mode: "cors" }).catch(() => {});
+    }
+    report(`warmed ${seen.size - 1} further playlists`);
+  }
+  setTimeout(warmPlaylists, 1200);   // after the first frame is on screen
 
   void autostart();
 }

@@ -1,3 +1,4 @@
+import { makeBloom } from "./bloom";
 // The projection screen: one film in the void.
 // Reads its data from the #cpmb-data JSON island rendered by Screen.astro.
 
@@ -85,22 +86,8 @@ function init(data: ScreenData, root: HTMLElement) {
   }
 
   // --- ambient bloom ------------------------------------------------------
-  const ctx = bloom?.getContext("2d", { alpha: false });
-  let bloomDead = false;
-  function paintBloom() {
-    if (!ctx || !bloom || bloomDead || video!.readyState < 2) return;
-    try {
-      ctx.drawImage(video!, 0, 0, bloom.width, bloom.height);
-    } catch {
-      bloomDead = true; // tainted canvas: settle for a constant faint glow
-      ctx.fillStyle = "#181818";
-      ctx.fillRect(0, 0, bloom.width, bloom.height);
-    }
-  }
-  if (bloom) {
-    bloom.width = 96;
-    bloom.height = 54;
-  }
+  const bloomer = makeBloom(bloom);
+  const paintBloom = () => bloomer.paint(video);
   let bloomTimer: number | undefined;
   function startBloom() {
     if (reducedMotion || bloomTimer) return;

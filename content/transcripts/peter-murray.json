@@ -1,0 +1,1283 @@
+{
+ "slug": "peter-murray",
+ "language": "en",
+ "model": "mlx-community/whisper-large-v3-mlx",
+ "corrected": false,
+ "cues": [
+  {
+   "start": 0.0,
+   "end": 8.0,
+   "text": "The most important question you should ask about Cedric Price is why did he die so soon?"
+  },
+  {
+   "start": 8.0,
+   "end": 19.0,
+   "text": "Because I think that he would have been in his element in the smart thinking about cities and planning that we have available today,"
+  },
+  {
+   "start": 19.0,
+   "end": 27.0,
+   "text": "which links back to his thinking about cybernetics, about the way cities work, the social aspects of cities,"
+  },
+  {
+   "start": 27.0,
+   "end": 37.72,
+   "text": "brain power and the ability to analyze things at the speed of light and to be clever about the way"
+  },
+  {
+   "start": 37.72,
+   "end": 47.98,
+   "text": "we do things so I think that I feel sorry that he's not around now to help us evaluate what is"
+  },
+  {
+   "start": 47.98,
+   "end": 56.52,
+   "text": "going on in relationship to new technologies and the way we run our cities yeah when I saw Cedric"
+  },
+  {
+   "start": 56.52,
+   "end": 60.92,
+   "text": "for the first time, yeah, I mean, he was no doubt a star."
+  },
+  {
+   "start": 61.12,
+   "end": 64.24,
+   "text": "You know, he had this rather portly carriage,"
+  },
+  {
+   "start": 64.82,
+   "end": 67.52,
+   "text": "always with the cigar puffing away."
+  },
+  {
+   "start": 68.68,
+   "end": 75.4,
+   "text": "And he was somebody who stood out from the rest."
+  },
+  {
+   "start": 75.4,
+   "end": 82.92,
+   "text": "Generally, as I say, with his rounded, stiff, starched collars,"
+  },
+  {
+   "start": 82.92,
+   "end": 92.24,
+   "text": "knitted black tie, baggy black jumper and hush puppy shoes, very distinctive and"
+  },
+  {
+   "start": 92.24,
+   "end": 100.92,
+   "text": "his own man very much really and that sort of long black hair that he swept"
+  },
+  {
+   "start": 100.92,
+   "end": 108.36,
+   "text": "back. He was quite difficult to pin down, he was quite secretive, everyone"
+  },
+  {
+   "start": 108.36,
+   "end": 115.34,
+   "text": "thought he didn't have to work because he was the heir to the fortune of the Prices Candle Factory"
+  },
+  {
+   "start": 115.34,
+   "end": 126.1,
+   "text": "fortune but I don't believe that was actually the case. Nevertheless he would generally drive around"
+  },
+  {
+   "start": 126.1,
+   "end": 136.44,
+   "text": "in chauffeur driven cars quite frequently. I at that stage lived in the West Country in a small"
+  },
+  {
+   "start": 136.44,
+   "end": 144.5,
+   "text": "village called Laycock in Wiltshire and he decided to come down and visit my family for the day and"
+  },
+  {
+   "start": 144.5,
+   "end": 152.22,
+   "text": "he took a taxi all the way from London it's about 108 miles actually to get there taxi all the way"
+  },
+  {
+   "start": 152.22,
+   "end": 157.18,
+   "text": "down taxi waited while he had lunch had a look around the village and the taxi took him back"
+  },
+  {
+   "start": 157.18,
+   "end": 166.32,
+   "text": "again so um you know he he lived a fairly luxurious existence in in that way and he made"
+  },
+  {
+   "start": 166.32,
+   "end": 179.36,
+   "text": "really specific choices about how he ran his life obviously lunch eating and drinking were"
+  },
+  {
+   "start": 179.36,
+   "end": 184.7,
+   "text": "a key part of the pleasures he got out of life."
+  },
+  {
+   "start": 185.72,
+   "end": 189.22,
+   "text": "When I was editor of Building Design, for instance,"
+  },
+  {
+   "start": 189.58,
+   "end": 194.44,
+   "text": "every Monday morning I would go at 8 o'clock"
+  },
+  {
+   "start": 194.44,
+   "end": 197.22,
+   "text": "for what you call breakfast."
+  },
+  {
+   "start": 198.06,
+   "end": 200.24,
+   "text": "Breakfast was a glass of brandy."
+  },
+  {
+   "start": 201.92,
+   "end": 204.54,
+   "text": "His was a bit deeper than mine."
+  },
+  {
+   "start": 205.88,
+   "end": 209.32,
+   "text": "I have to say I was surprised that brandy at that time"
+  },
+  {
+   "start": 209.32,
+   "end": 214.34,
+   "text": "in the morning has a very energizing impact on you for quite a long time during the day,"
+  },
+  {
+   "start": 215.16,
+   "end": 223.78,
+   "text": "which is, but I didn't really take to it. Nevertheless, those meetings were another"
+  },
+  {
+   "start": 223.78,
+   "end": 230.52,
+   "text": "interesting side of him of his interest in politics, his interest in gossip, his interest"
+  },
+  {
+   "start": 230.52,
+   "end": 238.54,
+   "text": "in the way you had an impact on decision-making at the highest level"
+  },
+  {
+   "start": 238.54,
+   "end": 244.38,
+   "text": "and made him really behind the scenes politically very powerful."
+  },
+  {
+   "start": 245.06,
+   "end": 248.9,
+   "text": "To me, he was something of a mystery always."
+  },
+  {
+   "start": 249.96,
+   "end": 254.96,
+   "text": "He was always found tremendously charming,"
+  },
+  {
+   "start": 256.12,
+   "end": 257.92,
+   "text": "very charming to the ladies."
+  },
+  {
+   "start": 257.92,
+   "end": 265.92,
+   "text": "and yet there were times when he could react very angrily about things."
+  },
+  {
+   "start": 266.04,
+   "end": 268.82,
+   "text": "I remember the thing that he used to get most upset was"
+  },
+  {
+   "start": 268.82,
+   "end": 273.5,
+   "text": "if one turned up at the office without an appointment,"
+  },
+  {
+   "start": 274.52,
+   "end": 276.26,
+   "text": "which he only did once,"
+  },
+  {
+   "start": 277.0,
+   "end": 279.94,
+   "text": "and he liked things to be organised"
+  },
+  {
+   "start": 279.94,
+   "end": 284.06,
+   "text": "and I'm sure many people have told you about East Grinstead"
+  },
+  {
+   "start": 284.06,
+   "end": 289.42,
+   "text": "so that he could disappear when he wanted to."
+  },
+  {
+   "start": 290.52,
+   "end": 293.5,
+   "text": "But he never actually taught me"
+  },
+  {
+   "start": 293.5,
+   "end": 296.78,
+   "text": "because when I came to the AA, he wasn't teaching here."
+  },
+  {
+   "start": 297.62,
+   "end": 301.9,
+   "text": "But in those days, I always think the AA had a rather better relationship"
+  },
+  {
+   "start": 301.9,
+   "end": 305.68,
+   "text": "with practices in the area, in London,"
+  },
+  {
+   "start": 305.9,
+   "end": 308.42,
+   "text": "and you could go out and forage for yourself"
+  },
+  {
+   "start": 308.42,
+   "end": 311.1,
+   "text": "to find people who would support you."
+  },
+  {
+   "start": 311.1,
+   "end": 320.48,
+   "text": "So he was really a mentor for me, particularly when I was editing Clip Kit with Jeffrey Smythe."
+  },
+  {
+   "start": 321.18,
+   "end": 327.3,
+   "text": "So Jeffrey and I would go and have regular meetings with Cedric."
+  },
+  {
+   "start": 327.3,
+   "end": 335.64,
+   "text": "And Cedric would be totally generous with his address book and put us in touch with everybody we needed to talk to"
+  },
+  {
+   "start": 335.64,
+   "end": 338.84,
+   "text": "in terms of collecting editorial content,"
+  },
+  {
+   "start": 339.56,
+   "end": 344.24,
+   "text": "in terms of distributing or anything we needed."
+  },
+  {
+   "start": 344.24,
+   "end": 347.94,
+   "text": "As long as we had made an appointment before we turned up,"
+  },
+  {
+   "start": 348.38,
+   "end": 351.62,
+   "text": "he would then be totally generous with his time."
+  },
+  {
+   "start": 353.4,
+   "end": 363.52,
+   "text": "And that in itself has influenced me completely during my career"
+  },
+  {
+   "start": 363.52,
+   "end": 366.52,
+   "text": "because I believe one should..."
+  },
+  {
+   "start": 367.24,
+   "end": 370.88,
+   "text": "Every student who rings up and wants half an hour of your time,"
+  },
+  {
+   "start": 371.04,
+   "end": 375.32,
+   "text": "you give it because I think that's what he gave to me"
+  },
+  {
+   "start": 375.32,
+   "end": 378.54,
+   "text": "and I think that's something you give back as well."
+  },
+  {
+   "start": 379.4,
+   "end": 382.7,
+   "text": "And so I feel there was huge generosity there,"
+  },
+  {
+   "start": 384.5,
+   "end": 388.52,
+   "text": "a social generosity in that he was a wonderful raconteur"
+  },
+  {
+   "start": 388.52,
+   "end": 393.22,
+   "text": "and party-goer and lunch companion."
+  },
+  {
+   "start": 393.52,
+   "end": 399.8,
+   "text": "I worked very closely with Cedric when I was technical editor at AD,"
+  },
+  {
+   "start": 400.02,
+   "end": 407.12,
+   "text": "where we produced a catalogue, really, of his work up until then."
+  },
+  {
+   "start": 408.56,
+   "end": 412.22,
+   "text": "And, you know, like almost everything he did,"
+  },
+  {
+   "start": 412.22,
+   "end": 415.96,
+   "text": "you had to go back to first principles about why you were doing something,"
+  },
+  {
+   "start": 416.32,
+   "end": 417.82,
+   "text": "how you actually published it,"
+  },
+  {
+   "start": 417.82,
+   "end": 425.92,
+   "text": "and then you did something which was a bit different to a normal way of doing it."
+  },
+  {
+   "start": 426.02,
+   "end": 431.98,
+   "text": "All the constraints of publishing were set aside, really."
+  },
+  {
+   "start": 432.66,
+   "end": 438.78,
+   "text": "And also, of course, you set aside the idea that he had any fixed ideas about things,"
+  },
+  {
+   "start": 438.84,
+   "end": 443.68,
+   "text": "because you realise that although he may have done a scheme a couple of years before,"
+  },
+  {
+   "start": 444.22,
+   "end": 447.1,
+   "text": "times would have changed, his own thinking would have changed,"
+  },
+  {
+   "start": 447.1,
+   "end": 449.16,
+   "text": "and therefore you had to re-evaluate things"
+  },
+  {
+   "start": 449.16,
+   "end": 453.68,
+   "text": "in the context of the time that has elapsed."
+  },
+  {
+   "start": 454.48,
+   "end": 459.0,
+   "text": "So each project that we published,"
+  },
+  {
+   "start": 459.5,
+   "end": 462.08,
+   "text": "there would be comments by him that would bring it up to date"
+  },
+  {
+   "start": 462.08,
+   "end": 467.86,
+   "text": "and also then comments by me about how I read the situation"
+  },
+  {
+   "start": 467.86,
+   "end": 471.26,
+   "text": "and how I interpreted the project."
+  },
+  {
+   "start": 472.08,
+   "end": 476.2,
+   "text": "So there was that element to it."
+  },
+  {
+   "start": 476.2,
+   "end": 479.68,
+   "text": "Nothing was fixed, and to a certain extent, again,"
+  },
+  {
+   "start": 480.76,
+   "end": 485.52,
+   "text": "the internet would have been a much better way of publishing his blogs"
+  },
+  {
+   "start": 485.52,
+   "end": 490.74,
+   "text": "rather than actually paper was not, in terms of publishing,"
+  },
+  {
+   "start": 491.38,
+   "end": 496.72,
+   "text": "the thing that would have been best to describe the shifting attitudes"
+  },
+  {
+   "start": 496.72,
+   "end": 499.98,
+   "text": "towards projects he'd only done maybe 12 months before."
+  },
+  {
+   "start": 500.58,
+   "end": 504.82,
+   "text": "That being said, he was a great one for collecting paper."
+  },
+  {
+   "start": 504.82,
+   "end": 513.66,
+   "text": "he loved indexing there was every sheet of paper that he gave you had a whole complex"
+  },
+  {
+   "start": 513.66,
+   "end": 522.04,
+   "text": "list of references and so on so that it could easily be found in the finding system so"
+  },
+  {
+   "start": 522.04,
+   "end": 526.88,
+   "text": "again that was something that you know he would have been very much at home in the"
+  },
+  {
+   "start": 526.88,
+   "end": 530.08,
+   "text": "sort of data-driven world we live in today."
+  },
+  {
+   "start": 531.22,
+   "end": 535.78,
+   "text": "And so he liked the organisation of it,"
+  },
+  {
+   "start": 535.86,
+   "end": 540.32,
+   "text": "so instead of publishing it as a story or a long article,"
+  },
+  {
+   "start": 540.78,
+   "end": 542.5,
+   "text": "everything was very episodic,"
+  },
+  {
+   "start": 542.94,
+   "end": 548.5,
+   "text": "everything was in a special gridded system that we set it into,"
+  },
+  {
+   "start": 549.14,
+   "end": 553.76,
+   "text": "and everything was referenced with its own numbers"
+  },
+  {
+   "start": 553.76,
+   "end": 561.0,
+   "text": "so that, again, they could be filed and you could actually tear the centrepiece out of the magazine"
+  },
+  {
+   "start": 561.0,
+   "end": 566.42,
+   "text": "and you could actually file it into one whole publication."
+  },
+  {
+   "start": 567.28,
+   "end": 576.78,
+   "text": "Poliart was the one I got most involved with in that I totally understood his frustration"
+  },
+  {
+   "start": 576.78,
+   "end": 582.58,
+   "text": "at the sort of skills available in education across the country,"
+  },
+  {
+   "start": 582.58,
+   "end": 588.42,
+   "text": "but the inability of students within each school to access those skills available."
+  },
+  {
+   "start": 588.84,
+   "end": 593.76,
+   "text": "Again, this is something which today would be much easier to do with digital media,"
+  },
+  {
+   "start": 594.22,
+   "end": 602.58,
+   "text": "but then in a sort of paper-driven teaching base that we had then, it was more difficult."
+  },
+  {
+   "start": 603.14,
+   "end": 608.36,
+   "text": "So PolyArc was a way of creating a network between schools,"
+  },
+  {
+   "start": 608.36,
+   "end": 611.38,
+   "text": "and we got together the PolyArc bus."
+  },
+  {
+   "start": 611.38,
+   "end": 617.62,
+   "text": "The Polyark bus was using a Routemaster."
+  },
+  {
+   "start": 618.4,
+   "end": 624.86,
+   "text": "At that time, London Transport had actually just bought a whole lot of new buses"
+  },
+  {
+   "start": 624.86,
+   "end": 630.36,
+   "text": "and it had fields full of very good quality Routemaster buses,"
+  },
+  {
+   "start": 630.62,
+   "end": 636.06,
+   "text": "which they sold for, I think they were only about £3,000 you could buy one for then."
+  },
+  {
+   "start": 636.06,
+   "end": 642.86,
+   "text": "The AA bought one and Tony Gwilliam, who was then second year tutor,"
+  },
+  {
+   "start": 644.84,
+   "end": 653.62,
+   "text": "actually had one which the students were converting into larger space at the top"
+  },
+  {
+   "start": 653.62,
+   "end": 656.32,
+   "text": "with wings that folded out."
+  },
+  {
+   "start": 656.48,
+   "end": 660.36,
+   "text": "So you create a sort of three times the floor area"
+  },
+  {
+   "start": 660.36,
+   "end": 668.42,
+   "text": "and a bathroom pod which fitted into the deck at the back of the bus."
+  },
+  {
+   "start": 669.54,
+   "end": 676.96,
+   "text": "And so we borrowed the bus and Dennis Crompton and the communications unit"
+  },
+  {
+   "start": 676.96,
+   "end": 684.4,
+   "text": "set up a whole series of videos for us of mainly AA tutors"
+  },
+  {
+   "start": 684.4,
+   "end": 687.68,
+   "text": "and of course Cedric as well,"
+  },
+  {
+   "start": 687.68,
+   "end": 691.1,
+   "text": "talking about a series of issues."
+  },
+  {
+   "start": 691.32,
+   "end": 693.06,
+   "text": "So we went with these videos."
+  },
+  {
+   "start": 693.26,
+   "end": 695.04,
+   "text": "We got on the bus, drove up."
+  },
+  {
+   "start": 695.24,
+   "end": 696.3,
+   "text": "First stop was Cambridge."
+  },
+  {
+   "start": 696.94,
+   "end": 700.66,
+   "text": "Then we went on up to Nottingham, Edinburgh and so on."
+  },
+  {
+   "start": 700.66,
+   "end": 704.24,
+   "text": "And in each place we unloaded the video kit,"
+  },
+  {
+   "start": 704.96,
+   "end": 711.14,
+   "text": "showed people films and videos of AA tutors mainly."
+  },
+  {
+   "start": 711.7,
+   "end": 716.76,
+   "text": "And then we also took videos of the schools that we arrived at"
+  },
+  {
+   "start": 716.76,
+   "end": 721.56,
+   "text": "to get their responses to some of the things they'd seen"
+  },
+  {
+   "start": 721.56,
+   "end": 725.3,
+   "text": "and also to take messages from one school onto the next."
+  },
+  {
+   "start": 726.36,
+   "end": 731.6,
+   "text": "And so we went up through Nottingham."
+  },
+  {
+   "start": 732.02,
+   "end": 736.5,
+   "text": "Nottingham was a slight problem in that we hit a low bridge,"
+  },
+  {
+   "start": 737.36,
+   "end": 741.48,
+   "text": "but luckily the steel structure of the leaves that came out"
+  },
+  {
+   "start": 741.48,
+   "end": 749.26,
+   "text": "was so strong that we actually just forced the bus down on its suspension"
+  },
+  {
+   "start": 749.26,
+   "end": 755.5,
+   "text": "and skidded under the bridge, but it did knock some of the construction off."
+  },
+  {
+   "start": 755.74,
+   "end": 763.58,
+   "text": "So it wasn't all plain sailing, but it was very instructive"
+  },
+  {
+   "start": 763.58,
+   "end": 769.36,
+   "text": "for students who we picked up and then took on to the next school."
+  },
+  {
+   "start": 769.36,
+   "end": 777.04,
+   "text": "So we would pick Cambridge students up, take them to Nottingham, leave them there and then Nottingham students went on up to Newcastle."
+  },
+  {
+   "start": 777.6,
+   "end": 788.44,
+   "text": "I remember one of the, we took Eric Parry from Newcastle up to Edinburgh and then we actually got thrown out of Edinburgh"
+  },
+  {
+   "start": 788.44,
+   "end": 797.68,
+   "text": "because one of the AA students who was something of a radical was offended by the fact that we were not able to use their studios"
+  },
+  {
+   "start": 797.68,
+   "end": 802.3,
+   "text": "because there was a dance event going on,"
+  },
+  {
+   "start": 802.5,
+   "end": 803.98,
+   "text": "and he was Glaswegian,"
+  },
+  {
+   "start": 804.08,
+   "end": 807.42,
+   "text": "and there was some tension between Glasgow students"
+  },
+  {
+   "start": 807.42,
+   "end": 808.62,
+   "text": "and Edinburgh students."
+  },
+  {
+   "start": 809.24,
+   "end": 812.9,
+   "text": "We were persona non grata in Edinburgh at the time,"
+  },
+  {
+   "start": 814.5,
+   "end": 817.18,
+   "text": "although that was where I first met Diane Sujic,"
+  },
+  {
+   "start": 817.28,
+   "end": 819.88,
+   "text": "who then later had become editor of Blueprint."
+  },
+  {
+   "start": 821.38,
+   "end": 824.96,
+   "text": "Then we actually went down to Bath"
+  },
+  {
+   "start": 824.96,
+   "end": 831.28,
+   "text": "and met a chap who was a great friend of Cedric's."
+  },
+  {
+   "start": 831.28,
+   "end": 833.24,
+   "text": "Again, one of these people he'd introduced us to"
+  },
+  {
+   "start": 833.24,
+   "end": 838.56,
+   "text": "who had a wonderful Gothic mansion he was restoring"
+  },
+  {
+   "start": 838.56,
+   "end": 845.78,
+   "text": "and had the main concession for repairing Morris Miners in Bath."
+  },
+  {
+   "start": 846.26,
+   "end": 849.54,
+   "text": "Charlie Ware, his name was, who was a great friend of Cedric's."
+  },
+  {
+   "start": 850.64,
+   "end": 854.06,
+   "text": "So we went down to Bath, Bristol, then back up to London again."
+  },
+  {
+   "start": 854.96,
+   "end": 861.16,
+   "text": "So polyarch was then very physical, now would be more digital,"
+  },
+  {
+   "start": 861.38,
+   "end": 868.66,
+   "text": "and in fact there is still a sort of polyarch network that continues on today,"
+  },
+  {
+   "start": 868.76,
+   "end": 870.32,
+   "text": "exchanging information about school."
+  },
+  {
+   "start": 870.82,
+   "end": 879.68,
+   "text": "So polyarch was interesting and we produced a big chunk of an issue of AD on polyarch."
+  },
+  {
+   "start": 879.68,
+   "end": 885.4,
+   "text": "pottery's think belt he was working on that while I was here at the AA and again"
+  },
+  {
+   "start": 885.4,
+   "end": 892.48,
+   "text": "you know that continued on all sorts of issues I was interested in which"
+  },
+  {
+   "start": 892.48,
+   "end": 899.26,
+   "text": "about temporariness about change about reuse about sustainability"
+  },
+  {
+   "start": 899.26,
+   "end": 908.24,
+   "text": "and it brought together so many issues which I think you know have grown in significance over"
+  },
+  {
+   "start": 908.24,
+   "end": 913.52,
+   "text": "the years but which were totally ignored by most of the people teaching architecture at the time."
+  },
+  {
+   "start": 916.22,
+   "end": 924.28,
+   "text": "Yes, the Pottery's Think Belt was a project related to the area around Stoke-on-Trent"
+  },
+  {
+   "start": 924.28,
+   "end": 932.7,
+   "text": "which had been an area of great industrial growth in the 19th, early 20th century"
+  },
+  {
+   "start": 932.7,
+   "end": 936.42,
+   "text": "where pottery was made."
+  },
+  {
+   "start": 937.14,
+   "end": 939.58,
+   "text": "It's an area that Cedric knew well."
+  },
+  {
+   "start": 940.7,
+   "end": 942.36,
+   "text": "There was massive unemployment"
+  },
+  {
+   "start": 942.36,
+   "end": 946.94,
+   "text": "and the area was in need of regeneration."
+  },
+  {
+   "start": 948.14,
+   "end": 951.44,
+   "text": "And so he saw education,"
+  },
+  {
+   "start": 951.8,
+   "end": 953.92,
+   "text": "the economic salvation of the area,"
+  },
+  {
+   "start": 954.58,
+   "end": 957.54,
+   "text": "the knowledge economy, which we know about today,"
+  },
+  {
+   "start": 957.54,
+   "end": 961.5,
+   "text": "but was then not something people even spoke about."
+  },
+  {
+   "start": 961.5,
+   "end": 964.8,
+   "text": "So, you know, Frederick was incredibly prescient, really,"
+  },
+  {
+   "start": 964.9,
+   "end": 967.66,
+   "text": "in realising that this was a key driver"
+  },
+  {
+   "start": 967.66,
+   "end": 971.08,
+   "text": "for economic growth and regeneration."
+  },
+  {
+   "start": 972.2,
+   "end": 977.38,
+   "text": "And then, again, very different to the normal reaction"
+  },
+  {
+   "start": 977.38,
+   "end": 979.92,
+   "text": "in those days of you just build buildings"
+  },
+  {
+   "start": 979.92,
+   "end": 982.42,
+   "text": "to create regenerative opportunities,"
+  },
+  {
+   "start": 982.42,
+   "end": 984.98,
+   "text": "he actually used the existing infrastructure,"
+  },
+  {
+   "start": 985.6,
+   "end": 988.12,
+   "text": "redundant rail carriages and so on,"
+  },
+  {
+   "start": 988.18,
+   "end": 990.72,
+   "text": "could be moved around, were very flexible,"
+  },
+  {
+   "start": 990.72,
+   "end": 996.72,
+   "text": "they made ideal teaching spaces and so the architecture actually became the"
+  },
+  {
+   "start": 996.72,
+   "end": 1000.74,
+   "text": "network the connection between the main centers within the Potteries Thinkbelt"
+  },
+  {
+   "start": 1000.74,
+   "end": 1005.78,
+   "text": "area which could reuse that infrastructure to deliver a totally"
+  },
+  {
+   "start": 1005.78,
+   "end": 1014.98,
+   "text": "different sort of economy Cedric was influential because he was very canny a"
+  },
+  {
+   "start": 1014.98,
+   "end": 1024.68,
+   "text": "amazing networker and he knew which buttons to press to actually have an"
+  },
+  {
+   "start": 1024.68,
+   "end": 1030.72,
+   "text": "influence on things he was he was very close to senior members of the Labour"
+  },
+  {
+   "start": 1030.72,
+   "end": 1038.72,
+   "text": "Party for instance and he tended to keep a lot of these areas slightly in silos"
+  },
+  {
+   "start": 1038.72,
+   "end": 1044.0,
+   "text": "you didn't meet a lot of the people he mixed with and they party every now and"
+  },
+  {
+   "start": 1044.0,
+   "end": 1051.58,
+   "text": "then you'd bump into them in East Grinstead. But so he, within the Labour movement, he"
+  },
+  {
+   "start": 1051.58,
+   "end": 1058.4,
+   "text": "had a whole network of people. So if he needed to put a bit of pressure in high places, he"
+  },
+  {
+   "start": 1058.4,
+   "end": 1068.04,
+   "text": "knew how to do that. He had a very strong social network. He moved in, I mean, just"
+  },
+  {
+   "start": 1068.04,
+   "end": 1071.78,
+   "text": "his connections with Tony Snowden and people like that,"
+  },
+  {
+   "start": 1071.9,
+   "end": 1078.78,
+   "text": "the fact that he was a regular visitor to Kensington Palace"
+  },
+  {
+   "start": 1078.78,
+   "end": 1081.68,
+   "text": "at the time when Princess Margaret was there"
+  },
+  {
+   "start": 1081.68,
+   "end": 1086.04,
+   "text": "was again a link into a wider society."
+  },
+  {
+   "start": 1087.02,
+   "end": 1092.5,
+   "text": "Yet then when Prince Charles spoke out about architecture"
+  },
+  {
+   "start": 1092.5,
+   "end": 1095.86,
+   "text": "and was promoting an idea of, I might say,"
+  },
+  {
+   "start": 1095.86,
+   "end": 1099.7,
+   "text": "the antithesis to what Cedric thought the future of architecture was,"
+  },
+  {
+   "start": 1100.16,
+   "end": 1101.92,
+   "text": "he got very upset about that."
+  },
+  {
+   "start": 1102.28,
+   "end": 1108.9,
+   "text": "And I did actually organise a dinner for the architecture club,"
+  },
+  {
+   "start": 1108.94,
+   "end": 1110.42,
+   "text": "of which I was secretary at the time,"
+  },
+  {
+   "start": 1110.52,
+   "end": 1114.06,
+   "text": "which Cedric was a long-standing member of the architecture club."
+  },
+  {
+   "start": 1114.16,
+   "end": 1118.68,
+   "text": "He had been a member of the architecture before I was even secretary."
+  },
+  {
+   "start": 1119.6,
+   "end": 1122.02,
+   "text": "And he would turn up to almost every dinner."
+  },
+  {
+   "start": 1122.02,
+   "end": 1126.52,
+   "text": "generally in his cups at the end of the dinner"
+  },
+  {
+   "start": 1126.52,
+   "end": 1131.28,
+   "text": "would talk at great length on some esoteric subject"
+  },
+  {
+   "start": 1131.28,
+   "end": 1136.72,
+   "text": "but once we invited the Prince of Wales"
+  },
+  {
+   "start": 1136.72,
+   "end": 1139.08,
+   "text": "to speak at dinner"
+  },
+  {
+   "start": 1139.08,
+   "end": 1142.86,
+   "text": "Cedric never came to another architecture club dinner after that"
+  },
+  {
+   "start": 1142.86,
+   "end": 1145.58,
+   "text": "he was really annoyed and insulted"
+  },
+  {
+   "start": 1145.58,
+   "end": 1148.38,
+   "text": "that we had actually given a platform to the Prince of Wales"
+  },
+  {
+   "start": 1148.38,
+   "end": 1152.28,
+   "text": "so although he moved within those circles"
+  },
+  {
+   "start": 1152.28,
+   "end": 1154.44,
+   "text": "he knew where to draw the line"
+  },
+  {
+   "start": 1154.44,
+   "end": 1159.44,
+   "text": "he was a very social animal"
+  },
+  {
+   "start": 1159.44,
+   "end": 1165.28,
+   "text": "so that he was all around the place"
+  },
+  {
+   "start": 1165.28,
+   "end": 1167.74,
+   "text": "he would be at all the parties"
+  },
+  {
+   "start": 1167.74,
+   "end": 1171.06,
+   "text": "so he knew how to network in a very sophisticated way"
+  },
+  {
+   "start": 1171.06,
+   "end": 1175.26,
+   "text": "and he knew how to use the press as well"
+  },
+  {
+   "start": 1175.26,
+   "end": 1178.86,
+   "text": "he was obviously great friends with Rainer Bannum"
+  },
+  {
+   "start": 1178.86,
+   "end": 1181.34,
+   "text": "when he was writing in New Society"
+  },
+  {
+   "start": 1181.34,
+   "end": 1185.36,
+   "text": "and also with Paul Barker who was editor of New Society"
+  },
+  {
+   "start": 1185.36,
+   "end": 1189.44,
+   "text": "then New Society at that time was a very powerful magazine"
+  },
+  {
+   "start": 1189.44,
+   "end": 1193.72,
+   "text": "and articles like his Non-Plan article"
+  },
+  {
+   "start": 1193.72,
+   "end": 1198.04,
+   "text": "really can have resonance to this day"
+  },
+  {
+   "start": 1198.04,
+   "end": 1204.48,
+   "text": "so he knew how to communicate in that sort of sphere"
+  },
+  {
+   "start": 1204.48,
+   "end": 1225.3,
+   "text": "I used to criticise him really for, he had a fairly obtuse way of using English which he thought was fine because he felt people needed to make a bit of an effort to understand what he was saying."
+  },
+  {
+   "start": 1225.3,
+   "end": 1231.48,
+   "text": "however I do think that did restrict sometimes the breadth of the audience"
+  },
+  {
+   "start": 1231.48,
+   "end": 1239.1,
+   "text": "that he could have garnered if he had really tried. Cedric was about people and"
+  },
+  {
+   "start": 1239.1,
+   "end": 1244.14,
+   "text": "the way that people relate to architecture and his well-known"
+  },
+  {
+   "start": 1244.14,
+   "end": 1250.18,
+   "text": "aphorism that you know when asked about a new house for a couple he said you"
+  },
+  {
+   "start": 1250.18,
+   "end": 1257.62,
+   "text": "don't want a house you need a divorce is something which I'm sure many other people have repeated to"
+  },
+  {
+   "start": 1257.62,
+   "end": 1264.82,
+   "text": "you but I think nevertheless shows that you actually obtain the solutions that aren't often"
+  },
+  {
+   "start": 1264.82,
+   "end": 1273.62,
+   "text": "expected of buildings through other means that we are dealing with the way people"
+  },
+  {
+   "start": 1273.62,
+   "end": 1282.08,
+   "text": "lead their lives and the architects knee-jerk response is too often just to"
+  },
+  {
+   "start": 1282.08,
+   "end": 1289.46,
+   "text": "build something to house whatever activity that is whereas he showed us"
+  },
+  {
+   "start": 1289.46,
+   "end": 1294.26,
+   "text": "that there are ways that don't require building that you can actually have the"
+  },
+  {
+   "start": 1294.26,
+   "end": 1302.1,
+   "text": "same impact and I would say that if you look at interaction and what happened"
+  },
+  {
+   "start": 1302.1,
+   "end": 1310.18,
+   "text": "and the fact that meanwhile spaces, pop-ups, temporary use,"
+  },
+  {
+   "start": 1310.32,
+   "end": 1316.16,
+   "text": "all those sorts of things have an impact on the way that cities work"
+  },
+  {
+   "start": 1316.16,
+   "end": 1320.76,
+   "text": "without having to be fixed buildings like the ones around us here."
+  },
+  {
+   "start": 1322.1,
+   "end": 1328.06,
+   "text": "That influence has been very powerful and I think has shown to be effective."
+  },
+  {
+   "start": 1328.06,
+   "end": 1341.0,
+   "text": "I think the relevance of Cedric today is actually almost more important because although he is a powerful figure in the architectural community at the moment,"
+  },
+  {
+   "start": 1341.4,
+   "end": 1355.4,
+   "text": "I feel that we are going through a period where architects are actually producing more fixed pieces of iconic architecture than at any previous period really."
+  },
+  {
+   "start": 1355.4,
+   "end": 1359.84,
+   "text": "and that is the antithesis of what Cedric was about."
+  },
+  {
+   "start": 1360.7,
+   "end": 1366.88,
+   "text": "And I would say that if you look at the world today"
+  },
+  {
+   "start": 1366.88,
+   "end": 1369.22,
+   "text": "in terms of architectural output,"
+  },
+  {
+   "start": 1369.64,
+   "end": 1374.16,
+   "text": "we are building a huge volume of space"
+  },
+  {
+   "start": 1374.16,
+   "end": 1378.28,
+   "text": "that is so constrained by design"
+  },
+  {
+   "start": 1378.28,
+   "end": 1380.84,
+   "text": "that actually we're going to find it very difficult"
+  },
+  {
+   "start": 1380.84,
+   "end": 1384.98,
+   "text": "to actually operate those pieces of kit in the future."
+  },
+  {
+   "start": 1385.4,
+   "end": 1391.02,
+   "text": "and that we need to actually look at a much freer way of building"
+  },
+  {
+   "start": 1391.02,
+   "end": 1395.52,
+   "text": "and other contemporaries of Cedric like Habrakon for instance"
+  },
+  {
+   "start": 1395.52,
+   "end": 1401.06,
+   "text": "need to be brought into the mix"
+  },
+  {
+   "start": 1401.06,
+   "end": 1406.94,
+   "text": "to look at systems of building that provide greater freedom"
+  },
+  {
+   "start": 1406.94,
+   "end": 1411.4,
+   "text": "and actually look more at the use than the artifact."
+  }
+ ]
+}

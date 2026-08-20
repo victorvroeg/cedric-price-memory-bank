@@ -156,8 +156,9 @@ a:hover {
   inset: -11% -9%;
   width: 118%;
   height: 122%;
-  filter: blur(58px) saturate(1.15);
-  opacity: 0.5;
+  filter: blur(64px) saturate(1.25) brightness(0.72);
+  opacity: 0.34;   /* a starting point — the player adjusts it to the frame */
+  transition: opacity 220ms linear;
   z-index: 0;
 }
 
