@@ -28,12 +28,13 @@ const clientData = {
           playable.length ? (
             <>
               {/* the engine parks the first turn on the SECOND element, so that one fronts */}
-              <video class="projection__video" playsinline preload="metadata" aria-hidden="true" />
-              <video class="projection__video is-front" playsinline preload="metadata" aria-label={`Everyone on ${topic.label}`} />
+              <video class="projection__video" playsinline preload="auto" aria-hidden="true" />
+              <video class="projection__video is-front" playsinline preload="auto" aria-label={`Everyone on ${topic.label}`} />
               <div class="projection__feather" aria-hidden="true" />
               <div class="projection__hint" aria-hidden="true">
-                play&ensp;·&ensp;{playable.length} {playable.length === 1 ? "turn" : "turns"}
+                {playable.length} {playable.length === 1 ? "turn" : "turns"}
               </div>
+              <div class="projection__sound" aria-hidden="true">click for sound</div>
             </>
           ) : (
             <p class="dead-note">

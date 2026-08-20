@@ -16,6 +16,9 @@ const href = (p: string) => (import.meta.env.BASE_URL + "/" + p).replace(/\/+/g,
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content="The Cedric Price Memory Bank — interviews with the network of Cedric Price, cut sideways by topic." />
+    <!-- open the connection to the video host while the page is still parsing -->
+    <link rel="preconnect" href="https://customer-syg1o9n270h63juf.cloudflarestream.com" crossorigin />
+    <link rel="dns-prefetch" href="https://customer-syg1o9n270h63juf.cloudflarestream.com" />
   </head>
   <body>
     <nav class="menu" aria-label="Site">

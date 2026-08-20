@@ -31,7 +31,7 @@ const enter = `${base}/topics/`;
           <video
             class="projection__video"
             playsinline
-            preload="metadata"
+            preload="auto"
             data-src={intro.video.hls}
             aria-label="Introduction to the Cedric Price Memory Bank"></video>
           <div class="projection__feather" aria-hidden="true"></div>
@@ -94,8 +94,21 @@ const enter = `${base}/topics/`;
     let timer: number | undefined;
 
     projection.querySelector(".projection__frame")?.addEventListener("click", () => {
+      if (video.muted) { video.muted = false; projection.classList.remove("is-muted"); return; }
       if (video.paused) void video.play(); else video.pause();
     });
+
+    // start on arrival, with sound if the browser allows it
+    video.addEventListener("canplay", async function once() {
+      video.removeEventListener("canplay", once);
+      try {
+        await video.play();
+      } catch {
+        video.muted = true;
+        projection.classList.add("is-muted");
+        try { await video.play(); } catch { /* leave the play hint up */ }
+      }
+    }, { once: true });
     video.addEventListener("play", () => {
       projection.classList.add("is-playing");
       timer ??= window.setInterval(paint, 130);

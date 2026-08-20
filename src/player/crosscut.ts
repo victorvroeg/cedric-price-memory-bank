@@ -66,26 +66,40 @@ function init(data: Data, root: HTMLElement) {
   let pendingStart = 0;
   const gaps: number[] = [];
 
-  async function attach(el: HTMLVideoElement, url: string): Promise<void> {
+  async function attach(el: HTMLVideoElement, url: string, at = 0): Promise<void> {
     const prev = hlsBySrc.get(el);
     if (prev?.url === url && !el.error) return; // re-attach after a media error
     prev?.hls?.destroy();
     if (native) {
-      el.src = url;
+      // Safari: #t= puts the first byte request at the in-point rather than
+      // fetching the head of the film and seeking afterwards.
+      el.src = at > 0 ? `${url}#t=${at.toFixed(2)}` : url;
       el.load();
       hlsBySrc.set(el, { url, hls: null });
     } else {
       if (!HlsCtor) HlsCtor = (await import("hls.js")).default;
-      const hls = new HlsCtor({ maxBufferLength: 20 });
-      hls.loadSource(url);
+      const hls = new HlsCtor({
+        // Start on the lowest rendition so the first frame arrives almost
+        // immediately; ABR climbs to full quality within a second or two.
+        startLevel: 0,
+        // Begin loading AT the in-point instead of at zero — a cross-cut
+        // almost never starts at the top of a film.
+        startPosition: at,
+        startFragPrefetch: true,
+        maxBufferLength: 30,
+        maxMaxBufferLength: 90,
+        backBufferLength: 30,
+        abrEwmaDefaultEstimate: 2_500_000,
+      });
       hls.attachMedia(el);
+      hls.loadSource(url);
       hlsBySrc.set(el, { url, hls });
     }
   }
 
   function park(el: HTMLVideoElement, item: Item): void {
     // attach + place on the in-point, paused, so starting it is instant
-    void attach(el, item.hls).then(() => {
+    void attach(el, item.hls, item.start).then(() => {
       const seek = () => { el.currentTime = item.start; };
       if (el.readyState >= 1) seek();
       else el.addEventListener("loadedmetadata", seek, { once: true });
@@ -113,7 +127,7 @@ function init(data: Data, root: HTMLElement) {
     if (!singleMode && !viaGesture) {
       // standby should already be parked on item.start
     } else {
-      await attach(el, item.hls);
+      await attach(el, item.hls, item.start);
       if (el.readyState >= 1) el.currentTime = item.start;
       else el.addEventListener("loadedmetadata", () => (el.currentTime = item.start), { once: true });
     }
@@ -270,4 +284,35 @@ function init(data: Data, root: HTMLElement) {
   park(els[1], items[0]);
   if (items[1]) park(els[0], items[1]);
   setTitles(items[0]);
+
+  // Start on arrival. Browsers only allow unprompted sound when they judge the
+  // visitor to be engaged, so: try with sound, fall back to silent rather than
+  // to nothing, and let any click or key bring the sound up.
+  async function autostart(): Promise<void> {
+    try {
+      await playItem(0, true);
+      if (!els[active].paused) return;
+    } catch { /* fall through to muted */ }
+    for (const el of els) el.muted = true;
+    projection.classList.add("is-muted");
+    try {
+      await playItem(0, true);
+      report("started muted — click for sound");
+    } catch {
+      pendingStart = 0;
+      current = -1;
+      report("tap to start");
+    }
+  }
+
+  function unmute(): void {
+    if (!projection.classList.contains("is-muted")) return;
+    for (const el of els) el.muted = false;
+    projection.classList.remove("is-muted");
+  }
+  for (const ev of ["pointerdown", "keydown"] as const) {
+    addEventListener(ev, unmute, { once: true, capture: true });
+  }
+
+  void autostart();
 }

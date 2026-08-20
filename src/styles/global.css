@@ -678,3 +678,20 @@ a:hover {
   color: var(--fg-dim);
 }
 #saved { margin-left: auto; }
+
+/* sound state — the film starts itself; sound arrives on the first click */
+.projection__sound {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 4;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  opacity: 0;
+  transition: opacity 300ms ease;
+  pointer-events: none;
+}
+.projection.is-muted .projection__sound { opacity: 1; }
+.projection.is-playing .projection__hint { opacity: 0; }
