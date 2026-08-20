@@ -63,6 +63,7 @@ function init(data: Data, root: HTMLElement) {
   let started = false;
   let advancing = false;
   let skipped = 0;
+  let pendingStart = 0;
   const gaps: number[] = [];
 
   async function attach(el: HTMLVideoElement, url: string): Promise<void> {
@@ -137,7 +138,14 @@ function init(data: Data, root: HTMLElement) {
         report("fallback: single-element mode");
         return playItem(i, true);
       }
-      return; // needs a user gesture; hint stays up
+      // Gesture allowance ran out (e.g. after skipping dead streams):
+      // re-arm so the next tap starts right here.
+      pendingStart = i;
+      current = -1;
+      projection.classList.remove("is-playing");
+      dim(false);
+      report("tap to start");
+      return;
     }
 
     if (!singleMode) {
@@ -214,11 +222,12 @@ function init(data: Data, root: HTMLElement) {
   // --- input ---------------------------------------------------------------
   projection.querySelector(".projection__frame")?.addEventListener("click", () => {
     if (current < 0) {
-      // first gesture: unlock the element that will stay standby (els[0]);
-      // els[1] gets its play() directly from this gesture inside playItem.
-      const p = els[0].play();
-      void p?.then(() => els[0].pause()).catch(() => {});
-      void playItem(0, true);
+      // first gesture: unlock the element that will stay standby; the other
+      // one gets its play() directly from this gesture inside playItem.
+      const idle = els[active];
+      const p = idle.play();
+      void p?.then(() => idle.pause()).catch(() => {});
+      void playItem(pendingStart, true);
     } else if (els[active].paused) {
       void els[active].play();
       projection.classList.add("is-playing");
