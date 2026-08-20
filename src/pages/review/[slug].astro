@@ -1,0 +1,81 @@
+---
+import Base from "../../layouts/Base.astro";
+import { interviews, topics, cards } from "../../lib/content";
+import { resolveVideoSource } from "../../lib/resolveVideoSource";
+
+// The review page exists only while running locally (npm run dev). It is the
+// human-approval step of ingest, not part of the published archive — so it is
+// never built into the deployed site.
+export function getStaticPaths() {
+  if (!import.meta.env.DEV) return [];
+  return [...interviews.keys()].map((slug) => ({ params: { slug } }));
+}
+
+const interview = interviews.get(Astro.params.slug)!;
+const source = resolveVideoSource(interview);
+
+// The transcript is optional: an interview can be reviewed without one.
+const transcripts = import.meta.glob("../../../content/transcripts/*.json", { eager: true });
+const tr = transcripts[`../../../content/transcripts/${interview.slug}.json`] as
+  { default: { cues: { start: number; end: number; text: string }[]; corrected?: boolean } } | undefined;
+
+const data = {
+  slug: interview.slug,
+  duration: interview.video.duration ?? 0,
+  hls: source?.url ?? null,
+  segments: interview.segments,
+  cards: interview.cards,
+  cues: tr?.default.cues ?? [],
+  corrected: tr?.default.corrected ?? false,
+  topics: [...topics.values()]
+    .map((t) => ({ id: t.slug, label: t.label, colour: t.colour }))
+    .sort((a, b) => a.label.localeCompare(b.label)),
+  cardTitles: Object.fromEntries([...cards.values()].map((c) => [c.slug, c.title])),
+};
+---
+
+<Base title={`Review — ${interview.interviewee.name}`}>
+  <main class="review">
+    <header class="review__head">
+      <h1>{interview.interviewee.name}</h1>
+      <p>
+        {interview.draft ? "DRAFT — not in the archive" : "published"} ·
+        {interview.segments.length} segments · {Math.round(interview.video.duration ?? 0)}s
+        {data.cues.length ? ` · transcript ${data.corrected ? "corrected" : "uncorrected"}` : " · no transcript"}
+      </p>
+    </header>
+
+    <div class="review__player">
+      <video class="review__video" playsinline controls></video>
+      <div class="review__timeline" id="timeline"></div>
+      <div class="review__time"><span id="clock">0:00</span> <span id="hint">click a segment to play it · drag its edges to trim</span></div>
+    </div>
+
+    <div class="review__cols">
+      <section class="review__segments">
+        <div class="review__bar">
+          <strong>Segments</strong>
+          <button id="add">+ add at playhead</button>
+        </div>
+        <ol id="segments"></ol>
+      </section>
+
+      <section class="review__transcript">
+        <div class="review__bar"><strong>Transcript</strong> <span class="dim">click a line to jump</span></div>
+        <div id="cues"></div>
+      </section>
+    </div>
+
+    <footer class="review__foot">
+      <button id="export" class="primary">Approve &amp; copy JSON</button>
+      <button id="download">Download file</button>
+      <span id="status" class="dim"></span>
+    </footer>
+  </main>
+
+  <script type="application/json" id="review-data" set:html={JSON.stringify(data)}></script>
+</Base>
+
+<script>
+  import "../../player/review.ts";
+</script>

@@ -14,6 +14,62 @@
     }
   },
   "draft": true,
-  "segments": [],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 62.0,
+      "topicId": "scene"
+    },
+    {
+      "start": 62.3,
+      "end": 82.1,
+      "topicId": "personality"
+    },
+    {
+      "start": 82.1,
+      "end": 104.2,
+      "topicId": "food-and-drink"
+    },
+    {
+      "start": 104.2,
+      "end": 204.9,
+      "topicId": "non-plan"
+    },
+    {
+      "start": 204.9,
+      "end": 252.2,
+      "topicId": "personality"
+    },
+    {
+      "start": 252.2,
+      "end": 281.2,
+      "topicId": "conscience"
+    },
+    {
+      "start": 281.2,
+      "end": 352.3,
+      "topicId": "thinking"
+    },
+    {
+      "start": 352.3,
+      "end": 398.8,
+      "topicId": "influence"
+    },
+    {
+      "start": 398.8,
+      "end": 445.1,
+      "topicId": "enabling"
+    },
+    {
+      "start": 445.1,
+      "end": 506.0,
+      "topicId": "institutions"
+    },
+    {
+      "start": 506.0,
+      "end": 563.5,
+      "topicId": "influence"
+    }
+  ],
   "cards": []
 }

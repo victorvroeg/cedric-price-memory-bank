@@ -1,0 +1,378 @@
+{
+ "slug": "kees-christiaanse",
+ "language": "en",
+ "model": "mlx-community/whisper-large-v3-mlx",
+ "corrected": false,
+ "cues": [
+  {
+   "start": 0.0,
+   "end": 8.0,
+   "text": "In Hamburg in the 1980s there was an architecture event every two years I think, which was called the Hamburger Bauforum."
+  },
+  {
+   "start": 8.0,
+   "end": 22.0,
+   "text": "The first one that I went to was I think in 1985 or so, and the second one I went to had the later HafenCity, what was later called the HafenCity as a theme."
+  },
+  {
+   "start": 22.0,
+   "end": 31.0,
+   "text": "And the participating teams were Will Alsop, Maximiliano Fuxas, Zaha Hadid,"
+  },
+  {
+   "start": 31.0,
+   "end": 39.0,
+   "text": "us on the one side, and Michael Graves, and then Cedric Price, Otto Steidler, Ungers,"
+  },
+  {
+   "start": 39.0,
+   "end": 44.0,
+   "text": "and Gregotti on the other side."
+  },
+  {
+   "start": 44.0,
+   "end": 51.0,
+   "text": "It was a total chance that, let's say, 11 years later, we won the competition for the Haven City"
+  },
+  {
+   "start": 51.0,
+   "end": 62.28,
+   "text": "with the same crew more or less. So very very odd. And so I met Cedric"
+  },
+  {
+   "start": 62.28,
+   "end": 69.22,
+   "text": "Price there. I remember that he was always very talkative and very"
+  },
+  {
+   "start": 69.22,
+   "end": 75.24,
+   "text": "communicative and he was very with a lot of attention and care working with his"
+  },
+  {
+   "start": 75.24,
+   "end": 82.12,
+   "text": "people so the people were like a kind of group of disciples around him and he was"
+  },
+  {
+   "start": 82.12,
+   "end": 86.62,
+   "text": "the whole time he was drinking brandy and smoking a cigar was a bottle of"
+  },
+  {
+   "start": 86.62,
+   "end": 95.82,
+   "text": "couverture on his desk that steadily became more empty and he had these big"
+  },
+  {
+   "start": 95.82,
+   "end": 104.22,
+   "text": "cigars you know typical face composition that fitted very well to his to his"
+  },
+  {
+   "start": 104.22,
+   "end": 113.9,
+   "text": "character. And he devised a project so everybody started to work on a kind of"
+  },
+  {
+   "start": 113.9,
+   "end": 120.9,
+   "text": "more or less serious proposal for a new city or a new part of the city"
+  },
+  {
+   "start": 120.9,
+   "end": 128.94,
+   "text": "center for Hamburg. But Cedric Price did completely the opposite. He said no"
+  },
+  {
+   "start": 128.94,
+   "end": 136.18,
+   "text": "more building we have been building enough and I will make a wetlands out of"
+  },
+  {
+   "start": 136.18,
+   "end": 141.82,
+   "text": "the area the tide is there still a little bit active so the tide comes in"
+  },
+  {
+   "start": 141.82,
+   "end": 147.94,
+   "text": "the tide comes out I will make a kind of Waddenzee as we call it or Waddenmeer"
+  },
+  {
+   "start": 147.94,
+   "end": 154.7,
+   "text": "of German in which there will be a biodiversity growing and then"
+  },
+  {
+   "start": 154.7,
+   "end": 161.7,
+   "text": "Consequently there will be bushes coming up and there will be a kind of urban nature of all the latter."
+  },
+  {
+   "start": 161.7,
+   "end": 174.7,
+   "text": "And then I will build boardwalks into this landscape where people can go in and at the end there will be observation posts with a slit for your eyes"
+  },
+  {
+   "start": 174.7,
+   "end": 180.7,
+   "text": "from which you can look at the ducks and the birds and the wildlife."
+  },
+  {
+   "start": 180.7,
+   "end": 187.6,
+   "text": "and so he called it Ducklands as an analogy to Docklands and I thought it"
+  },
+  {
+   "start": 187.6,
+   "end": 192.88,
+   "text": "was a brilliant scheme. I mean it was conceptually probably the very best. I"
+  },
+  {
+   "start": 192.88,
+   "end": 199.3,
+   "text": "think we did a good scheme in the sense that it was a serious urban design"
+  },
+  {
+   "start": 199.3,
+   "end": 204.92,
+   "text": "proposal and also a serious strategy. I think all the other projects were just"
+  },
+  {
+   "start": 204.92,
+   "end": 211.92,
+   "text": "nonsense. They were just kind of a show of graphics. The nicest thing that I experienced"
+  },
+  {
+   "start": 213.16,
+   "end": 220.16,
+   "text": "was when I gave a lecture in the AA. Then people said to me, you know, sometimes Cedric"
+  },
+  {
+   "start": 220.22,
+   "end": 227.22,
+   "text": "Price comes in when there's a lecture. And he always sits at the back and if he sits"
+  },
+  {
+   "start": 227.22,
+   "end": 233.4,
+   "text": "And if he sits at the back and he smiles, then you did a good lecture."
+  },
+  {
+   "start": 234.9,
+   "end": 238.88,
+   "text": "So I did a lecture and Cedric Price came in indeed."
+  },
+  {
+   "start": 239.6,
+   "end": 245.08,
+   "text": "And he sat in the back and during the lecture he started to really laugh."
+  },
+  {
+   "start": 245.86,
+   "end": 252.22,
+   "text": "So everybody said afterwards that I had done a very good lecture because I had amused Cedric Price."
+  },
+  {
+   "start": 252.22,
+   "end": 270.22,
+   "text": "I think Dirkland was a kind of finger to warn the architects and the city about ecological thinking."
+  },
+  {
+   "start": 270.22,
+   "end": 281.22,
+   "text": "In that sense, probably it has a role in the whole building up of thinking about sustainability."
+  },
+  {
+   "start": 281.22,
+   "end": 288.22,
+   "text": "sustainability. I think you should acknowledge Cedric Price as one of the most important"
+  },
+  {
+   "start": 288.4,
+   "end": 295.4,
+   "text": "personalities in architectural history and in architectural theory because he was utterly"
+  },
+  {
+   "start": 297.6,
+   "end": 304.6,
+   "text": "without any compromise. That's probably also why he didn't build very much. He just was"
+  },
+  {
+   "start": 304.6,
+   "end": 318.6,
+   "text": "was very pure in his thinking and consequently his projects are also for me extremely pure."
+  },
+  {
+   "start": 318.6,
+   "end": 323.74,
+   "text": "They are conceptually very sound and they are in their elaboration and also in their"
+  },
+  {
+   "start": 323.74,
+   "end": 334.58,
+   "text": "presentation they are really without any compromise and therefore they build let's say three"
+  },
+  {
+   "start": 334.58,
+   "end": 344.7,
+   "text": "theoretical statements that represent a certain moment in architecture and urbanist history."
+  },
+  {
+   "start": 344.7,
+   "end": 351.3,
+   "text": "And these statements, they definitely very strongly play their role also in the community"
+  },
+  {
+   "start": 351.3,
+   "end": 352.3,
+   "text": "of professionals."
+  },
+  {
+   "start": 352.3,
+   "end": 363.42,
+   "text": "I mean, it's not for nothing that this guy didn't build very much, but has in relation"
+  },
+  {
+   "start": 363.42,
+   "end": 367.38,
+   "text": "to, let's say, what he actually produced on paper."
+  },
+  {
+   "start": 367.38,
+   "end": 372.52,
+   "text": "He has an enormous group of followers all over the world."
+  },
+  {
+   "start": 372.52,
+   "end": 377.58,
+   "text": "And these followers are not only students"
+  },
+  {
+   "start": 377.58,
+   "end": 381.3,
+   "text": "that are fascinated by his work as such,"
+  },
+  {
+   "start": 381.3,
+   "end": 387.18,
+   "text": "but under his followers are Fumiko Maki, Kenzo Tanga, Rem"
+  },
+  {
+   "start": 387.18,
+   "end": 392.3,
+   "text": "Kohlhaas, Richard Rogers."
+  },
+  {
+   "start": 392.3,
+   "end": 398.78,
+   "text": "These people are all paying tribute to Cedric Price."
+  },
+  {
+   "start": 398.78,
+   "end": 406.1,
+   "text": "So let's say Cedric Price was very strongly"
+  },
+  {
+   "start": 406.1,
+   "end": 411.12,
+   "text": "into using architecture and urbanism"
+  },
+  {
+   "start": 411.12,
+   "end": 416.32,
+   "text": "as a kind of framework and platform for a free society"
+  },
+  {
+   "start": 416.32,
+   "end": 417.44,
+   "text": "to unfold."
+  },
+  {
+   "start": 417.44,
+   "end": 421.34,
+   "text": "His relevance for architecture and urbanism"
+  },
+  {
+   "start": 421.34,
+   "end": 435.62,
+   "text": "today is, I think, first of all, the right balance between physical substance and program,"
+  },
+  {
+   "start": 435.62,
+   "end": 445.06,
+   "text": "between political consciousness and constructing your object."
+  },
+  {
+   "start": 445.06,
+   "end": 459.34,
+   "text": "I think Cedric Price is an example of a social agent that acknowledges that education and"
+  },
+  {
+   "start": 459.34,
+   "end": 469.76,
+   "text": "culture belong to the most important instruments of a learning society that consequently can"
+  },
+  {
+   "start": 469.76,
+   "end": 483.32,
+   "text": "overcome the wild jungle man so to say and let's say has deployed these"
+  },
+  {
+   "start": 483.32,
+   "end": 497.04,
+   "text": "instruments in a very accessible and readable way into a collective or"
+  },
+  {
+   "start": 497.04,
+   "end": 506.04,
+   "text": "integrated set of statements that are milestones in our architectural culture."
+  },
+  {
+   "start": 506.04,
+   "end": 514.56,
+   "text": "I think probably he would say without Cedric Price there would be another"
+  },
+  {
+   "start": 514.56,
+   "end": 525.46,
+   "text": "Cedric Price. I wouldn't know so many people exactly in that period 1960. I do"
+  },
+  {
+   "start": 525.46,
+   "end": 528.28,
+   "text": "I do not talk about 1967 or later,"
+  },
+  {
+   "start": 528.28,
+   "end": 531.92,
+   "text": "but because the culmination of his thinking"
+  },
+  {
+   "start": 531.92,
+   "end": 534.72,
+   "text": "is already around 1960, 61, I think."
+  },
+  {
+   "start": 537.58,
+   "end": 545.04,
+   "text": "So let's say next to Kevin Lynch or Jane Jacobs,"
+  },
+  {
+   "start": 545.04,
+   "end": 551.92,
+   "text": "there are not so many people who theorize and grasp"
+  },
+  {
+   "start": 551.92,
+   "end": 558.16,
+   "text": "the society, and in his case exactly between art, culture,"
+  },
+  {
+   "start": 558.16,
+   "end": 563.32,
+   "text": "and the physical society so well as Cedric Price."
+  }
+ ]
+}

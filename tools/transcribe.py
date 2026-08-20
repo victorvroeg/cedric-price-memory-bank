@@ -16,6 +16,7 @@ search and (through the segment drafter) the topic map.
 """
 
 import json
+import os
 import subprocess
 import sys
 import tempfile
@@ -35,6 +36,18 @@ GLOSSARY = (
     "South Bank, Archigram, the Architectural Association, the AA, Reyner Banham, "
     "Frank Newby, Samantha Hardingham, Bureau Europa, Alsop, Tschumi, Obrist."
 )
+
+
+def ensure_ffmpeg_on_path() -> tempfile.TemporaryDirectory:
+    """Whisper shells out to `ffmpeg`. This machine has no system ffmpeg, only
+    the one bundled in the imageio-ffmpeg wheel — so expose it under the name
+    Whisper expects. Keeps the pipeline dependent on pip alone."""
+    import imageio_ffmpeg
+    shim = tempfile.TemporaryDirectory()
+    link = Path(shim.name) / "ffmpeg"
+    link.symlink_to(imageio_ffmpeg.get_ffmpeg_exe())
+    os.environ["PATH"] = f"{shim.name}:{os.environ.get('PATH', '')}"
+    return shim
 
 
 def audio_of(src: Path) -> tuple[Path, tempfile.TemporaryDirectory | None]:
@@ -58,6 +71,7 @@ def main() -> int:
     model = sys.argv[sys.argv.index("--model") + 1] if "--model" in sys.argv else DEFAULT_MODEL
 
     import mlx_whisper
+    shim = ensure_ffmpeg_on_path()
     wav, tmp = audio_of(src)
     print(f"transcribing {src.name} with {model.split('/')[-1]} …", flush=True)
     result = mlx_whisper.transcribe(
@@ -71,6 +85,7 @@ def main() -> int:
     )
     if tmp:
         tmp.cleanup()
+    shim.cleanup()
 
     cues = [{"start": round(s["start"], 2), "end": round(s["end"], 2),
              "text": s["text"].strip()} for s in result["segments"] if s["text"].strip()]
