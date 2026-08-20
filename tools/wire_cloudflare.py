@@ -1,82 +1,147 @@
 #!/usr/bin/env python3
 """Point the archive at Cloudflare Stream.
 
-Reads tools/.stream_uploads.json (written by upload_stream.py), asks Stream
-for each video's current state, and writes video.hls + video.duration into
-content/interviews/<slug>.json. Films Stream has not finished processing are
-left untouched and reported, so this is safe to rerun.
+Reads a JSON dump of the Stream video list (the API's `result` array, saved to
+a file) and writes each film's playback URL and duration into its content file.
 
-The duration written is Stream's own, cross-checked against the topic map;
-a disagreement over 2 s is reported rather than silently accepted.
+    python3 tools/wire_cloudflare.py stream-videos.json [--dry-run]
+
+Matching is by the uploaded filename, which is why masters keep their 2014
+names. A film whose duration disagrees with its topic map by more than 2 s is
+reported and NOT wired — that guard is the whole reason the archive's timecodes
+can be trusted after a host change.
+
+To move to a different host later, write that host's URLs into video.hls the
+same way; nothing else in the site needs to change. See RESURRECT.md.
 """
 
 import json
-import os
+import re
 import sys
-import urllib.request
 from pathlib import Path
 
-ACCOUNT = "203f021085d63c5fbac9c49b6f5c903c"
-API = f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT}/stream"
 ROOT = Path(__file__).resolve().parent.parent
-STATE = ROOT / "tools" / ".stream_uploads.json"
-CONTENT = ROOT / "content" / "interviews"
+INTERVIEWS = ROOT / "content" / "interviews"
+PAGES = ROOT / "content" / "pages"
+
+# uploaded filename (lowercased, no extension) -> interview slug
+FILMS = {
+    "1_willasop_def_tc-check": "will-alsop",
+    "2_thomweaver_def_tc-check": "thomas-weaver",
+    "3_samanthahardingham_def_tc-check": "samantha-hardingham",
+    "6_johnfrazer_def_tc-check": "john-frazer",
+    "7_jeremymelvin_def_tc-check": "jeremy-melvin",
+    "8_carlosbrand_def_tc-check": "carlos-villanueva-brandt",
+    "9_brettsteele_def_tc-check": "brett-steele",
+    "11_petermurray_def_tc-check": "peter-murray",
+    "11_stevemullin_def_tc-check": "steve-mullin",
+    "13_paulbarker_def_tc-check": "paul-barker",
+    "14_maxneill_def_tc-check": "max-neal",
+    "15_bernardtschumi_def_tc-check": "bernard-tschumi",
+    "cedric_price_memory_bank_-_paul_finch_v1 (1080p)": "paul-finch",
+    "cedric_price_memory_bank_-_hans_ulrich_obrist_v1 (1080p)": "hans-ulrich-obrist",
+}
+INTRO = "cedric_price_memory_bank_-_trailer_v1"
+# Kees Christiaanse has film but no topic map yet — he goes live through the
+# ingest pass, not through this script.
+HOLD = {"kees christiaanse v02": "kees-christiaanse"}
+
+TOLERANCE = 2.0
+
+# This account's Stream delivery subdomain (from any video's playback URL).
+CUSTOMER = "customer-syg1o9n270h63juf"
 
 
-def token() -> str:
-    t = os.environ.get("CF_STREAM_TOKEN")
-    if not t:
-        p = Path.home() / ".cpmb-cf-token"
-        if not p.exists():
-            sys.exit("No API token; see tools/upload_stream.py header.")
-        t = p.read_text().strip()
-    return t
+def map_basis(slug: str):
+    f = INTERVIEWS / f"{slug}.json"
+    if not f.exists():
+        return None
+    d = json.loads(f.read_text())
+    ends = [s["end"] for s in d.get("segments", [])] + [c["time"] for c in d.get("cards", [])]
+    return max(ends) if ends else None
 
 
 def main() -> int:
-    if not STATE.exists():
-        sys.exit("No upload state yet — run tools/upload_stream.py first.")
-    state = json.loads(STATE.read_text())
-    tok = token()
-    wired, waiting, flags = [], [], []
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    dry = "--dry-run" in sys.argv
+    if not args:
+        print(__doc__)
+        return 2
 
-    for slug, entry in sorted(state.items()):
-        vid = entry.get("videoId")
-        if not vid:
+    videos = json.loads(Path(args[0]).read_text())
+    if isinstance(videos, dict):
+        videos = videos.get("result", videos.get("videos", []))
+    # Accept the compact shape {n: name, u: uid, s: state, d: duration} as well
+    # as raw API objects; the compact form is what survives copying by hand.
+    videos = [v if "meta" in v else {
+        "meta": {"name": v["n"]},
+        "playback": {"hls": f"https://{CUSTOMER}.cloudflarestream.com/{v['u']}/manifest/video.m3u8"},
+        "status": {"state": v.get("s")},
+        "duration": v.get("d"),
+    } for v in videos]
+
+    wired, held, problems, missing = [], [], [], dict(FILMS)
+
+    for v in videos:
+        name = (v.get("meta", {}).get("name") or v.get("meta", {}).get("filename") or "")
+        stem = re.sub(r"\.(mov|mp4|m4v)$", "", name, flags=re.I).strip()
+        key = stem.lower()
+        hls = (v.get("playback") or {}).get("hls")
+        state = (v.get("status") or {}).get("state")
+        duration = v.get("duration")
+
+        if key in HOLD:
+            held.append(f"{HOLD[key]} ({state}) — awaiting ingest, not wired")
             continue
-        req = urllib.request.Request(f"{API}/{vid}",
-                                     headers={"Authorization": f"Bearer {tok}"})
-        with urllib.request.urlopen(req) as r:
-            result = json.loads(r.read()).get("result", {})
-        if not result.get("readyToStream"):
-            pct = (result.get("status") or {}).get("pctComplete", "?")
-            waiting.append(f"{slug} ({pct}%)")
+
+        if key == INTRO.lower():
+            if state != "ready" or not hls:
+                problems.append(f"intro: not ready ({state})")
+                continue
+            p = PAGES / "intro.json"
+            d = json.loads(p.read_text())
+            d["video"]["hls"] = hls
+            d["video"]["duration"] = round(duration, 2) if duration else d["video"]["duration"]
+            if not dry:
+                p.write_text(json.dumps(d, indent=2, ensure_ascii=False) + "\n")
+            wired.append(f"intro  {round(duration or 0, 2)}s")
             continue
 
-        hls = (result.get("playback") or {}).get("hls")
-        duration = round(float(result.get("duration") or 0), 2)
-        target = CONTENT / f"{slug}.json"
-        d = json.loads(target.read_text())
+        slug = FILMS.get(key)
+        if not slug:
+            problems.append(f"unrecognised upload: {name!r}")
+            continue
+        missing.pop(key, None)
 
-        ends = [s["end"] for s in d.get("segments", [])]
-        map_end = max(ends) if ends else 0
-        if duration and abs(duration - map_end) > 2:
-            flags.append(f"{slug}: Stream says {duration}s, topic map ends {map_end}s")
+        if state != "ready" or not hls:
+            problems.append(f"{slug}: not ready ({state}, {(v.get('status') or {}).get('pctComplete')}%)")
+            continue
 
+        basis = map_basis(slug)
+        delta = (duration - basis) if (basis and duration) else None
+        if delta is None or abs(delta) > TOLERANCE:
+            problems.append(f"{slug}: DURATION MISMATCH film={duration} map={basis} delta={delta} — not wired")
+            continue
+
+        f = INTERVIEWS / f"{slug}.json"
+        d = json.loads(f.read_text())
         d["video"]["hls"] = hls
-        d["video"]["duration"] = duration
-        target.write_text(json.dumps(d, indent=2, ensure_ascii=False) + "\n")
-        wired.append(f"{slug} ({duration}s)")
+        d["video"]["duration"] = round(duration, 2)
+        if not dry:
+            f.write_text(json.dumps(d, indent=2, ensure_ascii=False) + "\n")
+        wired.append(f"{slug:<26} {round(duration, 2):>8}s  (map {delta:+.2f}s)")
 
-    for w in wired:
-        print("wired  ", w)
-    if waiting:
-        print("\nstill processing:", ", ".join(waiting))
-    if flags:
-        print("\nCHECK:")
-        for f in flags:
-            print("  -", f)
-    return 0
+    for line in wired:
+        print(("DRY " if dry else "") + "wired " + line)
+    for line in held:
+        print("held  " + line)
+    for line in problems:
+        print("!!    " + line)
+    for slug in missing.values():
+        print(f"!!    {slug}: no upload found")
+
+    print(f"\n{len(wired)} wired, {len(held)} held, {len(problems) + len(missing)} outstanding")
+    return 1 if (problems or missing) else 0
 
 
 if __name__ == "__main__":
