@@ -9,7 +9,10 @@ Output: content/topics/<slug>.json
         content/cards/<slug>.json
         content/pages/colofon.json
 
-Deterministic: same input -> byte-identical output. Rerunning overwrites.
+Deterministic: same input -> byte-identical output. Rerunning overwrites,
+EXCEPT the live video fields (video.hls, video.duration) of an existing
+interview file, which are preserved: they are operational data set when a
+film lands on the streaming host, not part of the 2014 record.
 
 Timecodes in the 2014 CMS are SMPTE HH:MM:SS:FF at 25 fps (PAL production).
 They are converted to seconds with frame precision (multiples of 0.04 s).
@@ -118,7 +121,12 @@ def main() -> int:
         n_placements += len(placements)
 
         vimeo = re.search(r"external/(\d+)", iv.get("url_mp4") or "")
-        write(CONTENT / "interviews" / f"{slug}.json", {
+        existing_path = CONTENT / "interviews" / f"{slug}.json"
+        live_video = {"hls": None, "duration": None}
+        if existing_path.exists():
+            prev = json.loads(existing_path.read_text()).get("video") or {}
+            live_video = {"hls": prev.get("hls"), "duration": prev.get("duration")}
+        write(existing_path, {
             "title": p["title_plain"],
             "interviewee": {
                 "name": iv.get("interviewee_name") or p["title_plain"],
@@ -126,8 +134,8 @@ def main() -> int:
             },
             "recorded": p["date"][:10],
             "video": {
-                "hls": None,  # set when the film is on the streaming host
-                "duration": None,
+                "hls": live_video["hls"],  # set when the film is on the streaming host
+                "duration": live_video["duration"],
                 "legacy": {"vimeoId": vimeo.group(1) if vimeo else None,
                            "wpSlug": p["slug"]},
             },
