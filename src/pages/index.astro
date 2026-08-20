@@ -1,14 +1,91 @@
 ---
 import Base from "../layouts/Base.astro";
-import Screen from "../components/Screen.astro";
-import { interviews } from "../lib/content";
-import { DEMO_INTERVIEW } from "../config";
+import { intro } from "../lib/content";
 
-// M1: the front page holds one film. The archive view (wandering across all
-// interviews and cross-cutting by topic) arrives with the M2 engine.
-const interview = interviews.get(DEMO_INTERVIEW)!;
+// The front door, as in 2014: the intro film first, the archive behind it.
+// (2014 route table: "/" -> intro, "/memory-bank" -> the archive.)
+// Skippable — nobody should be made to sit through it twice.
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const enter = `${base}/topics/`;
 ---
 
 <Base title="Cedric Price Memory Bank" current="bank">
-  <Screen interview={interview} />
+  <main class="void void--intro">
+    <div class="stage stage--intro">
+      <h1 class="title title--left">Cedric Price</h1>
+      <p class="title title--right">memory bank</p>
+
+      <figure class="projection">
+        <canvas class="projection__bloom" aria-hidden="true"></canvas>
+        <div class="projection__frame">
+          <video
+            class="projection__video"
+            playsinline
+            preload="metadata"
+            data-src={intro.video.hls}
+            aria-label="Introduction to the Cedric Price Memory Bank"></video>
+          <div class="projection__feather" aria-hidden="true"></div>
+          <div class="projection__hint" aria-hidden="true">play</div>
+          <div class="projection__dim" aria-hidden="true"></div>
+        </div>
+      </figure>
+
+      <nav class="enter">
+        <a class="enter__link" href={enter} data-enter>Enter the Memory Bank</a>
+      </nav>
+    </div>
+  </main>
 </Base>
+
+<script>
+  import { DEV_FALLBACK_STREAM } from "../config";
+
+  const video = document.querySelector<HTMLVideoElement>(".stage--intro .projection__video");
+  const projection = document.querySelector<HTMLElement>(".stage--intro .projection");
+  const bloom = document.querySelector<HTMLCanvasElement>(".stage--intro .projection__bloom");
+  const enter = document.querySelector<HTMLAnchorElement>("[data-enter]");
+
+  if (video && projection && enter) {
+    const src = video.dataset.src || DEV_FALLBACK_STREAM;
+    if (!src) {
+      projection.classList.add("projection--dead");
+    } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+      video.src = src;
+    } else {
+      import("hls.js").then(({ default: Hls }) => {
+        if (!Hls.isSupported()) return;
+        const hls = new Hls();
+        hls.loadSource(src);
+        hls.attachMedia(video);
+      });
+    }
+
+    const ctx = bloom?.getContext("2d", { alpha: false });
+    if (bloom) { bloom.width = 96; bloom.height = 54; }
+    let dead = false;
+    const paint = () => {
+      if (!ctx || !bloom || dead || video.readyState < 2) return;
+      try { ctx.drawImage(video, 0, 0, bloom.width, bloom.height); }
+      catch { dead = true; }
+    };
+    let timer: number | undefined;
+
+    projection.querySelector(".projection__frame")?.addEventListener("click", () => {
+      if (video.paused) void video.play(); else video.pause();
+    });
+    video.addEventListener("play", () => {
+      projection.classList.add("is-playing");
+      timer ??= window.setInterval(paint, 130);
+    });
+    video.addEventListener("pause", () => {
+      projection.classList.remove("is-playing");
+      clearInterval(timer);
+      timer = undefined;
+    });
+    // The film ends by handing the visitor over, the way it used to.
+    video.addEventListener("ended", () => {
+      projection.classList.add("is-dimmed");
+      setTimeout(() => (location.href = enter.href), 320);
+    });
+  }
+</script>

@@ -65,3 +65,11 @@ export const colofon = (
     import.meta.glob("../../content/pages/colofon.json", { eager: true }),
   )[0] as { default: { title: string; body: string } }
 ).default;
+
+export const intro = (
+  Object.values(
+    import.meta.glob("../../content/pages/intro.json", { eager: true }),
+  )[0] as {
+    default: { title: string; video: { hls: string | null; duration: number } };
+  }
+).default;

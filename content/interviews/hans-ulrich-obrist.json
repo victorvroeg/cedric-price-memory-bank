@@ -6,8 +6,8 @@
   },
   "recorded": "2014-12-11",
   "video": {
-    "hls": null,
-    "duration": null,
+    "hls": "https://victorvroeg.github.io/cpmb-media-staging/hans-ulrich-obrist/index.m3u8",
+    "duration": 1760.04,
     "legacy": {
       "vimeoId": "114106513",
       "wpSlug": "hans-ulrich-obrist-2"

@@ -350,6 +350,27 @@ a:hover {
   font-variant-numeric: tabular-nums;
 }
 
+/* ——— intro: the front door ——— */
+
+.stage--intro .title--left {
+  font-size: clamp(17px, 2vw, 27px);
+}
+.enter {
+  margin: 30px auto 0;
+  width: calc(100% - 2 * clamp(48px, 7vw, 110px));
+  text-align: center;
+}
+.enter__link {
+  border-bottom: none;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+}
+.enter__link:hover {
+  color: var(--fg);
+}
+
 /* ——— topic index ——— */
 
 .prose--wide {

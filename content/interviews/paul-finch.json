@@ -6,8 +6,8 @@
   },
   "recorded": "2014-12-12",
   "video": {
-    "hls": null,
-    "duration": null,
+    "hls": "https://victorvroeg.github.io/cpmb-media-staging/paul-finch/index.m3u8",
+    "duration": 2021.04,
     "legacy": {
       "vimeoId": "114330052",
       "wpSlug": "555-2"
