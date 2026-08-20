@@ -3,11 +3,12 @@ import Base from "../../layouts/Base.astro";
 import { interviews, topics, cards } from "../../lib/content";
 import { resolveVideoSource } from "../../lib/resolveVideoSource";
 
-// The review page exists only while running locally (npm run dev). It is the
-// human-approval step of ingest, not part of the published archive — so it is
-// never built into the deployed site.
+// The review tool is published with the site so the maintainer can reach it
+// from anywhere. It is deliberately still a static page: it reads the archive
+// and hands back a corrected topic map, but writes nothing and stores nothing.
+// Approval travels back through GitHub's own editor — see the Approve button.
+// No server, no login of ours, nothing to rot between one interview and the next.
 export function getStaticPaths() {
-  if (!import.meta.env.DEV) return [];
   return [...interviews.keys()].map((slug) => ({ params: { slug } }));
 }
 
@@ -67,7 +68,8 @@ const data = {
     </div>
 
     <footer class="review__foot">
-      <button id="export" class="primary">Approve &amp; copy JSON</button>
+      <button id="propose" class="primary">Approve &amp; send to the archive</button>
+      <button id="export">Copy JSON</button>
       <button id="download">Download file</button>
       <span id="status" class="dim"></span>
     </footer>

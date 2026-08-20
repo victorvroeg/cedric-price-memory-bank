@@ -149,6 +149,28 @@ function start(d: Data) {
     })), null, 1);
   }
 
+  // Approval travels back through GitHub's own editor: the corrected map is
+  // pre-filled into a new file, the reviewer signs in as themselves and clicks
+  // "Propose changes". No token of ours, no server, nothing to expire.
+  const REPO = "victorvroeg/cedric-price-memory-bank";
+  document.getElementById("propose")!.onclick = () => {
+    const body = payload();
+    if (body.length > 7000) {
+      status.textContent = "too large to send this way — use Download file instead";
+      return;
+    }
+    const url = `https://github.com/${REPO}/new/main` +
+      `?filename=ingest/approved/${d.slug}.json` +
+      `&value=${encodeURIComponent(body)}` +
+      `&message=${encodeURIComponent(`Approve topic map: ${d.slug}`)}` +
+      `&description=${encodeURIComponent(
+        `${segs.length} segments approved in the review tool.\n\n` +
+        `Apply with: python3 tools/draft_segments.py --apply ${d.slug} ingest/approved/${d.slug}.json`)}`;
+    window.open(url, "_blank", "noopener");
+    dirty = false;
+    status.textContent = "opened GitHub — sign in and click “Propose changes”";
+  };
+
   document.getElementById("export")!.onclick = async () => {
     await navigator.clipboard.writeText(payload());
     dirty = false;

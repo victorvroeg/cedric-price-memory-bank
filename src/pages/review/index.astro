@@ -1,0 +1,30 @@
+---
+import Base from "../../layouts/Base.astro";
+import { interviews } from "../../lib/content";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const rows = [...interviews.values()].sort(
+  (a, b) => Number(!!b.draft) - Number(!!a.draft) || a.slug.localeCompare(b.slug),
+);
+---
+
+<Base title="Review — Cedric Price Memory Bank">
+  <main class="prose prose--wide">
+    <h1>Review</h1>
+    <p style="color:var(--fg-dim)">
+      Correct a drafted topic map, then send it to the archive. Nothing you do
+      here changes the site until the change is accepted on GitHub.
+    </p>
+    <nav class="topicindex" aria-label="Interviews">
+      {rows.map((iv) => (
+        <a class="topicindex__item" href={`${base}/review/${iv.slug}/`}>
+          <span class="topicindex__label">{iv.interviewee.name}</span>
+          <span class="topicindex__count">
+            {iv.draft ? "DRAFT — awaiting approval" : "published"} ·
+            {" "}{iv.segments.length} segments
+          </span>
+        </a>
+      ))}
+    </nav>
+  </main>
+</Base>
