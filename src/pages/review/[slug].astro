@@ -62,7 +62,16 @@ const data = {
       </section>
 
       <section class="review__transcript">
-        <div class="review__bar"><strong>Transcript</strong> <span class="dim">click a line to jump</span></div>
+        <div class="review__bar">
+          <strong>Transcript</strong>
+          <span class="dim">click the time to play · click the words to correct them</span>
+        </div>
+        <div class="review__find">
+          <input id="find" placeholder="find (e.g. Fuxas)" size="14" />
+          <input id="repl" placeholder="replace with" size="14" />
+          <button id="doreplace">replace all</button>
+          <span id="findstatus" class="dim"></span>
+        </div>
         <div id="cues"></div>
       </section>
     </div>

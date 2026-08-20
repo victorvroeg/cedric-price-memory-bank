@@ -599,3 +599,36 @@ a:hover {
 @media (max-width: 900px) {
   .review__cols { grid-template-columns: 1fr; }
 }
+
+.review__find {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.cue {
+  display: flex;
+  gap: 0.55em;
+  align-items: baseline;
+}
+.cue__t {
+  flex: none;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  color: var(--fg-dim) !important;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+}
+.cue__t:hover { color: #fff !important; }
+.cue__text {
+  flex: 1;
+  outline: none;
+  border-bottom: 1px solid transparent;
+  cursor: text;
+}
+.cue__text:hover { border-bottom-color: var(--hairline); }
+.cue__text:focus {
+  border-bottom-color: var(--fg);
+  color: #fff;
+}

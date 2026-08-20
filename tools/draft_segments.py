@@ -69,7 +69,11 @@ def main() -> int:
     if "--apply" in argv:
         i = argv.index("--apply")
         slug, draft_path = argv[i + 1], argv[i + 2]
-        draft = json.loads(Path(draft_path).read_text())
+        blob = json.loads(Path(draft_path).read_text())
+        # The review tool sends {slug, segments, transcript}; a bare list of
+        # segments is still accepted.
+        draft = blob["segments"] if isinstance(blob, dict) else blob
+        corrected = blob.get("transcript") if isinstance(blob, dict) else None
         target = ROOT / "content" / "interviews" / f"{slug}.json"
         iv = json.loads(target.read_text())
         known = {p.stem for p in (ROOT / "content" / "topics").glob("*.json")}
@@ -94,6 +98,17 @@ def main() -> int:
             for p in problems:
                 print("ERROR " + p)
             return 1
+
+        if corrected and corrected.get("cues"):
+            tpath = ROOT / "content" / "transcripts" / f"{slug}.json"
+            tr = json.loads(tpath.read_text()) if tpath.exists() else {"slug": slug, "language": "en"}
+            before = {c["start"]: c["text"] for c in tr.get("cues", [])}
+            tr["cues"] = [{"start": c["start"], "end": c["end"], "text": c["text"]}
+                          for c in corrected["cues"]]
+            tr["corrected"] = bool(corrected.get("corrected", True))
+            tpath.write_text(json.dumps(tr, indent=1, ensure_ascii=False) + "\n")
+            changed = sum(1 for c in tr["cues"] if before.get(c["start"]) not in (None, c["text"]))
+            print(f"transcript updated: {len(tr['cues'])} cues, {changed} edited by hand")
 
         iv["segments"] = clean
         iv["draft"] = True          # a person still has to approve it

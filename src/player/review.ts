@@ -25,7 +25,10 @@ function start(d: Data) {
   const fmt = (t: number) => `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, "0")}`;
 
   let segs: Seg[] = d.segments.map((s) => ({ ...s }));
+  const cues = d.cues.map((c) => ({ ...c }));
   let dirty = false;
+  let transcriptCorrected = d.corrected;
+  const markDirty = () => { status.textContent = dirty ? "unsaved changes" : ""; };
 
   if (d.hls) {
     if (video.canPlayType("application/vnd.apple.mpegurl")) video.src = d.hls;
@@ -105,14 +108,49 @@ function start(d: Data) {
 
   function drawCues() {
     cueBox.innerHTML = "";
-    for (const c of d.cues) {
+    for (const c of cues) {
       const p = document.createElement("p");
       p.className = "cue";
       p.dataset.start = String(c.start);
-      p.innerHTML = `<span class="cue__t dim">${fmt(c.start)}</span> ${c.text}`;
-      p.onclick = () => { video.currentTime = c.start; void video.play(); };
+
+      const t = document.createElement("button");
+      t.className = "cue__t";
+      t.textContent = fmt(c.start);
+      t.title = "play from here";
+      t.onclick = () => { video.currentTime = c.start; void video.play(); };
+
+      const text = document.createElement("span");
+      text.className = "cue__text";
+      text.contentEditable = "true";
+      text.spellcheck = true;
+      text.textContent = c.text;
+      // Whisper mangles exactly the proper nouns this archive is about, so the
+      // transcript is meant to be corrected here, by ear, against the film.
+      text.addEventListener("input", () => {
+        c.text = text.textContent ?? "";
+        dirty = true;
+        markDirty();
+      });
+      text.addEventListener("focus", () => { video.currentTime = c.start; });
+
+      p.append(t, text);
       cueBox.appendChild(p);
     }
+  }
+
+  // find and replace across the whole transcript — one pass fixes a name that
+  // Whisper got wrong every time it occurs.
+  function replaceAll(from: string, to: string): number {
+    if (!from) return 0;
+    const rx = new RegExp(from.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi");
+    let n = 0;
+    for (const c of cues) {
+      const before = c.text;
+      c.text = c.text.replace(rx, to);
+      if (c.text !== before) n += (before.match(rx) || []).length;
+    }
+    if (n) { dirty = true; drawCues(); markDirty(); }
+    return n;
   }
 
   function render() { sort(); drawTimeline(); drawList(); status.textContent = dirty ? "unsaved changes" : ""; }
@@ -124,6 +162,7 @@ function start(d: Data) {
     if (head) head.style.left = `${(t / d.duration) * 100}%`;
     let current: HTMLElement | null = null;
     for (const p of cueBox.children as HTMLCollectionOf<HTMLElement>) {
+      if (p.querySelector(".cue__text")=== document.activeElement) continue;
       const on = parseFloat(p.dataset.start!) <= t;
       p.classList.toggle("is-past", on);
       if (on) current = p;
@@ -141,12 +180,23 @@ function start(d: Data) {
     dirty = true; render();
   };
 
-  function payload() {
-    return JSON.stringify(segs.map((s) => ({
+  function segmentsOnly() {
+    return segs.map((s) => ({
       start: Math.round(s.start * 100) / 100,
       end: Math.round(s.end * 100) / 100,
       topicId: s.topicId,
-    })), null, 1);
+    }));
+  }
+
+  function payload() {
+    const out: Record<string, unknown> = { slug: d.slug, segments: segmentsOnly() };
+    if (cues.length) {
+      out.transcript = {
+        corrected: transcriptCorrected,
+        cues: cues.map((c) => ({ start: c.start, end: c.end, text: c.text.trim() })),
+      };
+    }
+    return JSON.stringify(out, null, 1);
   }
 
   // Approval travels back through GitHub's own editor: the corrected map is
@@ -155,8 +205,18 @@ function start(d: Data) {
   const REPO = "victorvroeg/cedric-price-memory-bank";
   document.getElementById("propose")!.onclick = () => {
     const body = payload();
-    if (body.length > 7000) {
-      status.textContent = "too large to send this way — use Download file instead";
+    transcriptCorrected = cues.length > 0;
+    // A corrected transcript is far too long for a URL, so hand the reviewer
+    // the file and GitHub's own drag-and-drop upload page instead. Still no
+    // code, still no service of ours.
+    if (body.length > 6000) {
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(new Blob([body], { type: "application/json" }));
+      a.download = `${d.slug}.json`;
+      a.click();
+      window.open(`https://github.com/${REPO}/upload/main/ingest/approved`, "_blank", "noopener");
+      dirty = false;
+      status.textContent = `downloaded ${d.slug}.json — drop it on the GitHub page that just opened, then “Propose changes”`;
       return;
     }
     const url = `https://github.com/${REPO}/new/main` +
@@ -187,6 +247,14 @@ function start(d: Data) {
   };
 
   addEventListener("beforeunload", (e) => { if (dirty) e.preventDefault(); });
+
+  document.getElementById("doreplace")!.onclick = () => {
+    const from = (document.getElementById("find") as HTMLInputElement).value.trim();
+    const to = (document.getElementById("repl") as HTMLInputElement).value;
+    const n = replaceAll(from, to);
+    document.getElementById("findstatus")!.textContent =
+      n ? `replaced ${n}` : from ? "no matches" : "";
+  };
 
   drawCues();
   render();
