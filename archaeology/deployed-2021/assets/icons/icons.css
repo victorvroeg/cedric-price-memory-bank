@@ -1,0 +1,65 @@
+@font-face {
+	font-family: 'mieras';
+	src:url('fonts/mieras.eot?wc849e');
+	src:url('fonts/mieras.eot?#iefixwc849e') format('embedded-opentype'),
+		url('fonts/mieras.woff?wc849e') format('woff'),
+		url('fonts/mieras.ttf?wc849e') format('truetype'),
+		url('fonts/mieras.svg?wc849e#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="iconm-"], [class*=" iconm-"] {
+	font-family: 'mieras';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.iconm-share-twitter:before {
+	content: "\4e";
+}
+.iconm-share-facebook:before {
+	content: "\4f";
+}
+
+.iconm-icon-audio-mute:before {
+	content: "\61";
+}
+.iconm-icon-audio:before {
+	content: "\6d";
+}
+.iconm-icon-fullscreen:before {
+	content: "\66";
+}
+.iconm-icon-info:before {
+	content: "\69";
+}
+.iconm-icon-link:before {
+	content: "\75";
+}
+.iconm-icon-location:before {
+	content: "\70";
+}
+.iconm-icon-lock:before {
+	content: "\6c";
+}
+.iconm-icon-menu-close:before {
+	content: "\78";
+}
+.iconm-icon-menu:before {
+	content: "\4d";
+}
+.iconm-icon-pause:before {
+	content: "\7c";
+}
+.iconm-icon-play:before {
+	content: "\3e";
+}

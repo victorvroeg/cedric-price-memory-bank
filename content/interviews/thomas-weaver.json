@@ -1,0 +1,226 @@
+{
+  "title": "Thomas Weaver",
+  "interviewee": {
+    "name": "Thomas Weaver",
+    "jobtitle": "Architectural writer and editor"
+  },
+  "recorded": "2014-11-05",
+  "video": {
+    "hls": null,
+    "duration": null,
+    "legacy": {
+      "vimeoId": "111748020",
+      "wpSlug": "thom"
+    }
+  },
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 368.0,
+      "topicId": "englishness"
+    },
+    {
+      "start": 368.0,
+      "end": 482.0,
+      "topicId": "drawing"
+    },
+    {
+      "start": 494.0,
+      "end": 572.0,
+      "topicId": "food-and-drink"
+    },
+    {
+      "start": 572.0,
+      "end": 711.0,
+      "topicId": "institutions"
+    },
+    {
+      "start": 711.0,
+      "end": 778.0,
+      "topicId": "appearance"
+    },
+    {
+      "start": 778.0,
+      "end": 890.0,
+      "topicId": "personality"
+    },
+    {
+      "start": 890.0,
+      "end": 932.0,
+      "topicId": "enabling"
+    },
+    {
+      "start": 932.0,
+      "end": 998.0,
+      "topicId": "architecture"
+    },
+    {
+      "start": 998.0,
+      "end": 1062.0,
+      "topicId": "thinking"
+    },
+    {
+      "start": 1062.0,
+      "end": 1174.0,
+      "topicId": "present"
+    }
+  ],
+  "cards": [
+    {
+      "time": 3.96,
+      "cardId": "princeton"
+    },
+    {
+      "time": 8.32,
+      "cardId": "cca"
+    },
+    {
+      "time": 12.44,
+      "cardId": "cca-competition-for-the-design-of-cities"
+    },
+    {
+      "time": 99.16,
+      "cardId": "peter-eisenman"
+    },
+    {
+      "time": 100.08,
+      "cardId": "morphosis"
+    },
+    {
+      "time": 101.08,
+      "cardId": "ben-van-berkel"
+    },
+    {
+      "time": 102.68,
+      "cardId": "jesse-reiser"
+    },
+    {
+      "time": 142.68,
+      "cardId": "rafael-moneo"
+    },
+    {
+      "time": 144.28,
+      "cardId": "frank-gehry"
+    },
+    {
+      "time": 145.6,
+      "cardId": "elizabeth-diller"
+    },
+    {
+      "time": 146.84,
+      "cardId": "282-2"
+    },
+    {
+      "time": 156.48,
+      "cardId": "four-seasons-restaurant"
+    },
+    {
+      "time": 160.52,
+      "cardId": "phyllis-lambert"
+    },
+    {
+      "time": 164.08,
+      "cardId": "seagram-building"
+    },
+    {
+      "time": 327.88,
+      "cardId": "cca-competition-for-the-design-of-cities"
+    },
+    {
+      "time": 415.64,
+      "cardId": "parametricism"
+    },
+    {
+      "time": 428.24,
+      "cardId": "xerox"
+    },
+    {
+      "time": 445.16,
+      "cardId": "grand-central-station"
+    },
+    {
+      "time": 501.96,
+      "cardId": "st-john"
+    },
+    {
+      "time": 573.32,
+      "cardId": "aa-files"
+    },
+    {
+      "time": 575.0,
+      "cardId": "aa"
+    },
+    {
+      "time": 614.92,
+      "cardId": "alvin-boyarsky"
+    },
+    {
+      "time": 643.16,
+      "cardId": "dennis-crompton"
+    },
+    {
+      "time": 644.08,
+      "cardId": "archigram"
+    },
+    {
+      "time": 655.84,
+      "cardId": "tv-aa"
+    },
+    {
+      "time": 694.12,
+      "cardId": "wish-we-were-here"
+    },
+    {
+      "time": 738.8,
+      "cardId": "aa"
+    },
+    {
+      "time": 742.16,
+      "cardId": "riba"
+    },
+    {
+      "time": 786.8,
+      "cardId": "cedric-price-works"
+    },
+    {
+      "time": 838.16,
+      "cardId": "cca"
+    },
+    {
+      "time": 947.28,
+      "cardId": "vitruvius"
+    },
+    {
+      "time": 949.28,
+      "cardId": "andrea-palladio"
+    },
+    {
+      "time": 951.24,
+      "cardId": "leon-battista-alberti"
+    },
+    {
+      "time": 982.08,
+      "cardId": "london-zoo-aviary"
+    },
+    {
+      "time": 984.36,
+      "cardId": "rem-koolhaas"
+    },
+    {
+      "time": 1084.0,
+      "cardId": "el-croquis"
+    },
+    {
+      "time": 1096.68,
+      "cardId": "herzog-de-meuron"
+    },
+    {
+      "time": 1098.12,
+      "cardId": "norman-foster"
+    },
+    {
+      "time": 1099.24,
+      "cardId": "zaha-hadid"
+    }
+  ]
+}

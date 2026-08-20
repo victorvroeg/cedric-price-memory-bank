@@ -1,0 +1,265 @@
+{
+  "title": "Max Neal",
+  "interviewee": {
+    "name": "Max Neal",
+    "jobtitle": "Former member of the office, architect"
+  },
+  "recorded": "2014-11-05",
+  "video": {
+    "hls": null,
+    "duration": null,
+    "legacy": {
+      "vimeoId": "114330808",
+      "wpSlug": "14-max"
+    }
+  },
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 86.0,
+      "topicId": "office"
+    },
+    {
+      "start": 86.0,
+      "end": 149.0,
+      "topicId": "personality"
+    },
+    {
+      "start": 149.0,
+      "end": 238.0,
+      "topicId": "building"
+    },
+    {
+      "start": 239.0,
+      "end": 312.0,
+      "topicId": "bathat"
+    },
+    {
+      "start": 313.0,
+      "end": 484.0,
+      "topicId": "office"
+    },
+    {
+      "start": 484.0,
+      "end": 622.0,
+      "topicId": "southbank"
+    },
+    {
+      "start": 623.0,
+      "end": 685.0,
+      "topicId": "network"
+    },
+    {
+      "start": 685.0,
+      "end": 729.0,
+      "topicId": "personality"
+    },
+    {
+      "start": 729.0,
+      "end": 789.0,
+      "topicId": "enabling"
+    },
+    {
+      "start": 789.0,
+      "end": 849.0,
+      "topicId": "fun-palace"
+    },
+    {
+      "start": 850.0,
+      "end": 884.0,
+      "topicId": "influence"
+    },
+    {
+      "start": 893.0,
+      "end": 959.0,
+      "topicId": "present"
+    },
+    {
+      "start": 959.0,
+      "end": 1029.0,
+      "topicId": "building"
+    }
+  ],
+  "cards": [
+    {
+      "time": 1.64,
+      "cardId": "cedric-price-office"
+    },
+    {
+      "time": 39.92,
+      "cardId": "white-collar"
+    },
+    {
+      "time": 203.56,
+      "cardId": "south-bank"
+    },
+    {
+      "time": 205.2,
+      "cardId": "glc"
+    },
+    {
+      "time": 207.6,
+      "cardId": "la-villette-greenhouse"
+    },
+    {
+      "time": 211.76,
+      "cardId": "bernard-tschumi"
+    },
+    {
+      "time": 216.96,
+      "cardId": "bat-hat"
+    },
+    {
+      "time": 235.36,
+      "cardId": "mcalpine-company"
+    },
+    {
+      "time": 236.88,
+      "cardId": "bat-hat"
+    },
+    {
+      "time": 240.36,
+      "cardId": "battersea-powerstation"
+    },
+    {
+      "time": 242.6,
+      "cardId": "bat-hat"
+    },
+    {
+      "time": 314.44,
+      "cardId": "cedric-price-office"
+    },
+    {
+      "time": 388.44,
+      "cardId": "the-white-room"
+    },
+    {
+      "time": 406.44,
+      "cardId": "peter-reyner-banham"
+    },
+    {
+      "time": 408.16,
+      "cardId": "joan-littlewood"
+    },
+    {
+      "time": 410.16,
+      "cardId": "monica-pidgeon"
+    },
+    {
+      "time": 410.92,
+      "cardId": "paul-finch"
+    },
+    {
+      "time": 412.8,
+      "cardId": "mcalpine-company"
+    },
+    {
+      "time": 442.6,
+      "cardId": "cedric-price-office"
+    },
+    {
+      "time": 446.92,
+      "cardId": "david-allford"
+    },
+    {
+      "time": 447.6,
+      "cardId": "brian-henderson"
+    },
+    {
+      "time": 449.6,
+      "cardId": "frank-newby"
+    },
+    {
+      "time": 453.08,
+      "cardId": "aa"
+    },
+    {
+      "time": 485.0,
+      "cardId": "south-bank"
+    },
+    {
+      "time": 488.52,
+      "cardId": "tony-banks"
+    },
+    {
+      "time": 492.2,
+      "cardId": "glc"
+    },
+    {
+      "time": 577.0,
+      "cardId": "london-eye"
+    },
+    {
+      "time": 641.96,
+      "cardId": "aa"
+    },
+    {
+      "time": 643.88,
+      "cardId": "eleanor-bron"
+    },
+    {
+      "time": 648.64,
+      "cardId": "david-price"
+    },
+    {
+      "time": 655.0,
+      "cardId": "labour-party"
+    },
+    {
+      "time": 655.96,
+      "cardId": "tory-party"
+    },
+    {
+      "time": 670.68,
+      "cardId": "margaret-thatcher"
+    },
+    {
+      "time": 744.8,
+      "cardId": "fun-palace"
+    },
+    {
+      "time": 796.08,
+      "cardId": "fun-palace"
+    },
+    {
+      "time": 841.52,
+      "cardId": "richard-rogers"
+    },
+    {
+      "time": 842.04,
+      "cardId": "norman-foster"
+    },
+    {
+      "time": 842.88,
+      "cardId": "james-sterling"
+    },
+    {
+      "time": 843.68,
+      "cardId": "nicholas-grimshaw"
+    },
+    {
+      "time": 863.32,
+      "cardId": "norman-foster"
+    },
+    {
+      "time": 864.28,
+      "cardId": "richard-rogers"
+    },
+    {
+      "time": 866.08,
+      "cardId": "nicholas-grimshaw"
+    },
+    {
+      "time": 867.24,
+      "cardId": "michael-hopkins"
+    },
+    {
+      "time": 879.52,
+      "cardId": "pompidou-centre"
+    },
+    {
+      "time": 883.28,
+      "cardId": "fun-palace"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Tektronix 405x",
+  "body": "<p class=\"MsoNormal\">The Tektronix 405x series was a series of graphics <a href=\"http://en.wikipedia.org/wiki/Microcomputer\">microcomputers</a> produced by <a href=\"http://en.wikipedia.org/wiki/Tektronix\">Tektronix</a> in the late 1970s through the early 1980s. The display technology was similar to the <a href=\"http://en.wikipedia.org/wiki/Tektronix_4014\">Tektronix 4014</a> terminal, using a <a href=\"http://en.wikipedia.org/wiki/Storage_tube\">storage tube</a> display to avoid the need for <a href=\"http://en.wikipedia.org/wiki/Video_RAM\">video RAM</a>. The 4051 and 4052 included a <a href=\"http://en.wikipedia.org/wiki/CPU\">CPU</a>, up to 32 <a href=\"http://en.wikipedia.org/wiki/Kilobyte\">kilobytes</a> of <a href=\"http://en.wikipedia.org/wiki/RAM\">RAM</a>, <a href=\"http://en.wikipedia.org/wiki/Computer_keyboard\">keyboard</a>, 11\" <a href=\"http://en.wikipedia.org/wiki/Cathode_ray_tube\">CRT</a> and full-sized 300 kilobyte 3M DC-300 series high speed data cartridge (as opposed to the <a href=\"http://en.wikipedia.org/wiki/Compact_Cassette\">cassette</a> tape drive used by the <a href=\"http://en.wikipedia.org/wiki/HP_9830\">HP 9830</a>) to the right of the CRT in a single, desktop-sized housing. All models included a <a href=\"http://en.wikipedia.org/wiki/GPIB\">GPIB</a> parallel bus interface for controlling lab and test equipment and external input and output peripherals. A simple <a href=\"http://en.wikipedia.org/wiki/Operating_system\">operating system</a> and <a href=\"http://en.wikipedia.org/wiki/BASIC\">BASIC</a> <a href=\"http://en.wikipedia.org/wiki/Interpreter_(computing)\">interpreter</a> were included in ROM. A hard copy device was available which made copies of the screen.</p>",
+  "image": null,
+  "legacy": {
+    "postId": 480,
+    "date": "2014-12-11 16:18:33"
+  }
+}

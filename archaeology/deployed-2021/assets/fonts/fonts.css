@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'Apercu';
+    src: url('apercubolditalic.eot');
+    src: url('apercubolditalic.eot') format('embedded-opentype'),
+         url('apercubolditalic.woff2') format('woff2'),
+         url('apercubolditalic.woff') format('woff'),
+         url('apercubolditalic.ttf') format('truetype'),
+         url('apercubolditalic.svg#ApercuBoldItalic') format('svg');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Apercu';
+    src: url('apercubold.eot');
+    src: url('apercubold.eot') format('embedded-opentype'),
+         url('apercubold.woff2') format('woff2'),
+         url('apercubold.woff') format('woff'),
+         url('apercubold.ttf') format('truetype'),
+         url('apercubold.svg#ApercuBold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Apercu';
+    src: url('apercuregular.eot');
+    src: url('apercuregular.eot') format('embedded-opentype'),
+         url('apercuregular.woff2') format('woff2'),
+         url('apercuregular.woff') format('woff'),
+         url('apercuregular.ttf') format('truetype'),
+         url('apercuregular.svg#ApercuRegular') format('svg');
+    font-weight:400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Apercu';
+    src: url('apercuitalic.eot');
+    src: url('apercuitalic.eot') format('embedded-opentype'),
+         url('apercuitalic.woff2') format('woff2'),
+         url('apercuitalic.woff') format('woff'),
+         url('apercuitalic.ttf') format('truetype'),
+         url('apercuitalic.svg#ApercuItalic') format('svg');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Apercu';
+    src: url('aperculight.eot');
+    src: url('aperculight.eot') format('embedded-opentype'),
+         url('aperculight.woff2') format('woff2'),
+         url('aperculight.woff') format('woff'),
+         url('aperculight.ttf') format('truetype'),
+         url('aperculight.svg#ApercuLight') format('svg');
+    font-weight:300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Apercu';
+    src: url('aperculightitalic.eot');
+    src: url('aperculightitalic.eot') format('embedded-opentype'),
+         url('aperculightitalic.woff2') format('woff2'),
+         url('aperculightitalic.woff') format('woff'),
+         url('aperculightitalic.ttf') format('truetype'),
+         url('aperculightitalic.svg#ApercuLightItalic') format('svg');
+    font-weight:300;
+    font-style: italic;
+}

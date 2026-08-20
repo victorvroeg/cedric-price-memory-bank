@@ -1,0 +1,283 @@
+{
+  "title": "Hans Ulrich Obrist",
+  "interviewee": {
+    "name": "Hans Ulrich Obrist",
+    "jobtitle": "Curator"
+  },
+  "recorded": "2014-12-11",
+  "video": {
+    "hls": null,
+    "duration": null,
+    "legacy": {
+      "vimeoId": "114106513",
+      "wpSlug": "hans-ulrich-obrist-2"
+    }
+  },
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 88.0,
+      "topicId": "present"
+    },
+    {
+      "start": 269.0,
+      "end": 335.0,
+      "topicId": "person"
+    },
+    {
+      "start": 335.0,
+      "end": 349.0,
+      "topicId": "time"
+    },
+    {
+      "start": 349.0,
+      "end": 438.0,
+      "topicId": "office"
+    },
+    {
+      "start": 438.0,
+      "end": 512.0,
+      "topicId": "thinking"
+    },
+    {
+      "start": 512.0,
+      "end": 581.0,
+      "topicId": "drawing"
+    },
+    {
+      "start": 581.0,
+      "end": 777.0,
+      "topicId": "time"
+    },
+    {
+      "start": 777.0,
+      "end": 878.0,
+      "topicId": "architecture"
+    },
+    {
+      "start": 878.0,
+      "end": 939.0,
+      "topicId": "institutions"
+    },
+    {
+      "start": 939.0,
+      "end": 975.0,
+      "topicId": "time"
+    },
+    {
+      "start": 975.0,
+      "end": 1033.0,
+      "topicId": "enabling"
+    },
+    {
+      "start": 1033.0,
+      "end": 1150.0,
+      "topicId": "institutions"
+    },
+    {
+      "start": 1150.0,
+      "end": 1300.0,
+      "topicId": "delight"
+    },
+    {
+      "start": 1300.0,
+      "end": 1527.0,
+      "topicId": "institutions"
+    },
+    {
+      "start": 1528.0,
+      "end": 1760.0,
+      "topicId": "present"
+    }
+  ],
+  "cards": [
+    {
+      "time": 8.68,
+      "cardId": "the-pavilion-of-switzerland-curated-by-hans-ulrich-obrist"
+    },
+    {
+      "time": 11.0,
+      "cardId": "fun-palace"
+    },
+    {
+      "time": 17.0,
+      "cardId": "rem-koolhaas"
+    },
+    {
+      "time": 42.84,
+      "cardId": "lucius-burckhardt"
+    },
+    {
+      "time": 79.76,
+      "cardId": "herzog-de-meuron"
+    },
+    {
+      "time": 104.12,
+      "cardId": "sir-john-soanes-museum-2"
+    },
+    {
+      "time": 169.64,
+      "cardId": "margaret-ann-richardson"
+    },
+    {
+      "time": 291.92,
+      "cardId": "rem-koolhaas"
+    },
+    {
+      "time": 347.52,
+      "cardId": "brutally-early-club"
+    },
+    {
+      "time": 363.0,
+      "cardId": "trade-union-congress"
+    },
+    {
+      "time": 381.0,
+      "cardId": "fun-palace"
+    },
+    {
+      "time": 395.96,
+      "cardId": "joan-littlewood"
+    },
+    {
+      "time": 438.2,
+      "cardId": "buckminster-fuller"
+    },
+    {
+      "time": 496.0,
+      "cardId": "pop-up-parliament"
+    },
+    {
+      "time": 500.68,
+      "cardId": "interaction-centre"
+    },
+    {
+      "time": 511.76,
+      "cardId": "recp"
+    },
+    {
+      "time": 572.28,
+      "cardId": "nick-barley"
+    },
+    {
+      "time": 589.36,
+      "cardId": "richard-hamilton"
+    },
+    {
+      "time": 625.36,
+      "cardId": "282-2"
+    },
+    {
+      "time": 668.8,
+      "cardId": "cybernetics"
+    },
+    {
+      "time": 671.76,
+      "cardId": "fun-palace"
+    },
+    {
+      "time": 685.0,
+      "cardId": "rem-koolhaas"
+    },
+    {
+      "time": 686.0,
+      "cardId": "ole-scheeren"
+    },
+    {
+      "time": 780.84,
+      "cardId": "rem-koolhaas"
+    },
+    {
+      "time": 786.48,
+      "cardId": "recp"
+    },
+    {
+      "time": 790.64,
+      "cardId": "282-2"
+    },
+    {
+      "time": 831.72,
+      "cardId": "oscar-wilde"
+    },
+    {
+      "time": 890.92,
+      "cardId": "nano-museum"
+    },
+    {
+      "time": 947.04,
+      "cardId": "recp"
+    },
+    {
+      "time": 982.72,
+      "cardId": "magnet"
+    },
+    {
+      "time": 1034.84,
+      "cardId": "fun-palace"
+    },
+    {
+      "time": 1096.72,
+      "cardId": "joan-littlewood"
+    },
+    {
+      "time": 1102.0,
+      "cardId": "gordon-pask"
+    },
+    {
+      "time": 1118.0,
+      "cardId": "potteries-thinkbelt"
+    },
+    {
+      "time": 1127.28,
+      "cardId": "black-mountain-college"
+    },
+    {
+      "time": 1176.4,
+      "cardId": "london-zoo-aviary"
+    },
+    {
+      "time": 1189.84,
+      "cardId": "frank-newby"
+    },
+    {
+      "time": 1191.4,
+      "cardId": "antony-charles-robert-armstrong-jones"
+    },
+    {
+      "time": 1227.48,
+      "cardId": "the-pavilion-of-switzerland-curated-by-hans-ulrich-obrist"
+    },
+    {
+      "time": 1234.16,
+      "cardId": "atelier-bow-wow"
+    },
+    {
+      "time": 1350.68,
+      "cardId": "buckminster-fuller"
+    },
+    {
+      "time": 1380.04,
+      "cardId": "sir-john-soanes-museum-2"
+    },
+    {
+      "time": 1503.52,
+      "cardId": "superstring-theory"
+    },
+    {
+      "time": 1547.08,
+      "cardId": "fun-palace"
+    },
+    {
+      "time": 1573.96,
+      "cardId": "potteries-thinkbelt"
+    },
+    {
+      "time": 1589.88,
+      "cardId": "pop-up-parliament"
+    },
+    {
+      "time": 1609.56,
+      "cardId": "cca-competition-for-the-design-of-cities"
+    }
+  ]
+}

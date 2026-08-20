@@ -1,0 +1,239 @@
+{
+  "title": "Steve Mullin",
+  "interviewee": {
+    "name": "Steve Mullin",
+    "jobtitle": "Former member of the office, architect"
+  },
+  "recorded": "2014-11-05",
+  "video": {
+    "hls": null,
+    "duration": null,
+    "legacy": {
+      "vimeoId": "114326654",
+      "wpSlug": "11-steve"
+    }
+  },
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 30.0,
+      "topicId": "personality"
+    },
+    {
+      "start": 30.0,
+      "end": 128.0,
+      "topicId": "office"
+    },
+    {
+      "start": 128.0,
+      "end": 353.0,
+      "topicId": "potteries-thinkbelt"
+    },
+    {
+      "start": 353.0,
+      "end": 742.0,
+      "topicId": "potteries-thinkbelt"
+    },
+    {
+      "start": 742.0,
+      "end": 1042.0,
+      "topicId": "office"
+    },
+    {
+      "start": 1042.0,
+      "end": 1142.0,
+      "topicId": "personality"
+    },
+    {
+      "start": 1142.0,
+      "end": 1198.0,
+      "topicId": "food-and-drink"
+    },
+    {
+      "start": 1198.0,
+      "end": 1232.0,
+      "topicId": "network"
+    },
+    {
+      "start": 1232.0,
+      "end": 1293.0,
+      "topicId": "food-and-drink"
+    },
+    {
+      "start": 1311.0,
+      "end": 1702.0,
+      "topicId": "housing-research"
+    },
+    {
+      "start": 1702.0,
+      "end": 1788.0,
+      "topicId": "network"
+    },
+    {
+      "start": 1788.0,
+      "end": 1819.0,
+      "topicId": "uncertainty"
+    },
+    {
+      "start": 1819.0,
+      "end": 1897.0,
+      "topicId": "present"
+    },
+    {
+      "start": 1897.0,
+      "end": 2009.0,
+      "topicId": "drawing"
+    },
+    {
+      "start": 2016.0,
+      "end": 2024.0,
+      "topicId": "present"
+    }
+  ],
+  "cards": [
+    {
+      "time": 26.88,
+      "cardId": "cedric-price-office"
+    },
+    {
+      "time": 83.44,
+      "cardId": "fun-palace"
+    },
+    {
+      "time": 85.56,
+      "cardId": "cybernetics"
+    },
+    {
+      "time": 118.32,
+      "cardId": "potteries-thinkbelt"
+    },
+    {
+      "time": 129.36,
+      "cardId": "potteries-thinkbelt"
+    },
+    {
+      "time": 138.8,
+      "cardId": "fun-palace"
+    },
+    {
+      "time": 143.0,
+      "cardId": "glc"
+    },
+    {
+      "time": 183.76,
+      "cardId": "staffordshire-potteries-2"
+    },
+    {
+      "time": 232.04,
+      "cardId": "potteries-thinkbelt-housing-types"
+    },
+    {
+      "time": 350.88,
+      "cardId": "aa"
+    },
+    {
+      "time": 355.12,
+      "cardId": "potteries-thinkbelt"
+    },
+    {
+      "time": 549.32,
+      "cardId": "buckminster-fuller"
+    },
+    {
+      "time": 612.24,
+      "cardId": "potteries-thinkbelt-housing-types"
+    },
+    {
+      "time": 625.52,
+      "cardId": "riba"
+    },
+    {
+      "time": 637.8,
+      "cardId": "fun-palace"
+    },
+    {
+      "time": 669.44,
+      "cardId": "british-airports-authority-office-heathrow"
+    },
+    {
+      "time": 677.84,
+      "cardId": "btdb-computer-centre"
+    },
+    {
+      "time": 681.84,
+      "cardId": "fun-palace"
+    },
+    {
+      "time": 716.28,
+      "cardId": "cedric-price-office"
+    },
+    {
+      "time": 743.6,
+      "cardId": "cedric-price-office"
+    },
+    {
+      "time": 1205.88,
+      "cardId": "hot-stuff-club"
+    },
+    {
+      "time": 1210.8,
+      "cardId": "national-federation-of-demolition-contractors"
+    },
+    {
+      "time": 1237.2,
+      "cardId": "david-allford"
+    },
+    {
+      "time": 1239.4,
+      "cardId": "frank-newby"
+    },
+    {
+      "time": 1312.44,
+      "cardId": "housing-research"
+    },
+    {
+      "time": 1319.68,
+      "cardId": "potteries-thinkbelt-housing-types"
+    },
+    {
+      "time": 1393.16,
+      "cardId": "buckminster-fuller"
+    },
+    {
+      "time": 1401.32,
+      "cardId": "steel-house-competition"
+    },
+    {
+      "time": 1549.2,
+      "cardId": "glc"
+    },
+    {
+      "time": 1639.24,
+      "cardId": "cedric-price-office"
+    },
+    {
+      "time": 1719.8,
+      "cardId": "london-zoo-aviary"
+    },
+    {
+      "time": 1746.76,
+      "cardId": "oxford-corner-house"
+    },
+    {
+      "time": 1763.6,
+      "cardId": "btdb-computer-centre"
+    },
+    {
+      "time": 1771.92,
+      "cardId": "blackpool-restaurant"
+    },
+    {
+      "time": 1903.76,
+      "cardId": "alison-and-peter-smithson"
+    },
+    {
+      "time": 1943.6,
+      "cardId": "fun-palace"
+    }
+  ]
+}

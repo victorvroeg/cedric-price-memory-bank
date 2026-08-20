@@ -1,0 +1,305 @@
+{
+  "title": "John Frazer",
+  "interviewee": {
+    "name": "John Frazer",
+    "jobtitle": "Researcher, designer, educator"
+  },
+  "recorded": "2014-11-05",
+  "video": {
+    "hls": null,
+    "duration": null,
+    "legacy": {
+      "vimeoId": "114329904",
+      "wpSlug": "john"
+    }
+  },
+  "segments": [
+    {
+      "start": 2.0,
+      "end": 36.0,
+      "topicId": "conscience"
+    },
+    {
+      "start": 36.0,
+      "end": 85.0,
+      "topicId": "drawing"
+    },
+    {
+      "start": 85.0,
+      "end": 209.0,
+      "topicId": "time"
+    },
+    {
+      "start": 209.0,
+      "end": 310.0,
+      "topicId": "generator"
+    },
+    {
+      "start": 332.0,
+      "end": 652.0,
+      "topicId": "generator"
+    },
+    {
+      "start": 652.0,
+      "end": 678.0,
+      "topicId": "conscience"
+    },
+    {
+      "start": 678.0,
+      "end": 801.0,
+      "topicId": "technology"
+    },
+    {
+      "start": 801.0,
+      "end": 868.0,
+      "topicId": "englishness"
+    },
+    {
+      "start": 868.0,
+      "end": 1032.0,
+      "topicId": "fun-palace"
+    },
+    {
+      "start": 1032.0,
+      "end": 1261.0,
+      "topicId": "potteries-thinkbelt"
+    },
+    {
+      "start": 1261.0,
+      "end": 1324.0,
+      "topicId": "polyark"
+    },
+    {
+      "start": 1324.0,
+      "end": 1425.0,
+      "topicId": "conscience"
+    },
+    {
+      "start": 1425.0,
+      "end": 1629.0,
+      "topicId": "thinking"
+    },
+    {
+      "start": 1629.0,
+      "end": 1646.0,
+      "topicId": "present"
+    },
+    {
+      "start": 1646.0,
+      "end": 1682.0,
+      "topicId": "thinking"
+    },
+    {
+      "start": 1682.0,
+      "end": 1708.0,
+      "topicId": "thinking"
+    },
+    {
+      "start": 1708.0,
+      "end": 1721.0,
+      "topicId": "generator"
+    }
+  ],
+  "cards": [
+    {
+      "time": 17.36,
+      "cardId": "roy-landau"
+    },
+    {
+      "time": 43.4,
+      "cardId": "cedric-price-office"
+    },
+    {
+      "time": 101.48,
+      "cardId": "aa-unit-system"
+    },
+    {
+      "time": 147.16,
+      "cardId": "tory-party"
+    },
+    {
+      "time": 213.68,
+      "cardId": "nick-bailey"
+    },
+    {
+      "time": 216.68,
+      "cardId": "cambridge-university"
+    },
+    {
+      "time": 219.32,
+      "cardId": "generator"
+    },
+    {
+      "time": 277.72,
+      "cardId": "tektronix-405x"
+    },
+    {
+      "time": 340.76,
+      "cardId": "ron-herron"
+    },
+    {
+      "time": 344.88,
+      "cardId": "archigram"
+    },
+    {
+      "time": 408.52,
+      "cardId": "tektronix-405x"
+    },
+    {
+      "time": 426.44,
+      "cardId": "generator"
+    },
+    {
+      "time": 457.36,
+      "cardId": "deyan-sudjic"
+    },
+    {
+      "time": 460.0,
+      "cardId": "riba"
+    },
+    {
+      "time": 541.52,
+      "cardId": "commodore-pet"
+    },
+    {
+      "time": 593.04,
+      "cardId": "bd"
+    },
+    {
+      "time": 653.08,
+      "cardId": "monica-pidgeon"
+    },
+    {
+      "time": 658.12,
+      "cardId": "generator"
+    },
+    {
+      "time": 764.56,
+      "cardId": "aa"
+    },
+    {
+      "time": 786.36,
+      "cardId": "generator"
+    },
+    {
+      "time": 873.92,
+      "cardId": "fun-palace"
+    },
+    {
+      "time": 896.24,
+      "cardId": "cybernetics"
+    },
+    {
+      "time": 928.16,
+      "cardId": "joan-littlewood"
+    },
+    {
+      "time": 949.4,
+      "cardId": "pompidou-centre"
+    },
+    {
+      "time": 969.4,
+      "cardId": "richard-rogers"
+    },
+    {
+      "time": 1034.72,
+      "cardId": "potteries-thinkbelt"
+    },
+    {
+      "time": 1048.6,
+      "cardId": "staffordshire-potteries"
+    },
+    {
+      "time": 1125.6,
+      "cardId": "archigram"
+    },
+    {
+      "time": 1175.4,
+      "cardId": "international-dialogue-of-experimental-architecture"
+    },
+    {
+      "time": 1192.04,
+      "cardId": "archigram"
+    },
+    {
+      "time": 1197.4,
+      "cardId": "peter-cook"
+    },
+    {
+      "time": 1224.48,
+      "cardId": "claude-parent-paul-virilio-2"
+    },
+    {
+      "time": 1249.88,
+      "cardId": "potteries-thinkbelt"
+    },
+    {
+      "time": 1270.28,
+      "cardId": "polyark"
+    },
+    {
+      "time": 1327.96,
+      "cardId": "rem-koolhaas"
+    },
+    {
+      "time": 1355.16,
+      "cardId": "peter-cook"
+    },
+    {
+      "time": 1366.32,
+      "cardId": "london-zoo-aviary"
+    },
+    {
+      "time": 1426.48,
+      "cardId": "roy-landau"
+    },
+    {
+      "time": 1435.32,
+      "cardId": "gay-hussar"
+    },
+    {
+      "time": 1483.28,
+      "cardId": "tugendhat-house"
+    },
+    {
+      "time": 1496.4,
+      "cardId": "mies"
+    },
+    {
+      "time": 1574.36,
+      "cardId": "new-makers-of-modern-culture"
+    },
+    {
+      "time": 1649.0,
+      "cardId": "eleanor-bron"
+    },
+    {
+      "time": 1650.08,
+      "cardId": "samantha-hardingham"
+    },
+    {
+      "time": 1653.32,
+      "cardId": "retriever"
+    },
+    {
+      "time": 1662.88,
+      "cardId": "pickwick-papers"
+    },
+    {
+      "time": 1683.8,
+      "cardId": "generator"
+    },
+    {
+      "time": 1684.84,
+      "cardId": "fun-palace"
+    },
+    {
+      "time": 1686.92,
+      "cardId": "potteries-thinkbelt"
+    },
+    {
+      "time": 1709.08,
+      "cardId": "generator"
+    }
+  ]
+}

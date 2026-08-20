@@ -1,0 +1,191 @@
+{
+  "title": "Carlos Villanueva Brandt",
+  "interviewee": {
+    "name": "Carlos Villanueva Brandt",
+    "jobtitle": "Architect and educator"
+  },
+  "recorded": "2014-11-05",
+  "video": {
+    "hls": null,
+    "duration": null,
+    "legacy": {
+      "vimeoId": "111771835",
+      "wpSlug": "08-carlos"
+    }
+  },
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 123.0,
+      "topicId": "institutions"
+    },
+    {
+      "start": 123.0,
+      "end": 171.0,
+      "topicId": "person"
+    },
+    {
+      "start": 171.0,
+      "end": 240.0,
+      "topicId": "thinking"
+    },
+    {
+      "start": 250.0,
+      "end": 446.0,
+      "topicId": "englishness"
+    },
+    {
+      "start": 480.0,
+      "end": 502.0,
+      "topicId": "drawing"
+    },
+    {
+      "start": 502.0,
+      "end": 634.0,
+      "topicId": "scene"
+    },
+    {
+      "start": 634.0,
+      "end": 780.0,
+      "topicId": "architecture"
+    },
+    {
+      "start": 780.0,
+      "end": 941.0,
+      "topicId": "enabling"
+    },
+    {
+      "start": 941.0,
+      "end": 1006.0,
+      "topicId": "person"
+    },
+    {
+      "start": 1006.0,
+      "end": 1218.0,
+      "topicId": "delight"
+    },
+    {
+      "start": 1218.0,
+      "end": 1300.0,
+      "topicId": "present"
+    }
+  ],
+  "cards": [
+    {
+      "time": 3.32,
+      "cardId": "aa"
+    },
+    {
+      "time": 20.56,
+      "cardId": "south-bank"
+    },
+    {
+      "time": 27.08,
+      "cardId": "alvin-boyarsky"
+    },
+    {
+      "time": 44.92,
+      "cardId": "rem-koolhaas"
+    },
+    {
+      "time": 71.52,
+      "cardId": "rem-koolhaas"
+    },
+    {
+      "time": 262.04,
+      "cardId": "john-summerson"
+    },
+    {
+      "time": 263.8,
+      "cardId": "robin-evans"
+    },
+    {
+      "time": 275.84,
+      "cardId": "sir-john-soanes-museum"
+    },
+    {
+      "time": 297.36,
+      "cardId": "white-collar"
+    },
+    {
+      "time": 364.8,
+      "cardId": "delirious-new-york"
+    },
+    {
+      "time": 366.96,
+      "cardId": "manhattan-transcripts"
+    },
+    {
+      "time": 370.8,
+      "cardId": "bernard-tschumi"
+    },
+    {
+      "time": 377.6,
+      "cardId": "nigel-coates"
+    },
+    {
+      "time": 402.4,
+      "cardId": "nato"
+    },
+    {
+      "time": 459.76,
+      "cardId": "john-summerson"
+    },
+    {
+      "time": 463.96,
+      "cardId": "robin-evans"
+    },
+    {
+      "time": 475.92,
+      "cardId": "cambridge-university"
+    },
+    {
+      "time": 527.72,
+      "cardId": "aa"
+    },
+    {
+      "time": 647.24,
+      "cardId": "fun-palace"
+    },
+    {
+      "time": 657.92,
+      "cardId": "aa"
+    },
+    {
+      "time": 771.72,
+      "cardId": "open-university"
+    },
+    {
+      "time": 837.4,
+      "cardId": "south-bank"
+    },
+    {
+      "time": 967.2,
+      "cardId": "tory-party"
+    },
+    {
+      "time": 971.44,
+      "cardId": "white-collar"
+    },
+    {
+      "time": 983.68,
+      "cardId": "rem-koolhaas"
+    },
+    {
+      "time": 1038.72,
+      "cardId": "eleanor-bron"
+    },
+    {
+      "time": 1065.6,
+      "cardId": "rem-koolhaas"
+    },
+    {
+      "time": 1080.88,
+      "cardId": "peter-cook"
+    },
+    {
+      "time": 1092.16,
+      "cardId": "282-2"
+    }
+  ]
+}

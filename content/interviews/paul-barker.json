@@ -1,0 +1,177 @@
+{
+  "title": "Paul Barker",
+  "interviewee": {
+    "name": "Paul Barker",
+    "jobtitle": "Journalist and writer"
+  },
+  "recorded": "2014-11-05",
+  "video": {
+    "hls": null,
+    "duration": null,
+    "legacy": {
+      "vimeoId": "111770380",
+      "wpSlug": "13-paul"
+    }
+  },
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 145.0,
+      "topicId": "communications"
+    },
+    {
+      "start": 145.0,
+      "end": 364.0,
+      "topicId": "pop-up-parliament"
+    },
+    {
+      "start": 368.0,
+      "end": 586.0,
+      "topicId": "potteries-thinkbelt"
+    },
+    {
+      "start": 586.0,
+      "end": 1030.0,
+      "topicId": "non-plan"
+    },
+    {
+      "start": 1030.0,
+      "end": 1064.0,
+      "topicId": "appearance"
+    },
+    {
+      "start": 1064.0,
+      "end": 1177.0,
+      "topicId": "office"
+    },
+    {
+      "start": 1177.0,
+      "end": 1302.0,
+      "topicId": "personality"
+    },
+    {
+      "start": 1302.0,
+      "end": 1320.0,
+      "topicId": "building"
+    },
+    {
+      "start": 1322.0,
+      "end": 1397.0,
+      "topicId": "present"
+    }
+  ],
+  "cards": [
+    {
+      "time": 29.6,
+      "cardId": "new-society"
+    },
+    {
+      "time": 57.84,
+      "cardId": "peter-reyner-banham"
+    },
+    {
+      "time": 146.16,
+      "cardId": "new-society"
+    },
+    {
+      "time": 184.12,
+      "cardId": "cedric-price-office"
+    },
+    {
+      "time": 247.32,
+      "cardId": "cedric-price-office"
+    },
+    {
+      "time": 304.52,
+      "cardId": "parliament"
+    },
+    {
+      "time": 371.12,
+      "cardId": "potteries-thinkbelt"
+    },
+    {
+      "time": 377.84,
+      "cardId": "pop-up-parliament"
+    },
+    {
+      "time": 404.88,
+      "cardId": "staffordshire-potteries-2"
+    },
+    {
+      "time": 425.24,
+      "cardId": "wedgwood"
+    },
+    {
+      "time": 566.76,
+      "cardId": "open-university"
+    },
+    {
+      "time": 588.44,
+      "cardId": "non-plan"
+    },
+    {
+      "time": 623.0,
+      "cardId": "peter-hall"
+    },
+    {
+      "time": 693.36,
+      "cardId": "le-corbusier"
+    },
+    {
+      "time": 824.96,
+      "cardId": "peter-reyner-banham"
+    },
+    {
+      "time": 1032.04,
+      "cardId": "ludwig-wittgenstein"
+    },
+    {
+      "time": 1047.72,
+      "cardId": "white-collar"
+    },
+    {
+      "time": 1065.2,
+      "cardId": "cedric-price-office"
+    },
+    {
+      "time": 1075.8,
+      "cardId": "bt-tower"
+    },
+    {
+      "time": 1075.8,
+      "cardId": "peter-reyner-banham"
+    },
+    {
+      "time": 1123.08,
+      "cardId": "steve-mullin"
+    },
+    {
+      "time": 1125.8,
+      "cardId": "will-alsop"
+    },
+    {
+      "time": 1136.04,
+      "cardId": "the-white-room"
+    },
+    {
+      "time": 1174.2,
+      "cardId": "trade-union-congress"
+    },
+    {
+      "time": 1224.92,
+      "cardId": "edward-wadie-said"
+    },
+    {
+      "time": 1248.76,
+      "cardId": "cyd-charisse"
+    },
+    {
+      "time": 1250.36,
+      "cardId": "an-american-in-paris"
+    },
+    {
+      "time": 1268.52,
+      "cardId": "learning-from-las-vegas"
+    }
+  ]
+}

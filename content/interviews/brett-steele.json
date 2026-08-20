@@ -1,0 +1,127 @@
+{
+  "title": "Brett Steele",
+  "interviewee": {
+    "name": "Brett Steele",
+    "jobtitle": "Director of the Architectural Association"
+  },
+  "recorded": "2014-11-05",
+  "video": {
+    "hls": null,
+    "duration": null,
+    "legacy": {
+      "vimeoId": "111770375",
+      "wpSlug": "09-brett"
+    }
+  },
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 85.0,
+      "topicId": "conscience"
+    },
+    {
+      "start": 85.0,
+      "end": 293.0,
+      "topicId": "personality"
+    },
+    {
+      "start": 293.0,
+      "end": 435.0,
+      "topicId": "influence"
+    },
+    {
+      "start": 435.0,
+      "end": 603.0,
+      "topicId": "office"
+    },
+    {
+      "start": 603.0,
+      "end": 683.0,
+      "topicId": "building"
+    },
+    {
+      "start": 683.0,
+      "end": 772.0,
+      "topicId": "thinking"
+    },
+    {
+      "start": 772.0,
+      "end": 1006.0,
+      "topicId": "present"
+    }
+  ],
+  "cards": [
+    {
+      "time": 195.92,
+      "cardId": "aa"
+    },
+    {
+      "time": 220.32,
+      "cardId": "walter-gropius"
+    },
+    {
+      "time": 328.88,
+      "cardId": "richard-rogers"
+    },
+    {
+      "time": 328.92,
+      "cardId": "renzo-piano"
+    },
+    {
+      "time": 328.96,
+      "cardId": "listed-building"
+    },
+    {
+      "time": 388.16,
+      "cardId": "aa"
+    },
+    {
+      "time": 444.04,
+      "cardId": "cedric-price-office"
+    },
+    {
+      "time": 451.12,
+      "cardId": "cedric-price-works"
+    },
+    {
+      "time": 464.08,
+      "cardId": "fun-palace"
+    },
+    {
+      "time": 483.92,
+      "cardId": "aa"
+    },
+    {
+      "time": 519.8,
+      "cardId": "samantha-hardingham"
+    },
+    {
+      "time": 524.84,
+      "cardId": "retriever"
+    },
+    {
+      "time": 598.0,
+      "cardId": "the-archive-as-a-productive-space-of-conflict-event-2"
+    },
+    {
+      "time": 636.36,
+      "cardId": "aa"
+    },
+    {
+      "time": 683.92,
+      "cardId": "rem-koolhaas"
+    },
+    {
+      "time": 806.12,
+      "cardId": "cca"
+    },
+    {
+      "time": 848.96,
+      "cardId": "cedric-price-a-selective-bibliography-draft"
+    },
+    {
+      "time": 853.56,
+      "cardId": "cedric-price-works"
+    }
+  ]
+}

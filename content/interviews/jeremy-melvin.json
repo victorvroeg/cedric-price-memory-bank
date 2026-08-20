@@ -1,0 +1,333 @@
+{
+  "title": "Jeremy Melvin",
+  "interviewee": {
+    "name": "Jeremy Melvin",
+    "jobtitle": "Journalist, writer, curator"
+  },
+  "recorded": "2014-11-05",
+  "video": {
+    "hls": null,
+    "duration": null,
+    "legacy": {
+      "vimeoId": "114326653",
+      "wpSlug": "07-jeremy"
+    }
+  },
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 46.0,
+      "topicId": "personality"
+    },
+    {
+      "start": 46.0,
+      "end": 83.0,
+      "topicId": "appearance"
+    },
+    {
+      "start": 83.0,
+      "end": 140.0,
+      "topicId": "uncertainty"
+    },
+    {
+      "start": 140.0,
+      "end": 272.0,
+      "topicId": "delight"
+    },
+    {
+      "start": 272.0,
+      "end": 389.0,
+      "topicId": "influence"
+    },
+    {
+      "start": 389.0,
+      "end": 503.0,
+      "topicId": "building"
+    },
+    {
+      "start": 503.0,
+      "end": 579.0,
+      "topicId": "present"
+    },
+    {
+      "start": 579.0,
+      "end": 666.0,
+      "topicId": "interaction-centre"
+    },
+    {
+      "start": 666.0,
+      "end": 702.0,
+      "topicId": "building"
+    },
+    {
+      "start": 702.0,
+      "end": 931.0,
+      "topicId": "influence"
+    },
+    {
+      "start": 931.0,
+      "end": 1031.0,
+      "topicId": "enabling"
+    },
+    {
+      "start": 1031.0,
+      "end": 1168.0,
+      "topicId": "fun-palace"
+    },
+    {
+      "start": 1168.0,
+      "end": 1407.0,
+      "topicId": "potteries-thinkbelt"
+    },
+    {
+      "start": 1407.0,
+      "end": 1532.0,
+      "topicId": "thinking"
+    },
+    {
+      "start": 1532.0,
+      "end": 1749.0,
+      "topicId": "food-and-drink"
+    },
+    {
+      "start": 1749.0,
+      "end": 1835.0,
+      "topicId": "office"
+    },
+    {
+      "start": 1835.0,
+      "end": 2030.0,
+      "topicId": "institutions"
+    },
+    {
+      "start": 2030.0,
+      "end": 2110.0,
+      "topicId": "institutions"
+    },
+    {
+      "start": 2110.0,
+      "end": 2245.0,
+      "topicId": "pop-up-parliament"
+    },
+    {
+      "start": 2245.0,
+      "end": 2356.0,
+      "topicId": "thinking"
+    },
+    {
+      "start": 2356.0,
+      "end": 2433.0,
+      "topicId": "present"
+    }
+  ],
+  "cards": [
+    {
+      "time": 47.64,
+      "cardId": "white-collar"
+    },
+    {
+      "time": 152.12,
+      "cardId": "vitruvius"
+    },
+    {
+      "time": 156.0,
+      "cardId": "henry-wotton"
+    },
+    {
+      "time": 223.48,
+      "cardId": "labour-party"
+    },
+    {
+      "time": 270.32,
+      "cardId": "hugh-dalton"
+    },
+    {
+      "time": 271.04,
+      "cardId": "margaret-thatcher"
+    },
+    {
+      "time": 312.16,
+      "cardId": "david-allford"
+    },
+    {
+      "time": 350.0,
+      "cardId": "frank-newby"
+    },
+    {
+      "time": 404.24,
+      "cardId": "london-zoo-aviary"
+    },
+    {
+      "time": 411.76,
+      "cardId": "interaction-centre"
+    },
+    {
+      "time": 414.28,
+      "cardId": "fun-palace"
+    },
+    {
+      "time": 418.72,
+      "cardId": "joan-littlewood"
+    },
+    {
+      "time": 553.72,
+      "cardId": "potteries-thinkbelt"
+    },
+    {
+      "time": 580.12,
+      "cardId": "interaction-centre"
+    },
+    {
+      "time": 593.8,
+      "cardId": "listed-building"
+    },
+    {
+      "time": 624.08,
+      "cardId": "bd"
+    },
+    {
+      "time": 625.8,
+      "cardId": "paul-finch"
+    },
+    {
+      "time": 712.56,
+      "cardId": "magnet"
+    },
+    {
+      "time": 718.04,
+      "cardId": "keiichi-saiki"
+    },
+    {
+      "time": 776.6,
+      "cardId": "will-alsop"
+    },
+    {
+      "time": 787.72,
+      "cardId": "peckham-library"
+    },
+    {
+      "time": 1021.72,
+      "cardId": "fun-palace"
+    },
+    {
+      "time": 1022.52,
+      "cardId": "interaction-centre"
+    },
+    {
+      "time": 1024.0,
+      "cardId": "magnet"
+    },
+    {
+      "time": 1036.76,
+      "cardId": "fun-palace"
+    },
+    {
+      "time": 1044.16,
+      "cardId": "joan-littlewood"
+    },
+    {
+      "time": 1128.8,
+      "cardId": "hans-ulrich-obrist"
+    },
+    {
+      "time": 1132.72,
+      "cardId": "fun-palace"
+    },
+    {
+      "time": 1173.44,
+      "cardId": "potteries-thinkbelt"
+    },
+    {
+      "time": 1188.32,
+      "cardId": "cambridge-university"
+    },
+    {
+      "time": 1256.4,
+      "cardId": "staffordshire-potteries"
+    },
+    {
+      "time": 1329.44,
+      "cardId": "new-society"
+    },
+    {
+      "time": 1331.12,
+      "cardId": "paul-barker"
+    },
+    {
+      "time": 1340.8,
+      "cardId": "peter-reyner-banham"
+    },
+    {
+      "time": 1504.76,
+      "cardId": "potteries-thinkbelt"
+    },
+    {
+      "time": 1543.48,
+      "cardId": "david-allford"
+    },
+    {
+      "time": 1636.36,
+      "cardId": "frs-yorke"
+    },
+    {
+      "time": 1639.64,
+      "cardId": "the-white-room"
+    },
+    {
+      "time": 1750.04,
+      "cardId": "the-white-room"
+    },
+    {
+      "time": 1751.88,
+      "cardId": "cedric-price-office"
+    },
+    {
+      "time": 1896.04,
+      "cardId": "pop-up-parliament"
+    },
+    {
+      "time": 1993.6,
+      "cardId": "cedric-price-obituary-by-jeremy-melvin"
+    },
+    {
+      "time": 2065.84,
+      "cardId": "potteries-thinkbelt"
+    },
+    {
+      "time": 2067.08,
+      "cardId": "supercrit"
+    },
+    {
+      "time": 2071.96,
+      "cardId": "architectural-review"
+    },
+    {
+      "time": 2089.4,
+      "cardId": "the-barbican-estate"
+    },
+    {
+      "time": 2111.12,
+      "cardId": "pop-up-parliament"
+    },
+    {
+      "time": 2116.64,
+      "cardId": "new-society"
+    },
+    {
+      "time": 2117.92,
+      "cardId": "paul-barker"
+    },
+    {
+      "time": 2131.68,
+      "cardId": "parliament"
+    },
+    {
+      "time": 2148.56,
+      "cardId": "winston-churchill"
+    },
+    {
+      "time": 2408.64,
+      "cardId": "rem-koolhaas"
+    }
+  ]
+}

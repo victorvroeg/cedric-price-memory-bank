@@ -1,0 +1,205 @@
+{
+  "title": "Will Alsop",
+  "interviewee": {
+    "name": "Will Alsop",
+    "jobtitle": "Former member of the office, architect"
+  },
+  "recorded": "2014-11-05",
+  "video": {
+    "hls": null,
+    "duration": null,
+    "legacy": {
+      "vimeoId": "114326652",
+      "wpSlug": "will"
+    }
+  },
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 392.0,
+      "topicId": "interaction-centre"
+    },
+    {
+      "start": 392.0,
+      "end": 496.0,
+      "topicId": "building"
+    },
+    {
+      "start": 496.0,
+      "end": 558.0,
+      "topicId": "institutions"
+    },
+    {
+      "start": 558.0,
+      "end": 601.0,
+      "topicId": "office"
+    },
+    {
+      "start": 601.0,
+      "end": 667.0,
+      "topicId": "mcappy"
+    },
+    {
+      "start": 667.0,
+      "end": 813.0,
+      "topicId": "office"
+    },
+    {
+      "start": 813.0,
+      "end": 852.0,
+      "topicId": "hot-stuff-club"
+    },
+    {
+      "start": 852.0,
+      "end": 969.0,
+      "topicId": "office"
+    },
+    {
+      "start": 969.0,
+      "end": 1060.0,
+      "topicId": "enabling"
+    },
+    {
+      "start": 1060.0,
+      "end": 1097.0,
+      "topicId": "personality"
+    },
+    {
+      "start": 1097.0,
+      "end": 1243.0,
+      "topicId": "fun-palace"
+    },
+    {
+      "start": 1257.0,
+      "end": 1291.0,
+      "topicId": "mcappy"
+    },
+    {
+      "start": 1291.0,
+      "end": 1390.0,
+      "topicId": "conscience"
+    }
+  ],
+  "cards": [
+    {
+      "time": 2.64,
+      "cardId": "cedric-price-office"
+    },
+    {
+      "time": 15.88,
+      "cardId": "interaction-centre"
+    },
+    {
+      "time": 421.56,
+      "cardId": "la-villette-greenhouse"
+    },
+    {
+      "time": 498.32,
+      "cardId": "aa"
+    },
+    {
+      "time": 504.84,
+      "cardId": "alvin-boyarsky"
+    },
+    {
+      "time": 518.88,
+      "cardId": "aa"
+    },
+    {
+      "time": 568.32,
+      "cardId": "cedric-price-office"
+    },
+    {
+      "time": 577.76,
+      "cardId": "the-white-room"
+    },
+    {
+      "time": 602.56,
+      "cardId": "mcalpine-company"
+    },
+    {
+      "time": 607.68,
+      "cardId": "mcappy"
+    },
+    {
+      "time": 672.0,
+      "cardId": "cedric-price-office"
+    },
+    {
+      "time": 761.16,
+      "cardId": "cedric-price-office"
+    },
+    {
+      "time": 815.88,
+      "cardId": "hot-stuff-club"
+    },
+    {
+      "time": 833.88,
+      "cardId": "frank-newby"
+    },
+    {
+      "time": 835.36,
+      "cardId": "david-allford"
+    },
+    {
+      "time": 841.44,
+      "cardId": "trade-union-congress"
+    },
+    {
+      "time": 857.68,
+      "cardId": "david-price"
+    },
+    {
+      "time": 874.8,
+      "cardId": "smarties"
+    },
+    {
+      "time": 877.08,
+      "cardId": "the-white-room"
+    },
+    {
+      "time": 896.04,
+      "cardId": "escape-from-colditz"
+    },
+    {
+      "time": 1092.64,
+      "cardId": "richard-meier"
+    },
+    {
+      "time": 1102.68,
+      "cardId": "joan-littlewood"
+    },
+    {
+      "time": 1104.36,
+      "cardId": "fun-palace"
+    },
+    {
+      "time": 1157.08,
+      "cardId": "pompidou-centre"
+    },
+    {
+      "time": 1174.04,
+      "cardId": "richard-rogers"
+    },
+    {
+      "time": 1175.68,
+      "cardId": "renzo-piano"
+    },
+    {
+      "time": 1239.44,
+      "cardId": "labour-party"
+    },
+    {
+      "time": 1260.8,
+      "cardId": "mcappy"
+    },
+    {
+      "time": 1328.16,
+      "cardId": "vienna-university-of-technology"
+    },
+    {
+      "time": 1356.68,
+      "cardId": "archigram"
+    }
+  ]
+}

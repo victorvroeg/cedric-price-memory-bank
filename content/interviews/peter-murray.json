@@ -1,0 +1,241 @@
+{
+  "title": "Peter Murray",
+  "interviewee": {
+    "name": "Peter Murray",
+    "jobtitle": "Architectural journalist"
+  },
+  "recorded": "2014-11-05",
+  "video": {
+    "hls": null,
+    "duration": null,
+    "legacy": {
+      "vimeoId": "111770376",
+      "wpSlug": "11-peter-murray"
+    }
+  },
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 55.0,
+      "topicId": "present"
+    },
+    {
+      "start": 55.0,
+      "end": 102.0,
+      "topicId": "appearance"
+    },
+    {
+      "start": 102.0,
+      "end": 245.0,
+      "topicId": "personality"
+    },
+    {
+      "start": 245.0,
+      "end": 394.0,
+      "topicId": "personality"
+    },
+    {
+      "start": 394.0,
+      "end": 567.0,
+      "topicId": "time"
+    },
+    {
+      "start": 567.0,
+      "end": 880.0,
+      "topicId": "institutions"
+    },
+    {
+      "start": 880.0,
+      "end": 915.0,
+      "topicId": "potteries-thinkbelt"
+    },
+    {
+      "start": 915.0,
+      "end": 1008.0,
+      "topicId": "potteries-thinkbelt"
+    },
+    {
+      "start": 1008.0,
+      "end": 1060.0,
+      "topicId": "network"
+    },
+    {
+      "start": 1060.0,
+      "end": 1149.0,
+      "topicId": "network"
+    },
+    {
+      "start": 1173.0,
+      "end": 1237.0,
+      "topicId": "communications"
+    },
+    {
+      "start": 1237.0,
+      "end": 1329.0,
+      "topicId": "enabling"
+    },
+    {
+      "start": 1329.0,
+      "end": 1412.0,
+      "topicId": "present"
+    }
+  ],
+  "cards": [
+    {
+      "time": 21.84,
+      "cardId": "cybernetics"
+    },
+    {
+      "time": 79.84,
+      "cardId": "white-collar"
+    },
+    {
+      "time": 114.2,
+      "cardId": "prices-candles"
+    },
+    {
+      "time": 188.16,
+      "cardId": "bd"
+    },
+    {
+      "time": 272.16,
+      "cardId": "cedric-price-office"
+    },
+    {
+      "time": 283.72,
+      "cardId": "the-white-room"
+    },
+    {
+      "time": 295.64,
+      "cardId": "aa"
+    },
+    {
+      "time": 317.36,
+      "cardId": "clip-kit"
+    },
+    {
+      "time": 399.8,
+      "cardId": "ad"
+    },
+    {
+      "time": 403.48,
+      "cardId": "cp-supplements"
+    },
+    {
+      "time": 516.84,
+      "cardId": "retriever"
+    },
+    {
+      "time": 567.68,
+      "cardId": "polyark"
+    },
+    {
+      "time": 617.28,
+      "cardId": "routemaster"
+    },
+    {
+      "time": 636.52,
+      "cardId": "aa"
+    },
+    {
+      "time": 674.08,
+      "cardId": "dennis-crompton"
+    },
+    {
+      "time": 696.36,
+      "cardId": "cambridge-university"
+    },
+    {
+      "time": 698.68,
+      "cardId": "nottingham-trent-university"
+    },
+    {
+      "time": 699.6,
+      "cardId": "edinburgh-school-of-architecture"
+    },
+    {
+      "time": 780.0,
+      "cardId": "eric-parry"
+    },
+    {
+      "time": 816.96,
+      "cardId": "deyan-sudjic"
+    },
+    {
+      "time": 819.76,
+      "cardId": "blueprint"
+    },
+    {
+      "time": 844.44,
+      "cardId": "morris-minor"
+    },
+    {
+      "time": 877.92,
+      "cardId": "ad"
+    },
+    {
+      "time": 881.64,
+      "cardId": "potteries-thinkbelt"
+    },
+    {
+      "time": 884.76,
+      "cardId": "aa"
+    },
+    {
+      "time": 918.4,
+      "cardId": "potteries-thinkbelt"
+    },
+    {
+      "time": 923.16,
+      "cardId": "staffordshire-potteries"
+    },
+    {
+      "time": 1030.72,
+      "cardId": "labour-party"
+    },
+    {
+      "time": 1046.08,
+      "cardId": "the-white-room"
+    },
+    {
+      "time": 1070.52,
+      "cardId": "antony-charles-robert-armstrong-jones"
+    },
+    {
+      "time": 1078.64,
+      "cardId": "kensington-palace"
+    },
+    {
+      "time": 1091.08,
+      "cardId": "charles-philip-arthur-george"
+    },
+    {
+      "time": 1108.76,
+      "cardId": "the-architecture-club"
+    },
+    {
+      "time": 1178.8,
+      "cardId": "peter-reyner-banham"
+    },
+    {
+      "time": 1181.08,
+      "cardId": "new-society"
+    },
+    {
+      "time": 1183.68,
+      "cardId": "paul-barker"
+    },
+    {
+      "time": 1193.0,
+      "cardId": "non-plan"
+    },
+    {
+      "time": 1300.44,
+      "cardId": "interaction-centre"
+    },
+    {
+      "time": 1394.8,
+      "cardId": "john-habraken"
+    }
+  ]
+}

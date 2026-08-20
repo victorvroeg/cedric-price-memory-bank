@@ -1,0 +1,141 @@
+{
+  "title": "Bernard Tschumi",
+  "interviewee": {
+    "name": "Bernard Tschumi",
+    "jobtitle": "Architect"
+  },
+  "recorded": "2014-11-05",
+  "video": {
+    "hls": null,
+    "duration": null,
+    "legacy": {
+      "vimeoId": "111771836",
+      "wpSlug": "15-bernardt"
+    }
+  },
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 167.0,
+      "topicId": "thinking"
+    },
+    {
+      "start": 167.0,
+      "end": 245.0,
+      "topicId": "person"
+    },
+    {
+      "start": 245.0,
+      "end": 302.0,
+      "topicId": "thinking"
+    },
+    {
+      "start": 302.0,
+      "end": 462.0,
+      "topicId": "building"
+    },
+    {
+      "start": 462.0,
+      "end": 644.0,
+      "topicId": "vilette"
+    },
+    {
+      "start": 644.0,
+      "end": 804.0,
+      "topicId": "scene"
+    },
+    {
+      "start": 804.0,
+      "end": 978.0,
+      "topicId": "present"
+    },
+    {
+      "start": 978.0,
+      "end": 1091.0,
+      "topicId": "scene"
+    },
+    {
+      "start": 1091.0,
+      "end": 1207.0,
+      "topicId": "network"
+    }
+  ],
+  "cards": [
+    {
+      "time": 139.88,
+      "cardId": "fun-palace"
+    },
+    {
+      "time": 140.88,
+      "cardId": "potteries-thinkbelt"
+    },
+    {
+      "time": 312.0,
+      "cardId": "piranesi"
+    },
+    {
+      "time": 316.76,
+      "cardId": "etienne-louis-boullee"
+    },
+    {
+      "time": 317.08,
+      "cardId": "claude-nicolas-ledoux"
+    },
+    {
+      "time": 341.04,
+      "cardId": "claude-parent-paul-virilio-2"
+    },
+    {
+      "time": 345.68,
+      "cardId": "yona-friedman"
+    },
+    {
+      "time": 372.64,
+      "cardId": "pritzker-prize"
+    },
+    {
+      "time": 487.08,
+      "cardId": "john-hejduk"
+    },
+    {
+      "time": 488.48,
+      "cardId": "peter-eisenman"
+    },
+    {
+      "time": 490.08,
+      "cardId": "jacques-derrida"
+    },
+    {
+      "time": 542.6,
+      "cardId": "la-villette-greenhouse"
+    },
+    {
+      "time": 608.72,
+      "cardId": "bernard-tschumi"
+    },
+    {
+      "time": 702.0,
+      "cardId": "aa"
+    },
+    {
+      "time": 770.36,
+      "cardId": "archigram"
+    },
+    {
+      "time": 879.2,
+      "cardId": "albert-einstein"
+    },
+    {
+      "time": 1093.84,
+      "cardId": "eth"
+    },
+    {
+      "time": 1142.36,
+      "cardId": "le-corbusier"
+    },
+    {
+      "time": 1172.2,
+      "cardId": "aa"
+    }
+  ]
+}
