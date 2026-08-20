@@ -6,7 +6,8 @@
     "build": "node tools/validate.mjs && astro build",
     "preview": "astro preview",
     "validate": "node tools/validate.mjs",
-    "convert": "python3 tools/convert_2014.py"
+    "convert": "python3 tools/convert_2014.py",
+    "build:pages": "node tools/validate.mjs && DEPLOY_TARGET=pages astro build"
   },
   "dependencies": {
     "astro": "7.2.4",

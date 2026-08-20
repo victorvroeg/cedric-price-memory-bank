@@ -6,6 +6,7 @@ interface Props {
   current?: string;
 }
 const { title, current } = Astro.props;
+const href = (p: string) => (import.meta.env.BASE_URL + "/" + p).replace(/\/+/g, "/");
 ---
 
 <!doctype html>
@@ -18,8 +19,8 @@ const { title, current } = Astro.props;
   </head>
   <body>
     <nav class="menu" aria-label="Site">
-      <a href="/" aria-current={current === "bank" ? "page" : undefined}>Memory Bank</a>
-      <a href="/colofon/" aria-current={current === "colofon" ? "page" : undefined}>Colofon</a>
+      <a href={href("/")} aria-current={current === "bank" ? "page" : undefined}>Memory Bank</a>
+      <a href={href("/colofon/")} aria-current={current === "colofon" ? "page" : undefined}>Colofon</a>
     </nav>
     <slot />
   </body>
