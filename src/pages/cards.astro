@@ -1,0 +1,25 @@
+---
+import Base from "../layouts/Base.astro";
+import { raisedCards } from "../lib/cards";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const rows = raisedCards();
+---
+
+<Base title="References — Cedric Price Memory Bank" current="cards">
+  <main class="prose prose--wide">
+    <h1>References</h1>
+    <p style="color:var(--fg-dim)">
+      The people, buildings and ideas the interviewees raise — {rows.length} of
+      them, written for the 2014 Memory Bank and recovered with it.
+    </p>
+    <nav class="topicindex" aria-label="References">
+      {rows.map(({ card, count }) => (
+        <a class="topicindex__item" href={`${base}/card/${card.slug}/`}>
+          <span class="topicindex__label">{card.title}</span>
+          <span class="topicindex__count">raised {count} {count === 1 ? "time" : "times"}</span>
+        </a>
+      ))}
+    </nav>
+  </main>
+</Base>

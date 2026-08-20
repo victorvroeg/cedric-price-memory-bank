@@ -24,6 +24,8 @@ interface Item {
 interface Data {
   items: Item[];
   topic: { label: string; colour: string };
+  base: string;
+  cards: Record<string, { slug: string; body: string }>;
 }
 
 const dataEl = document.getElementById("cpmb-crosscut");
@@ -212,10 +214,49 @@ function init(data: Data, root: HTMLElement) {
     if (nowIndex) nowIndex.textContent = `${current + 1} / ${items.length}`;
     if (nowCard) {
       const card = [...item.cards].reverse().find((c) => c.time <= el.currentTime);
-      nowCard.textContent = card?.title ?? "";
+      const title = card?.title ?? "";
+      if (nowCard.dataset.title !== title) {
+        nowCard.dataset.title = title;
+        nowCard.textContent = "";
+        if (title) {
+          // A name raised in passing is a door: open it without losing the film.
+          const b = document.createElement("button");
+          b.className = "nowline__cardlink";
+          b.textContent = title;
+          b.onclick = () => openCard(title);
+          nowCard.appendChild(b);
+        }
+      }
     }
     paintBloom();
   }, 120);
+
+  // --- reference cards -------------------------------------------------------
+  const panel = root.querySelector<HTMLElement>(".cardpanel");
+  let resumeAfterCard = false;
+
+  function openCard(title: string): void {
+    const card = data.cards[title];
+    if (!panel || !card) return;
+    panel.querySelector<HTMLElement>(".cardpanel__title")!.textContent = title;
+    panel.querySelector<HTMLElement>(".cardpanel__body")!.innerHTML = card.body;
+    panel.querySelector<HTMLAnchorElement>(".cardpanel__more")!.href =
+      `${data.base}/card/${card.slug}/`;
+    panel.hidden = false;
+    // reading is not watching: hold the film rather than talk over it
+    resumeAfterCard = !els[active].paused;
+    els[active].pause();
+  }
+
+  function closeCard(): void {
+    if (!panel || panel.hidden) return;
+    panel.hidden = true;
+    if (resumeAfterCard) void els[active].play();
+    resumeAfterCard = false;
+  }
+
+  panel?.querySelector<HTMLButtonElement>(".cardpanel__close")?.addEventListener("click", closeCard);
+  addEventListener("keydown", (e) => { if (e.key === "Escape") closeCard(); });
 
   // --- bloom ---------------------------------------------------------------
   const ctx = bloom?.getContext("2d", { alpha: false });

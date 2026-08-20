@@ -1,6 +1,8 @@
 ---
 import type { Topic } from "../lib/content";
+import { cards } from "../lib/content";
 import { crossCut } from "../lib/crosscut";
+import { safeBody } from "../lib/cards";
 
 interface Props {
   topic: Topic;
@@ -10,9 +12,17 @@ const { playable, awaiting } = crossCut(topic.slug);
 const total = playable.reduce((a, i) => a + (i.end - i.start), 0);
 const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
 
+// only the cards this cross-cut can actually raise
+const usedCards = new Set(playable.flatMap((i) => i.cards.map((c) => c.title)));
 const clientData = {
   items: playable,
   topic: { label: topic.label, colour: topic.colour },
+  base: import.meta.env.BASE_URL.replace(/\/$/, ""),
+  cards: Object.fromEntries(
+    [...cards.values()]
+      .filter((c) => usedCards.has(c.title))
+      .map((c) => [c.title, { slug: c.slug, body: safeBody(c.body) }]),
+  ),
 };
 ---
 
@@ -63,7 +73,14 @@ const clientData = {
             <div class="scrub__playhead" style="left:0%" />
           </div>
 
-          <div class="nowline">
+          <aside class="cardpanel" hidden>
+        <button class="cardpanel__close" aria-label="close">×</button>
+        <h2 class="cardpanel__title"></h2>
+        <div class="cardpanel__body"></div>
+        <a class="cardpanel__more" href="#">full reference and where else it is raised →</a>
+      </aside>
+
+      <div class="nowline">
             <span class="nowline__topic" style={`color:${topic.colour}`}>
               {playable[0].name} — {playable[0].jobtitle}
             </span>

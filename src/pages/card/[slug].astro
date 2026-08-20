@@ -1,0 +1,41 @@
+---
+import Base from "../../layouts/Base.astro";
+import { cards, topics } from "../../lib/content";
+import { appearances, raisedCards, safeBody } from "../../lib/cards";
+
+export function getStaticPaths() {
+  return raisedCards().map(({ card }) => ({ params: { slug: card.slug } }));
+}
+
+const card = cards.get(Astro.params.slug)!;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const where = appearances(card.slug);
+const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+---
+
+<Base title={`${card.title} — Cedric Price Memory Bank`} current="cards">
+  <main class="prose">
+    <p class="card__back"><a href={`${base}/cards/`}>← all references</a></p>
+    <h1>{card.title}</h1>
+    <div class="card__body" set:html={safeBody(card.body)} />
+
+    <section class="card__where">
+      <h2>Raised in the archive</h2>
+      <ul>
+        {where.map((a) => (
+          <li>
+            <a href={`${base}/interview/${a.slug}/?t=${Math.floor(a.time)}`}>
+              {a.name} <span class="dim">— {fmt(a.time)}</span>
+            </a>
+            {a.topicId && (
+              <> <span class="dim">while speaking about</span>{" "}
+                <a href={`${base}/topic/${a.topicId}/`} style={`--topic-colour:${topics.get(a.topicId)?.colour}`}
+                   class="card__topic">{topics.get(a.topicId)?.label}</a>
+              </>
+            )}
+          </li>
+        ))}
+      </ul>
+    </section>
+  </main>
+</Base>
