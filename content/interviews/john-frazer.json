@@ -6,8 +6,8 @@
   },
   "recorded": "2014-11-05",
   "video": {
-    "hls": null,
-    "duration": null,
+    "hls": "https://victorvroeg.github.io/cpmb-media-staging/john-frazer/index.m3u8",
+    "duration": 1722.0,
     "legacy": {
       "vimeoId": "114329904",
       "wpSlug": "john"

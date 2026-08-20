@@ -6,8 +6,8 @@
   },
   "recorded": "2014-11-05",
   "video": {
-    "hls": null,
-    "duration": null,
+    "hls": "https://victorvroeg.github.io/cpmb-media-staging/jeremy-melvin/index.m3u8",
+    "duration": 2432.8,
     "legacy": {
       "vimeoId": "114326653",
       "wpSlug": "07-jeremy"
