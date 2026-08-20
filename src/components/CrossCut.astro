@@ -27,8 +27,9 @@ const clientData = {
         {
           playable.length ? (
             <>
-              <video class="projection__video is-front" playsinline preload="metadata" aria-label={`Everyone on ${topic.label}`} />
+              {/* the engine parks the first turn on the SECOND element, so that one fronts */}
               <video class="projection__video" playsinline preload="metadata" aria-hidden="true" />
+              <video class="projection__video is-front" playsinline preload="metadata" aria-label={`Everyone on ${topic.label}`} />
               <div class="projection__feather" aria-hidden="true" />
               <div class="projection__hint" aria-hidden="true">
                 play&ensp;·&ensp;{playable.length} {playable.length === 1 ? "turn" : "turns"}

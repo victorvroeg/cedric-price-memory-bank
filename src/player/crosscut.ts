@@ -62,14 +62,16 @@ function init(data: Data, root: HTMLElement) {
   let singleMode = false;
   let started = false;
   let advancing = false;
+  let skipped = 0;
   const gaps: number[] = [];
 
   async function attach(el: HTMLVideoElement, url: string): Promise<void> {
     const prev = hlsBySrc.get(el);
-    if (prev?.url === url) return;
+    if (prev?.url === url && !el.error) return; // re-attach after a media error
     prev?.hls?.destroy();
     if (native) {
       el.src = url;
+      el.load();
       hlsBySrc.set(el, { url, hls: null });
     } else {
       if (!HlsCtor) HlsCtor = (await import("hls.js")).default;
@@ -117,7 +119,16 @@ function init(data: Data, root: HTMLElement) {
 
     try {
       await el.play();
-    } catch {
+    } catch (e) {
+      // A broken stream must not silence the whole topic: skip the turn.
+      const dead = el.error || (e instanceof DOMException && e.name === "NotSupportedError");
+      if (dead) {
+        skipped++;
+        report(`stream unreachable, skipping ${item.slug} (${skipped}/${items.length})`);
+        if (skipped < items.length && i + 1 < items.length) return playItem(i + 1, viaGesture);
+        dim(false);
+        return;
+      }
       if (!singleMode && !viaGesture) {
         singleMode = true;   // iOS refused the second element: degrade
         active = 0;
