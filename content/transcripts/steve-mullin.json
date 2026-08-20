@@ -1,0 +1,1683 @@
+{
+ "slug": "steve-mullin",
+ "language": "en",
+ "model": "mlx-community/whisper-large-v3-mlx",
+ "corrected": false,
+ "cues": [
+  {
+   "start": 0.0,
+   "end": 17.0,
+   "text": "I didn't really know what to make of him. He was, in those days, young, slim, immensely energetic, and very, very knowledgeable on architectural history, which I appreciated."
+  },
+  {
+   "start": 17.0,
+   "end": 27.0,
+   "text": "But the general impression was that there were some very interesting things to be done in the office"
+  },
+  {
+   "start": 27.0,
+   "end": 30.0,
+   "text": "and I would like to be part of them."
+  },
+  {
+   "start": 30.0,
+   "end": 35.0,
+   "text": "The job I got, which was with the British Rail Chief Architects Department,"
+  },
+  {
+   "start": 35.0,
+   "end": 41.0,
+   "text": "I took the job simply to get to London basically, as a lot of people did at that time."
+  },
+  {
+   "start": 41.0,
+   "end": 47.3,
+   "text": "and so when he made me the offer, it was one I couldn't refuse."
+  },
+  {
+   "start": 48.36,
+   "end": 50.48,
+   "text": "It was at one of our meetings and he said,"
+  },
+  {
+   "start": 50.48,
+   "end": 52.68,
+   "text": "well, would you like to join us?"
+  },
+  {
+   "start": 56.3,
+   "end": 58.58,
+   "text": "I can't offer you a very high salary,"
+  },
+  {
+   "start": 58.74,
+   "end": 61.0,
+   "text": "but that goes without saying, Cedric."
+  },
+  {
+   "start": 61.84,
+   "end": 64.04,
+   "text": "And boy, it was not a high salary."
+  },
+  {
+   "start": 64.88,
+   "end": 69.08,
+   "text": "£1,500 a year in those days."
+  },
+  {
+   "start": 69.24,
+   "end": 70.36,
+   "text": "£63, remember."
+  },
+  {
+   "start": 70.36,
+   "end": 73.84,
+   "text": "Now that was what I was getting at the time, so effectively he said, I'll match your salary."
+  },
+  {
+   "start": 74.98,
+   "end": 76.86,
+   "text": "Well, I was the one and only assistant."
+  },
+  {
+   "start": 77.46,
+   "end": 83.6,
+   "text": "He had a secretary, Dick Baudelaar, who was doing the technical work on the farm palace,"
+  },
+  {
+   "start": 83.98,
+   "end": 89.44,
+   "text": "the cybernetics work there, was in part of the time,"
+  },
+  {
+   "start": 89.58,
+   "end": 94.04,
+   "text": "but I was the only quote-unquote architect besides Cedric."
+  },
+  {
+   "start": 94.9,
+   "end": 96.56,
+   "text": "It was immensely stimulating."
+  },
+  {
+   "start": 96.56,
+   "end": 100.56,
+   "text": "He was in and out of the office all the time."
+  },
+  {
+   "start": 100.56,
+   "end": 104.56,
+   "text": "We got in very early and as we progressed on to things,"
+  },
+  {
+   "start": 104.56,
+   "end": 108.56,
+   "text": "our way of working was to chat things over when he was there."
+  },
+  {
+   "start": 108.56,
+   "end": 112.56,
+   "text": "Then he would leave drawing, drawings after drawing after drawing"
+  },
+  {
+   "start": 112.56,
+   "end": 116.56,
+   "text": "and say, I think this should do that and I think this should go like this."
+  },
+  {
+   "start": 116.56,
+   "end": 120.56,
+   "text": "Particularly on the Potter's Think Belt."
+  },
+  {
+   "start": 120.56,
+   "end": 124.56,
+   "text": "It was a mixture of graphic and"
+  },
+  {
+   "start": 124.56,
+   "end": 132.44,
+   "text": "verbal communication basically. We started this, it was, Cedric had had it in his mind"
+  },
+  {
+   "start": 132.44,
+   "end": 141.72,
+   "text": "I think for a long time and when we ceased work on the Fun Palace, the main project because"
+  },
+  {
+   "start": 141.72,
+   "end": 152.04,
+   "text": "it was being stalled by the GLC, he launched into that and what we did first of all, I"
+  },
+  {
+   "start": 152.04,
+   "end": 157.88,
+   "text": "I mean the overall concept was explained as it were, chatted through."
+  },
+  {
+   "start": 158.56,
+   "end": 165.82,
+   "text": "But we then got large scale maps of the whole area, which is quite a lot of maps because it's quite a large area."
+  },
+  {
+   "start": 166.34,
+   "end": 175.86,
+   "text": "And we sorted out the main constituents of the plan on those ordnance survey maps."
+  },
+  {
+   "start": 176.2,
+   "end": 179.44,
+   "text": "Because we had the contours, we had the buildings."
+  },
+  {
+   "start": 179.44,
+   "end": 184.06,
+   "text": "we had practically all the information you needed. I did know the pottery"
+  },
+  {
+   "start": 184.06,
+   "end": 189.64,
+   "text": "slightly because a friend of mine had gone to work as a director of the"
+  },
+  {
+   "start": 189.64,
+   "end": 198.06,
+   "text": "Victoria Theatre in Stoke-on-Trent so I knew it vaguely but we worked out the"
+  },
+  {
+   "start": 198.06,
+   "end": 203.82,
+   "text": "detailed implementation. The basic principle is the triangle, right?"
+  },
+  {
+   "start": 203.82,
+   "end": 208.76,
+   "text": "You've got the three transfer areas, Maidley, Pittshill and Myrhor."
+  },
+  {
+   "start": 209.48,
+   "end": 216.52,
+   "text": "And then what was interesting was to sort out all the usable railway lines, of which there were many."
+  },
+  {
+   "start": 216.94,
+   "end": 218.54,
+   "text": "There were a hell of a lot of sidings."
+  },
+  {
+   "start": 219.26,
+   "end": 222.16,
+   "text": "So these became the faculty sidings."
+  },
+  {
+   "start": 223.2,
+   "end": 227.42,
+   "text": "And then the housing, there was an awful lot of waste land."
+  },
+  {
+   "start": 227.42,
+   "end": 234.42,
+   "text": "land. So we devised four different types of housing to cope with different locations,"
+  },
+  {
+   "start": 234.42,
+   "end": 241.42,
+   "text": "different soil conditions. I mean the whole of the potteries at that time was just one"
+  },
+  {
+   "start": 241.42,
+   "end": 248.42,
+   "text": "vast excavation. There were the mines, coal mines, there was the pottery clay mines, the"
+  },
+  {
+   "start": 248.42,
+   "end": 255.42,
+   "text": "rest. The whole thing had been turned over, gouged out and over about 200 years. So there"
+  },
+  {
+   "start": 255.42,
+   "end": 259.02,
+   "text": "So there was an awful lot of interesting topography."
+  },
+  {
+   "start": 260.38,
+   "end": 264.54,
+   "text": "There were the spoil heaps, the excavations,"
+  },
+  {
+   "start": 265.14,
+   "end": 268.8,
+   "text": "and there was an awful lot of just wasteland in between"
+  },
+  {
+   "start": 268.8,
+   "end": 271.6,
+   "text": "where the industry had been and then gone."
+  },
+  {
+   "start": 271.94,
+   "end": 277.68,
+   "text": "So we chose our housing sites, as I said, from the Ordnance Survey maps,"
+  },
+  {
+   "start": 278.06,
+   "end": 281.16,
+   "text": "and it wasn't until the thing was pretty well settled,"
+  },
+  {
+   "start": 282.16,
+   "end": 285.06,
+   "text": "in my mind at least, that we went up there."
+  },
+  {
+   "start": 285.42,
+   "end": 288.42,
+   "text": "and photograph the sites which we selected."
+  },
+  {
+   "start": 288.42,
+   "end": 295.42,
+   "text": "And what was very interesting was that it was pretty well as I'd imagined it would be,"
+  },
+  {
+   "start": 295.42,
+   "end": 299.42,
+   "text": "because I knew the thing now in three dimensions, you know, from the maps."
+  },
+  {
+   "start": 299.42,
+   "end": 311.42,
+   "text": "So it was a dreadful, drizzly grey day, so that's why the photographs are dreadfully grey and drizzly,"
+  },
+  {
+   "start": 311.42,
+   "end": 316.66,
+   "text": "be in, which is no bad thing because they don't glamorise the site at all. The site"
+  },
+  {
+   "start": 316.66,
+   "end": 321.48,
+   "text": "was not glamorous. It was a mucky old place then. It still is to some extent now, but"
+  },
+  {
+   "start": 321.48,
+   "end": 334.32,
+   "text": "boy was it mucky then. So we toured the whole area. We went to the transfer areas. We looked"
+  },
+  {
+   "start": 334.32,
+   "end": 341.22,
+   "text": "at the housing sites. There was nothing really that needed changing. So it was an interesting"
+  },
+  {
+   "start": 341.22,
+   "end": 349.02,
+   "text": "experiment in what you can do with just visual information which I later used as training for"
+  },
+  {
+   "start": 349.02,
+   "end": 353.68,
+   "text": "my own students when I was teaching at the AA. It's a very good discipline in fact. How close"
+  },
+  {
+   "start": 353.68,
+   "end": 362.3,
+   "text": "to realisation? Nowhere near close to realisation because it was very much you could do this if you"
+  },
+  {
+   "start": 362.3,
+   "end": 369.86,
+   "text": "had x million pounds you know. It was a demonstration thing it was not to be sold. I mean we produced"
+  },
+  {
+   "start": 369.86,
+   "end": 381.48,
+   "text": "these packages of drawings, the aerial photograph and everything, it was more a, well it was"
+  },
+  {
+   "start": 381.48,
+   "end": 392.56,
+   "text": "a response to a remark, yeah, at that time the, I think it was Lord Kent who was Minister"
+  },
+  {
+   "start": 392.56,
+   "end": 401.86,
+   "text": "in the education department and he got into a conversation and which developed into an argument"
+  },
+  {
+   "start": 401.86,
+   "end": 408.34,
+   "text": "with Cedric at some occasion talking about universities and you know Cedric said look"
+  },
+  {
+   "start": 408.34,
+   "end": 413.78,
+   "text": "you're going up the wrong path you shouldn't be doing so so Kenneth in exasperation said well why"
+  },
+  {
+   "start": 413.78,
+   "end": 420.22,
+   "text": "don't you do something and show me so he said well I will yeah but it has as I say been in his mind"
+  },
+  {
+   "start": 420.22,
+   "end": 429.04,
+   "text": "for some time. And this was therefore a demonstration of what you could do using existing infrastructure"
+  },
+  {
+   "start": 429.04,
+   "end": 437.66,
+   "text": "and a new radical way of looking at learning, looking at education as a whole life experience."
+  },
+  {
+   "start": 437.66,
+   "end": 444.0,
+   "text": "Remember at that time, if you went to university, whether it was the new universities or the"
+  },
+  {
+   "start": 444.0,
+   "end": 456.0,
+   "text": "old ones, you stayed in student accommodation. This was Cedric's view, quite rightly, that"
+  },
+  {
+   "start": 456.0,
+   "end": 461.8,
+   "text": "housing could benefit, new housing could benefit everybody in the area and students should"
+  },
+  {
+   "start": 461.8,
+   "end": 468.16,
+   "text": "be used as a means of improving the housing stock and lifting it up and improving expectations."
+  },
+  {
+   "start": 468.72,
+   "end": 472.72,
+   "text": "So that was a pretty radical idea at the time. It isn't now, of course, but it was then."
+  },
+  {
+   "start": 472.72,
+   "end": 482.74,
+   "text": "The second thing was that education could be in its own right an economic driver for a depressed area where the industry had gone."
+  },
+  {
+   "start": 483.32,
+   "end": 486.86,
+   "text": "And that of course is again today taken as granted."
+  },
+  {
+   "start": 487.18,
+   "end": 496.52,
+   "text": "If you want to push an area up you put a university in it because it's a powerhouse for high technology and so forth."
+  },
+  {
+   "start": 496.52,
+   "end": 507.52,
+   "text": "So that was, the two things were to normalise learning, in other words, not an ivory tower, but just part of everyday life."
+  },
+  {
+   "start": 507.52,
+   "end": 513.52,
+   "text": "Students are no different from anybody else, and everybody is a student at some time or other through their life."
+  },
+  {
+   "start": 513.52,
+   "end": 521.52,
+   "text": "And that, together with bringing the area up by the injection of technological change."
+  },
+  {
+   "start": 521.52,
+   "end": 523.08,
+   "text": "So those were the two linchpins."
+  },
+  {
+   "start": 523.7,
+   "end": 526.3,
+   "text": "Also, I think there was a degree of romanticism there."
+  },
+  {
+   "start": 526.86,
+   "end": 529.0,
+   "text": "The idea of using the railway lines,"
+  },
+  {
+   "start": 529.16,
+   "end": 531.66,
+   "text": "which was immense fun to work out,"
+  },
+  {
+   "start": 532.88,
+   "end": 535.26,
+   "text": "was an interesting comment"
+  },
+  {
+   "start": 535.26,
+   "end": 541.02,
+   "text": "on how you could reuse existing infrastructure,"
+  },
+  {
+   "start": 541.28,
+   "end": 542.98,
+   "text": "existing plant, existing kit,"
+  },
+  {
+   "start": 543.58,
+   "end": 546.18,
+   "text": "and not junk it, basically."
+  },
+  {
+   "start": 546.48,
+   "end": 548.12,
+   "text": "So to a certain extent,"
+  },
+  {
+   "start": 548.24,
+   "end": 550.54,
+   "text": "that sort of echoed Bucky's view of recycling."
+  },
+  {
+   "start": 551.52,
+   "end": 564.52,
+   "text": "The housing thing also was, it led on to various housing studies, particularly the sprawl housing,"
+  },
+  {
+   "start": 564.52,
+   "end": 574.52,
+   "text": "looking at a 25 year life housing, very low, very light footprint on the ground."
+  },
+  {
+   "start": 574.52,
+   "end": 579.52,
+   "text": "So that developed later on into the various housing studies we did."
+  },
+  {
+   "start": 579.52,
+   "end": 589.82,
+   "text": "But the four types of housing were effectively to, you know, we said this is nothing new."
+  },
+  {
+   "start": 589.82,
+   "end": 594.12,
+   "text": "People have looked at totally enclosed, totally controlled environments."
+  },
+  {
+   "start": 594.12,
+   "end": 596.18,
+   "text": "People have looked at suburban housing."
+  },
+  {
+   "start": 596.18,
+   "end": 604.12,
+   "text": "People have looked at housing where you could slot in new units as required."
+  },
+  {
+   "start": 604.12,
+   "end": 606.32,
+   "text": "There was nothing new about that."
+  },
+  {
+   "start": 606.32,
+   "end": 616.9,
+   "text": "So the three, three, four, four, three types, sprawl, battery and crate."
+  },
+  {
+   "start": 617.28,
+   "end": 617.7,
+   "text": "That's right."
+  },
+  {
+   "start": 617.8,
+   "end": 618.68,
+   "text": "So I got it wrong."
+  },
+  {
+   "start": 618.76,
+   "end": 619.56,
+   "text": "It's not four, it's three."
+  },
+  {
+   "start": 619.76,
+   "end": 619.84,
+   "text": "Yeah."
+  },
+  {
+   "start": 620.14,
+   "end": 625.14,
+   "text": "But we chose the word sprawl because we thought it would really get up the noses of the RIBA."
+  },
+  {
+   "start": 627.3,
+   "end": 629.7,
+   "text": "So there was a degree of bravado in there."
+  },
+  {
+   "start": 629.7,
+   "end": 641.7,
+   "text": "But it was at no time, unlike the Fun Palace, at no time did we say, you know, when do we start building."
+  },
+  {
+   "start": 641.7,
+   "end": 651.7,
+   "text": "We costed it of course. It could have been built, of course, but it was a demonstration project rather than,"
+  },
+  {
+   "start": 651.7,
+   "end": 656.4,
+   "text": "will somebody please lend me 10 million pounds, you know,"
+  },
+  {
+   "start": 656.48,
+   "end": 658.14,
+   "text": "whatever it would cost at the time."
+  },
+  {
+   "start": 660.36,
+   "end": 662.72,
+   "text": "And don't forget, we were, at the same time,"
+  },
+  {
+   "start": 662.8,
+   "end": 663.9,
+   "text": "we were doing other projects."
+  },
+  {
+   "start": 664.1,
+   "end": 666.04,
+   "text": "I mean, it was fitting in with various other things."
+  },
+  {
+   "start": 666.04,
+   "end": 671.86,
+   "text": "The London Heathrow Airport Northside study,"
+  },
+  {
+   "start": 672.54,
+   "end": 677.66,
+   "text": "later the Docksport building, the computer building,"
+  },
+  {
+   "start": 677.66,
+   "end": 682.3,
+   "text": "and the Fun Palace pilot project,"
+  },
+  {
+   "start": 682.4,
+   "end": 685.08,
+   "text": "which did look as if it had a chance of getting off the ground."
+  },
+  {
+   "start": 685.08,
+   "end": 688.22,
+   "text": "That was taken to quite a detailed degree."
+  },
+  {
+   "start": 689.1,
+   "end": 693.62,
+   "text": "So the thing was not a sit down and do it like that."
+  },
+  {
+   "start": 693.82,
+   "end": 697.12,
+   "text": "It was in the cracks, which was a nice way of working, of course,"
+  },
+  {
+   "start": 697.22,
+   "end": 701.14,
+   "text": "because if you'd spent the day, as I sometimes did,"
+  },
+  {
+   "start": 701.22,
+   "end": 705.34,
+   "text": "working out details of the tiling in the lavatory,"
+  },
+  {
+   "start": 705.34,
+   "end": 710.9,
+   "text": "It was quite nice to go up the scale like that to one of the transfer areas."
+  },
+  {
+   "start": 711.76,
+   "end": 716.4,
+   "text": "So it was a nice mix basically, as was everything in Cedric's office."
+  },
+  {
+   "start": 716.98,
+   "end": 728.0,
+   "text": "It was always a very fruitful mix of people, ideas, the odd drink and so on and so forth."
+  },
+  {
+   "start": 728.12,
+   "end": 729.74,
+   "text": "Very relaxed way of working."
+  },
+  {
+   "start": 729.74,
+   "end": 734.96,
+   "text": "But actually, I don't think I've ever worked so hard in my life as I did in that office."
+  },
+  {
+   "start": 734.96,
+   "end": 738.82,
+   "text": "but that's obviously part of the magic of the place,"
+  },
+  {
+   "start": 738.9,
+   "end": 741.12,
+   "text": "that you didn't want to stop working, basically."
+  },
+  {
+   "start": 741.92,
+   "end": 745.94,
+   "text": "Typical day, Alfred Place, which we moved to shortly after George Street."
+  },
+  {
+   "start": 747.02,
+   "end": 753.98,
+   "text": "And by that time, I got four rooms in Windmill Street,"
+  },
+  {
+   "start": 754.08,
+   "end": 755.74,
+   "text": "which is just across Tottenham Court Road,"
+  },
+  {
+   "start": 756.18,
+   "end": 759.1,
+   "text": "which I was converting to a flat with an actual bathroom,"
+  },
+  {
+   "start": 759.28,
+   "end": 761.22,
+   "text": "which is the first one I'd had since I'd come to London."
+  },
+  {
+   "start": 761.22,
+   "end": 767.22,
+   "text": "So it took me three minutes to walk to the office, which was very pleasant."
+  },
+  {
+   "start": 767.22,
+   "end": 772.22,
+   "text": "Or indeed three minutes to walk home, which is more to the point."
+  },
+  {
+   "start": 772.22,
+   "end": 776.22,
+   "text": "So I would get in about nine o'clock, something like that."
+  },
+  {
+   "start": 776.22,
+   "end": 780.22,
+   "text": "Cedric would probably have been there since six."
+  },
+  {
+   "start": 780.22,
+   "end": 788.22,
+   "text": "He would have left a lot of drawings and things if he was not going to be in that morning,"
+  },
+  {
+   "start": 788.22,
+   "end": 795.98,
+   "text": "morning which is quite frequently the case or then we would go over what I was going to do that day"
+  },
+  {
+   "start": 795.98,
+   "end": 803.26,
+   "text": "or how I thought we should proceed on something and so forth. But he had so many people coming"
+  },
+  {
+   "start": 803.26,
+   "end": 810.46,
+   "text": "to see him that it was not a continuous thing. He was in and out of his little cubbyhole office"
+  },
+  {
+   "start": 810.46,
+   "end": 816.46,
+   "text": "there all the time and he would shut himself away when he was thinking which was a very sensible"
+  },
+  {
+   "start": 816.46,
+   "end": 828.0,
+   "text": "thing to do. So then we might well have a hot brandy before lunch and I would go out"
+  },
+  {
+   "start": 828.0,
+   "end": 836.1,
+   "text": "either back to the flat or get a sandwich or something like that and work through. It"
+  },
+  {
+   "start": 836.1,
+   "end": 840.6,
+   "text": "was, you know, there was no particular pattern to any day, it depends what he was doing at"
+  },
+  {
+   "start": 840.6,
+   "end": 847.08,
+   "text": "the time or he might be abroad for example but there was a very close liaison on anything we"
+  },
+  {
+   "start": 847.08,
+   "end": 854.0,
+   "text": "were working i i mentioned tiles and lavatories when he was in the states at one point i was doing"
+  },
+  {
+   "start": 854.0,
+   "end": 861.94,
+   "text": "the layout for the uh the toilets lavatories call you what you want for the docks board building"
+  },
+  {
+   "start": 861.94,
+   "end": 869.74,
+   "text": "which was quite an interesting problem in its own right because i i enjoy drainage like george"
+  },
+  {
+   "start": 869.74,
+   "end": 878.42,
+   "text": "at Edmund Street who said, I'm a drains man and stench pipes are my speciality. I enjoy"
+  },
+  {
+   "start": 878.42,
+   "end": 884.58,
+   "text": "designing plumbing. It's never been the same since cast iron and copper went. It's all"
+  },
+  {
+   "start": 884.58,
+   "end": 892.74,
+   "text": "plastic now. There's no interest in designing plumbing any longer. Anyway, so he sent a"
+  },
+  {
+   "start": 892.74,
+   "end": 901.1,
+   "text": "message saying, can you send the drawings of the lavatories by email, by airmail to"
+  },
+  {
+   "start": 901.1,
+   "end": 910.52,
+   "text": "me, which he did, you know, because he was, you know, it was a very close relationship"
+  },
+  {
+   "start": 910.52,
+   "end": 922.5,
+   "text": "between us in terms of detailing. Cedric had very interesting ideas on additive detailing"
+  },
+  {
+   "start": 922.5,
+   "end": 924.9,
+   "text": "which I picked up from him, basically,"
+  },
+  {
+   "start": 925.52,
+   "end": 929.8,
+   "text": "because they were a sort of loose-fit approach to detailing."
+  },
+  {
+   "start": 930.38,
+   "end": 936.78,
+   "text": "I'd been trained to, or was used to doing,"
+  },
+  {
+   "start": 937.34,
+   "end": 940.7,
+   "text": "classic joinery detailing,"
+  },
+  {
+   "start": 941.12,
+   "end": 943.46,
+   "text": "you know, tongued in, all the rest of it there."
+  },
+  {
+   "start": 945.28,
+   "end": 949.56,
+   "text": "And Cedric's approach was a much more flexible one, in fact,"
+  },
+  {
+   "start": 949.66,
+   "end": 950.94,
+   "text": "sometimes too flexible."
+  },
+  {
+   "start": 952.5,
+   "end": 959.0,
+   "text": "on the Docksport building, Frank Newby had quite rightly wanted to seal off the plenum"
+  },
+  {
+   "start": 959.0,
+   "end": 966.0,
+   "text": "space in the roof with the air conditioning in block work because that gives you an impermeable"
+  },
+  {
+   "start": 966.0,
+   "end": 973.68,
+   "text": "barrier. Cedric erupted at this because he hated the idea of what he conceived of as"
+  },
+  {
+   "start": 973.68,
+   "end": 986.06,
+   "text": "an all dry building having this nasty wet dirt blocks in it. So he suggested, well he"
+  },
+  {
+   "start": 986.06,
+   "end": 994.06,
+   "text": "required that, because by that time I got an assistant to work on the actual details"
+  },
+  {
+   "start": 994.06,
+   "end": 1002.84,
+   "text": "through, the only time I ever had an assistant. He required that we do the cladding of the"
+  },
+  {
+   "start": 1002.84,
+   "end": 1010.38,
+   "text": "the plenum in pressed steel. Now that was a difficult one because you've got to make"
+  },
+  {
+   "start": 1010.38,
+   "end": 1019.54,
+   "text": "a plenum airtight for obvious reasons and he had an unwarranted faith in the subcontractor"
+  },
+  {
+   "start": 1019.54,
+   "end": 1031.44,
+   "text": "being able to produce an airtight gasket seal, which was not. I didn't want to do it, Frank"
+  },
+  {
+   "start": 1031.44,
+   "end": 1036.8,
+   "text": "didn't want to do it he insisted it would all be perfectly right he had not unwarranted faith"
+  },
+  {
+   "start": 1036.8,
+   "end": 1043.76,
+   "text": "it not just in technology but in other people's use for technology cedric's personality was"
+  },
+  {
+   "start": 1046.0,
+   "end": 1052.24,
+   "text": "immediate and fairly overwhelming to i think to most people who met him immensely"
+  },
+  {
+   "start": 1053.84,
+   "end": 1060.64,
+   "text": "generous and i mean he could he could talk to anybody and put anybody at their ease basically"
+  },
+  {
+   "start": 1061.44,
+   "end": 1071.44,
+   "text": "He was also supremely and rightly convinced of his own rightness, though he, as he always said,"
+  },
+  {
+   "start": 1071.44,
+   "end": 1074.44,
+   "text": "I'm always willing to admit I might be wrong."
+  },
+  {
+   "start": 1074.44,
+   "end": 1083.44,
+   "text": "But I think on occasions when he actually admitted he was wrong, I can count on the fingers of one hand."
+  },
+  {
+   "start": 1083.44,
+   "end": 1090.44,
+   "text": "But then on the other hand, he took care to make sure he was right, because he did his homework."
+  },
+  {
+   "start": 1090.44,
+   "end": 1099.52,
+   "text": "He did the research, he did the delving and the digging to get to the right solution."
+  },
+  {
+   "start": 1099.52,
+   "end": 1107.8,
+   "text": "A very attractive personality, particularly to women, of which he knew many."
+  },
+  {
+   "start": 1107.8,
+   "end": 1121.04,
+   "text": "and the power to command an audience of as little as two or as many as a hundred"
+  },
+  {
+   "start": 1121.04,
+   "end": 1128.46,
+   "text": "that that immense person that that's the thing that came through whenever he was speaking he"
+  },
+  {
+   "start": 1128.46,
+   "end": 1135.06,
+   "text": "was such an accomplished speaker the rhythm of his speech would draw the audience along with it"
+  },
+  {
+   "start": 1135.06,
+   "end": 1140.74,
+   "text": "It was only afterwards that you thought, hey, hang on a moment, am I sure about that?"
+  },
+  {
+   "start": 1141.64,
+   "end": 1144.34,
+   "text": "Why did he drink so much? Because he liked drinking."
+  },
+  {
+   "start": 1146.24,
+   "end": 1148.56,
+   "text": "We all drank too much at that time."
+  },
+  {
+   "start": 1149.58,
+   "end": 1151.48,
+   "text": "I can't say I was abstemious."
+  },
+  {
+   "start": 1153.92,
+   "end": 1157.7,
+   "text": "He, it kept him going."
+  },
+  {
+   "start": 1158.56,
+   "end": 1164.94,
+   "text": "He had three things on his desk, a box of cigars,"
+  },
+  {
+   "start": 1165.06,
+   "end": 1168.96,
+   "text": "a bottle of brandy at a metronome."
+  },
+  {
+   "start": 1171.42,
+   "end": 1174.62,
+   "text": "But he liked to drink."
+  },
+  {
+   "start": 1175.68,
+   "end": 1178.04,
+   "text": "And at the back of his mind, I think,"
+  },
+  {
+   "start": 1178.16,
+   "end": 1181.22,
+   "text": "there was always the feeling that it might not last that long."
+  },
+  {
+   "start": 1182.24,
+   "end": 1188.32,
+   "text": "Because, as you know, his father had a hereditary heart condition."
+  },
+  {
+   "start": 1189.42,
+   "end": 1191.74,
+   "text": "And Cedric knew he'd inherited it."
+  },
+  {
+   "start": 1191.74,
+   "end": 1197.74,
+   "text": "So there was always, I think, a bit of doubt in his mind about getting things done in time."
+  },
+  {
+   "start": 1197.74,
+   "end": 1217.74,
+   "text": "Well, Cedric was a member of a large number of organisations, including some obscure ones like the Hot Stuff Club, the Confederation of British Demolition Contractors, all sorts of strange things which interested him."
+  },
+  {
+   "start": 1217.74,
+   "end": 1222.64,
+   "text": "interested in him. Basically he became a member of things which he wanted to know a little"
+  },
+  {
+   "start": 1222.64,
+   "end": 1227.9,
+   "text": "bit more about. So if you're going to build a building and expect it to be demolished"
+  },
+  {
+   "start": 1227.9,
+   "end": 1232.26,
+   "text": "in 25 years you might as well make sure it can be done very easily."
+  },
+  {
+   "start": 1232.26,
+   "end": 1239.06,
+   "text": "Hocksoff Club was a jolly get together drinking club. So there was David Alford and Frank"
+  },
+  {
+   "start": 1239.06,
+   "end": 1246.06,
+   "text": "Newby trying to think of the Herbert Gans, quite a lot of Americans, hard drinking Americans,"
+  },
+  {
+   "start": 1247.74,
+   "end": 1262.24,
+   "text": "Seoul, Kornberg. It was basically a sort of transatlantic club which included all the"
+  },
+  {
+   "start": 1262.24,
+   "end": 1270.02,
+   "text": "people that Cedric enjoyed talking with and exploring their minds and so forth. They would"
+  },
+  {
+   "start": 1270.02,
+   "end": 1277.02,
+   "text": "meet whenever one of them was in town basically, which was, you know, they were a peripatetic"
+  },
+  {
+   "start": 1277.46,
+   "end": 1284.46,
+   "text": "world around people. And they would meet up, it wasn't a fixed thing or anything like that,"
+  },
+  {
+   "start": 1285.76,
+   "end": 1291.06,
+   "text": "it was just, and it was really just a name for having a darn nice evening, lots of good"
+  },
+  {
+   "start": 1291.06,
+   "end": 1295.8,
+   "text": "food and good drink, you know. Well, since it's the only building I managed to put up"
+  },
+  {
+   "start": 1295.8,
+   "end": 1302.1,
+   "text": "for him, the Docksball building obviously because that was great fun. It was 12 months"
+  },
+  {
+   "start": 1302.1,
+   "end": 1309.1,
+   "text": "from inception to completion. 12 months to design and build and get up a building. That"
+  },
+  {
+   "start": 1309.1,
+   "end": 1315.62,
+   "text": "was quite an interesting challenge. Housing research stemmed directly from one of the"
+  },
+  {
+   "start": 1315.62,
+   "end": 1321.68,
+   "text": "three housing types of the Thinkbelt, sprawl housing, which was originally designed for"
+  },
+  {
+   "start": 1321.68,
+   "end": 1331.04,
+   "text": "very uneven ground and very poor services or non-existent services. So the houses themselves"
+  },
+  {
+   "start": 1331.04,
+   "end": 1338.08,
+   "text": "were based on a triadic platform on jacks to accommodate for the ground because there was"
+  },
+  {
+   "start": 1338.08,
+   "end": 1345.2,
+   "text": "enormous subsidence going on all the time in the Think Belt. He walked into the office of what was"
+  },
+  {
+   "start": 1345.2,
+   "end": 1350.72,
+   "text": "called the regeneration department, not the planning department, and there was a big picture"
+  },
+  {
+   "start": 1350.72,
+   "end": 1357.32,
+   "text": "on the wall showing how much your house is likely to sink in the next five years because"
+  },
+  {
+   "start": 1357.32,
+   "end": 1362.6,
+   "text": "of all the mining substance. So that started off basically something you could plonk on"
+  },
+  {
+   "start": 1362.6,
+   "end": 1372.88,
+   "text": "ground, very lightweight, with timber frame on top. And to that we connected self-contained"
+  },
+  {
+   "start": 1372.88,
+   "end": 1380.22,
+   "text": "sewage digestion facilities which we got from the type of shipboard sewage digestion which"
+  },
+  {
+   "start": 1380.22,
+   "end": 1387.72,
+   "text": "were made by Anker at the time. And so the idea of decoupling surfaces, running them"
+  },
+  {
+   "start": 1387.72,
+   "end": 1395.0,
+   "text": "above ground, not having to dig out dirt and put in more dirt, you know, as Bucky put it,"
+  },
+  {
+   "start": 1395.0,
+   "end": 1399.94,
+   "text": "started there. So we then turned this into, at the same time we were working on, then"
+  },
+  {
+   "start": 1399.94,
+   "end": 1405.94,
+   "text": "we were working on the steel house competition. So that provided an impetus to look at the"
+  },
+  {
+   "start": 1405.94,
+   "end": 1413.68,
+   "text": "flexibility which a steel frame would give us. We were looking at the ability to customise"
+  },
+  {
+   "start": 1413.68,
+   "end": 1425.56,
+   "text": "the outside completely. Basically the housing as it developed had a prefabricated foundation"
+  },
+  {
+   "start": 1425.56,
+   "end": 1433.62,
+   "text": "raft which are now pretty commonplace today which weren't then. And then you sat the thing"
+  },
+  {
+   "start": 1433.62,
+   "end": 1442.94,
+   "text": "on top. That was steel frame, glazed, fully air-conditioned, and you know, you could do"
+  },
+  {
+   "start": 1442.94,
+   "end": 1449.2,
+   "text": "almost anything with it. And it lasted 25 years because that was the optimum financial"
+  },
+  {
+   "start": 1449.2,
+   "end": 1453.86,
+   "text": "investment time. You could use it after that of course, but you were basically recycling"
+  },
+  {
+   "start": 1453.86,
+   "end": 1460.76,
+   "text": "bits of it. That was linked to, in the sort of final studies I did, particularly on the"
+  },
+  {
+   "start": 1460.76,
+   "end": 1469.16,
+   "text": "Tilbury study. A concept of running all the services above ground under a boardwalk which"
+  },
+  {
+   "start": 1469.16,
+   "end": 1477.76,
+   "text": "would also support lighting and so forth. And the roadways were aluminium emergency"
+  },
+  {
+   "start": 1477.76,
+   "end": 1486.1,
+   "text": "runway strips, perforated aluminium. So your whole thing could be taken away after 25 years."
+  },
+  {
+   "start": 1486.1,
+   "end": 1493.1,
+   "text": "there was an artificial moon. An artificial moon to light it at night would go up and"
+  },
+  {
+   "start": 1493.48,
+   "end": 1500.48,
+   "text": "light the whole area. Which actually the way these things come round, many years later"
+  },
+  {
+   "start": 1503.98,
+   "end": 1510.98,
+   "text": "they were filming Sylvia, a film called Sylvia, about Sylvia Plath in our back garden and"
+  },
+  {
+   "start": 1510.98,
+   "end": 1516.58,
+   "text": "in our back garden and they were lighting a night scene and they had an inflatable moon"
+  },
+  {
+   "start": 1518.1,
+   "end": 1525.62,
+   "text": "oh god i've got a sentence to set you know it happened at last um so the housing study"
+  },
+  {
+   "start": 1525.62,
+   "end": 1531.14,
+   "text": "were basically looking at how you could add to existing um settlements without placing"
+  },
+  {
+   "start": 1531.14,
+   "end": 1541.94,
+   "text": "and demand on services and without sort of, well, investing as little as possible in things"
+  },
+  {
+   "start": 1541.94,
+   "end": 1547.6,
+   "text": "which would have to be left in the ground. Because the other thing we'd done is do a"
+  },
+  {
+   "start": 1547.6,
+   "end": 1555.56,
+   "text": "study into the GLC mobile homes, which were produced in the early 60s, too, because they"
+  },
+  {
+   "start": 1555.56,
+   "end": 1560.16,
+   "text": "had a lot of spare bomb sites and they had a big housing shortage and they produced rather"
+  },
+  {
+   "start": 1560.16,
+   "end": 1565.5,
+   "text": "good timber framed mobile homes so-called mobile they were supposed to"
+  },
+  {
+   "start": 1565.5,
+   "end": 1571.14,
+   "text": "be able to be moved from one site to another we actually followed one set of"
+  },
+  {
+   "start": 1571.14,
+   "end": 1579.16,
+   "text": "houses being moved from one site to another they were in sections and we"
+  },
+  {
+   "start": 1579.16,
+   "end": 1584.88,
+   "text": "were following one and the thing was bouncing along and you could see between"
+  },
+  {
+   "start": 1584.88,
+   "end": 1592.68,
+   "text": "the floor joists and bottle after gin bottle came rolling out of the from"
+  },
+  {
+   "start": 1592.68,
+   "end": 1599.48,
+   "text": "between the floor joists but the thing we learned from that was that the the"
+  },
+  {
+   "start": 1599.48,
+   "end": 1608.66,
+   "text": "amount of cost factor in services is quite disproportionate the amount of"
+  },
+  {
+   "start": 1608.66,
+   "end": 1614.1,
+   "text": "digging and laying and drainage and the rest of it made it really actually"
+  },
+  {
+   "start": 1614.1,
+   "end": 1622.68,
+   "text": "virtually it wasn't cost effective to move these things because you had to lay"
+  },
+  {
+   "start": 1622.68,
+   "end": 1627.34,
+   "text": "in this whole network of services if you're going to move them so that the"
+  },
+  {
+   "start": 1627.34,
+   "end": 1632.72,
+   "text": "nozzles Bucky put it on the top was was the least of your worries in terms of"
+  },
+  {
+   "start": 1632.72,
+   "end": 1638.98,
+   "text": "cost and I certainly ran into this later because once I after I'd left Cedric's"
+  },
+  {
+   "start": 1638.98,
+   "end": 1643.14,
+   "text": "office I think that's right I was asked to advise the Brixton Law Centre on"
+  },
+  {
+   "start": 1643.14,
+   "end": 1645.14,
+   "text": "on putting up a..."
+  },
+  {
+   "start": 1645.14,
+   "end": 1649.56,
+   "text": "They were servicing Brixton Jail."
+  },
+  {
+   "start": 1651.24,
+   "end": 1654.96,
+   "text": "Doing a home for them, as it were."
+  },
+  {
+   "start": 1655.24,
+   "end": 1658.34,
+   "text": "And I did investigate using GLC mobile homes,"
+  },
+  {
+   "start": 1658.42,
+   "end": 1659.76,
+   "text": "which were on the market at the time,"
+  },
+  {
+   "start": 1659.82,
+   "end": 1662.72,
+   "text": "but the same problem came up, cost of services."
+  },
+  {
+   "start": 1663.46,
+   "end": 1665.2,
+   "text": "Site was easy, you could get a site,"
+  },
+  {
+   "start": 1665.76,
+   "end": 1667.44,
+   "text": "but the services were the problem."
+  },
+  {
+   "start": 1667.84,
+   "end": 1670.34,
+   "text": "So the final bits of the housing study"
+  },
+  {
+   "start": 1670.34,
+   "end": 1674.48,
+   "text": "were trying to decouple from the big service networks,"
+  },
+  {
+   "start": 1674.92,
+   "end": 1680.2,
+   "text": "which effectively, we knew this because after the war,"
+  },
+  {
+   "start": 1681.28,
+   "end": 1683.28,
+   "text": "a hell of a lot of East London was rebuilt."
+  },
+  {
+   "start": 1683.94,
+   "end": 1689.24,
+   "text": "But it was basically the sewers which determined the pattern of the new development,"
+  },
+  {
+   "start": 1689.76,
+   "end": 1692.74,
+   "text": "not anything else, because you couldn't do away with them"
+  },
+  {
+   "start": 1692.74,
+   "end": 1695.46,
+   "text": "because it would be far too expensive to change them."
+  },
+  {
+   "start": 1695.46,
+   "end": 1699.66,
+   "text": "So your pattern of development was constrained by your services,"
+  },
+  {
+   "start": 1699.66,
+   "end": 1701.1,
+   "text": "which were underground."
+  },
+  {
+   "start": 1701.96,
+   "end": 1704.18,
+   "text": "How did he manage to be so influential?"
+  },
+  {
+   "start": 1704.96,
+   "end": 1709.76,
+   "text": "By power of speech, by power of ideas, by power of drawings,"
+  },
+  {
+   "start": 1710.42,
+   "end": 1715.12,
+   "text": "by opening up possibilities which people hadn't thought of before."
+  },
+  {
+   "start": 1715.24,
+   "end": 1720.06,
+   "text": "And remember, he had a track record very early on with the aviary."
+  },
+  {
+   "start": 1721.06,
+   "end": 1725.22,
+   "text": "You know, he built it, which is no small thing."
+  },
+  {
+   "start": 1725.22,
+   "end": 1726.52,
+   "text": "So he had credibility."
+  },
+  {
+   "start": 1727.14,
+   "end": 1729.52,
+   "text": "He had architectural street cred, if you like."
+  },
+  {
+   "start": 1729.66,
+   "end": 1732.56,
+   "text": "He wasn't just a dreamer or somebody."
+  },
+  {
+   "start": 1732.72,
+   "end": 1736.56,
+   "text": "He was putting forward things which could be built"
+  },
+  {
+   "start": 1736.56,
+   "end": 1739.4,
+   "text": "and the reasons why they weren't built"
+  },
+  {
+   "start": 1739.4,
+   "end": 1742.9,
+   "text": "were very often nothing to do with him"
+  },
+  {
+   "start": 1742.9,
+   "end": 1744.8,
+   "text": "but with the fact that the client changed"
+  },
+  {
+   "start": 1744.8,
+   "end": 1747.12,
+   "text": "as with the Oxford Street Corner house"
+  },
+  {
+   "start": 1747.12,
+   "end": 1750.88,
+   "text": "where the Joe Lyons, the Salmon family changed its direction."
+  },
+  {
+   "start": 1751.44,
+   "end": 1754.62,
+   "text": "So clients tend to follow Cedric around."
+  },
+  {
+   "start": 1755.88,
+   "end": 1759.34,
+   "text": "Norman Payne, who was the chair of the British Airports Authority,"
+  },
+  {
+   "start": 1759.66,
+   "end": 1764.02,
+   "text": "then moved to British Transport, Docksport, which is why we built the commuter centre for him."
+  },
+  {
+   "start": 1764.66,
+   "end": 1769.62,
+   "text": "Geoffrey Salmon of Joe Lyons moved to another section of Joe Lyons,"
+  },
+  {
+   "start": 1769.78,
+   "end": 1776.7,
+   "text": "and that's why the Blackpool restaurant is there, because that was their restaurant."
+  },
+  {
+   "start": 1777.78,
+   "end": 1784.5,
+   "text": "So it wasn't the case so much of Cedric seeking out clients as clients seeking out Cedric."
+  },
+  {
+   "start": 1785.0,
+   "end": 1787.82,
+   "text": "And one thought, coming back for more."
+  },
+  {
+   "start": 1787.82,
+   "end": 1792.86,
+   "text": "Ah, well, Blackpool Zoo was another square building, by the way."
+  },
+  {
+   "start": 1793.74,
+   "end": 1794.6,
+   "text": "Cedric liked squares."
+  },
+  {
+   "start": 1795.84,
+   "end": 1800.14,
+   "text": "And this was Blackpool Zoo, and it was a restaurant for Blackpool Zoo."
+  },
+  {
+   "start": 1800.46,
+   "end": 1804.52,
+   "text": "Now, Blackpool Zoo is part of the funfair."
+  },
+  {
+   "start": 1804.68,
+   "end": 1807.28,
+   "text": "It's a sort of fairly curious place."
+  },
+  {
+   "start": 1807.94,
+   "end": 1813.28,
+   "text": "And Cedric designed the restaurant so that if it didn't get off the ground,"
+  },
+  {
+   "start": 1813.28,
+   "end": 1820.28,
+   "text": "if it failed as a restaurant it could be converted into an animal house. The relevance is hope,"
+  },
+  {
+   "start": 1822.78,
+   "end": 1829.78,
+   "text": "confidence. This is a very unconfident era for architecture. Well it has been for the"
+  },
+  {
+   "start": 1829.78,
+   "end": 1836.78,
+   "text": "last twenty years basically. The relevance is also about having a much more fragmented,"
+  },
+  {
+   "start": 1836.78,
+   "end": 1845.78,
+   "text": "having a much more fragmented, flexible approach to the built environment, what we live in."
+  },
+  {
+   "start": 1845.78,
+   "end": 1853.44,
+   "text": "That realising that it is never static, it's always changing, it's always renewing itself"
+  },
+  {
+   "start": 1853.44,
+   "end": 1860.16,
+   "text": "or being renewed, just as people are never static. And looking at built environment as"
+  },
+  {
+   "start": 1860.16,
+   "end": 1865.9,
+   "text": "a palimpsest of past people, which is something that very much interests me because I did"
+  },
+  {
+   "start": 1865.9,
+   "end": 1871.48,
+   "text": "specialize in quite a lot of historic building work. That's something you"
+  },
+  {
+   "start": 1871.48,
+   "end": 1877.06,
+   "text": "quickly realize you are dealing with. If you've got a 500 year old building and"
+  },
+  {
+   "start": 1877.06,
+   "end": 1884.02,
+   "text": "you can track what has happened to it, you are talking about a whole slew of"
+  },
+  {
+   "start": 1884.02,
+   "end": 1889.9,
+   "text": "generations of people who worked, lived and changed that building, you know, which"
+  },
+  {
+   "start": 1889.9,
+   "end": 1895.24,
+   "text": "is a very sobering thing. You're just one in that line and there will be"
+  },
+  {
+   "start": 1895.24,
+   "end": 1903.08,
+   "text": "others beyond you. Cedric was told that he had to accommodate a folly by Peter"
+  },
+  {
+   "start": 1903.08,
+   "end": 1909.88,
+   "text": "Smithson, Little Tower. All the drawings that Cedric produced after that showed"
+  },
+  {
+   "start": 1909.88,
+   "end": 1914.64,
+   "text": "this thing dotting up all over the place like that, changing where it"
+  },
+  {
+   "start": 1914.64,
+   "end": 1926.26,
+   "text": "was, whatever it was, you know. It became almost a dream set of drawings that just said"
+  },
+  {
+   "start": 1926.26,
+   "end": 1931.14,
+   "text": "this has appeared here but it could be there tomorrow. Look it's over there now and all"
+  },
+  {
+   "start": 1931.14,
+   "end": 1941.68,
+   "text": "the rest of it. And that was as his life progressed, I mean that was the change from, you know"
+  },
+  {
+   "start": 1941.68,
+   "end": 1948.3,
+   "text": "was initially with the Fun Palace he was designing buildings which could change. He was more"
+  },
+  {
+   "start": 1948.3,
+   "end": 1955.04,
+   "text": "interested in building as part of change by the end of his life. In other words, not that"
+  },
+  {
+   "start": 1955.04,
+   "end": 1962.46,
+   "text": "they would go anywhere, do anything, all that sort of stuff. That they would be part of"
+  },
+  {
+   "start": 1962.46,
+   "end": 1968.72,
+   "text": "a changing environment and adapt to it and adapt it. In other words, there should be"
+  },
+  {
+   "start": 1968.72,
+   "end": 1976.2,
+   "text": "an interactive environment between the built works, if you like, and the people who use"
+  },
+  {
+   "start": 1976.2,
+   "end": 1983.76,
+   "text": "and inhabit them. And that together would form a continuously changing pattern of living"
+  },
+  {
+   "start": 1983.76,
+   "end": 1991.84,
+   "text": "and learning. It's very difficult to put it into words. It's a feeling more of... Whenever"
+  },
+  {
+   "start": 1991.84,
+   "end": 1997.16,
+   "text": "I see one of Cedric's drawings, particularly the later ones, there is that feeling that"
+  },
+  {
+   "start": 1997.16,
+   "end": 2004.16,
+   "text": "comes out of it is that there's a mark being put on the city here, another mark there,"
+  },
+  {
+   "start": 2004.16,
+   "end": 2009.16,
+   "text": "and they change, you know, they become much more impermanent."
+  },
+  {
+   "start": 2017.16,
+   "end": 2024.16,
+   "text": "Look at the projects, read the words, and then work out whether you like them or not."
+  }
+ ]
+}

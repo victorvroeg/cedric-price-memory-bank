@@ -62,6 +62,7 @@ changes. Fill in — do not let these stay TBD past launch:
 |---|---|---|---|
 | This repo | github.com/victorvroeg/cedric-price-memory-bank | Victor Vroegindeweij | The archive itself; staging deploys to GitHub Pages via `tools/deploy-pages.sh` |
 | Domain `cedricprice.com` | TBD registrar | TBD | 2014 site still bound to it |
+| Billing alert | Cloudflare budget alert, $25/month | support@earlystudios.nl | Expected spend is about $5/month (365 min stored, ~3,500 min delivered). An alert means roughly five times normal — worth looking at. |
 | Streaming host | Cloudflare Stream | support@earlystudios.nl | Live since 2026-08-20. Account 203f021085d63c5fbac9c49b6f5c903c; delivery subdomain `customer-syg1o9n270h63juf.cloudflarestream.com`. Holds transcodes, not masters. (github.com/victorvroeg/cpmb-media-staging is the retired interim host — delete once Cloudflare has proven itself) |
 | Master films | `video/` in Victor's workspace + iCloud Drive | Victor Vroegindeweij | **Still needs a proper cold-storage home — the one open custody item.** 23.7 GB, fourteen films plus the intro and one unpublished interview |
 | 2014 CMS hosting | Hostnet (NL) | TBD | Old WordPress DB + card images still on disk — worth one full backup before the account lapses |
