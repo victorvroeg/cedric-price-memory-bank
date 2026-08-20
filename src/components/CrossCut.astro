@@ -98,10 +98,13 @@ const clientData = {
       )
     }
 
-    <nav class="topics" aria-label="Interviewees on this topic">
+    <nav class="topics" aria-label="Interviewees on this topic — click to hear theirs">
       {playable
         .filter((i, n) => playable.findIndex((x) => x.slug === i.slug) === n)
-        .map((i) => <span class="topic" style={`--topic-colour:${topic.colour}`}>{i.name}</span>)}
+        .map((i) => (
+          <button class="topic" data-speaker={i.slug} style={`--topic-colour:${topic.colour}`}
+                  title={`hear ${i.name} on ${topic.label}`}>{i.name}</button>
+        ))}
       {awaiting.map((a) => (
         <span class="topic topic--awaiting" title="film not yet online">{a.name}</span>
       ))}

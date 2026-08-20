@@ -213,6 +213,7 @@ function init(data: Data, root: HTMLElement) {
     const pos = offsets[current] + Math.min(Math.max(el.currentTime - item.start, 0), item.end - item.start);
     if (playhead) playhead.style.left = `${(pos / total) * 100}%`;
     if (nowIndex) nowIndex.textContent = `${current + 1} / ${items.length}`;
+    markSpeaker();
     if (nowCard) {
       const card = [...item.cards].reverse().find((c) => c.time <= el.currentTime);
       const title = card?.title ?? "";
@@ -345,6 +346,25 @@ function init(data: Data, root: HTMLElement) {
   }
   for (const ev of ["pointerdown", "keydown"] as const) {
     addEventListener(ev, unmute, { once: true, capture: true });
+  }
+
+  // Clicking a name jumps to that person's turn on this topic.
+  for (const chip of root.querySelectorAll<HTMLButtonElement>(".topic[data-speaker]")) {
+    chip.addEventListener("click", () => {
+      const from = current < 0 ? 0 : current;
+      // the next turn of theirs after where we are, or their first
+      const next = items.findIndex((it, n) => it.slug === chip.dataset.speaker && n > from);
+      const i = next >= 0 ? next : items.findIndex((it) => it.slug === chip.dataset.speaker);
+      if (i < 0) return;
+      dim(true);
+      void playItem(i, true);
+    });
+  }
+
+  function markSpeaker(): void {
+    const slug = current >= 0 ? items[current].slug : null;
+    for (const chip of root.querySelectorAll<HTMLElement>(".topic[data-speaker]"))
+      chip.classList.toggle("is-active", chip.dataset.speaker === slug);
   }
 
   // Warm the rest of the cross-cut. Only the playlists — a few kB each — not
