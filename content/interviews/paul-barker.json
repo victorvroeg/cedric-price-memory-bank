@@ -6,8 +6,8 @@
   },
   "recorded": "2014-11-05",
   "video": {
-    "hls": null,
-    "duration": null,
+    "hls": "https://victorvroeg.github.io/cpmb-media-staging/paul-barker/index.m3u8",
+    "duration": 1397.0,
     "legacy": {
       "vimeoId": "111770380",
       "wpSlug": "13-paul"

@@ -6,8 +6,8 @@
   },
   "recorded": "2014-11-05",
   "video": {
-    "hls": null,
-    "duration": null,
+    "hls": "https://victorvroeg.github.io/cpmb-media-staging/steve-mullin/index.m3u8",
+    "duration": 2024.76,
     "legacy": {
       "vimeoId": "114326654",
       "wpSlug": "11-steve"

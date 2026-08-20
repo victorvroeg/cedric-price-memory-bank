@@ -6,8 +6,8 @@
   },
   "recorded": "2014-11-05",
   "video": {
-    "hls": null,
-    "duration": null,
+    "hls": "https://victorvroeg.github.io/cpmb-media-staging/bernard-tschumi/index.m3u8",
+    "duration": 1208.44,
     "legacy": {
       "vimeoId": "111771836",
       "wpSlug": "15-bernardt"

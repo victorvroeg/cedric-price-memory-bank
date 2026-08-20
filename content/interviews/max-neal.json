@@ -6,8 +6,8 @@
   },
   "recorded": "2014-11-05",
   "video": {
-    "hls": null,
-    "duration": null,
+    "hls": "https://victorvroeg.github.io/cpmb-media-staging/max-neal/index.m3u8",
+    "duration": 1029.76,
     "legacy": {
       "vimeoId": "114330808",
       "wpSlug": "14-max"

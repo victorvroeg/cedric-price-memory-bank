@@ -6,8 +6,8 @@
   },
   "recorded": "2014-11-05",
   "video": {
-    "hls": null,
-    "duration": null,
+    "hls": "https://victorvroeg.github.io/cpmb-media-staging/peter-murray/index.m3u8",
+    "duration": 1412.56,
     "legacy": {
       "vimeoId": "111770376",
       "wpSlug": "11-peter-murray"
