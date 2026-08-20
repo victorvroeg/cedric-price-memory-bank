@@ -61,6 +61,8 @@ root instead; the switch is `DEPLOY_TARGET` in `astro.config.mjs`.
   strongest confirmation the archaeology gave back the real thing.
 - **The 2014 intro film is restored** at the root from the studio's
   master, after dying with the old site.
+- **Video lives on Cloudflare Stream** (studio account), moved there on
+  2026-08-20 with every duration re-verified against the topic map.
 
 Not yet in the archive: an unpublished **Kees Christiaanse** interview
 (9:24, no topic map) — the first real case for the M4 ingest pipeline,
