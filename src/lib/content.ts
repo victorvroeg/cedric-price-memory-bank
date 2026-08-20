@@ -17,6 +17,9 @@ export interface Interview {
   title: string;
   interviewee: { name: string; jobtitle: string };
   recorded: string;
+  /** true until a human has approved the drafted topic map — drafts are
+   *  reachable at their own URL for review but stay out of the archive. */
+  draft?: boolean;
   video: {
     hls: string | null;
     duration: number | null;

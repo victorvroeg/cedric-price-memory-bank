@@ -8,6 +8,11 @@
 
 import { interviews, cards, type Interview } from "./content";
 
+/** Everything the public archive is built from: approved interviews only. */
+export function published(): Interview[] {
+  return [...interviews.values()].filter((iv) => !iv.draft);
+}
+
 export interface CrossCutItem {
   slug: string;
   name: string;
@@ -27,7 +32,7 @@ export function crossCut(topicId: string): CrossCut {
   const playable: CrossCutItem[] = [];
   const awaiting: CrossCut["awaiting"] = [];
 
-  const sorted = [...interviews.values()].sort((a, b) => a.slug.localeCompare(b.slug));
+  const sorted = published().sort((a, b) => a.slug.localeCompare(b.slug));
   for (const iv of sorted) {
     const segs = iv.segments
       .filter((s) => s.topicId === topicId)
@@ -56,7 +61,7 @@ export function crossCut(topicId: string): CrossCut {
 
 export function topicsWithSegments(): Map<string, number> {
   const counts = new Map<string, number>();
-  for (const iv of interviews.values())
+  for (const iv of published())
     for (const s of iv.segments) counts.set(s.topicId, (counts.get(s.topicId) ?? 0) + 1);
   return counts;
 }

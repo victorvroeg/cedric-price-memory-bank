@@ -35,6 +35,8 @@ const usedCards = new Set();
 
 for (const [slug, iv] of interviews) {
   if (!iv.title || !iv.interviewee?.name) errors.push(`${slug}: missing identity fields`);
+  if (iv.draft) warnings.push(`${slug} is a DRAFT — excluded from the archive until approved`);
+  else if (!(iv.segments ?? []).length) errors.push(`${slug}: published but has no segments`);
   for (const [i, s] of (iv.segments ?? []).entries()) {
     if (typeof s.start !== "number" || typeof s.end !== "number" || s.start < 0 || s.end <= s.start)
       errors.push(`${slug} segment ${i}: bad times start=${s.start} end=${s.end}`);
