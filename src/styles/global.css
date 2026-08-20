@@ -658,3 +658,20 @@ a:hover {
   .seg { grid-template-columns: 2em 1fr 8.2em 1.8em 8.2em 1.8em 2em; }
   .seg__len { display: none; }
 }
+
+.review__identity {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 10px 0 8px;
+}
+.review__identity label {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+}
+#saved { margin-left: auto; }

@@ -4,6 +4,7 @@
 interface Seg { start: number; end: number; topicId: string }
 interface Data {
   slug: string; duration: number; hls: string | null;
+  jobtitle: string; recorded: string;
   segments: Seg[]; cards: { time: number; cardId: string }[];
   cues: { start: number; end: number; text: string }[];
   topics: { id: string; label: string; colour: string }[];
@@ -59,7 +60,35 @@ function start(d: Data) {
   const cues = d.cues.map((c) => ({ ...c }));
   let dirty = false;
   let transcriptCorrected = d.corrected;
-  const markDirty = () => { status.textContent = dirty ? "unsaved changes" : ""; };
+  const jobtitleEl = document.getElementById("jobtitle") as HTMLInputElement;
+  const recordedEl = document.getElementById("recorded") as HTMLInputElement;
+  const savedEl = document.getElementById("saved")!;
+
+  // Work in progress is kept in this browser, so closing the tab loses
+  // nothing. It is not the archive: that is what Approve does.
+  const KEY = `cpmb-review:${d.slug}`;
+  let saveTimer: number | undefined;
+
+  function saveLocal() {
+    localStorage.setItem(KEY, JSON.stringify({
+      at: new Date().toISOString(),
+      segments: segs,
+      cues,
+      jobtitle: jobtitleEl?.value ?? "",
+      recorded: recordedEl?.value ?? "",
+    }));
+    savedEl.textContent = `saved in this browser · ${new Date().toLocaleTimeString()}`;
+  }
+
+  function queueSave() {
+    clearTimeout(saveTimer);
+    saveTimer = window.setTimeout(saveLocal, 600);
+  }
+
+  const markDirty = () => {
+    status.textContent = dirty ? "unsaved changes" : "";
+    if (dirty) queueSave();
+  };
 
   if (d.hls) {
     if (video.canPlayType("application/vnd.apple.mpegurl")) video.src = d.hls;
@@ -257,7 +286,12 @@ function start(d: Data) {
   }
 
   function payload() {
-    const out: Record<string, unknown> = { slug: d.slug, segments: segmentsOnly() };
+    const out: Record<string, unknown> = {
+      slug: d.slug,
+      interviewee: { jobtitle: jobtitleEl?.value.trim() ?? d.jobtitle },
+      recorded: recordedEl?.value.trim() ?? d.recorded,
+      segments: segmentsOnly(),
+    };
     if (cues.length) {
       out.transcript = {
         corrected: transcriptCorrected,
@@ -284,6 +318,7 @@ function start(d: Data) {
       a.click();
       window.open(`https://github.com/${REPO}/upload/main/ingest/approved`, "_blank", "noopener");
       dirty = false;
+      saveLocal();
       status.textContent = `downloaded ${d.slug}.json — drop it on the GitHub page that just opened, then “Propose changes”`;
       return;
     }
@@ -315,6 +350,34 @@ function start(d: Data) {
   };
 
   addEventListener("beforeunload", (e) => { if (dirty) e.preventDefault(); });
+
+  // restore anything left from a previous sitting
+  try {
+    const raw = localStorage.getItem(KEY);
+    if (raw) {
+      const prev = JSON.parse(raw);
+      if (Array.isArray(prev.segments) && prev.segments.length) {
+        segs = prev.segments;
+        if (Array.isArray(prev.cues) && prev.cues.length === cues.length) {
+          prev.cues.forEach((c: { text: string }, i: number) => (cues[i].text = c.text));
+        }
+        if (prev.jobtitle && jobtitleEl) jobtitleEl.value = prev.jobtitle;
+        if (prev.recorded && recordedEl) recordedEl.value = prev.recorded;
+        dirty = true;
+        savedEl.textContent = `restored your unsent changes from ${new Date(prev.at).toLocaleString()}`;
+      }
+    }
+  } catch { /* a corrupt save must never block the tool */ }
+
+  for (const input of [jobtitleEl, recordedEl]) {
+    input?.addEventListener("input", () => { dirty = true; markDirty(); });
+  }
+
+  document.getElementById("revert")!.onclick = () => {
+    if (!confirm("Discard your changes and go back to what the archive holds?")) return;
+    localStorage.removeItem(KEY);
+    location.reload();
+  };
 
   document.getElementById("doreplace")!.onclick = () => {
     const from = (document.getElementById("find") as HTMLInputElement).value.trim();

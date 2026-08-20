@@ -110,6 +110,16 @@ def main() -> int:
             changed = sum(1 for c in tr["cues"] if before.get(c["start"]) not in (None, c["text"]))
             print(f"transcript updated: {len(tr['cues'])} cues, {changed} edited by hand")
 
+        if isinstance(blob, dict):
+            job = (blob.get("interviewee") or {}).get("jobtitle")
+            if job is not None and job != iv["interviewee"].get("jobtitle"):
+                iv["interviewee"]["jobtitle"] = job
+                print(f"credit line: {job!r}")
+            rec = blob.get("recorded")
+            if rec is not None and rec != iv.get("recorded"):
+                iv["recorded"] = rec
+                print(f"recorded: {rec!r}")
+
         iv["segments"] = clean
         iv["draft"] = True          # a person still has to approve it
         target.write_text(json.dumps(iv, indent=2, ensure_ascii=False) + "\n")

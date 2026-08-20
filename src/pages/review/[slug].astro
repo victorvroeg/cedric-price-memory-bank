@@ -22,6 +22,8 @@ const tr = transcripts[`../../../content/transcripts/${interview.slug}.json`] as
 
 const data = {
   slug: interview.slug,
+  jobtitle: interview.interviewee.jobtitle,
+  recorded: interview.recorded,
   duration: interview.video.duration ?? 0,
   hls: source?.url ?? null,
   segments: interview.segments,
@@ -39,6 +41,14 @@ const data = {
   <main class="review">
     <header class="review__head">
       <h1>{interview.interviewee.name}</h1>
+      <div class="review__identity">
+        <label>credit line
+          <input id="jobtitle" value={interview.interviewee.jobtitle} placeholder="e.g. Architect and urbanist" size="30" />
+        </label>
+        <label>recorded
+          <input id="recorded" value={interview.recorded} placeholder="YYYY-MM-DD" size="12" />
+        </label>
+      </div>
       <p>
         {interview.draft ? "DRAFT — not in the archive" : "published"} ·
         {interview.segments.length} segments · {Math.round(interview.video.duration ?? 0)}s
@@ -78,9 +88,11 @@ const data = {
 
     <footer class="review__foot">
       <button id="propose" class="primary">Approve &amp; send to the archive</button>
-      <button id="export">Copy JSON</button>
       <button id="download">Download file</button>
+      <button id="export">Copy JSON</button>
+      <button id="revert">Discard my changes</button>
       <span id="status" class="dim"></span>
+      <span id="saved" class="dim"></span>
     </footer>
   </main>
 
