@@ -53,8 +53,18 @@ root instead; the switch is `DEPLOY_TARGET` in `astro.config.mjs`.
 - **M1 foundation — done.** Static site, projection treatment, player,
   scrub, topic seeking, all running on the recovered data. Video plays a
   placeholder stream until films are transcoded onto the streaming host.
-- **M2 next: the cross-cut engine** (topic playlists across films,
-  desktop + iOS Safari). This is the point of no return in the plan.
+- **M2 cross-cut engine — done.** Topic pages play every interviewee's
+  turn in sequence across films. Measured transitions: 1 ms desktop,
+  50 ms iOS Safari. `?debug` on any topic page shows the metrics.
+- **All fourteen films are online** and every one was verified against
+  the recovered topic map (worst case 1.4 s, most under 1 s) — the
+  strongest confirmation the archaeology gave back the real thing.
+- **The 2014 intro film is restored** at the root from the studio's
+  master, after dying with the old site.
+
+Not yet in the archive: an unpublished **Kees Christiaanse** interview
+(9:24, no topic map) — the first real case for the M4 ingest pipeline,
+and the first proof the archive can grow.
 
 Open items: Apercu web licence confirmation; Cloudflare Stream vs Bunny
 (pin at M2); 2014 release language re: re-publication and transcription;
