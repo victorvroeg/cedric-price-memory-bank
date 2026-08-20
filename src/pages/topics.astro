@@ -32,7 +32,8 @@ for (const iv of interviews.values())
           <a class="topicindex__item" href={`${base}/topic/${t.slug}/`} style={`--topic-colour:${t.colour}`}>
             <span class="topicindex__label">{t.label}</span>
             <span class="topicindex__count">
-              {used.get(t.slug)} segments{watchable.get(t.slug) ? "" : " · film pending"}
+              {used.get(t.slug)} {used.get(t.slug) === 1 ? "segment" : "segments"}
+              {watchable.get(t.slug) ? "" : " · film pending"}
             </span>
           </a>
         ))
