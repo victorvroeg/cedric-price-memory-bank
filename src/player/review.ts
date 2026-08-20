@@ -142,7 +142,11 @@ function start(d: Data) {
   // Whisper got wrong every time it occurs.
   function replaceAll(from: string, to: string): number {
     if (!from) return 0;
-    const rx = new RegExp(from.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi");
+    // Whole words only: replacing "Duckland" with "Ducklands" must not turn an
+    // already-correct "Ducklands" into "Ducklandss".
+    const esc = from.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const bounded = /^[\w\s'-]+$/.test(from) ? `\\b${esc}\\b` : esc;
+    const rx = new RegExp(bounded, "gi");
     let n = 0;
     for (const c of cues) {
       const before = c.text;
