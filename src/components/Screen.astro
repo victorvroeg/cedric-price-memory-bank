@@ -1,0 +1,111 @@
+---
+import type { Interview } from "../lib/content";
+import { topics, cards } from "../lib/content";
+import { resolveVideoSource } from "../lib/resolveVideoSource";
+
+interface Props {
+  interview: Interview;
+}
+const { interview } = Astro.props;
+const source = resolveVideoSource(interview);
+
+// The scrub track maps time to width. Until real durations arrive at
+// transcode time (M3), the basis is the end of the last tagged segment.
+const basis =
+  interview.video.duration ??
+  Math.max(...interview.segments.map((s) => s.end), ...interview.cards.map((c) => c.time), 1);
+
+// Server-rendered spans keep the page meaningful without JavaScript;
+// the client rebuilds the track when a placeholder stream rescales it.
+const spans: { width: number; colour: string | null; label: string | null; active?: string }[] = [];
+let cursor = 0;
+for (const s of interview.segments) {
+  if (s.start > cursor) spans.push({ width: ((s.start - cursor) / basis) * 100, colour: null, label: null });
+  const t = topics.get(s.topicId);
+  spans.push({ width: ((s.end - s.start) / basis) * 100, colour: t?.colour ?? "#666", label: t?.label ?? s.topicId });
+  cursor = s.end;
+}
+
+const interviewTopics = [...new Set(interview.segments.map((s) => s.topicId))].map(
+  (id) => topics.get(id)!,
+);
+
+const clientData = {
+  source: source && { url: source.url, placeholder: source.placeholder },
+  segments: interview.segments,
+  cards: interview.cards,
+  topics: Object.fromEntries(
+    interviewTopics.map((t) => [t.slug, { label: t.label, colour: t.colour }]),
+  ),
+  cardTitles: Object.fromEntries(
+    interview.cards.map((c) => [c.cardId, cards.get(c.cardId)?.title ?? c.cardId]),
+  ),
+  basis,
+};
+---
+
+<main class="void">
+  <div class="stage">
+    <h1 class="title title--left">{interview.interviewee.name}</h1>
+    <p class="title title--right">{interview.interviewee.jobtitle}</p>
+
+    <figure class:list={["projection", { "projection--dead": !source }]}>
+      <canvas class="projection__bloom" aria-hidden="true"></canvas>
+      <div class="projection__frame">
+        {
+          source ? (
+            <>
+              <video class="projection__video" playsinline preload="metadata" aria-label={`Interview with ${interview.interviewee.name}`} />
+              <div class="projection__feather" aria-hidden="true" />
+              <div class="projection__hint" aria-hidden="true">play</div>
+            </>
+          ) : (
+            <p class="dead-note">
+              The film is not reachable right now. The interview’s topics and
+              references below remain the record.
+            </p>
+          )
+        }
+        <div class="projection__dim" aria-hidden="true"></div>
+      </div>
+    </figure>
+
+    <div class="scrub" role="slider" aria-label="Timeline" tabindex="0">
+      <div class="scrub__track">
+        {
+          spans.map((s) =>
+            s.colour ? (
+              <span class="scrub__segment" style={`width:${s.width}%;background:${s.colour}`} title={s.label} />
+            ) : (
+              <span class="scrub__segment" style={`width:${s.width}%;background:transparent`} />
+            ),
+          )
+        }
+      </div>
+      {interview.cards.map((c) => <span class="scrub__card" style={`left:${(c.time / basis) * 100}%`} />)}
+      <div class="scrub__playhead" style="left:0%"></div>
+    </div>
+
+    <div class="nowline">
+      <span class="nowline__topic"></span>
+      <span class="nowline__card"></span>
+      <span class="nowline__time"></span>
+    </div>
+
+    <nav class="topics" aria-label="Topics in this interview">
+      {
+        interviewTopics.map((t) => (
+          <button class="topic" data-topic={t.slug} style={`--topic-colour:${t.colour}`}>
+            {t.label}
+          </button>
+        ))
+      }
+    </nav>
+  </div>
+
+  <script type="application/json" id="cpmb-data" set:html={JSON.stringify(clientData)} />
+</main>
+
+<script>
+  import "../player/screen.ts";
+</script>

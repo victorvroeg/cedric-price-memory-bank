@@ -1,0 +1,14 @@
+---
+import Base from "../layouts/Base.astro";
+import Screen from "../components/Screen.astro";
+import { interviews } from "../lib/content";
+import { DEMO_INTERVIEW } from "../config";
+
+// M1: the front page holds one film. The archive view (wandering across all
+// interviews and cross-cutting by topic) arrives with the M2 engine.
+const interview = interviews.get(DEMO_INTERVIEW)!;
+---
+
+<Base title="Cedric Price Memory Bank" current="bank">
+  <Screen interview={interview} />
+</Base>

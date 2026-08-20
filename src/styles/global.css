@@ -1,0 +1,372 @@
+/* ————————————————————————————————————————————————————————————————
+   Cedric Price Memory Bank — identity carried over from 2014:
+   Apercu, black, white, rotated titles. The page is a void; films
+   render as projections on an implied cinema screen within it.
+   ———————————————————————————————————————————————————————————————— */
+
+@font-face {
+  font-family: "Apercu";
+  src: url("/fonts/apercuregular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Apercu";
+  src: url("/fonts/apercuitalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Apercu";
+  src: url("/fonts/apercubold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Apercu";
+  src: url("/fonts/apercubolditalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --bg: #000;
+  --fg: #fff;
+  --fg-dim: rgba(255, 255, 255, 0.55);
+  --hairline: rgba(255, 255, 255, 0.18);
+  --font: "Apercu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--fg);
+  text-decoration: none;
+  border-bottom: 1px solid var(--hairline);
+}
+a:hover {
+  border-bottom-color: var(--fg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+/* ——— chrome ——— */
+
+.menu {
+  position: fixed;
+  top: 28px;
+  left: 24px;
+  z-index: 40;
+  font-size: 15px;
+  display: flex;
+  gap: 1.4em;
+}
+.menu a {
+  border-bottom: none;
+  color: var(--fg-dim);
+}
+.menu a:hover,
+.menu a[aria-current="page"] {
+  color: var(--fg);
+}
+
+/* ——— the void and its rotated titles (2014: .title--left/--right) ——— */
+
+.void {
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  justify-items: center;
+  padding: 56px 0 28px;
+}
+
+.stage {
+  position: relative;
+  width: min(78vw, 152svh);
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  font-size: clamp(15px, 1.7vw, 24px);
+  letter-spacing: 1px;
+  line-height: 1.25;
+  white-space: nowrap;
+  z-index: 5;
+}
+.title--left {
+  left: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%) rotate(270deg);
+}
+.title--right {
+  right: 0;
+  font-weight: 400;
+  text-transform: lowercase;
+  color: var(--fg-dim);
+  transform: translate(50%, -50%) rotate(90deg);
+}
+
+/* ——— projection treatment ———
+   The film is a light source on an implied screen: an inset frame,
+   ambient bloom behind it, feathered edges, and a dim layer that
+   carries every cut. Nothing is illustrated; presence is implied. */
+
+.projection {
+  position: relative;
+  margin: 0 auto;
+  width: calc(100% - 2 * clamp(48px, 7vw, 110px));
+}
+
+.projection__bloom {
+  position: absolute;
+  inset: -11% -9%;
+  width: 118%;
+  height: 122%;
+  filter: blur(58px) saturate(1.15);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.projection__frame {
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  cursor: pointer;
+}
+
+.projection__video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* varying aspect ratios letterbox into the screen */
+  display: block;
+}
+
+.projection__feather {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 44px 16px rgba(0, 0, 0, 0.55);
+}
+
+.projection__dim {
+  position: absolute;
+  inset: -14% -12%;
+  z-index: 3;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 260ms ease;
+}
+.projection.is-dimmed .projection__dim {
+  opacity: 1;
+}
+
+.projection__hint {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  pointer-events: none;
+  transition: opacity 400ms ease;
+}
+.projection.is-playing .projection__hint {
+  opacity: 0;
+}
+
+/* the wounded state: video gone, archive still legible */
+.projection--dead .projection__frame {
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--hairline);
+  cursor: default;
+}
+.projection--dead .projection__bloom {
+  display: none;
+}
+.dead-note {
+  max-width: 34em;
+  padding: 1em;
+  text-align: center;
+  color: var(--fg-dim);
+  font-size: 14px;
+}
+
+/* ——— scrub bar: segments coloured by topic, card ticks ——— */
+
+.scrub {
+  position: relative;
+  margin: 26px auto 0;
+  width: calc(100% - 2 * clamp(48px, 7vw, 110px));
+  height: 22px;
+  cursor: pointer;
+}
+.scrub__track {
+  position: absolute;
+  inset: 8px 0;
+  display: flex;
+  background: rgba(255, 255, 255, 0.06);
+}
+.scrub__segment {
+  height: 100%;
+  opacity: 0.45;
+  transition: opacity 150ms ease;
+  border-right: 1px solid rgba(0, 0, 0, 0.4); /* 2014 .bar */
+}
+.scrub__segment.is-active,
+.scrub__segment:hover {
+  opacity: 1;
+}
+.scrub__card {
+  position: absolute;
+  top: 2px;
+  width: 1px;
+  height: 4px;
+  background: var(--fg-dim);
+}
+.scrub__playhead {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--fg);
+  pointer-events: none;
+}
+
+.nowline {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  margin: 10px auto 0;
+  width: calc(100% - 2 * clamp(48px, 7vw, 110px));
+  font-size: 14px;
+  min-height: 1.4em;
+}
+.nowline__topic {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.nowline__card {
+  color: var(--fg-dim);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.nowline__time {
+  color: var(--fg-dim);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ——— topic rail ——— */
+
+.topics {
+  margin: 26px auto 0;
+  width: calc(100% - 2 * clamp(48px, 7vw, 110px));
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 1.6em;
+}
+.topic {
+  background: none;
+  border: none;
+  font: inherit;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: var(--fg-dim);
+  cursor: pointer;
+  padding: 2px 0;
+}
+.topic:hover,
+.topic.is-active {
+  color: var(--topic-colour, var(--fg));
+}
+
+/* ——— prose pages (colofon) ——— */
+
+.prose {
+  max-width: 38em;
+  margin: 0 auto;
+  padding: 110px 24px 80px;
+}
+.prose h1 {
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1.6em;
+}
+.prose p {
+  margin-bottom: 1em;
+  color: rgba(255, 255, 255, 0.82);
+}
+.prose .attribution {
+  margin-top: 3em;
+  padding-top: 1.5em;
+  border-top: 1px solid var(--hairline);
+  color: var(--fg-dim);
+  font-size: 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .projection__dim,
+  .projection__hint,
+  .scrub__segment {
+    transition: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .stage {
+    width: 100vw;
+  }
+  .projection,
+  .scrub,
+  .nowline,
+  .topics {
+    width: calc(100% - 2 * clamp(20px, 6vw, 48px));
+  }
+  .title--left {
+    transform: translate(-38%, -50%) rotate(270deg);
+  }
+  .title--right {
+    transform: translate(38%, -50%) rotate(90deg);
+  }
+}

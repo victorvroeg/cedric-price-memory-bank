@@ -1,0 +1,26 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  current?: string;
+}
+const { title, current } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content="The Cedric Price Memory Bank — interviews with the network of Cedric Price, cut sideways by topic." />
+  </head>
+  <body>
+    <nav class="menu" aria-label="Site">
+      <a href="/" aria-current={current === "bank" ? "page" : undefined}>Memory Bank</a>
+      <a href="/colofon/" aria-current={current === "colofon" ? "page" : undefined}>Colofon</a>
+    </nav>
+    <slot />
+  </body>
+</html>

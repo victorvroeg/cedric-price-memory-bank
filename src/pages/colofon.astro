@@ -1,0 +1,15 @@
+---
+import Base from "../layouts/Base.astro";
+import { colofon } from "../lib/content";
+---
+
+<Base title="Colofon — Cedric Price Memory Bank" current="colofon">
+  <main class="prose">
+    <h1>{colofon.title}</h1>
+    <div set:html={colofon.body} />
+    <p class="attribution">
+      The Memory Bank was rebuilt in 2026 as a project of Early Studios and
+      Studio Nauta, on the work credited above.
+    </p>
+  </main>
+</Base>
