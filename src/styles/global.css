@@ -152,6 +152,7 @@ a:hover {
 
 .projection__bloom {
   position: absolute;
+  pointer-events: none;   /* decoration: it spills past the frame, over links */
   inset: -11% -9%;
   width: 118%;
   height: 122%;
@@ -356,6 +357,8 @@ a:hover {
   font-size: clamp(17px, 2vw, 27px);
 }
 .enter {
+  position: relative;
+  z-index: 10;
   margin: 30px auto 0;
   width: calc(100% - 2 * clamp(48px, 7vw, 110px));
   text-align: center;

@@ -1,11 +1,21 @@
 ---
 import Base from "../layouts/Base.astro";
 import { intro } from "../lib/content";
+import { topicsWithSegments, crossCut } from "../lib/crosscut";
 
 // The front door, as in 2014: the intro film first, the archive behind it.
 // (2014 route table: "/" -> intro, "/memory-bank" -> the archive.)
 // Skippable — nobody should be made to sit through it twice.
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+// Wandering is the front door: entering drops you into a topic, a different
+// one each time, already playing. Only topics with more than one film are
+// offered — landing on a single turn is not a cross-cut, it is a clip.
+const counts = topicsWithSegments();
+const wander = [...counts.keys()].filter((slug) => {
+  const cut = crossCut(slug);
+  return new Set(cut.playable.map((i) => i.slug)).size > 1;
+});
 const enter = `${base}/topics/`;
 ---
 
@@ -31,7 +41,8 @@ const enter = `${base}/topics/`;
       </figure>
 
       <nav class="enter">
-        <a class="enter__link" href={enter} data-enter>Enter the Memory Bank</a>
+        <a class="enter__link" href={enter} data-enter data-wander={wander.join(" ")}
+           >Enter the Memory Bank</a>
       </nav>
     </div>
   </main>
@@ -44,6 +55,18 @@ const enter = `${base}/topics/`;
   const projection = document.querySelector<HTMLElement>(".stage--intro .projection");
   const bloom = document.querySelector<HTMLCanvasElement>(".stage--intro .projection__bloom");
   const enter = document.querySelector<HTMLAnchorElement>("[data-enter]");
+
+  // pick a different topic on every visit
+  if (enter) {
+    const pool = (enter.dataset.wander || "").split(" ").filter(Boolean);
+    if (pool.length) {
+      const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+      const pick = () => `${base}/topic/${pool[Math.floor(Math.random() * pool.length)]}/`;
+      enter.href = pick();
+      // re-roll on hover so a second look is a second place
+      enter.addEventListener("pointerenter", () => (enter.href = pick()));
+    }
+  }
 
   if (video && projection && enter) {
     const src = video.dataset.src || DEV_FALLBACK_STREAM;
