@@ -68,6 +68,6 @@ Not yet in the archive: an unpublished **Kees Christiaanse** interview
 (9:24, no topic map) — the first real case for the M4 ingest pipeline,
 and the first proof the archive can grow.
 
-Open items: Apercu web licence confirmation; Cloudflare Stream vs Bunny
-(pin at M2); 2014 release language re: re-publication and transcription;
-card images (recoverable via the CMS host — see archaeology README).
+Open items: Apercu web licence confirmation; 2014 release language re:
+re-publication and transcription; card images (recoverable via the CMS
+host — see archaeology README); cold storage for the masters.
