@@ -10,6 +10,37 @@ interface Data {
   cardTitles: Record<string, string>;
 }
 
+// The archive is 25 fps throughout — the 2014 masters were cut in PAL and the
+// recovered topic map is SMPTE 25. Segment boundaries are stored in seconds but
+// edited as timecode, and always land on a frame.
+const FPS = 25;
+const snap = (t: number) => Math.round(t * FPS) / FPS;
+
+function toTC(t: number): string {
+  const f = Math.round(Math.max(0, t) * FPS);
+  const h = Math.floor(f / (3600 * FPS));
+  const m = Math.floor((f % (3600 * FPS)) / (60 * FPS));
+  const sec = Math.floor((f % (60 * FPS)) / FPS);
+  const fr = f % FPS;
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return `${pad(h)}:${pad(m)}:${pad(sec)}:${pad(fr)}`;
+}
+
+/** Accepts HH:MM:SS:FF, MM:SS:FF, SS:FF, or plain seconds. */
+function fromTC(v: string): number | null {
+  const t = v.trim();
+  if (!t) return null;
+  if (/^\d+(\.\d+)?$/.test(t)) return snap(parseFloat(t));
+  const parts = t.split(":").map((x) => parseInt(x, 10));
+  if (parts.some(isNaN)) return null;
+  const fr = parts.pop()!;
+  const sec = parts.pop() ?? 0;
+  const min = parts.pop() ?? 0;
+  const hr = parts.pop() ?? 0;
+  if (fr >= FPS) return null;
+  return snap(hr * 3600 + min * 60 + sec + fr / FPS);
+}
+
 const el = document.getElementById("review-data");
 if (el) start(JSON.parse(el.textContent!) as Data);
 
@@ -61,8 +92,8 @@ function start(d: Data) {
           const move = (m: PointerEvent) => {
             const r = timeline.getBoundingClientRect();
             const t = Math.max(0, Math.min(((m.clientX - r.left) / r.width) * d.duration, d.duration));
-            if (side === "start" && t < s.end - 1) s.start = Math.round(t * 10) / 10;
-            if (side === "end" && t > s.start + 1) s.end = Math.round(t * 10) / 10;
+            if (side === "start" && t < s.end - 1 / FPS) s.start = snap(t);
+            if (side === "end" && t > s.start + 1 / FPS) s.end = snap(t);
             dirty = true; render();
           };
           const up = () => { removeEventListener("pointermove", move); removeEventListener("pointerup", up); };
@@ -83,22 +114,55 @@ function start(d: Data) {
     for (const [i, s] of segs.entries()) {
       const li = document.createElement("li");
       li.className = "seg";
+      const tcHelp = "timecode hh:mm:ss:ff — ↑↓ steps one frame, shift ↑↓ one second";
       li.innerHTML = `
         <button class="seg__play" title="play">▸</button>
         <select class="seg__topic">${d.topics.map((t) =>
           `<option value="${t.id}"${t.id === s.topicId ? " selected" : ""}>${t.label}</option>`).join("")}</select>
-        <input class="seg__t" type="number" step="0.1" value="${s.start.toFixed(1)}" title="start">
-        <input class="seg__t" type="number" step="0.1" value="${s.end.toFixed(1)}" title="end">
-        <span class="seg__len dim">${Math.round(s.end - s.start)}s</span>
+        <input class="seg__tc" value="${toTC(s.start)}" title="in — ${tcHelp}" spellcheck="false">
+        <button class="seg__grab" data-side="start" title="set in from playhead">⌾</button>
+        <input class="seg__tc" value="${toTC(s.end)}" title="out — ${tcHelp}" spellcheck="false">
+        <button class="seg__grab" data-side="end" title="set out from playhead">⌾</button>
+        <span class="seg__len dim">${toTC(s.end - s.start).slice(3)}</span>
         <button class="seg__del" title="delete">×</button>`;
       li.style.borderLeftColor = colour(s.topicId);
       const [play] = li.getElementsByClassName("seg__play") as HTMLCollectionOf<HTMLButtonElement>;
       play.onclick = () => { video.currentTime = s.start; void video.play(); };
       const sel = li.querySelector<HTMLSelectElement>(".seg__topic")!;
       sel.onchange = () => { s.topicId = sel.value; dirty = true; render(); };
-      const [a, b] = li.querySelectorAll<HTMLInputElement>(".seg__t");
-      a.onchange = () => { s.start = parseFloat(a.value); dirty = true; sort(); render(); };
-      b.onchange = () => { s.end = parseFloat(b.value); dirty = true; sort(); render(); };
+      const [a, b] = li.querySelectorAll<HTMLInputElement>(".seg__tc");
+      const bind = (input: HTMLInputElement, side: "start" | "end") => {
+        const commit = (t: number) => {
+          if (side === "start" && t < s.end - 1 / FPS) s.start = t;
+          else if (side === "end" && t > s.start + 1 / FPS) s.end = t;
+          dirty = true; sort(); render();
+        };
+        input.onchange = () => {
+          const t = fromTC(input.value);
+          if (t === null) { input.value = toTC(s[side]); return; }
+          commit(t);
+        };
+        input.onkeydown = (ev) => {
+          if (ev.key !== "ArrowUp" && ev.key !== "ArrowDown") return;
+          ev.preventDefault();
+          const step = (ev.shiftKey ? 1 : 1 / FPS) * (ev.key === "ArrowUp" ? 1 : -1);
+          const t = snap(Math.max(0, (fromTC(input.value) ?? s[side]) + step));
+          input.value = toTC(t);
+          commit(t);
+          // keep the eye on the frame you are trimming to
+          video.currentTime = t;
+        };
+      };
+      bind(a, "start"); bind(b, "end");
+      for (const g of li.querySelectorAll<HTMLButtonElement>(".seg__grab")) {
+        g.onclick = () => {
+          const t = snap(video.currentTime);
+          const side = g.dataset.side as "start" | "end";
+          if (side === "start" && t < s.end - 1 / FPS) s.start = t;
+          if (side === "end" && t > s.start + 1 / FPS) s.end = t;
+          dirty = true; sort(); render();
+        };
+      }
       li.querySelector<HTMLButtonElement>(".seg__del")!.onclick = () => {
         segs.splice(i, 1); dirty = true; render();
       };
@@ -161,7 +225,7 @@ function start(d: Data) {
 
   video.addEventListener("timeupdate", () => {
     const t = video.currentTime;
-    clock.textContent = fmt(t);
+    clock.textContent = toTC(t);
     const head = document.getElementById("tl-head");
     if (head) head.style.left = `${(t / d.duration) * 100}%`;
     let current: HTMLElement | null = null;
@@ -179,15 +243,15 @@ function start(d: Data) {
   });
 
   document.getElementById("add")!.onclick = () => {
-    const t = Math.round(video.currentTime * 10) / 10;
-    segs.push({ start: t, end: Math.min(t + 60, d.duration), topicId: d.topics[0].id });
+    const t = snap(video.currentTime);
+    segs.push({ start: t, end: snap(Math.min(t + 60, d.duration)), topicId: d.topics[0].id });
     dirty = true; render();
   };
 
   function segmentsOnly() {
     return segs.map((s) => ({
-      start: Math.round(s.start * 100) / 100,
-      end: Math.round(s.end * 100) / 100,
+      start: Math.round(snap(s.start) * 1000) / 1000,
+      end: Math.round(snap(s.end) * 1000) / 1000,
       topicId: s.topicId,
     }));
   }
