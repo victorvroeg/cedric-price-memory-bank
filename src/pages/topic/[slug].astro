@@ -1,0 +1,19 @@
+---
+import Base from "../../layouts/Base.astro";
+import CrossCut from "../../components/CrossCut.astro";
+import { topics } from "../../lib/content";
+import { topicsWithSegments } from "../../lib/crosscut";
+
+export function getStaticPaths() {
+  const used = topicsWithSegments();
+  return [...topics.keys()]
+    .filter((slug) => used.has(slug))
+    .map((slug) => ({ params: { slug } }));
+}
+
+const topic = topics.get(Astro.params.slug)!;
+---
+
+<Base title={`${topic.label} — Cedric Price Memory Bank`} current="topics">
+  <CrossCut topic={topic} />
+</Base>

@@ -144,12 +144,7 @@ function init(data: ScreenData, root: HTMLElement) {
     seekTo(((e.clientX - r.left) / r.width) * basis);
   });
 
-  for (const chip of root.querySelectorAll<HTMLButtonElement>(".topic")) {
-    chip.addEventListener("click", () => {
-      const first = data.segments.find((s) => s.topicId === chip.dataset.topic);
-      if (first) seekTo((first.start / data.basis) * basis);
-    });
-  }
+  // topic chips are links into the cross-cut; the scrub handles in-film seeks
 
   document.addEventListener("keydown", (e) => {
     if (e.target instanceof HTMLElement && e.target.closest("button, a, input")) return;

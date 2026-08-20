@@ -92,12 +92,17 @@ const clientData = {
       <span class="nowline__time"></span>
     </div>
 
-    <nav class="topics" aria-label="Topics in this interview">
+    <nav class="topics" aria-label="Topics in this interview — each opens the cross-cut">
       {
         interviewTopics.map((t) => (
-          <button class="topic" data-topic={t.slug} style={`--topic-colour:${t.colour}`}>
+          <a
+            class="topic"
+            href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/topic/${t.slug}/`}
+            data-topic={t.slug}
+            style={`--topic-colour:${t.colour}`}
+          >
             {t.label}
-          </button>
+          </a>
         ))
       }
     </nav>

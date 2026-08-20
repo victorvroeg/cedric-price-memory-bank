@@ -1,0 +1,90 @@
+---
+import type { Topic } from "../lib/content";
+import { crossCut } from "../lib/crosscut";
+
+interface Props {
+  topic: Topic;
+}
+const { topic } = Astro.props;
+const { playable, awaiting } = crossCut(topic.slug);
+const total = playable.reduce((a, i) => a + (i.end - i.start), 0);
+const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+
+const clientData = {
+  items: playable,
+  topic: { label: topic.label, colour: topic.colour },
+};
+---
+
+<main class="void">
+  <div class="stage stage--crosscut">
+    <h1 class="title title--left" style={`color:${topic.colour}`}>{topic.label}</h1>
+    <p class="title title--right">{playable.length ? playable[0].name : ""}</p>
+
+    <figure class:list={["projection", { "projection--dead": !playable.length }]}>
+      <canvas class="projection__bloom" aria-hidden="true"></canvas>
+      <div class="projection__frame">
+        {
+          playable.length ? (
+            <>
+              <video class="projection__video is-front" playsinline preload="metadata" aria-label={`Everyone on ${topic.label}`} />
+              <video class="projection__video" playsinline preload="metadata" aria-hidden="true" />
+              <div class="projection__feather" aria-hidden="true" />
+              <div class="projection__hint" aria-hidden="true">
+                play&ensp;·&ensp;{playable.length} {playable.length === 1 ? "turn" : "turns"}
+              </div>
+            </>
+          ) : (
+            <p class="dead-note">
+              No film for this topic is reachable yet — the interviews below
+              hold it, and their films arrive as they are transcoded.
+            </p>
+          )
+        }
+        <div class="projection__dim" aria-hidden="true"></div>
+      </div>
+    </figure>
+
+    {
+      playable.length > 0 && (
+        <>
+          <div class="scrub" role="slider" aria-label="Cross-cut timeline" tabindex="0">
+            <div class="scrub__track">
+              {playable.map((i) => (
+                <span
+                  class="scrub__segment scrub__segment--cut"
+                  style={`width:${((i.end - i.start) / total) * 100}%;background:${topic.colour}`}
+                  title={`${i.name} — ${fmt(i.end - i.start)}`}
+                />
+              ))}
+            </div>
+            <div class="scrub__playhead" style="left:0%" />
+          </div>
+
+          <div class="nowline">
+            <span class="nowline__topic" style={`color:${topic.colour}`}>
+              {playable[0].name} — {playable[0].jobtitle}
+            </span>
+            <span class="nowline__card" />
+            <span class="nowline__time">1 / {playable.length}</span>
+          </div>
+        </>
+      )
+    }
+
+    <nav class="topics" aria-label="Interviewees on this topic">
+      {playable
+        .filter((i, n) => playable.findIndex((x) => x.slug === i.slug) === n)
+        .map((i) => <span class="topic" style={`--topic-colour:${topic.colour}`}>{i.name}</span>)}
+      {awaiting.map((a) => (
+        <span class="topic topic--awaiting" title="film not yet online">{a.name}</span>
+      ))}
+    </nav>
+  </div>
+
+  <script type="application/json" id="cpmb-crosscut" set:html={JSON.stringify(clientData)} />
+</main>
+
+<script>
+  import "../player/crosscut.ts";
+</script>

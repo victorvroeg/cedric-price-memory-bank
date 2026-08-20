@@ -20,6 +20,7 @@ const href = (p: string) => (import.meta.env.BASE_URL + "/" + p).replace(/\/+/g,
   <body>
     <nav class="menu" aria-label="Site">
       <a href={href("/")} aria-current={current === "bank" ? "page" : undefined}>Memory Bank</a>
+      <a href={href("/topics/")} aria-current={current === "topics" ? "page" : undefined}>Topics</a>
       <a href={href("/colofon/")} aria-current={current === "colofon" ? "page" : undefined}>Colofon</a>
     </nav>
     <slot />

@@ -1,0 +1,42 @@
+---
+import Base from "../layouts/Base.astro";
+import { topics, interviews } from "../lib/content";
+import { topicsWithSegments } from "../lib/crosscut";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const used = topicsWithSegments();
+const playableSlugs = new Set(
+  [...interviews.values()].filter((iv) => iv.video.hls).map((iv) => iv.slug),
+);
+const rows = [...topics.values()]
+  .filter((t) => used.has(t.slug))
+  .sort((a, b) => a.label.localeCompare(b.label, "en", { sensitivity: "base" }));
+
+// how many films per topic are already watchable
+const watchable = new Map<string, number>();
+for (const iv of interviews.values())
+  for (const s of iv.segments)
+    if (playableSlugs.has(iv.slug))
+      watchable.set(s.topicId, (watchable.get(s.topicId) ?? 0) + 1);
+---
+
+<Base title="Topics — Cedric Price Memory Bank" current="topics">
+  <main class="prose prose--wide">
+    <h1>Topics</h1>
+    <p style="color:var(--fg-dim)">
+      Click an idea and everyone takes a turn at it, cut across the films.
+    </p>
+    <nav class="topicindex" aria-label="All topics">
+      {
+        rows.map((t) => (
+          <a class="topicindex__item" href={`${base}/topic/${t.slug}/`} style={`--topic-colour:${t.colour}`}>
+            <span class="topicindex__label">{t.label}</span>
+            <span class="topicindex__count">
+              {used.get(t.slug)} segments{watchable.get(t.slug) ? "" : " · film pending"}
+            </span>
+          </a>
+        ))
+      }
+    </nav>
+  </main>
+</Base>
