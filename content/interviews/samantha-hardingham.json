@@ -6,7 +6,7 @@
   },
   "recorded": "2014-10-30",
   "video": {
-    "hls": "https://victorvroeg.github.io/cpmb-media-staging/samantha-hardingham/index.m3u8",
+    "hls": "https://customer-syg1o9n270h63juf.cloudflarestream.com/abb7e85d874116361d9e50b93354c5b8/manifest/video.m3u8",
     "duration": 1417.4,
     "legacy": {
       "vimeoId": "111748019",

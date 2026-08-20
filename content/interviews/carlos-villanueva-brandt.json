@@ -6,8 +6,8 @@
   },
   "recorded": "2014-11-05",
   "video": {
-    "hls": "https://victorvroeg.github.io/cpmb-media-staging/carlos-villanueva-brandt/index.m3u8",
-    "duration": 1299.72,
+    "hls": "https://customer-syg1o9n270h63juf.cloudflarestream.com/e9c21774f93ef9989ef44a21473ad6cd/manifest/video.m3u8",
+    "duration": 1299.7,
     "legacy": {
       "vimeoId": "111771835",
       "wpSlug": "08-carlos"

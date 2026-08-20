@@ -6,8 +6,8 @@
   },
   "recorded": "2014-11-05",
   "video": {
-    "hls": "https://victorvroeg.github.io/cpmb-media-staging/thomas-weaver/index.m3u8",
-    "duration": 1174.04,
+    "hls": "https://customer-syg1o9n270h63juf.cloudflarestream.com/279a19e14496d90f5f083bd3fca5c9a2/manifest/video.m3u8",
+    "duration": 1174,
     "legacy": {
       "vimeoId": "111748020",
       "wpSlug": "thom"

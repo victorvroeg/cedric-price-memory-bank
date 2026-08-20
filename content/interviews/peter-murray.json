@@ -6,8 +6,8 @@
   },
   "recorded": "2014-11-05",
   "video": {
-    "hls": "https://victorvroeg.github.io/cpmb-media-staging/peter-murray/index.m3u8",
-    "duration": 1412.56,
+    "hls": "https://customer-syg1o9n270h63juf.cloudflarestream.com/768d3291cb3be6c485219dc8ebfddf62/manifest/video.m3u8",
+    "duration": 1412.5,
     "legacy": {
       "vimeoId": "111770376",
       "wpSlug": "11-peter-murray"
