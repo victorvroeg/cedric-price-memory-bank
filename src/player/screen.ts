@@ -1,5 +1,6 @@
 import { makeBloom } from "./bloom";
 import { makeTitleCard } from "./titlecard";
+import { makeMode } from "./mode";
 // The projection screen: one film in the void.
 // Reads its data from the #cpmb-data JSON island rendered by Screen.astro.
 
@@ -12,6 +13,7 @@ interface ScreenData {
   basis: number; // seconds represented by the scrub track at build time
   base: string;
   here: string;
+  speakerName: string;
   topicList: { slug: string; label: string; mine: boolean }[];
   people: { slug: string; name: string }[];
 }
@@ -319,6 +321,47 @@ function init(data: ScreenData, root: HTMLElement) {
     if (!(e.target as Element).closest(".topicfield__item")) close();
   });
   addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+
+  // On this page the speaker is fixed and the themes change under them. The
+  // theme reported is whatever the playhead is inside right now.
+  let liveTopic = data.segments[0]?.topicId ?? "";
+  video.addEventListener("timeupdate", () => {
+    const tArchive = (video.currentTime / basis) * data.basis;
+    const seg = data.segments.find((x) => tArchive >= x.start && tArchive < x.end);
+    if (seg && seg.topicId !== liveTopic) {
+      liveTopic = seg.topicId;
+      mode.update();
+    }
+  });
+
+  const mode = makeMode(root, {
+    kind: "speaker",
+    base: data.base,
+    get theme() {
+      const t = data.topics[liveTopic];
+      return { slug: liveTopic, label: t?.label ?? "", colour: t?.colour ?? "#fff" };
+    },
+    speaker: { slug: data.here, name: data.speakerName },
+    at: () => video!.currentTime,
+    count: { n: Object.keys(data.topics).length, noun: "theme" },
+  });
+
+  // A theme chip moves the playhead, it does not change what you are
+  // following. Crossing to the theme's cross-cut is what the switch is for.
+  // Clicked again it finds that theme's next passage, so a speaker who
+  // returns to something three times can be followed through all three.
+  for (const chip of root.querySelectorAll<HTMLButtonElement>(".topic[data-topic]")) {
+    chip.addEventListener("click", () => {
+      const id = chip.dataset.topic;
+      const runs = data.segments
+        .filter((x) => x.topicId === id)
+        .sort((a, b) => a.start - b.start);
+      if (!runs.length) return;
+      const now = (video!.currentTime / basis) * data.basis;
+      const next = runs.find((r) => r.start > now + 0.5) ?? runs[0];
+      seekTo((next.start / data.basis) * basis);
+    });
+  }
 
   layoutScrub();
 }

@@ -55,6 +55,7 @@ const clientData = {
   basis,
   base,
   here: interview.slug,
+  speakerName: interview.interviewee.name,
   topicList: allTopicsWithFilm.map((t) => ({ ...t, mine: mine.has(t.slug) })),
   people: everyone,
 };
@@ -84,6 +85,7 @@ const clientData = {
                   <span class="titlebar__topic"></span>
                 </p>
               </div>
+              <p class="modesay" hidden aria-live="polite"></p>
               <div class="projection__sound">Sound is off — click the film to turn it on</div>
             </>
           ) : (
@@ -97,7 +99,8 @@ const clientData = {
       </div>
     </figure>
 
-    <div class="scrub" role="slider" aria-label="Timeline" tabindex="0">
+    <p class="scrubcaption"></p>
+  <div class="scrub" role="slider" aria-label="Timeline" tabindex="0">
       <div class="scrub__track">
         {
           spans.map((s) =>
@@ -113,24 +116,27 @@ const clientData = {
       <div class="scrub__playhead" style="left:0%"></div>
     </div>
 
-    <div class="nowline">
+    <nav class="modeswitch" aria-label="Follow a theme, or follow a speaker"></nav>
+
+  <div class="nowline">
       <span class="nowline__topic"></span>
       <span class="nowline__card"></span>
       <span class="nowline__time"></span>
     </div>
 
-    <nav class="topics" aria-label="Themes in this interview — each opens the cross-cut">
+    <nav class="topics" aria-label="Themes in this interview — each jumps to where it is spoken">
     <span class="topics__lead">Themes in this interview:</span>
       {
         interviewTopics.map((t) => (
-          <a
+          <button
             class="topic"
-            href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/topic/${t.slug}/`}
+            type="button"
             data-topic={t.slug}
             style={`--topic-colour:${t.colour}`}
+            title={`jump to where ${interview.interviewee.name} speaks on ${t.label}`}
           >
             {t.label}
-          </a>
+          </button>
         ))
       }
     </nav>

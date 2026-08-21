@@ -1373,3 +1373,90 @@ a:hover {
   white-space: nowrap;
   margin-right: 0.2em;
 }
+
+/* ——— which way you are moving: caption, switch, announcement ——— */
+
+/* What the timeline is a picture of. Its meaning changes completely between
+   the two modes and it never used to say so. */
+.scrubcaption {
+  width: calc(100% - 2 * clamp(48px, 7vw, 110px));
+  margin: 0 auto 6px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+}
+
+/* The two axes, with the live one held and the other reachable. */
+.modeswitch {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  width: calc(100% - 2 * clamp(48px, 7vw, 110px));
+  margin: 12px auto 0;
+  font-size: 13px;
+}
+.modeswitch__side {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 7px;
+  padding: 3px 0;
+  color: var(--fg-dim);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+a.modeswitch__side:hover,
+a.modeswitch__side:focus-visible {
+  color: var(--fg);
+  border-bottom-color: var(--hairline);
+}
+.modeswitch__axis {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+.modeswitch__value {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+/* the side you are on is stated, not offered */
+.modeswitch__side.is-live { color: var(--fg); }
+.modeswitch__side.is-live .modeswitch__value { color: var(--c, var(--fg)); }
+.modeswitch__side.is-live .modeswitch__axis { opacity: 1; }
+.modeswitch__sep { color: var(--fg-dim); }
+
+/* Said once or twice, then never again. */
+.modesay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 42%;
+  z-index: 7;
+  margin: 0;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 500ms ease, transform 500ms ease;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.9);
+}
+.modesay[hidden] { display: none; }
+.modesay.is-on { opacity: 1; transform: none; }
+.modesay__lead {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  margin-bottom: 6px;
+}
+.modesay__what {
+  display: block;
+  font-size: clamp(18px, 2.2vw, 30px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

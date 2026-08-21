@@ -13,6 +13,7 @@ import type Hls from "hls.js";
 import { makeBloom } from "./bloom";
 import { makeScore } from "./score";
 import { makeTitleCard } from "./titlecard";
+import { makeMode } from "./mode";
 
 interface Item {
   slug: string;
@@ -157,6 +158,7 @@ function init(data: Data, root: HTMLElement) {
     }
     if (barJob) barJob.textContent = item.jobtitle;
     titleCard.show();   // a cut changes the answer, so say it again
+    axis.update();
 
   }
 
@@ -745,18 +747,18 @@ function init(data: Data, root: HTMLElement) {
   // Start on arrival. Browsers only allow unprompted sound when they judge the
   // visitor to be engaged, so: try with sound, fall back to silent rather than
   // to nothing, and let any click or key bring the sound up.
-  async function autostart(): Promise<void> {
+  async function autostart(first = 0): Promise<void> {
     try {
-      await playItem(0, true);
+      await playItem(first, true);
       if (!els[active].paused) { score?.allow(); return; }
     } catch { /* fall through to muted */ }
     for (const el of els) el.muted = true;
     projection.classList.add("is-muted");
     try {
-      await playItem(0, true);
+      await playItem(first, true);
       report("started muted — click for sound");
     } catch {
-      pendingStart = 0;
+      pendingStart = first;
       current = -1;
       report("tap to start");
     }
@@ -819,8 +821,28 @@ function init(data: Data, root: HTMLElement) {
   }
   setTimeout(warmPlaylists, 1200);   // after the first frame is on screen
 
+  // On this page the theme is fixed and the speakers change under it.
+  const axis = makeMode(root, {
+    kind: "theme",
+    base: data.base,
+    theme: { slug: data.here, label: data.topic.label, colour: data.topic.colour },
+    get speaker() {
+      const it = items[current < 0 ? 0 : current];
+      return { slug: it.slug, name: it.name };
+    },
+    at: () => els[active].currentTime,
+    count: { n: new Set(items.map((i) => i.slug)).size, noun: "speaker" },
+  });
+
+  // Arriving from the switch: start on the speaker you were already hearing.
+  const from = new URLSearchParams(location.search).get("from");
+  if (from) {
+    const n = items.findIndex((i) => i.slug === from);
+    if (n > 0) pendingStart = n;
+  }
+
   layoutCards();
   loading(true);          // Cedric holds the frame until a picture arrives
   score?.swell();
-  void autostart();
+  void autostart(pendingStart);
 }

@@ -117,6 +117,7 @@ const clientData = {
                   <span class="titlebar__topic" style={`color:${topic.colour}`}>{topic.label}</span>
                 </p>
               </div>
+              <p class="modesay" hidden aria-live="polite"></p>
               <div class="projection__sound">Sound is off — click the film to turn it on</div>
             </>
           ) : (
@@ -133,6 +134,7 @@ const clientData = {
     {
       playable.length > 0 && (
         <>
+          <p class="scrubcaption"></p>
           <div class="scrub" role="slider" aria-label="Cross-cut timeline" tabindex="0">
             <div class="scrub__track">
               {playable.map((i) => (
@@ -153,6 +155,8 @@ const clientData = {
         <div class="cardpanel__also"></div>
         <button class="cardpanel__more" type="button">read the full reference →</button>
       </aside>
+
+      <nav class="modeswitch" aria-label="Follow a theme, or follow a speaker"></nav>
 
       <div class="nowline">
             <span class="nowline__topic" style={`color:${topic.colour}`} />
