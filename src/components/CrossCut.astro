@@ -88,11 +88,11 @@ const clientData = {
   <div class="stage stage--crosscut">
     <h1 class="title title--left title--following" style={`color:${topic.colour}`}>
       <button class="topicdoor" aria-expanded="false" aria-controls="topicfield"
-              title="every topic in the archive">{topic.label}</button>
+              title="every theme in the archive">{topic.label}</button>
     </h1>
     <p class="title title--right title--idle">
       <button class="peopledoor" aria-expanded="false" aria-controls="topicfield"
-              title="everyone in the archive">{playable.length ? playable[0].name : ""}</button>
+              title="every speaker in the archive">{playable.length ? playable[0].name : ""}</button>
     </p>
 
     <figure class:list={["projection", { "projection--dead": !playable.length }]}>
@@ -162,7 +162,7 @@ const clientData = {
       )
     }
 
-    <nav class="topics" aria-label="Interviewees on this topic — click to hear theirs">
+    <nav class="topics" aria-label="Speakers on this theme — click to hear theirs">
       {playable
         .filter((i, n) => playable.findIndex((x) => x.slug === i.slug) === n)
         .map((i) => (
@@ -187,7 +187,7 @@ const clientData = {
     </article>
   </div>
 
-  <nav class="topicfield" id="topicfield" hidden aria-label="Every topic in the archive">
+  <nav class="topicfield" id="topicfield" hidden aria-label="Every theme in the archive">
     <button class="topicfield__close" aria-label="close">×</button>
     <div class="topicfield__row"></div>
   </nav>

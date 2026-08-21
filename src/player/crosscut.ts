@@ -348,7 +348,7 @@ function init(data: Data, root: HTMLElement) {
           const b = document.createElement("button");
           b.className = "cardpanel__jump";
           fill(b);
-          b.title = `hear ${a.name} on this, in this cross-cut`;
+          x
           b.addEventListener("click", () => {
             closeCard(true);
             dim(true);

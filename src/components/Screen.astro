@@ -65,7 +65,7 @@ const clientData = {
     <h1 class="title title--left title--idle"></h1>
     <p class="title title--right title--following">
       <button class="peopledoor" aria-expanded="false" aria-controls="topicfield"
-              title="everyone in the archive">{interview.interviewee.name}</button>
+              title="every speaker in the archive">{interview.interviewee.name}</button>
     </p>
 
     <figure class:list={["projection", { "projection--dead": !source }]}>
@@ -88,7 +88,7 @@ const clientData = {
             </>
           ) : (
             <p class="dead-note">
-              The film is not reachable right now. The interview’s topics and
+              The film is not reachable right now. The interview’s themes and
               references below remain the record.
             </p>
           )
@@ -119,7 +119,7 @@ const clientData = {
       <span class="nowline__time"></span>
     </div>
 
-    <nav class="topics" aria-label="Topics in this interview — each opens the cross-cut">
+    <nav class="topics" aria-label="Themes in this interview — each opens the cross-cut">
       {
         interviewTopics.map((t) => (
           <a
@@ -135,7 +135,7 @@ const clientData = {
     </nav>
   </div>
 
-  <nav class="topicfield" id="topicfield" hidden aria-label="Topics and protagonists">
+  <nav class="topicfield" id="topicfield" hidden aria-label="Themes and speakers">
     <button class="topicfield__close" aria-label="close">×</button>
     <div class="topicfield__row"></div>
   </nav>
