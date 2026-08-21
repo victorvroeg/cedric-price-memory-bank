@@ -1,9 +1,12 @@
 {
   "title": "Black Mountain College",
   "body": "Black Mountain College, a school founded in 1933 in Black Mountain, North Carolina (near Asheville, North Carolina), was a new kind of college in the United States in which the study of art was seen to be central to a liberal arts education, and in which John Dewey's principles of education played a major role. Many of the school's students and faculty were influential in the arts or other fields, or went on to become influential. Although notable even during its short life, the school closed in 1957 after only 24 years.",
-  "image": null,
+  "image": "/cards/black-mountain-college.jpg",
   "legacy": {
     "postId": 544,
     "date": "2014-12-11 17:04:56"
-  }
+  },
+  "subtitle": "School",
+  "external": "http://blackmountaincollege.org",
+  "location": "https://www.google.nl/maps/place/Black+Mountain+College/@35.630949,-82.363176,17z/data=!3m1!4b1!4m2!3m1!1s0x8859f84b16014fc7:0x5b0e2a9513c395bf"
 }

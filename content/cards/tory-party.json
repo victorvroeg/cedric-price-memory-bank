@@ -1,9 +1,12 @@
 {
   "title": "Tory Party",
   "body": "The Conservative Party, colloquially referred to as the Tory Party or the Tories, is a <a href=\"http://en.wikipedia.org/wiki/Centre-right\">centre-right</a> <a href=\"http://en.wikipedia.org/wiki/Political_party\">political party</a> in the <a href=\"http://en.wikipedia.org/wiki/United_Kingdom\">United Kingdom</a> that states that it espouses the philosophies of conservatism and <a href=\"http://en.wikipedia.org/wiki/British_unionism\">British unionism</a>.",
-  "image": null,
+  "image": "/cards/tory-party.jpg",
   "legacy": {
     "postId": 40,
     "date": "2014-11-14 15:28:45"
-  }
+  },
+  "subtitle": "The Conservative Party",
+  "external": "http://www.conservatives.com",
+  "location": "https://www.google.com/maps/place/United+Kingdom/@55.3617609,-3.4433238,5z/data=!3m1!4b1!4m2!3m1!1s0x25a3b1142c791a9:0xc4f8a0433288257a"
 }

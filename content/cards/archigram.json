@@ -1,9 +1,12 @@
 {
   "title": "Archigram",
   "body": "Archigram was an <a href=\"http://en.wikipedia.org/wiki/Avant-garde\">avant-garde</a> architectural group formed in the 1960s - based at the <a href=\"http://en.wikipedia.org/wiki/Architectural_Association_School_of_Architecture\">Architectural Association</a>, <a href=\"http://en.wikipedia.org/wiki/London\">London</a> - that was <a href=\"http://en.wikipedia.org/wiki/Neofuturistic\">neofuturistic</a>, anti-heroic and pro-consumerist, drawing inspiration from technology in order to create a new reality that was solely expressed through hypothetical projects. The main members of the group were <a href=\"http://en.wikipedia.org/wiki/Peter_Cook_(architect)\">Peter Cook</a>, <a href=\"http://en.wikipedia.org/w/index.php?title=Warren_Chalk&amp;action=edit&amp;redlink=1\">Warren Chalk</a>, <a href=\"http://en.wikipedia.org/wiki/Ron_Herron\">Ron Herron</a>, <a href=\"http://en.wikipedia.org/w/index.php?title=Dennis_Crompton&amp;action=edit&amp;redlink=1\">Dennis Crompton</a>, <a href=\"http://en.wikipedia.org/wiki/Michael_Webb_(architect)\">Michael Webb</a> and <a href=\"http://en.wikipedia.org/w/index.php?title=David_Greene_(architect)&amp;action=edit&amp;redlink=1\">David Greene</a>.",
-  "image": null,
+  "image": "/cards/archigram.jpg",
   "legacy": {
     "postId": 90,
     "date": "2014-11-18 19:34:43"
-  }
+  },
+  "subtitle": "Peter Cook, Warren Chalk, Ron Herron, Dennis Crompton, Michael Webb and David Greene",
+  "external": "http://designmuseum.org/design/archigram",
+  "location": "https://www.google.com/maps/place/36+Bedford+Square,+AA+School+of+Architecture,+Fitzrovia,+London+WC1B+3ES,+UK/@51.5183066,-0.1307022,17z/data=!3m1!4b1!4m2!3m1!1s0x48761b2dbd608be9:0xf41e54d0d347dce6"
 }

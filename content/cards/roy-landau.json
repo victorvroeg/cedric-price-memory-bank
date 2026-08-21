@@ -1,9 +1,12 @@
 {
   "title": "Roy Landau",
   "body": "As director of graduate studies at the Architectural Association from 1974-93, Royston \"Roy\" Landau, was part of the process that turned the London centre from a fine, but limited, professional school of architecture into an international powerhouse. It was the inseparability of architecture and ideas that was the premise that led him into teaching at the AA from 1961 onwards, in an independent school of architecture, self-consciously democratic and unintentionally elitist, packed with brilliant students, and a young faculty that constituted a galaxy of talent. What made him stand out was not just his intensity and rigour, but the range of his interests.",
-  "image": null,
+  "image": "/cards/roy-landau.jpg",
   "legacy": {
     "postId": 44,
     "date": "2014-11-14 16:41:52"
-  }
+  },
+  "subtitle": "Director of Graduate Studies, Architectural Association",
+  "external": "http://www.theguardian.com/news/2001/nov/20/guardianobituaries.highereducation",
+  "location": "https://www.google.com/maps/place/36+Bedford+Square,+AA+School+of+Architecture,+Fitzrovia,+London+WC1B+3ES,+UK/@51.5183066,-0.1307022,17z/data=!3m1!4b1!4m2!3m1!1s0x48761b2dbd608be9:0xf41e54d0d347dce6"
 }

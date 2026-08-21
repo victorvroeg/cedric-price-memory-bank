@@ -1,9 +1,12 @@
 {
   "title": "Ron Herron",
   "body": "<p class=\"MsoNormal\">Ron Herron (born in 1930 in <a href=\"http://en.wikipedia.org/wiki/London\">London</a>, <a href=\"http://en.wikipedia.org/wiki/England\">England</a>. Died 1994) was a notable English <a href=\"http://en.wikipedia.org/wiki/Architect\">architect</a> and teacher. He was perhaps best known for his work with the seminal English experimental architecture collective <a href=\"http://en.wikipedia.org/wiki/Archigram\">Archigram</a>, which was formed in London in the early 1960s. Herron is the creator of one of the group's best known and celebrated projects, The <a href=\"http://en.wikipedia.org/wiki/Walking_city\">Walking city</a>.</p>",
-  "image": null,
+  "image": "/cards/ron-herron.jpg",
   "legacy": {
     "postId": 482,
     "date": "2014-12-11 16:19:12"
-  }
+  },
+  "subtitle": "Architect",
+  "external": "http://en.wikipedia.org/wiki/Ron_Herron",
+  "location": "https://www.google.nl/maps/place/London,+UK/data=!4m2!3m1!1s0x47d8a00baf21de75:0x52963a5addd52a99?sa=X&amp;ei=KUl3VJvBGMW-PMHegZgF&amp;ved=0CI8BEPIBMBA"
 }

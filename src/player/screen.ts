@@ -1,4 +1,5 @@
 import { makeBloom } from "./bloom";
+import { makeTitleCard } from "./titlecard";
 // The projection screen: one film in the void.
 // Reads its data from the #cpmb-data JSON island rendered by Screen.astro.
 
@@ -9,6 +10,10 @@ interface ScreenData {
   topics: Record<string, { label: string; colour: string }>;
   cardTitles: Record<string, string>;
   basis: number; // seconds represented by the scrub track at build time
+  base: string;
+  here: string;
+  topicList: { slug: string; label: string; mine: boolean }[];
+  people: { slug: string; name: string }[];
 }
 
 const dataEl = document.getElementById("cpmb-data");
@@ -22,6 +27,7 @@ function init(data: ScreenData, root: HTMLElement) {
   const scrub = root.querySelector<HTMLElement>(".scrub");
   const playhead = root.querySelector<HTMLElement>(".scrub__playhead");
   const nowTopic = root.querySelector<HTMLElement>(".nowline__topic");
+  const titleCard = makeTitleCard(root);
   const edgeTopic = root.querySelector<HTMLElement>(".title--left");
   const barTopic = root.querySelector<HTMLElement>(".titlebar__topic");
   const nowCard = root.querySelector<HTMLElement>(".nowline__card");
@@ -207,7 +213,11 @@ function init(data: ScreenData, root: HTMLElement) {
     // The left edge and the title card both name whatever is being said now.
     for (const el of [edgeTopic, barTopic]) {
       if (!el) continue;
-      if (el.textContent !== (topic?.label ?? "")) el.textContent = topic?.label ?? "";
+      // crossing into a new topic is a change of answer: say it again
+      if (el.textContent !== (topic?.label ?? "")) {
+        el.textContent = topic?.label ?? "";
+        titleCard.show();
+      }
       el.style.color = topic?.colour ?? "";
     }
     for (const el of root.querySelectorAll<HTMLElement>(".scrub__segment[data-topic]"))
@@ -218,6 +228,97 @@ function init(data: ScreenData, root: HTMLElement) {
     const card = [...data.cards].reverse().find((c) => c.time <= tArchive);
     if (nowCard) nowCard.textContent = card ? data.cardTitles[card.cardId] ?? "" : "";
   });
+
+  // --- the same two doors the cross-cut has --------------------------------
+  // Left edge opens the topics, right edge opens the people. Here you are
+  // following the person, so their own topics come first and the whole
+  // interviews are the way across to somebody else.
+  const field = document.querySelector<HTMLElement>(".topicfield");
+  const fieldRow = field?.querySelector<HTMLElement>(".topicfield__row");
+  const doorT = root.querySelector<HTMLElement>(".title--left");
+  const doorP = root.querySelector<HTMLButtonElement>(".peopledoor");
+  let leaving: number | undefined;
+  let closeTimer: number | undefined;
+
+  function head(t: string): HTMLElement {
+    const h = document.createElement("h3");
+    h.className = "topicfield__head";
+    h.textContent = t;
+    return h;
+  }
+  function rows(entries: { label: string; href: string; current: boolean }[], from: number): HTMLUListElement {
+    const ul = document.createElement("ul");
+    ul.className = "topicfield__list";
+    entries.forEach((e, n) => {
+      const li = document.createElement("li");
+      li.style.setProperty("--i", String(from + n));
+      const a = document.createElement("a");
+      a.className = e.current ? "topicfield__item is-current" : "topicfield__item";
+      a.href = e.href;
+      a.textContent = e.label;
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+    return ul;
+  }
+
+  function build(mode: "topics" | "people"): void {
+    if (!fieldRow) return;
+    fieldRow.textContent = "";
+    const name = root.querySelector<HTMLElement>(".titlebar__name")?.textContent ?? "";
+    if (mode === "topics") {
+      const mine = data.topicList.filter((t) => t.mine);
+      const rest = data.topicList.filter((t) => !t.mine);
+      fieldRow.appendChild(head(`${name} on`));
+      fieldRow.appendChild(rows(mine.map((t) => ({ label: t.label, href: `${data.base}/topic/${t.slug}/`, current: false })), 0));
+      fieldRow.appendChild(head("others on"));
+      fieldRow.appendChild(rows(rest.map((t) => ({ label: t.label, href: `${data.base}/topic/${t.slug}/`, current: false })), mine.length));
+    } else {
+      fieldRow.appendChild(head("whole interviews"));
+      fieldRow.appendChild(rows(data.people.map((p) => ({
+        label: p.name, href: `${data.base}/interview/${p.slug}/`, current: p.slug === data.here,
+      })), 0));
+    }
+  }
+
+  function open(mode: "topics" | "people"): void {
+    if (!field) return;
+    build(mode);
+    clearTimeout(leaving);
+    clearTimeout(closeTimer);
+    field.classList.remove("is-leaving");
+    field.hidden = false;
+    projection.classList.add("is-recessed");
+    root.classList.add("is-fielded");
+  }
+  function close(): void {
+    if (!field || field.hidden) return;
+    projection.classList.remove("is-recessed");
+    root.classList.remove("is-fielded");
+    field.classList.add("is-leaving");
+    clearTimeout(leaving);
+    leaving = window.setTimeout(() => {
+      field.hidden = true;
+      field.classList.remove("is-leaving");
+    }, 300);
+  }
+  const closeSoon = () => {
+    clearTimeout(closeTimer);
+    closeTimer = window.setTimeout(close, 360);
+  };
+
+  for (const [el, mode] of [[doorT, "topics"], [doorP, "people"]] as const) {
+    el?.addEventListener("pointerenter", () => open(mode));
+    el?.addEventListener("pointerleave", closeSoon);
+    el?.addEventListener("click", () => open(mode));
+  }
+  field?.addEventListener("pointerenter", () => clearTimeout(closeTimer));
+  field?.addEventListener("pointerleave", closeSoon);
+  field?.querySelector(".topicfield__close")?.addEventListener("click", close);
+  field?.addEventListener("click", (e) => {
+    if (!(e.target as Element).closest(".topicfield__item")) close();
+  });
+  addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
 
   layoutScrub();
 }

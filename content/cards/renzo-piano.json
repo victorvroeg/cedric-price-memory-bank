@@ -1,9 +1,12 @@
 {
   "title": "Renzo Piano",
   "body": "Renzo Piano, <a href=\"http://en.wikipedia.org/wiki/Order_of_Merit_of_the_Italian_Republic\">Cavaliere di Gran Croce OMRI</a> (born 14 September 1937) is an <a href=\"http://en.wikipedia.org/wiki/Italy\">Italian</a><a href=\"http://en.wikipedia.org/wiki/Pritzker_Architecture_Prize\">Pritzker Prize</a>-winning <a href=\"http://en.wikipedia.org/wiki/Architect\">architect</a>. In 2006, Piano was selected by <a href=\"http://en.wikipedia.org/wiki/Time_(magazine)\">TIME</a> as one of the 100 most influential people in the world. He was selected as the 10th most influential person in the \"Arts and Entertainment\" category of the <a href=\"http://en.wikipedia.org/wiki/2006_Time_100\">2006 Time 100</a>. In August 2013 he was appointed <a href=\"http://en.wikipedia.org/wiki/Senator_for_Life\">Senator for Life</a> in the Italian Senate by President <a href=\"http://en.wikipedia.org/wiki/Giorgio_Napolitano\">Giorgio Napolitano</a>.",
-  "image": null,
+  "image": "/cards/renzo-piano.jpg",
   "legacy": {
     "postId": 165,
     "date": "2014-11-20 16:35:38"
-  }
+  },
+  "subtitle": "Architect",
+  "external": "http://www.rpbw.com",
+  "location": "https://www.google.com/maps/place/United+Kingdom/@55.3617609,-3.4433238,5z/data=!3m1!4b1!4m2!3m1!1s0x25a3b1142c791a9:0xc4f8a0433288257a"
 }

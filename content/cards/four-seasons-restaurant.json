@@ -1,9 +1,12 @@
 {
   "title": "Four Seasons restaurant",
   "body": "The Four Seasons is a <a href=\"http://en.wikipedia.org/wiki/New_American_cuisine\">New American cuisine</a> restaurant in <a href=\"http://en.wikipedia.org/wiki/New_York_City\">New York City</a> located at 99 East <a href=\"http://en.wikipedia.org/wiki/52nd_Street_(Manhattan)\">52nd Street</a>, in the <a href=\"http://en.wikipedia.org/wiki/Seagram_Building\">Seagram Building</a> in <a href=\"http://en.wikipedia.org/wiki/Midtown_Manhattan\">Midtown Manhattan</a>.\r\n\r\n&nbsp;\r\n\r\nOpened in 1959, the Four Seasons is associated with a number of milestone firsts in the hospitality industry. The Four Seasons is credited with introducing the idea of seasonally-changing menus to America. It was the first destination restaurant to print its menus in English. The Four Seasons was also the first restaurant in the US to cook using fresh, wild mushrooms rather than the dried offerings that were more common in the 1950s.",
-  "image": null,
+  "image": "/cards/four-seasons-restaurant.jpg",
   "legacy": {
     "postId": 284,
     "date": "2014-11-30 10:01:23"
-  }
+  },
+  "subtitle": "New York",
+  "external": "http://www.fourseasonsrestaurant.com",
+  "location": "https://www.google.nl/maps/place/The+Four+Seasons/@40.75824,-73.972385,15z/data=!4m2!3m1!1s0x0:0x2e68b9cf5e0067cf?sa=X&amp;ei=R9xVVNnZLcOrPKW4gYgI&amp;ved=0CJ0BEPwSMA0"
 }

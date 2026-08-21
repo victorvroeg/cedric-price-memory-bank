@@ -1,9 +1,12 @@
 {
   "title": "Cybernetics",
   "body": "Cybernetics is a <a href=\"http://en.wikipedia.org/wiki/Transdisciplinarity\">transdisciplinary</a> approach for exploring regulatory <a href=\"http://en.wikipedia.org/wiki/Systems\">systems</a>, their <a href=\"http://en.wikipedia.org/wiki/Structure\">structures</a>, constraints, and possibilities. Cybernetics is relevant to the study of systems, such as mechanical, physical, biological, cognitive, and <a href=\"http://en.wikipedia.org/wiki/Social_systems\">social systems</a>.",
-  "image": null,
+  "image": "/cards/cybernetics.jpg",
   "legacy": {
     "postId": 74,
     "date": "2014-11-18 19:26:18"
-  }
+  },
+  "subtitle": "κυβερνητική / government",
+  "external": "http://en.wikipedia.org/wiki/Cybernetics",
+  "location": null
 }

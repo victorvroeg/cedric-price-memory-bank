@@ -1,9 +1,12 @@
 {
   "title": "Vienna University of Technology",
   "body": "The Vienna University of Technology is one of the major universities in <a href=\"http://en.wikipedia.org/wiki/Vienna\">Vienna</a>, the capital of Austria. Founded in 1815 as the \"Imperial-Royal Polytechnic Institute\", it currently has about 26,200 students (19% foreign students/30% women), eight faculties and about 4,000 staff members (1,800 academics). The university's teaching and research is focused on <a href=\"http://en.wikipedia.org/wiki/Engineering\">engineering</a> and <a href=\"http://en.wikipedia.org/wiki/Natural_science\">natural sciences</a>.",
-  "image": null,
+  "image": "/cards/vienna-university-of-technology.jpg",
   "legacy": {
     "postId": 167,
     "date": "2014-11-20 16:36:40"
-  }
+  },
+  "subtitle": "Technische Universität Wien",
+  "external": "http://www.tuwien.ac.at/en/tuwien_home/",
+  "location": "https://www.google.com/maps/place/Vienna+University+of+Technology/@48.198655,16.368463,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x1e9933a0d2a95812"
 }

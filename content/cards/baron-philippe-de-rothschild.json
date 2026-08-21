@@ -1,9 +1,12 @@
 {
   "title": "Baron Philippe de Rothschild",
   "body": "Baron Philippe de Rothschild (13 April 1902 – 20 January 1988) was a member of the <a href=\"http://en.wikipedia.org/wiki/Rothschild_family\">Rothschild</a><a href=\"http://en.wikipedia.org/wiki/Rothschild_banking_family_of_France\">banking dynasty</a> who became a <a href=\"http://en.wikipedia.org/wiki/Grand_Prix_motor_racing\">Grand Prix</a> race-car driver, a screenwriter and playwright, a theatrical producer, a film producer, a poet, and one of the most successful wine growers in the world.",
-  "image": null,
+  "image": "/cards/baron-philippe-de-rothschild.jpg",
   "legacy": {
     "postId": 230,
     "date": "2014-11-21 14:28:29"
-  }
+  },
+  "subtitle": "Rothschild dynasty",
+  "external": "http://en.wikipedia.org/wiki/Philippe_de_Rothschild",
+  "location": "https://www.google.nl/maps/place/Paris,+France/@48.8622759,2.3365501,13z/data=!4m2!3m1!1s0x47e66e1f06e2b70f:0x40b82c3688c9460"
 }

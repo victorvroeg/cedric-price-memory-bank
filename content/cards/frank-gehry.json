@@ -1,9 +1,12 @@
 {
   "title": "Frank Gehry",
   "body": "Frank Owen Gehry, CC (born Frank Owen Goldberg; February 28, 1929 is a Canadian-\r\n\r\nAmerican Pritzker Prize–winning architect based in Los Angeles.\r\n\r\nA number of his buildings, including his private residence, have become\r\n\r\nworld renowned tourist attractions. His works are cited as being among\r\n\r\nthe most important works of contemporary architecture in the 2010\r\n\r\nWorld Architecture Survey, which led Vanity Fair to label him as \"the\r\n\r\nmost important architect of our age\".",
-  "image": null,
+  "image": "/cards/frank-gehry.jpg",
   "legacy": {
     "postId": 277,
     "date": "2014-11-27 07:54:17"
-  }
+  },
+  "subtitle": "Architect",
+  "external": "https://www.foga.com",
+  "location": "https://www.google.nl/maps/place/12541+Beatrice+St,+Los+Angeles,+CA+90066,+USA/@33.9815749,-118.4149594,15z/data=!4m2!3m1!1s0x80c2b0a03553d1d5:0x2b552a22b281d171?sa=X&amp;ei=SdpVVJ2KM4m3PPOBgSA&amp;ved=0CCIQ8gEwAA"
 }

@@ -1,9 +1,12 @@
 {
   "title": "GLC",
   "body": "<p class=\"MsoNormal\">The Greater London Council (GLC) was the top-tier <a href=\"http://en.wikipedia.org/wiki/Local_government\">local government</a> administrative body for <a href=\"http://en.wikipedia.org/wiki/Greater_London\">Greater London</a> from 1965 to 1986. It replaced the earlier <a href=\"http://en.wikipedia.org/wiki/London_County_Council\">London County Council</a> (LCC) which had covered a much smaller area. The GLC was dissolved in 1986 by the <a href=\"http://en.wikipedia.org/wiki/Local_Government_Act_1985\">Local Government Act 1985</a> and its powers were devolved to the London boroughs and other entities.</p>",
-  "image": null,
+  "image": "/cards/glc.jpg",
   "legacy": {
     "postId": 319,
     "date": "2014-11-30 10:17:23"
-  }
+  },
+  "subtitle": "Greater London Council",
+  "external": "http://news.bbc.co.uk/onthisday/hi/dates/stories/march/31/newsid_2530000/2530803.stm",
+  "location": "https://www.google.nl/maps/place/London,+UK/@51.5073509,-0.1277583,7z/data=!4m2!3m1!1s0x47d8a00baf21de75:0x52963a5addd52a99?sa=X&amp;ei=5P1VVMLCG4b2OsrbgLAK&amp;ved=0CJIBEPIBMBA"
 }

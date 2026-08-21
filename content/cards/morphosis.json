@@ -1,9 +1,12 @@
 {
   "title": "Morphosis ",
   "body": "Thom Mayne (born January 19, 1944, in <a href=\"http://en.wikipedia.org/wiki/Waterbury,_Connecticut\">Waterbury, Connecticut</a>) is a <a href=\"http://en.wikipedia.org/wiki/Los_Angeles\">Los Angeles</a>-based <a href=\"http://en.wikipedia.org/wiki/Architect\">architect</a>. Educated at <a href=\"http://en.wikipedia.org/wiki/University_of_Southern_California\">University of Southern California</a> (1969) and the <a href=\"http://en.wikipedia.org/wiki/Harvard_University\">Harvard University</a><a href=\"http://en.wikipedia.org/wiki/Graduate_School_of_Design\">Graduate School of Design</a> in 1978, Mayne helped found the <a href=\"http://en.wikipedia.org/wiki/Southern_California_Institute_of_Architecture\">Southern California Institute of Architecture</a> (SCI-Arc) in 1972, where he is a trustee. Since then he has held teaching positions at SCI-Arc, the <a href=\"http://en.wikipedia.org/wiki/California_State_Polytechnic_University,_Pomona\">California State Polytechnic University, Pomona</a> (Cal Poly Pomona) and the <a href=\"http://en.wikipedia.org/wiki/University_of_California,_Los_Angeles\">University of California, Los Angeles</a> (UCLA). He is principal of Morphosis, an architectural firm in <a href=\"http://en.wikipedia.org/wiki/Santa_Monica,_California\">Santa Monica, California</a>. Mayne received the <a href=\"http://en.wikipedia.org/wiki/Pritzker_Architecture_Prize\">Pritzker Architecture Prize</a> in March 2005.",
-  "image": null,
+  "image": "/cards/morphosis.jpg",
   "legacy": {
     "postId": 264,
     "date": "2014-11-21 15:14:58"
-  }
+  },
+  "subtitle": "Thom Mayne",
+  "external": "http://www.morphosis.com",
+  "location": "https://www.google.nl/maps/place/UCLA+:+Architecture+%26+Urban+Design/@34.0204989,-118.4117325,10z/data=!4m5!1m2!2m1!1smorphosis+los+angeles!3m1!1s0x80c2bc89d9c00001:0x6bd041813679fcb2"
 }

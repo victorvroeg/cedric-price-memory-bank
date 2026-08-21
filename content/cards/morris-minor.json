@@ -1,9 +1,12 @@
 {
   "title": "Morris Minor",
   "body": "The Morris Minor is a British <a href=\"http://en.wikipedia.org/wiki/Economy_car\">economy car</a> that debuted at the <a href=\"http://en.wikipedia.org/wiki/Earls_Court\">Earls Court</a> Motor Show, London, on 20 September 1948. Designed under the leadership of <a href=\"http://en.wikipedia.org/wiki/Alec_Issigonis\">Alec Issigonis</a>, more than 1.3 million were manufactured between 1948 and 1972. Initially available as a two-door <a href=\"http://en.wikipedia.org/wiki/Sedan_(car)\">saloon</a> and <a href=\"http://en.wikipedia.org/wiki/Tourer\">tourer</a> (convertible), the range was subsequently expanded to include a four-door saloon in 1950, a <a href=\"http://en.wikipedia.org/wiki/Woodie_(car_body_style)\">wood-framed</a> <a href=\"http://en.wikipedia.org/wiki/Station_wagon\">estate</a> (the Traveller) from 1952 and <a href=\"http://en.wikipedia.org/wiki/Panel_van\">panel van</a> and <a href=\"http://en.wikipedia.org/wiki/Pick-up_truck\">pick-up truck</a> variants from 1953.\r\n\r\n&nbsp;\r\n\r\nThe Minor was manufactured in three series: the MM (1948), the Series II (1952) and finally the 1000 series (1956).",
-  "image": null,
+  "image": "/cards/morris-minor.jpg",
   "legacy": {
     "postId": 466,
     "date": "2014-12-11 16:00:40"
-  }
+  },
+  "subtitle": "Automobile",
+  "external": "http://www.morrisminor.org.uk",
+  "location": "https://www.google.nl/maps/place/United+Kingdom/data=!4m2!3m1!1s0x25a3b1142c791a9:0xc4f8a0433288257a?sa=X&amp;ei=jkF3VOuED4TgOKKGgMAF&amp;ved=0CIUBEPIBMBQ"
 }

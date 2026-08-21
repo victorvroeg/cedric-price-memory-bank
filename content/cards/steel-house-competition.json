@@ -1,9 +1,12 @@
 {
   "title": "Steel House competition",
   "body": "Cedric Price designed the Steelhouse as a response to the increasing requirements for less definitive space. He argued that the main design criterion should be for the provision of space with maximum variation of possible uses. Features of the plan are: a shared activity area that is variable over a 24-hour cycle; alternative access routes (internal and external); capacity for subdivision into 2 homes; possibility of permanently fragmented ‘home’ with self-contained units and separate external access.",
-  "image": null,
+  "image": "/cards/steel-house-competition.jpg",
   "legacy": {
     "postId": 430,
     "date": "2014-12-10 19:07:11"
-  }
+  },
+  "subtitle": "Cedric Price architects",
+  "external": "http://www.aaschool.ac.uk/PUBLIC/AAPUBLICATIONS/aboutpublications.php",
+  "location": "https://www.google.nl/maps/place/United+Kingdom/@55.378051,-3.435973,7z/data=!4m2!3m1!1s0x25a3b1142c791a9:0xc4f8a0433288257a"
 }

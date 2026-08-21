@@ -1,9 +1,12 @@
 {
   "title": "Parametricism",
   "body": "<p class=\"MsoNormal\">Though parametricism has its roots in the digital animation techniques of the mid-1990s, it has only fully emerged in recent years with the development of advanced parametric design systems. Parametricism has become the dominant, single style for avant-garde practice today. It is particularly suited to large-scale urbanism as exemplified by a series of competition-winning master-plans by Zaha Hadid Architects.</p>",
-  "image": null,
+  "image": "/cards/parametricism.jpg",
   "legacy": {
     "postId": 289,
     "date": "2014-11-30 10:03:10"
-  }
+  },
+  "subtitle": "Patrick Schumacher and friends",
+  "external": "http://www.patrikschumacher.com",
+  "location": "https://www.google.nl/maps/place/Montreal,+QC,+Canada/@45.5086699,-73.5539925,7z/data=!4m2!3m1!1s0x4cc91a541c64b70d:0x654e3138211fefef?sa=X&amp;ei=8N1VVNX0B43CPPyfgLAH&amp;ved=0CIoBEPIBMBA"
 }

@@ -1,9 +1,12 @@
 {
   "title": "Lea Valley",
   "body": "The Lea Valley, the valley of the <a href=\"http://en.wikipedia.org/wiki/River_Lea\">River Lea</a>, has been used as a transport corridor, a source of sand and gravel, an industrial area, a water supply for <a href=\"http://en.wikipedia.org/wiki/London\">London</a>, and a recreational area. The London <a href=\"http://en.wikipedia.org/wiki/2012_Summer_Olympics\">2012 Summer Olympics</a> were based in <a href=\"http://en.wikipedia.org/wiki/Stratford,_London\">Stratford</a>, in the <a href=\"http://en.wikipedia.org/wiki/Lower_Lea_Valley\">Lower Lea Valley</a>.",
-  "image": null,
+  "image": "/cards/lea-valley.jpg",
   "legacy": {
     "postId": 208,
     "date": "2014-11-21 14:10:13"
-  }
+  },
+  "subtitle": "East London",
+  "external": "http://en.wikipedia.org/wiki/Lea_Valley",
+  "location": "https://maps.google.nl/maps?q=lea+valley&amp;client=safari&amp;rls=en&amp;biw=1430&amp;bih=780&amp;um=1&amp;ie=UTF-8&amp;sa=X&amp;ei=f-Q0VIyzBYT9ygOTuoLoDQ&amp;ved=0CAgQ_AUoAQ"
 }

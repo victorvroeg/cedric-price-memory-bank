@@ -1195,7 +1195,9 @@ a:hover {
   text-align: center;
   pointer-events: none;
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85);
+  transition: opacity 900ms ease;
 }
+.titlebar.is-faded { opacity: 0; }
 .titlebar__name {
   margin: 0 0 4px;
   font-size: clamp(20px, 3.1vw, 48px);
@@ -1222,3 +1224,19 @@ a:hover {
   margin-left: 0.45em;
 }
 .stage--crosscut.is-fielded .titlebar { opacity: 0; transition: opacity 260ms ease; }
+
+/* The name over the picture is a way in: click it and you get that person
+   whole, from the top, instead of the slice this topic asked them for. */
+.titlebar__link {
+  pointer-events: auto;
+  color: inherit;
+  border-bottom: 0;
+  text-decoration: none;
+  transition: opacity 160ms ease;
+}
+.titlebar__link:hover,
+.titlebar__link:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
+}

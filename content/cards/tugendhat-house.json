@@ -1,9 +1,12 @@
 {
   "title": "Tugendhat House",
   "body": "In the Tugendhat House, which was commissioned by Grete and Fritz Tugendhat, Mies van der Rohe incorporates, among other things, design elements from the Barcelona Pavilion. The steel skeleton construction, large windows, flowing transitions between the rooms on the ground floor and the use of the finest raw materials to divide up the space are familiar components. In addition, Mies laid great store by implementing the latest developments in the field of modern living.",
-  "image": null,
+  "image": "/cards/tugendhat-house.png",
   "legacy": {
     "postId": 117,
     "date": "2014-11-19 15:50:58"
-  }
+  },
+  "subtitle": "Brno, 1929",
+  "external": "http://bauhaus-online.de/en/atlas/werke/tugendhat-house",
+  "location": "https://www.google.com/maps/preview?client=safari&amp;oe=UTF-8&amp;ie=UTF-8&amp;fb=1&amp;gl=fr&amp;sll=49.207138,16.616041&amp;sspn=0.0215332,0.0439462&amp;cid=5889127146370224362&amp;q=tugendhat+house&amp;ei=QxwIVNyuB8Tlao3-gqgM&amp;ved=0CLQBEPwSMBA"
 }

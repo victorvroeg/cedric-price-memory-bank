@@ -1,9 +1,12 @@
 {
   "title": "Samantha Hardingham",
   "body": "Samantha Hardingham is an architectural writer and editor publishing work in several editions of the original ellipsis architecture guide series. She graduated from the AA in 1993. She was senior research fellow in the Research Centre for Experimental Practice at the University of Westminster 2003–09. She co-edited a book and cocurated the accompanying exhibition for L.A.W.u.N Project #19+20. She is currently researching a publication on the ‘Complete Works of Cedric Price’.",
-  "image": null,
+  "image": "/cards/samantha-hardingham.jpg",
   "legacy": {
     "postId": 126,
     "date": "2014-11-19 15:56:36"
-  }
+  },
+  "subtitle": "Architectural writer and editor",
+  "external": "http://www.grahamfoundation.org/grantees/4832-cedric-price-works-19582003-a-forward-minded-retrospective",
+  "location": "https://www.google.com/maps/place/London,+UK/@51.5286416,-0.1015987,11z/data=!3m1!4b1!4m2!3m1!1s0x47d8a00baf21de75:0x52963a5addd52a99"
 }

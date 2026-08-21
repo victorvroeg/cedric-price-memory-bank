@@ -1,9 +1,12 @@
 {
   "title": "Price’s candles",
   "body": "<p class=\"MsoNormal\">Price's Candles, founded in 1830, is an importer and retailer of <a href=\"http://en.wikipedia.org/wiki/Candle\">candles</a>. Its full name is Price's Patent Candles Ltd. The firm is headquartered in <a href=\"http://en.wikipedia.org/wiki/Bedford\">Bedford</a> and holds the <a href=\"http://en.wikipedia.org/wiki/Royal_Warrant\">Royal Warrant</a> for the supply of candles. It is now the largest candle supplier in the UK. They hold an important place in the technological <a href=\"http://en.wikipedia.org/wiki/History_of_candle_making\">history of candle making</a>.</p>",
-  "image": null,
+  "image": "/cards/prices-candles.jpg",
   "legacy": {
     "postId": 445,
     "date": "2014-12-11 15:41:18"
-  }
+  },
+  "subtitle": "Factory",
+  "external": "http://www.prices-candles.co.uk",
+  "location": "https://www.google.nl/maps/place/Bedford,+UK/@52.1390923,-0.4515815,13z/data=!3m1!4b1!4m2!3m1!1s0x4877b6c6c66c36cd:0x125df4c90cabaf30"
 }

@@ -1,9 +1,12 @@
 {
   "title": "Peter Eisenman",
   "body": "Peter Eisenman was born on August 11, 1932 in <a href=\"http://en.wikipedia.org/wiki/Newark,_New_Jersey\">Newark</a>, <a href=\"http://en.wikipedia.org/wiki/New_Jersey\">New Jersey</a>. As a child, he attended <a href=\"http://en.wikipedia.org/wiki/Columbia_High_School_(New_Jersey)\">Columbia High School</a> located in <a href=\"http://en.wikipedia.org/wiki/Maplewood,_New_Jersey\">Maplewood, New Jersey</a>. He transferred in to the architecture school as an undergraduate at <a href=\"http://en.wikipedia.org/wiki/Cornell_University\">Cornell University</a> and gave up his position on the swimming team in order to commit full-time to his studies. He received a Bachelor of Architecture Degree from Cornell, a Master of Architecture Degree from <a href=\"http://en.wikipedia.org/wiki/Columbia_University\">Columbia University</a>'s <a href=\"http://en.wikipedia.org/wiki/Graduate_School_of_Architecture,_Planning_and_Preservation\">Graduate School of Architecture, Planning and Preservation</a>, and M.A. and Ph.D. degrees from the <a href=\"http://en.wikipedia.org/wiki/University_of_Cambridge\">University of Cambridge</a>. He received an honorary degree from <a href=\"http://en.wikipedia.org/wiki/Syracuse_University\">Syracuse University</a><a href=\"http://en.wikipedia.org/wiki/Syracuse_University_School_of_Architecture\">School of Architecture</a> in 2007.",
-  "image": null,
+  "image": "/cards/peter-eisenman.jpg",
   "legacy": {
     "postId": 262,
     "date": "2014-11-21 15:13:50"
-  }
+  },
+  "subtitle": "Architect",
+  "external": "http://www.eisenmanarchitects.com",
+  "location": "https://www.google.nl/maps/place/41+W+25th+St,+New+York,+NY+10010,+USA/@40.7440188,-73.990784,15z/data=!4m2!3m1!1s0x89c259a5b371da4f:0x2cfcf092b0888865?sa=X&amp;ei=O9o_VOCfGMTR7QaUhoDAAg&amp;ved=0CCIQ8gEwAA"
 }

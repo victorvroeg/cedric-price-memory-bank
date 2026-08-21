@@ -1,9 +1,12 @@
 {
   "title": "Clip Kit",
   "body": "<p class=\"MsoNormal\">Clip Kit was a student magazine at the Architectural Association, initiated by peter Murray.<span style=\"font-family: 'Calibri','sans-serif'; mso-ascii-theme-font: major-latin; mso-fareast-font-family: 'MS Mincho'; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: major-latin; mso-bidi-font-family: Helvetica; color: black; mso-themecolor: text1; mso-bidi-font-weight: bold;\"> </span></p>",
-  "image": null,
+  "image": "/cards/clip-kit.jpg",
   "legacy": {
     "postId": 447,
     "date": "2014-12-11 15:42:51"
-  }
+  },
+  "subtitle": "By Peter Murray",
+  "external": "http://books.google.nl/books?id=9z_zrQLuY3kC&amp;pg=PA442&amp;lpg=PA442&amp;dq=clip+kit+peter+murray&amp;source=bl&amp;ots=5mU768GCgA&amp;sig=25mQWjjq6cBEQJmPd5RStBKSMko&amp;hl=en&amp;sa=X&amp;ei=8Jh1VK2IGtXraqeVgkg&amp;ved=0CDQQ6AEwBA#v=onepage&amp;q=clip%20kit%20peter%20murray&amp;f=false",
+  "location": "https://www.google.nl/maps/place/aa+school+of+architecture/@51.518231,-0.130927,15z/data=!4m2!3m1!1s0x0:0x377e41fb41bdc0f8?sa=X&amp;ei=66B1VJjfLMqt7gaso4DYDQ&amp;ved=0CIMBEPwSMA4"
 }

@@ -1,9 +1,12 @@
 {
   "title": "Margaret Thatcher",
   "body": "Margaret Hilda Thatcher, Baroness Thatcher, (13 October 1925 – 8 April 2013), was the <a href=\"http://en.wikipedia.org/wiki/Prime_Minister_of_the_United_Kingdom\">Prime Minister of the United Kingdom</a> from 1979 to 1990 and the <a href=\"http://en.wikipedia.org/wiki/Leader_of_the_Conservative_Party_(UK)\">Leader of the Conservative Party</a> from 1975 to 1990. She was the longest-serving British Prime Minister of the 20th century and is currently the only woman to have held the office. A <a href=\"http://en.wikipedia.org/wiki/Soviet_Union\">Soviet</a> journalist called her the \"<a href=\"http://en.wikipedia.org/wiki/Iron_Lady\">Iron Lady</a>\", a nickname that became associated with her uncompromising politics and leadership style. As Prime Minister, she implemented policies that have come to be known as <a href=\"http://en.wikipedia.org/wiki/Thatcherism\">Thatcherism</a>.",
-  "image": null,
+  "image": "/cards/margaret-thatcher.png",
   "legacy": {
     "postId": 183,
     "date": "2014-11-20 16:44:42"
-  }
+  },
+  "subtitle": "Politician",
+  "external": "http://en.wikipedia.org/wiki/Margaret_Thatcher",
+  "location": "https://maps.google.nl/maps?client=safari&amp;rls=en&amp;q=UK&amp;oe=UTF-8&amp;gfe_rd=cr&amp;um=1&amp;ie=UTF-8&amp;sa=X&amp;ei=0Y8aVMGsCMGsPOysgbAC&amp;ved=0CAgQ_AUoAQ"
 }

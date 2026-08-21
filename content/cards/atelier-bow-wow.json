@@ -1,9 +1,12 @@
 {
   "title": "Atelier Bow Wow",
   "body": "Atelier Bow-Wow is a Tokyo-based architecture firm, founded in 1992 by Yoshiharu Tsukamoto and Momoyo Kajima. The firm is well known for its domestic and cultural architecture and its research exploring the urban conditions of micro, ad hoc architecture.",
-  "image": null,
+  "image": "/cards/atelier-bow-wow.jpg",
   "legacy": {
     "postId": 548,
     "date": "2014-12-11 17:06:34"
-  }
+  },
+  "subtitle": "Architecture firm",
+  "external": "http://www.bow-wow.jp",
+  "location": "https://www.google.nl/maps/place/Shinjuku,+Tokyo,+Japan/@35.7015253,139.7092071,13z/data=!3m1!4b1!4m2!3m1!1s0x60188d2059b7fd4b:0xec61c68fe232efd2"
 }

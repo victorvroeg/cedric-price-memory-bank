@@ -104,7 +104,9 @@ const clientData = {
               <img class="projection__loader" src={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/img/loader-ced.gif`}
                    alt="" aria-hidden="true" width="129" height="100" />
               <div class="titlebar">
-                <h2 class="titlebar__name">{playable.length ? playable[0].name : ""}</h2>
+                <h2 class="titlebar__name"><a class="titlebar__link"
+                  href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/interview/${playable.length ? playable[0].slug : ""}/`}
+                  title="watch the whole interview">{playable.length ? playable[0].name : ""}</a></h2>
                 <p class="titlebar__job">{playable.length ? playable[0].jobtitle : ""}</p>
                 <p class="titlebar__on">
                   <span class="titlebar__prep">on</span>
@@ -151,7 +153,6 @@ const clientData = {
       <div class="nowline">
             <span class="nowline__topic" style={`color:${topic.colour}`} />
             <span class="nowline__card" />
-            <span class="nowline__time">1 / {playable.length}</span>
           </div>
         </>
       )

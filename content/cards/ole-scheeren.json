@@ -1,9 +1,12 @@
 {
   "title": "Ole Scheeren",
   "body": "Ole Scheeren (born 1971, Karlsruhe) is a German architect and principal of Büro Ole Scheeren with offices in Beijing, Hong Kong and London and a visiting professor at Hong Kong University.",
-  "image": null,
+  "image": "/cards/ole-scheeren.jpg",
   "legacy": {
     "postId": 538,
     "date": "2014-12-11 17:02:29"
-  }
+  },
+  "subtitle": "Architect",
+  "external": "http://www.buro-os.com",
+  "location": "https://www.google.nl/maps/place/Beijing,+China/data=!4m2!3m1!1s0x35f05296e7142cb9:0xb9625620af0fa98a?sa=X&amp;ei=9rqEVP7WAoH_UpuEAg&amp;ved=0CIsBEPIBMBA"
 }

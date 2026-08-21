@@ -1,9 +1,12 @@
 {
   "title": "Battersea Powerstation",
   "body": "Battersea Power Station is a decommissioned <a href=\"http://en.wikipedia.org/wiki/Fossil_fuel_power_plant\">coal-fired power station</a> located on the south bank of the <a href=\"http://en.wikipedia.org/wiki/River_Thames\">River Thames</a>, in <a href=\"http://en.wikipedia.org/wiki/Battersea\">Battersea</a>, an inner-city district of <a href=\"http://en.wikipedia.org/wiki/South_West_(London_sub_region)\">South West London</a>. It comprises two individual power stations, built in two stages in the form of a single building. Battersea A Power Station was built in the 1930s, with Battersea B Power Station to its east in the 1950s. The two stations were built to an identical design, providing the well known four-chimney layout. The station ceased generating electricity in 1983, but over the past 50 years it has become one of the best known landmarks in London and is <a href=\"http://en.wikipedia.org/wiki/Grade_II*_listed\">Grade II* listed</a>.\r\n<p class=\"MsoNormal\"></p>",
-  "image": null,
+  "image": "/cards/battersea-powerstation.jpg",
   "legacy": {
     "postId": 326,
     "date": "2014-11-30 10:44:51"
-  }
+  },
+  "subtitle": "South London",
+  "external": "http://en.wikipedia.org/wiki/Battersea_Power_Station",
+  "location": "https://www.google.nl/maps/place/Battersea+Power+Station/@51.4818057,-0.1470724,16z/data=!4m2!3m1!1s0x0000000000000000:0x96a0bfdb4e42515d"
 }

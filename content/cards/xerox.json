@@ -1,9 +1,12 @@
 {
   "title": "Xerox",
   "body": "<p class=\"MsoNormal\">A photocopier (also known as a copier or copy machine) is a <a href=\"http://en.wikipedia.org/wiki/Machine\">machine</a> that makes <a href=\"http://en.wikipedia.org/wiki/Paper\">paper</a> copies of documents and other visual images quickly and cheaply. Most current photocopiers use a technology called <a href=\"http://en.wikipedia.org/wiki/Xerography\">xerography</a>, a dry process that uses electrostatic charges on a light sensitive photoreceptor to first attract and then transfer toner particles (a powder) onto paper in the form of an image. Heat, pressure or a combination of both is then used to fuse the toner onto the paper. (Copiers can also use other technologies such as <a href=\"http://en.wikipedia.org/wiki/Inkjet_printer\">ink jet</a>, but xerography is standard for office copying). Xerographic office photocopying was introduced by <a href=\"http://en.wikipedia.org/wiki/Xerox\">Xerox</a> in 1959, and it gradually replaced copies made by <a href=\"http://en.wikipedia.org/w/index.php?title=Verifax&amp;action=edit&amp;redlink=1\">Verifax</a>, <a href=\"http://en.wikipedia.org/wiki/Photostat\">Photostat</a>, <a href=\"http://en.wikipedia.org/wiki/Carbon_paper\">carbon paper</a>, <a href=\"http://en.wikipedia.org/wiki/Mimeograph_machine\">mimeograph machines</a>, and other <a href=\"http://en.wikipedia.org/wiki/Duplicating_machines\">duplicating machines</a>. The prevalence of its use is one of the factors that prevented the development of the <a href=\"http://en.wikipedia.org/wiki/Paperless_office\">paperless office</a> heralded early in the <a href=\"http://en.wikipedia.org/wiki/Digital_revolution\">digital revolution</a>.</p>",
-  "image": null,
+  "image": "/cards/xerox.jpg",
   "legacy": {
     "postId": 291,
     "date": "2014-11-30 10:05:12"
-  }
+  },
+  "subtitle": "Copy machine",
+  "external": "www.xerox.com",
+  "location": "https://www.google.nl/maps/search/xerox+norwalk/@41.118618,-73.434124,13z/data=!3m1!4b1?sa=X&amp;ei=yeBVVPjIJci7PZmHgbAH&amp;ved=0CLcBELYD"
 }

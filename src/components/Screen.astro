@@ -1,6 +1,7 @@
 ---
 import type { Interview } from "../lib/content";
 import { topics, cards } from "../lib/content";
+import { published, crossCut } from "../lib/crosscut";
 import { resolveVideoSource } from "../lib/resolveVideoSource";
 
 interface Props {
@@ -30,6 +31,17 @@ const interviewTopics = [...new Set(interview.segments.map((s) => s.topicId))].m
   (id) => topics.get(id)!,
 );
 
+// the same two doors as the cross-cut: every topic, and everyone
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const allTopicsWithFilm = [...topics.values()]
+  .filter((t) => crossCut(t.slug).playable.length > 0)
+  .sort((a, b) => a.label.localeCompare(b.label))
+  .map((t) => ({ slug: t.slug, label: t.label }));
+const mine = new Set(interview.segments.map((s) => s.topicId));
+const everyone = published()
+  .map((iv) => ({ slug: iv.slug, name: iv.interviewee.name }))
+  .sort((a, b) => a.name.localeCompare(b.name));
+
 const clientData = {
   source: source && { url: source.url, placeholder: source.placeholder },
   segments: interview.segments,
@@ -41,13 +53,20 @@ const clientData = {
     interview.cards.map((c) => [c.cardId, cards.get(c.cardId)?.title ?? c.cardId]),
   ),
   basis,
+  base,
+  here: interview.slug,
+  topicList: allTopicsWithFilm.map((t) => ({ ...t, mine: mine.has(t.slug) })),
+  people: everyone,
 };
 ---
 
 <main class="void">
   <div class="stage">
     <h1 class="title title--left title--idle"></h1>
-    <p class="title title--right title--following">{interview.interviewee.name}</p>
+    <p class="title title--right title--following">
+      <button class="peopledoor" aria-expanded="false" aria-controls="topicfield"
+              title="everyone in the archive">{interview.interviewee.name}</button>
+    </p>
 
     <figure class:list={["projection", { "projection--dead": !source }]}>
       <canvas class="projection__bloom" aria-hidden="true"></canvas>
@@ -115,6 +134,11 @@ const clientData = {
       }
     </nav>
   </div>
+
+  <nav class="topicfield" id="topicfield" hidden aria-label="Topics and protagonists">
+    <button class="topicfield__close" aria-label="close">×</button>
+    <div class="topicfield__row"></div>
+  </nav>
 
   <script type="application/json" id="cpmb-data" set:html={JSON.stringify(clientData)} />
 </main>

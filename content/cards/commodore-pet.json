@@ -1,9 +1,12 @@
 {
   "title": "Commodore PET",
   "body": "<p class=\"MsoNormal\">The Commodore PET (Personal Electronic Transactor) is a <a href=\"http://en.wikipedia.org/wiki/Home_computer\">home</a>/<a href=\"http://en.wikipedia.org/wiki/Personal_computer\">personal computer</a> produced in 1977 by <a href=\"http://en.wikipedia.org/wiki/Commodore_International\">Commodore International</a>. A top-seller in the Canadian and United States educational markets, it was Commodore's first full-featured computer, and formed the basis for their entire <a href=\"http://en.wikipedia.org/wiki/8-bit\">8-bit</a> product line.</p>",
-  "image": null,
+  "image": "/cards/commodore-pet.jpg",
   "legacy": {
     "postId": 484,
     "date": "2014-12-11 16:19:46"
-  }
+  },
+  "subtitle": "Computer",
+  "external": "http://en.wikipedia.org/wiki/Commodore_PET",
+  "location": "https://www.google.nl/maps/place/Toronto,+ON,+Canada/@43.7182713,-79.3777061,11z/data=!3m1!4b1!4m2!3m1!1s0x89d4cb90d7c63ba5:0x323555502ab4c477"
 }

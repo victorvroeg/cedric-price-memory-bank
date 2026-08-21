@@ -1,9 +1,12 @@
 {
   "title": "Housing research",
   "body": "Research into flexible, pre-fabricated, short life housing in the UK. Published in AD in 1971.",
-  "image": null,
+  "image": "/cards/housing-research.png",
   "legacy": {
     "postId": 428,
     "date": "2014-12-10 19:06:10"
-  }
+  },
+  "subtitle": "Cedric Price architects",
+  "external": "http://www.aaschool.ac.uk/PUBLIC/AAPUBLICATIONS/aboutpublications.php",
+  "location": "https://www.google.nl/maps/place/United+Kingdom/@55.378051,-3.435973,7z/data=!4m2!3m1!1s0x25a3b1142c791a9:0xc4f8a0433288257a"
 }

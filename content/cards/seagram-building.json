@@ -1,9 +1,12 @@
 {
   "title": "Seagram Building",
   "body": "The Seagram Building is a <a href=\"http://en.wikipedia.org/wiki/Skyscraper\">skyscraper</a>, located at 375 <a href=\"http://en.wikipedia.org/wiki/Park_Avenue_(Manhattan)\">Park Avenue</a>, between <a href=\"http://en.wikipedia.org/wiki/52nd_Street_(Manhattan)\">52nd Street</a> and <a href=\"http://en.wikipedia.org/wiki/53rd_Street_(Manhattan)\">53rd Street</a> in <a href=\"http://en.wikipedia.org/wiki/Midtown_Manhattan\">Midtown Manhattan</a>, <a href=\"http://en.wikipedia.org/wiki/New_York_City\">New York City</a>. The structure was designed by <a href=\"http://en.wikipedia.org/wiki/Germany\">German</a> architect <a href=\"http://en.wikipedia.org/wiki/Ludwig_Mies_van_der_Rohe\">Ludwig Mies van der Rohe</a> while the lobby and other internal aspects were designed by <a href=\"http://en.wikipedia.org/wiki/Philip_Johnson\">Philip Johnson</a>, including <a href=\"http://en.wikipedia.org/wiki/The_Four_Seasons_Restaurant\">The Four Seasons</a> and Brasserie restaurants. <a href=\"http://en.wikipedia.org/wiki/Severud_Associates\">Severud Associates</a> were the structural engineering consultants. The building stands 157 meters tall with 38 stories, and was completed in 1958. It stands as one of the finest examples of the <a href=\"http://en.wikipedia.org/wiki/Functionalism_(architecture)\">functionalist</a> aesthetic and a masterpiece of corporate <a href=\"http://en.wikipedia.org/wiki/Modern_architecture\">modernism</a>. It was designed as the headquarters for the Canadian distillers <a href=\"http://en.wikipedia.org/wiki/Seagram\">Joseph E. Seagram's &amp; Sons</a> with the active interest of <a href=\"http://en.wikipedia.org/wiki/Phyllis_Lambert\">Phyllis Lambert</a>, the daughter of <a href=\"http://en.wikipedia.org/wiki/Samuel_Bronfman\">Samuel Bronfman</a>, Seagram's CEO. It has the worst <a href=\"http://en.wikipedia.org/wiki/Energy_Star\">Energy Star</a> rating of any building in New York, at 3 out of 100. The building is owned by RFR Holdings.",
-  "image": null,
+  "image": "/cards/seagram-building.jpg",
   "legacy": {
     "postId": 286,
     "date": "2014-11-30 10:01:57"
-  }
+  },
+  "subtitle": "New York",
+  "external": "http://en.wikipedia.org/wiki/Seagram_Building",
+  "location": "https://www.google.nl/maps/place/seagram+building/@40.758504,-73.972057,15z/data=!4m2!3m1!1s0x0:0x2137560fcdec5d3c?sa=X&amp;ei=9dxVVL2LH82LOe3AgIgI&amp;sqi=2&amp;ved=0CJgBEPwSMBI"
 }

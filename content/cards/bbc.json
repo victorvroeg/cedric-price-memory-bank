@@ -1,9 +1,12 @@
 {
   "title": "BBC",
   "body": "The British Broadcasting Corporation (BBC) is a UK based international public service broadcaster headquartered at <a href=\"http://en.wikipedia.org/wiki/Broadcasting_House\">Broadcasting House</a> in <a href=\"http://en.wikipedia.org/wiki/London\">London</a>. It is the world's oldest national broadcasting organisation and the largest broadcaster in the world by number of employees, with about 23,000 staff.\r\n\r\nThe BBC is established under a <a href=\"http://en.wikipedia.org/wiki/Royal_Charter#United_Kingdom\">Royal Charter</a> and operates under its Agreement with the Secretary of State for Culture Media and Sport. Its work is funded principally by an annual <a href=\"http://en.wikipedia.org/wiki/Television_licensing_in_the_United_Kingdom\">television licence fee</a> which is charged to all British households, companies and organisations using any type of equipment to receive live television broadcasts. The level of the fee is set by the <a href=\"http://en.wikipedia.org/wiki/Government_of_the_United_Kingdom\">British Government</a>, agreed by <a href=\"http://en.wikipedia.org/wiki/Parliament_of_the_United_Kingdom\">Parliament</a> and used to fund the BBC's extensive Radio, TV and Online services covering the nations and regions of the UK. From 1 April 2014 it also funds the BBC World Service which provides comprehensive TV, Radio and Online services in Arabic and Persian and broadcasts in 28 languages overall. Around a quarter of BBC revenues come from its commercial arm <a href=\"http://en.wikipedia.org/wiki/BBC_Worldwide\">BBC Worldwide</a> Ltd. which sells BBC programmes and services internationally and also distributes the BBC's international 24 hour English language news services BBC World News and BBC.com, provided by BBC Global News Ltd.",
-  "image": null,
+  "image": "/cards/bbc.png",
   "legacy": {
     "postId": 254,
     "date": "2014-11-21 15:03:41"
-  }
+  },
+  "subtitle": "British Broadcasting Corporation",
+  "external": "http://www.bbc.com",
+  "location": "https://www.google.nl/maps/place/London,+UK/@51.5073509,-0.1277583,8z/data=!4m2!3m1!1s0x47d8a00baf21de75:0x52963a5addd52a99"
 }

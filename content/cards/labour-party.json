@@ -1,9 +1,12 @@
 {
   "title": "Labour Party",
   "body": "The Labour Party is a <a href=\"http://en.wikipedia.org/wiki/Centre-left\">centre-left</a> political party in the <a href=\"http://en.wikipedia.org/wiki/United_Kingdom\">United Kingdom</a>. It grew out of the <a href=\"http://en.wikipedia.org/wiki/Labour_movement\">trade union movement</a> and <a href=\"http://en.wikipedia.org/wiki/Socialism\">socialist</a> political parties of the nineteenth century and has been described as a <a href=\"http://en.wikipedia.org/wiki/Broad_church\">broad church</a>; the party contains a diversity of ideological trends from strongly socialist, to more moderately <a href=\"http://en.wikipedia.org/wiki/Social_democracy\">social democratic</a>.",
-  "image": null,
+  "image": "/cards/labour-party.jpg",
   "legacy": {
     "postId": 179,
     "date": "2014-11-20 16:43:21"
-  }
+  },
+  "subtitle": "Political party",
+  "external": "http://www.labour.org.uk",
+  "location": "https://maps.google.nl/maps?client=safari&amp;rls=en&amp;q=UK&amp;oe=UTF-8&amp;gfe_rd=cr&amp;um=1&amp;ie=UTF-8&amp;sa=X&amp;ei=0Y8aVMGsCMGsPOysgbAC&amp;ved=0CAgQ_AUoAQ"
 }

@@ -1,9 +1,12 @@
 {
   "title": "TV AA",
   "body": "Broadcasting from the Architectural Association School of Architecture around 1975.",
-  "image": null,
+  "image": "/cards/tv-aa.jpg",
   "legacy": {
     "postId": 301,
     "date": "2014-11-30 10:08:53"
-  }
+  },
+  "subtitle": "Architectural Association",
+  "external": "http://www.aaschool.ac.uk/VIDEO/lecture.php?ID=2552",
+  "location": "https://www.google.nl/maps?client=safari&amp;rls=en&amp;q=bedford+square+london&amp;oe=UTF-8&amp;gfe_rd=cr&amp;um=1&amp;ie=UTF-8&amp;sa=X&amp;ei=O-JVVMfxAcGoPPjdgOgN&amp;ved=0CAgQ_AUoAQ"
 }

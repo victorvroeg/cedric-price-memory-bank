@@ -1,9 +1,12 @@
 {
   "title": "Richard Meier",
   "body": "Richard Meier (born October 12, 1934) is an American <a href=\"http://en.wikipedia.org/wiki/Abstract_art\">abstract artist</a> and <a href=\"http://en.wikipedia.org/wiki/Architect\">architect</a>, whose geometric designs make prominent use of the color white. A winner of the <a href=\"http://en.wikipedia.org/wiki/Pritzker_Architecture_Prize\">Pritzker Architecture Prize</a> in 1984, some of his more iconic buildings include the <a href=\"http://en.wikipedia.org/wiki/Barcelona_Museum_of_Contemporary_Art\">Barcelona Museum of Contemporary Art</a> and the <a href=\"http://en.wikipedia.org/wiki/Getty_Center\">Getty Center</a> in <a href=\"http://en.wikipedia.org/wiki/Los_Angeles\">Los Angeles</a>.",
-  "image": null,
+  "image": "/cards/richard-meier.jpg",
   "legacy": {
     "postId": 163,
     "date": "2014-11-20 16:34:56"
-  }
+  },
+  "subtitle": "Architect",
+  "external": "http://www.richardmeier.com",
+  "location": "https://www.google.com/maps/place/475+10th+Ave,+New+York,+NY+10018,+USA/@40.7562375,-73.9984038,17z/data=!3m1!4b1!4m2!3m1!1s0x89c259b3232ee0f9:0x63130b14b549e47d"
 }

@@ -1,9 +1,12 @@
 {
   "title": "White Collar",
   "body": "Typical Cedric Price appearance",
-  "image": null,
+  "image": "/cards/white-collar.jpg",
   "legacy": {
     "postId": 169,
     "date": "2014-11-20 16:38:13"
-  }
+  },
+  "subtitle": "X",
+  "external": "X",
+  "location": "https://www.google.com/maps/preview?client=safari&amp;oe=UTF-8&amp;ie=UTF-8&amp;fb=1&amp;gl=fr&amp;sll=51.5196961,-0.1324347&amp;sspn=0.0205088,0.0439461&amp;q=38+Alfred+Pl,+London+WC1E,+UK&amp;ei=x5QIVKPdDNHXaN_xgNAH&amp;ved=0CCIQ8gEwAA"
 }

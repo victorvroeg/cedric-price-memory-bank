@@ -1,9 +1,12 @@
 {
   "title": "Nano Museum",
   "body": "The Nano Museum is an exhibition space hosted on a 2 x 3 inch picture frame. That original museum went missing in the 1990s, lost in a bar by artist Douglas Gordon.",
-  "image": null,
+  "image": "/cards/nano-museum.jpg",
   "legacy": {
     "postId": 542,
     "date": "2014-12-11 17:04:18"
-  }
+  },
+  "subtitle": "By Hans Ulrich Obrist and Cedric Price",
+  "external": "http://artfcity.com/2013/09/17/hans-ulrich-obrist-will-curate-a-very-tiny-onlineexhibition/",
+  "location": "https://www.google.nl/maps/place/London,+UK/@51.5286416,-0.1015987,11z/data=!3m1!4b1!4m2!3m1!1s0x47d8a00baf21de75:0x52963a5addd52a99"
 }

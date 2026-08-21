@@ -1,9 +1,12 @@
 {
   "title": "POLYARK",
   "body": "The original Polyark can also be seen as a development of Price’s idea for the National School Plan, originally published in The Architects’ Journal in March 1966. The NSP was critical of the limitations of UK architecture education, and posited the idea of an amorphous but sharply responsive network of students and tutors, offering a broader, more vivid education.",
-  "image": null,
+  "image": "/cards/polyark.jpg",
   "legacy": {
     "postId": 98,
     "date": "2014-11-19 13:13:29"
-  }
+  },
+  "subtitle": "Project",
+  "external": "http://www.architecture.com/RIBA/Becomeanarchitect/Oureducationalactivities/Polyark.aspx",
+  "location": "https://www.google.nl/maps/place/United+Kingdom/@55.378051,-3.435973,7z/data=!4m2!3m1!1s0x25a3b1142c791a9:0xc4f8a0433288257a"
 }

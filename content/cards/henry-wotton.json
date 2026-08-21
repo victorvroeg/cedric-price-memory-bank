@@ -1,9 +1,12 @@
 {
   "title": "Henry Wotton",
   "body": "Sir Henry Wotton (30 March 1568 – December 1639) was an English author, diplomat and politician who sat in the <a href=\"http://en.wikipedia.org/wiki/House_of_Commons_of_England\">House of Commons</a> in 1614 and 1625. He is often quoted as saying, \"An ambassador is an honest gentleman sent to lie abroad for the good of his country.\" (Wotton said that when on a mission in <a href=\"http://en.wikipedia.org/wiki/Augsburg\">Augsburg</a>, in 1604.)",
-  "image": null,
+  "image": "/cards/henry-wotton.jpg",
   "legacy": {
     "postId": 177,
     "date": "2014-11-20 16:42:49"
-  }
+  },
+  "subtitle": "Author, diplomat and politician",
+  "external": "http://en.wikipedia.org/wiki/Henry_Wotton",
+  "location": "https://www.google.nl/maps/preview?client=safari&amp;oe=UTF-8&amp;ie=UTF-8&amp;fb=1&amp;gl=nl&amp;q=London,+UK&amp;ei=zY4aVO6XIMePOLnsgUg&amp;ved=0CKcBEPIBMA8"
 }

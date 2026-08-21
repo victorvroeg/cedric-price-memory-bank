@@ -1,9 +1,12 @@
 {
   "title": "Rafael Moneo",
   "body": "José Rafael Moneo Vallés (born 9 May 1937) is a Spanish architect. He\r\n\r\nwon the Pritzker Prize for architecture in 1996 and the RIBA Royal Gold\r\n\r\nMedal in 2003.",
-  "image": null,
+  "image": "/cards/rafael-moneo.jpg",
   "legacy": {
     "postId": 275,
     "date": "2014-11-27 07:52:48"
-  }
+  },
+  "subtitle": "Architect",
+  "external": "http://www.pritzkerprize.com/laureates/1996",
+  "location": "https://www.google.nl/maps/place/Madrid,+Spain/@40.4167754,-3.7037902,9z/data=!4m2!3m1!1s0xd422997800a3c81:0xc436dec1618c2269?sa=X&amp;ei=xdlVVL2FHMjAPKnogZAL&amp;ved=0CIwBEPIBMA4"
 }

@@ -1,9 +1,12 @@
 {
   "title": "Routemaster",
   "body": "The AEC Routemaster is a <a href=\"http://en.wikipedia.org/wiki/Double-decker_bus\">double-decker bus</a> designed by <a href=\"http://en.wikipedia.org/wiki/London_Transport_Executive\">London Transport</a> and built by the <a href=\"http://en.wikipedia.org/wiki/Associated_Equipment_Company\">Associated Equipment Company</a> (AEC) and <a href=\"http://en.wikipedia.org/wiki/Park_Royal_Vehicles\">Park Royal Vehicles</a>. The first prototype was completed in September 1954 and the last one was delivered in 1968. The layout of the vehicle was traditional for the time, with a half-cab, front-mounted engine and open rear platform, although the coach version was fitted with rear platform doors. Forward entrance vehicles with platform doors were also produced as was a unique front-entrance prototype with the engine mounted transversely at the rear. The first Routemasters entered service with London Transport in February 1956 and the last were withdrawn from regular service in December 2005, although one heritage route is still operated by Routemasters in central London.\r\n\r\n&nbsp;\r\n<p class=\"MsoNormal\">Most Routemasters were built for London Transport, although small numbers were built for <a href=\"http://en.wikipedia.org/wiki/British_European_Airways\">British European Airways</a> and the <a href=\"http://en.wikipedia.org/wiki/Northern_General_Transport_Company\">Northern General Transport Company</a>. A total of 2,876 Routemasters were built with 1,280 still in existence.</p>",
-  "image": null,
+  "image": "/cards/routemaster.jpg",
   "legacy": {
     "postId": 451,
     "date": "2014-12-11 15:46:00"
-  }
+  },
+  "subtitle": "Associated Equipment Company",
+  "external": "http://en.wikipedia.org/wiki/Routemaster",
+  "location": "https://www.google.nl/maps/place/United+Kingdom/@55.3617609,-3.4433238,5z/data=!3m1!4b1!4m2!3m1!1s0x25a3b1142c791a9:0xc4f8a0433288257a"
 }

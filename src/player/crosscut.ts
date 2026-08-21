@@ -12,6 +12,7 @@
 import type Hls from "hls.js";
 import { makeBloom } from "./bloom";
 import { makeScore } from "./score";
+import { makeTitleCard } from "./titlecard";
 
 interface Item {
   slug: string;
@@ -135,6 +136,7 @@ function init(data: Data, root: HTMLElement) {
 
   // The topic (left title) is the constant of the page; the speaker (right
   // title) changes with every cut — the "change of slide".
+  const titleCard = makeTitleCard(root);
   const barName = root.querySelector<HTMLElement>(".titlebar__name");
   const barJob = root.querySelector<HTMLElement>(".titlebar__job");
 
@@ -142,8 +144,17 @@ function init(data: Data, root: HTMLElement) {
     // write into the door, not over it
     const label = titleR?.querySelector<HTMLElement>(".peopledoor") ?? titleR;
     if (label) label.textContent = item.name;
-    if (barName) barName.textContent = item.name;
+    if (barName) {
+      const link = barName.querySelector<HTMLAnchorElement>(".titlebar__link");
+      if (link) {
+        link.textContent = item.name;
+        link.href = `${data.base}/interview/${item.slug}/`;
+      } else {
+        barName.textContent = item.name;
+      }
+    }
     if (barJob) barJob.textContent = item.jobtitle;
+    titleCard.show();   // a cut changes the answer, so say it again
 
   }
 
@@ -249,7 +260,6 @@ function init(data: Data, root: HTMLElement) {
     const pos = offsets[current] + Math.min(Math.max(el.currentTime - item.start, 0), item.end - item.start);
     if (playhead) playhead.style.left = `${(pos / total) * 100}%`;
     markTicks(pos / total);
-    if (nowIndex) nowIndex.textContent = `${current + 1} / ${items.length}`;
     markSpeaker();
     if (nowCard) {
       const card = [...item.cards].reverse().find((c) => c.time <= el.currentTime);

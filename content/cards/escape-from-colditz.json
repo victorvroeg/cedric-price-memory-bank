@@ -1,9 +1,12 @@
 {
   "title": "Escape from Colditz",
   "body": "Escape from Colditz is a strategy card and dice-based <a href=\"http://en.wikipedia.org/wiki/Board_game\">board game</a> produced by <a href=\"http://en.wikipedia.org/wiki/Gibsons_Games\">Gibsons Games</a> and first released in 1973. It was licensed to <a href=\"http://en.wikipedia.org/wiki/Parker_Brothers\">Parker Brothers</a> in the US in the mid-1970s. The game was devised by successful escaper <a href=\"http://en.wikipedia.org/wiki/Pat_Reid\">Pat Reid</a>, based on the <a href=\"http://en.wikipedia.org/wiki/Prisoner-of-war\">prisoner-of-war</a> camp (<a href=\"http://en.wikipedia.org/wiki/Oflag_IV-C\">Oflag IV-C</a>) at <a href=\"http://en.wikipedia.org/wiki/Colditz_Castle\">Colditz Castle</a> in <a href=\"http://en.wikipedia.org/wiki/Germany\">Germany</a> during <a href=\"http://en.wikipedia.org/wiki/World_War_II\">World War II</a>.",
-  "image": null,
+  "image": "/cards/escape-from-colditz.jpg",
   "legacy": {
     "postId": 161,
     "date": "2014-11-19 16:28:30"
-  }
+  },
+  "subtitle": "Board game",
+  "external": "http://en.wikipedia.org/wiki/Escape_from_Colditz",
+  "location": "https://www.google.com/maps/preview?client=safari&amp;q=UK&amp;oe=UTF-8&amp;ie=UTF-8&amp;ei=u1kJVPjcA9DlaJKYgtAK&amp;ved=0CAgQ_AUoAQ"
 }

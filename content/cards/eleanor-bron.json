@@ -1,9 +1,12 @@
 {
   "title": "Eleanor Bron",
   "body": "Eleanor Bron (born 14 March 1938) is an English stage, film and television actress and author. Bron was the partner of the architect <a href=\"http://en.wikipedia.org/wiki/Cedric_Price\">Cedric Price</a> for many years until his death in 2003; they had no children.",
-  "image": null,
+  "image": "/cards/eleanor-bron.jpg",
   "legacy": {
     "postId": 124,
     "date": "2014-11-19 15:55:24"
-  }
+  },
+  "subtitle": "Actress and author",
+  "external": "http://www.imdb.com/name/nm0111376/",
+  "location": "https://www.google.com/maps/place/London,+UK/@51.5286416,-0.1015987,11z/data=!3m1!4b1!4m2!3m1!1s0x47d8a00baf21de75:0x52963a5addd52a99"
 }

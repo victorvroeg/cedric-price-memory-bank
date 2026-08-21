@@ -1,9 +1,12 @@
 {
   "title": "Buckminster Fuller",
   "body": "Richard Buckminster \"Bucky\" Fuller published more than 30 books, coining or popularizing terms such as \"<a href=\"http://en.wikipedia.org/wiki/Spaceship_Earth\">Spaceship Earth</a>\", <a href=\"http://en.wikipedia.org/wiki/Ephemeralization\">ephemeralization</a>, and <a href=\"http://en.wikipedia.org/wiki/Synergetics_(Fuller)\">synergetic</a>. He also developed numerous inventions, mainly architectural designs, and popularized the widely known <a href=\"http://en.wikipedia.org/wiki/Geodesic_dome\">geodesic dome</a>. Carbon molecules known as <a href=\"http://en.wikipedia.org/wiki/Fullerene\">fullerenes</a> were later named by scientists for their resemblance to geodesic spheres. Buckminster Fuller was the second president of <a href=\"http://en.wikipedia.org/wiki/Mensa_International\">Mensa</a> from 1974 to 1983.",
-  "image": null,
+  "image": "/cards/buckminster-fuller.jpg",
   "legacy": {
     "postId": 228,
     "date": "2014-11-21 14:27:29"
-  }
+  },
+  "subtitle": "Neo-futuristic architect, systems theorist, author, designer, and inventor.",
+  "external": "https://bfi.org",
+  "location": "https://www.google.nl/maps/place/Milton,+MA,+USA/@42.2495321,-71.0661653,7z/data=!4m2!3m1!1s0x89e37dcc5d01064b:0x6b4bf10013fdfcb5"
 }

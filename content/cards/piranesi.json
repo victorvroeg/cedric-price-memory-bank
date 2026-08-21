@@ -1,9 +1,12 @@
 {
   "title": "Piranesi",
   "body": "<p class=\"MsoNormal\" style=\"margin-right: 53.5pt; tab-stops: 0in;\">Piranesi was born in <a href=\"http://en.wikipedia.org/wiki/Mogliano_Veneto\">Mogliano Veneto</a>, near <a href=\"http://en.wikipedia.org/wiki/Treviso\">Treviso</a>, then part of the <a href=\"http://en.wikipedia.org/wiki/Republic_of_Venice\">Republic of Venice</a>. His brother Andrea introduced him to <a href=\"http://en.wikipedia.org/wiki/Latin_language\">Latin</a> and the ancient civilization, and later he studied as an architect under his uncle, <a href=\"http://en.wikipedia.org/wiki/Matteo_Lucchesi\">Matteo Lucchesi</a>, who was Magistrato delle Acque, a Venetian engineer who specialized in excavation.</p>",
-  "image": null,
+  "image": "/cards/piranesi.jpg",
   "legacy": {
     "postId": 386,
     "date": "2014-12-03 16:36:59"
-  }
+  },
+  "subtitle": "Architect",
+  "external": "http://en.wikipedia.org/wiki/Giovanni_Battista_Piranesi",
+  "location": "https://www.google.nl/maps/place/Rome,+Italy/@41.8723889,12.4801802,7z/data=!4m2!3m1!1s0x132f6196f9928ebb:0xb90f770693656e38?sa=X&amp;ei=rtpcVNHIGqi27gbvyYHoAQ&amp;ved=0CJUBEPIBMBA"
 }

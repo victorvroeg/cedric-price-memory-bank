@@ -1,9 +1,12 @@
 {
   "title": "Norman Foster",
   "body": "Norman Robert Foster, Lord Foster of Thames Bank, <a href=\"http://en.wikipedia.org/wiki/Order_of_Merit\">OM</a> (born 1 June 1935) is an English <a href=\"http://en.wikipedia.org/wiki/Architect\">architect</a> whose company, <a href=\"http://en.wikipedia.org/wiki/Foster_%2B_Partners\">Foster + Partners</a>, maintains an international design practice famous for <a href=\"http://en.wikipedia.org/wiki/High-tech_architecture\">high-tech architecture</a>.\r\n\r\nHe is one of Britain's most prolific architects of his generation. In 1999 he was awarded the <a href=\"http://en.wikipedia.org/wiki/Pritzker_Architecture_Prize\">Pritzker Architecture Prize</a>, often referred to as the <a href=\"http://en.wikipedia.org/wiki/Nobel_Prize\">Nobel Prize</a> of architecture. In 2009 Foster was awarded the <a href=\"http://en.wikipedia.org/wiki/Prince_of_Asturias_Awards\">Prince of Asturias Award</a> in the Arts category. In 1994 he received the <a href=\"http://en.wikipedia.org/wiki/AIA_Gold_Medal\">AIA Gold Medal</a>.",
-  "image": null,
+  "image": "/cards/norman-foster.jpg",
   "legacy": {
     "postId": 193,
     "date": "2014-11-20 16:48:02"
-  }
+  },
+  "subtitle": "Architect",
+  "external": "http://www.fosterandpartners.com",
+  "location": "https://www.google.nl/maps/preview?client=safari&amp;q=foster+and+partners&amp;ie=UTF-8&amp;ei=V5caVNfQOMK0O-2FgKAO&amp;sqi=2&amp;ved=0CAcQ_AUoAg"
 }

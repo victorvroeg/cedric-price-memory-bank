@@ -1,9 +1,12 @@
 {
   "title": "10 Downing Street",
   "body": "10 Downing Street, colloquially known in the United Kingdom as \"Number 10\", is the headquarters of <a href=\"http://en.wikipedia.org/wiki/Government_of_the_United_Kingdom\">the British Government</a> and the official residence and office of the <a href=\"http://en.wikipedia.org/wiki/First_Lord_of_the_Treasury\">First Lord of the Treasury</a>, an office now invariably held by the <a href=\"http://en.wikipedia.org/wiki/Prime_Minister_of_the_United_Kingdom\">Prime Minister</a>.\r\n\r\nSituated in <a href=\"http://en.wikipedia.org/wiki/Downing_Street\">Downing Street</a> in the <a href=\"http://en.wikipedia.org/wiki/City_of_Westminster\">City of Westminster</a>, London, Number 10 is one of the most famous addresses in the world. Over three hundred years old, the building contains about one hundred rooms. There is a private residence on the third floor and a kitchen in the basement. The other floors contain offices and numerous conference, reception, sitting and dining rooms where the Prime Minister works, and where government ministers, national leaders and foreign dignitaries are met and entertained. There is an interior courtyard and, in the back, a terrace overlooking a garden of 0.5 acres (2,000 m<sup>2</sup>). Adjacent to <a href=\"http://en.wikipedia.org/wiki/St._James%27s_Park\">St. James's Park</a>, Number 10 is near to <a href=\"http://en.wikipedia.org/wiki/Buckingham_Palace\">Buckingham Palace</a>, the official London residence of the <a href=\"http://en.wikipedia.org/wiki/British_Monarchy\">British monarch</a>, and the <a href=\"http://en.wikipedia.org/wiki/Palace_of_Westminster\">Palace of Westminster</a>, the meeting place of both houses of <a href=\"http://en.wikipedia.org/wiki/Parliament_of_the_United_Kingdom\">parliament</a>.",
-  "image": null,
+  "image": "/cards/10-downing-street.jpg",
   "legacy": {
     "postId": 236,
     "date": "2014-11-21 14:32:30"
-  }
+  },
+  "subtitle": "Prime Minister's Office",
+  "external": "https://www.gov.uk/government/organisations/prime-ministers-office-10-downing-street",
+  "location": "https://www.google.nl/maps/place/10+downing+street/@51.503364,-0.127625,15z/data=!4m2!3m1!1s0x0:0xf882a439cb8a5619?sa=X&amp;ei=9sc_VLO8FYbV7gbZrIHwCA&amp;ved=0CJMBEPwSMA4"
 }

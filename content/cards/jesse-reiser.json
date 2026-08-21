@@ -1,9 +1,12 @@
 {
   "title": "Jesse Reiser",
   "body": "Jesse Reiser (USA) and Nanako Umemoto (Japan), who have been\r\n\r\npracticing together since 1986, created RUR Architecture PC to be an\r\n\r\nincubator of innovative architecture and design culture. Jesse Reiser is a\r\n\r\nProfessor of Architecture at Princeton University. Nanako Umemoto is\r\n\r\ncurrently a Visiting Professor at the Southern California Institute of\r\n\r\nArchitecture, Los Angeles, CA. Jesse Reiser received his Bachelor of\r\n\r\nArchitecture degree from The Cooper Union in New York and completed\r\n\r\nhis Masters of Architecture at the Cranbrook Academy of Art, and in\r\n\r\n1985, was appointed as a fellow of the American Academy in Rome.",
-  "image": null,
+  "image": "/cards/jesse-reiser.jpg",
   "legacy": {
     "postId": 273,
     "date": "2014-11-27 07:50:48"
-  }
+  },
+  "subtitle": "Architect",
+  "external": "http://www.reiser-umemoto.com",
+  "location": "https://www.google.nl/maps/place/118+E+59th+St+%23402,+New+York,+NY+10022,+USA/@40.7623412,-73.9690306,17z/data=!3m1!4b1!4m2!3m1!1s0x89c258e570031819:0x3e1fe20f63a240fa"
 }

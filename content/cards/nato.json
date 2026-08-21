@@ -1,9 +1,12 @@
 {
   "title": "NATO",
   "body": "NATO was formed as an architecture group and a magazine in 1983 around the work of Diploma Unit 10 run by Nigel Coates. Dip 10 students included Catrina Beevor, Robert Mull, Christina Norton, Mark Prizeman, Melanie Sainsbury, and Carlos Villanueva-Brandt",
-  "image": null,
+  "image": "/cards/nato.jpg",
   "legacy": {
     "postId": 516,
     "date": "2014-12-11 16:52:46"
-  }
+  },
+  "subtitle": "Narrative Architecture Today",
+  "external": "http://books.google.nl/books?id=SVdQ3pZu1KYC&amp;pg=PT67&amp;lpg=PT67&amp;dq=NATO+carlos+villanueva+brandt+nigel+coates&amp;source=bl&amp;ots=2TWrKIcGIN&amp;sig=QaM8XwYkm2FKX5asuWZyN-3YVHc&amp;hl=en&amp;sa=X&amp;ei=dFN3VKTZKsfVPMPigKgF&amp;ved=0CCEQ6AEwAA#v=onepage&amp;q=NATO%20carlos%20villanueva%20brandt%20nigel%20coates&amp;f=false",
+  "location": "https://www.google.nl/maps/place/Bedford+Square,+London,+UK/@51.5185929,-0.1308632,17z/data=!3m1!4b1!4m2!3m1!1s0x48761b2d93337405:0x86afe2114a2cda24"
 }

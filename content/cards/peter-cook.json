@@ -1,9 +1,12 @@
 {
   "title": "Peter Cook",
   "body": "Professor Sir Peter Cook RA, founder of Archigram, former Director the Institute for Contemporary Art, London (the ICA) and Bartlett School of Architecture at University Col- lege, London has been a pivotal figure within the global architectural world for over half a century. His ongoing contribution to architectural innovation was most recent- ly recognised via the conferral of an honorary doctorate in April 2010, by the University of Lund, Sweden.",
-  "image": null,
+  "image": "/cards/peter-cook.jpg",
   "legacy": {
     "postId": 108,
     "date": "2014-11-19 15:44:59"
-  }
+  },
+  "subtitle": "Archigram",
+  "external": "http://www.crab-studio.com/assets/cv-p.cook%2c-g.-robotham.pdf",
+  "location": "https://www.google.com/maps/preview?client=safari&amp;ie=UTF-8&amp;fb=1&amp;gl=fr&amp;sll=51.53805,-0.099895&amp;sspn=0.0205005,0.0439461&amp;cid=8406236117447114977&amp;q=Crab+Studio&amp;ei=exQIVO6wK8LiavnmgpAI&amp;ved=0CHAQ_BIwCg"
 }

@@ -1,9 +1,12 @@
 {
   "title": "Listed Building",
   "body": "A listed building, in the United Kingdom, is a building that has been placed on the Statutory List of Buildings of Special Architectural or Historic Interest. It is a widely used status, applied to around half a million buildings. The statutory body maintaining the list in <a href=\"http://en.wikipedia.org/wiki/England\">England</a> is <a href=\"http://en.wikipedia.org/wiki/English_Heritage\">English Heritage</a>.",
-  "image": null,
+  "image": "/cards/listed-building.png",
   "legacy": {
     "postId": 185,
     "date": "2014-11-20 16:45:15"
-  }
+  },
+  "subtitle": "English Heritage",
+  "external": "http://en.wikipedia.org/wiki/Listed_building",
+  "location": "https://maps.google.nl/maps?client=safari&amp;rls=en&amp;q=UK&amp;oe=UTF-8&amp;gfe_rd=cr&amp;um=1&amp;ie=UTF-8&amp;sa=X&amp;ei=0Y8aVMGsCMGsPOysgbAC&amp;ved=0CAgQ_AUoAQ"
 }

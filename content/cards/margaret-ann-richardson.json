@@ -1,9 +1,12 @@
 {
   "title": "Margaret Ann Richardson",
   "body": "Margaret Richardson, the first woman to hold the title of Curator. She had succeeded Stroud as Inspectress in 1985, and served as Curator until 2005, with Helen Dorey as Inspectress (1995– ).",
-  "image": null,
+  "image": "/cards/margaret-ann-richardson.jpg",
   "legacy": {
     "postId": 526,
     "date": "2014-12-11 16:57:25"
-  }
+  },
+  "subtitle": "Curator at the Sir John Soane’s museum",
+  "external": "http://www.npg.org.uk/collections/search/portrait/mw16687/Margaret-Ann-Richardson",
+  "location": "https://www.google.nl/maps/place/sir+john+soane's+museum/@51.51694,-0.11743,15z/data=!4m2!3m1!1s0x0:0xdb8be3c9759aab99?sa=X&amp;ei=XLWEVP_IE4y7PajSgbAF&amp;sqi=2&amp;ved=0CJcBEPwSMBA"
 }

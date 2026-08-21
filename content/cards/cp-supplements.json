@@ -1,9 +1,12 @@
 {
   "title": "CP Supplements",
   "body": "<p class=\"MsoNormal\">A series of five special Cedric Price Supplements were published by AD between 1970 and 1972.<span style=\"font-family: 'Calibri','sans-serif'; mso-ascii-theme-font: major-latin; mso-fareast-font-family: 'MS Mincho'; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: major-latin; mso-bidi-font-family: Helvetica; color: black; mso-themecolor: text1; mso-bidi-font-weight: bold;\"> </span></p>",
-  "image": null,
+  "image": "/cards/cp-supplements.png",
   "legacy": {
     "postId": 449,
     "date": "2014-12-11 15:44:15"
-  }
+  },
+  "subtitle": "Architectural Design",
+  "external": "http://www.architectural-design-magazine.com/view/0/index.html",
+  "location": "https://www.google.nl/maps/place/London,+UK/@51.5286416,-0.1015987,11z/data=!3m1!4b1!4m2!3m1!1s0x47d8a00baf21de75:0x52963a5addd52a99"
 }

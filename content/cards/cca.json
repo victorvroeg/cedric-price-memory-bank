@@ -1,9 +1,12 @@
 {
   "title": "CCA",
   "body": "The Canadian Centre for Architecture (CCA) was founded in 1979 as a new form of cultural institution to build public awareness of the role of architecture in society, to promote scholarly research in the field, and to stimulate innovation in design practice.\r\n\r\nThe CCA holds one of the world’s foremost international research collections of publications, conceptual studies, drawings, plans, models, prints, photographs, architectural archives, related artefacts and ephemera. Over 50 years ago, architect Phyllis Lambert, Founding Director Emeritus, began the collection that would become the cornerstone of the institution. Today the CCA Collection, comprising works dating from the Renaissance to the present day, documents the culture of architecture worldwide.\r\n\r\nUnparalleled in scope, the 100,000 prints and drawings, more than 60,000 photographs, 150 archives, 215,000 volumes, and over 5,000 periodical titles comprise dynamically interrelated bodies of primary and secondary materials that advance thinking about the nature of the built domain and the ideas that underlie it. The guiding purpose of the Collection is to make comprehensive and integrated bodies of material available for advanced, interdisciplinary research in order to reveal the changing character of thought and observation pertaining to the built world, provide evidence in depth of cultural and intellectual circles of the past, and point to the future of architectural thinking and practice.",
-  "image": null,
+  "image": "/cards/cca.jpg",
   "legacy": {
     "postId": 214,
     "date": "2014-11-21 14:13:45"
-  }
+  },
+  "subtitle": "Canadian Centre for Architecture",
+  "external": "http://www.cca.qc.ca/en/collection/294-institutional-overview",
+  "location": "http://www.cca.qc.ca/en/collection/294-institutional-overview"
 }

@@ -1,9 +1,12 @@
 {
   "title": "InterAction Centre",
   "body": "The failure of the Fun Palace was not the end of Price's attempts to realize an interactive and improvisational architecture. In 1976, he built a greatly reduced version of the Fun Palace in Kentish Town. Known as the InterAction Centre, this design incorporated many of the features and innovations of the Fun Palace, though on a smaller scale. It was demolished in 2003.",
-  "image": null,
+  "image": "/cards/interaction-centre.jpg",
   "legacy": {
     "postId": 134,
     "date": "2014-11-19 16:03:27"
-  }
+  },
+  "subtitle": "Kentish Town",
+  "external": "http://www.audacity.org/SM-26-11-07-02.htm",
+  "location": "https://www.google.com/maps/place/Kentish+Town/@51.55031,-0.14071,14z/data=!4m2!3m1!1s0x48761b02736eaea1:0xa4fec2f56a983ccb"
 }

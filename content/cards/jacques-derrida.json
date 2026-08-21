@@ -1,9 +1,12 @@
 {
   "title": "Jacques Derrida",
   "body": "<p class=\"MsoNormal\" style=\"margin-right: 53.5pt; tab-stops: 0in;\">Jacques Derrida; born Jackie Élie Derrida;July 15, 1930 – October 9, 2004) was a French philosopher, born in <a href=\"http://en.wikipedia.org/wiki/French_Algeria\">French Algeria</a>. Derrida is best known for developing a form of <a href=\"http://en.wikipedia.org/wiki/Semiotics\">semiotic</a> analysis known as <a href=\"http://en.wikipedia.org/wiki/Deconstruction\">deconstruction</a>. He is one of the major figures associated with <a href=\"http://en.wikipedia.org/wiki/Post-structuralism\">post-structuralism</a> and <a href=\"http://en.wikipedia.org/wiki/Postmodern_philosophy\">postmodern philosophy</a>.</p>",
-  "image": null,
+  "image": "/cards/jacques-derrida.jpg",
   "legacy": {
     "postId": 400,
     "date": "2014-12-03 16:42:17"
-  }
+  },
+  "subtitle": "Philosopher",
+  "external": "http://en.wikipedia.org/wiki/Jacques_Derrida",
+  "location": "https://www.google.nl/maps/place/Paris,+France/@48.856614,2.3522219,7z/data=!4m2!3m1!1s0x47e66e1f06e2b70f:0x40b82c3688c9460"
 }

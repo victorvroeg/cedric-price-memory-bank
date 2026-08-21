@@ -1,9 +1,12 @@
 {
   "title": "RIBA",
   "body": "The Royal Institute of British Architects (RIBA) is a <a href=\"http://en.wikipedia.org/wiki/Professional_body\">professional body</a> for architects primarily in the <a href=\"http://en.wikipedia.org/wiki/United_Kingdom\">United Kingdom</a>, but also internationally, founded for the advancement of architecture under its charter granted in 1837 and Supplemental Charter granted in 1971.",
-  "image": null,
+  "image": "/cards/riba.jpg",
   "legacy": {
     "postId": 63,
     "date": "2014-11-18 19:20:31"
-  }
+  },
+  "subtitle": "Royal Institute of British Architects",
+  "external": "http://www.architecture.com",
+  "location": "https://www.google.com/maps/preview?client=safari&amp;oe=UTF-8&amp;ie=UTF-8&amp;fb=1&amp;gl=fr&amp;sll=51.5213873,-0.1454136&amp;sspn=0.020508,0.0439461&amp;q=66+Portland+Pl,+London+W1B,+UK&amp;ei=FUYHVPjVE8bfapKigtAG&amp;ved=0CC0Q8gEwAg"
 }

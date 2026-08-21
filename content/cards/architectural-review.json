@@ -1,9 +1,12 @@
 {
   "title": "Architectural Review",
   "body": "The Architectural Review is a monthly international <a href=\"http://en.wikipedia.org/wiki/Architecture\">architectural</a> magazine published in <a href=\"http://en.wikipedia.org/wiki/London\">London</a> since 1896. Articles cover the <a href=\"http://en.wikipedia.org/wiki/Built_environment\">built environment</a> which includes <a href=\"http://en.wikipedia.org/wiki/Landscape\">landscape</a>, <a href=\"http://en.wikipedia.org/wiki/Building_design\">building design</a>, <a href=\"http://en.wikipedia.org/wiki/Interior_design\">interior design</a> and <a href=\"http://en.wikipedia.org/wiki/Urbanism\">urbanism</a> as well as theory of these subjects.\r\n\r\n&nbsp;\r\n\r\nThe publishers, Emap Construct, also produce a sister publication called <a href=\"http://en.wikipedia.org/wiki/Architects_Journal\">Architects' Journal</a>.",
-  "image": null,
+  "image": "/cards/architectural-review.jpg",
   "legacy": {
     "postId": 494,
     "date": "2014-12-11 16:23:32"
-  }
+  },
+  "subtitle": "Magazine",
+  "external": "http://info.architectural-review.com/home-eu/?infinity=gaw~Brand%2BEU%2BENG%2BSPART~Architecture%20Review%2BEXACT~54843638885~architectural%20review~e&amp;gclid=CjwKEAiAtNujBRDMmoCN46aB8noSJAC7SYv7WVhZ3PhIijVs5cfBcaYJBoGPUDhP-xVvEWPNz4I5URoC6mjw_wcB&amp;gclsrc=aw.ds",
+  "location": "https://www.google.nl/maps/place/Wilder+Walk,+Soho,+London+W1F,+UK/@51.5106082,-0.1356374,17z/data=!3m1!4b1!4m2!3m1!1s0x487604d40e51fdcd:0xf9fad18fc66cfa8f"
 }
