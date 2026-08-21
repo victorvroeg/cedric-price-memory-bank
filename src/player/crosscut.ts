@@ -118,6 +118,10 @@ function init(data: Data, root: HTMLElement) {
     });
   }
 
+  function loading(on: boolean): void {
+    projection.classList.toggle("is-loading", on);
+  }
+
   function dim(on: boolean): void {
     projection.classList.toggle("is-dimmed", on);
     // The bed follows the picture: gone means music, arrived means speech.
@@ -198,8 +202,8 @@ function init(data: Data, root: HTMLElement) {
       const gap = performance.now() - t0;
       if (started) { gaps.push(gap); report(`cut #${gaps.length} → ${item.slug}: ${gap.toFixed(0)}ms`); }
     };
-    if (el.readyState >= 3) undim();
-    else el.addEventListener("playing", undim, { once: true });
+    if (el.readyState >= 3) { loading(false); undim(); }
+    else el.addEventListener("playing", () => { loading(false); undim(); }, { once: true });
 
     started = true;
     projection.classList.add("is-playing");
@@ -542,8 +546,16 @@ function init(data: Data, root: HTMLElement) {
   // A stall is a gap like any other: the bed covers it, the way a cut is
   // covered, so waiting sounds like part of the film rather than a fault.
   for (const el of els) {
-    el.addEventListener("waiting", () => { if (el === els[active]) score?.swell(); });
-    el.addEventListener("playing", () => { if (el === els[active]) score?.under(); });
+    el.addEventListener("waiting", () => {
+      if (el !== els[active]) return;
+      score?.swell();
+      loading(true);
+    });
+    el.addEventListener("playing", () => {
+      if (el !== els[active]) return;
+      score?.under();
+      loading(false);
+    });
     el.addEventListener("pause", () => { if (el === els[active] && !advancing) score?.swell(); });
   }
 
@@ -683,6 +695,7 @@ function init(data: Data, root: HTMLElement) {
   setTimeout(warmPlaylists, 1200);   // after the first frame is on screen
 
   layoutCards();
+  loading(true);          // Cedric holds the frame until a picture arrives
   score?.swell();
   void autostart();
 }

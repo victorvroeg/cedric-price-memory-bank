@@ -82,6 +82,8 @@ const clientData = {
               <video class="projection__video" playsinline preload="auto" aria-hidden="true" />
               <video class="projection__video is-front" playsinline preload="auto" aria-label={`Everyone on ${topic.label}`} />
               <div class="projection__feather" aria-hidden="true" />
+              <img class="projection__loader" src={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/img/loader-ced.gif`}
+                   alt="" aria-hidden="true" width="129" height="100" />
               <div class="projection__sound">Sound is off — click the film to turn it on</div>
             </>
           ) : (

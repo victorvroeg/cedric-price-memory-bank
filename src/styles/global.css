@@ -1184,3 +1184,19 @@ a:hover {
 }
 .cardpanel__more:hover,
 .cardpanel__more:focus-visible { color: var(--fg); border-bottom-color: var(--fg); }
+
+/* Cedric, drawn, waiting — the 2014 loader, recovered from the live site.
+   He stands in whenever the frame has no picture in it yet. */
+.projection__loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  width: clamp(72px, 8vw, 129px);
+  height: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease;
+}
+.projection.is-loading .projection__loader { opacity: 0.9; }
