@@ -2,7 +2,7 @@
 import type { Topic } from "../lib/content";
 import { cards, topics as allTopics } from "../lib/content";
 import { crossCut } from "../lib/crosscut";
-import { safeBody } from "../lib/cards";
+import { safeBody, appearances } from "../lib/cards";
 import { musicTracks, seedOf } from "../lib/music";
 
 interface Props {
@@ -33,10 +33,26 @@ const clientData = {
   topic: { label: topic.label, colour: topic.colour },
   base: import.meta.env.BASE_URL.replace(/\/$/, ""),
   music: { tracks: musicTracks(), seed: seedOf(topic.slug) },
+  // Each reference carries every other moment it is raised, anywhere in the
+  // archive. A name mentioned in passing is not just a footnote on this turn;
+  // it is a thread, and the other people pulling it should be reachable.
   cards: Object.fromEntries(
     [...cards.values()]
       .filter((c) => usedCards.has(c.title))
-      .map((c) => [c.title, { slug: c.slug, body: safeBody(c.body) }]),
+      .map((c) => [
+        c.title,
+        {
+          slug: c.slug,
+          body: safeBody(c.body),
+          also: appearances(c.slug).map((a) => ({
+            slug: a.slug,
+            name: a.name,
+            time: a.time,
+            topicId: a.topicId,
+            topicLabel: a.topicId ? (allTopics.get(a.topicId)?.label ?? a.topicId) : null,
+          })),
+        },
+      ]),
   ),
 };
 ---
@@ -99,7 +115,8 @@ const clientData = {
         <button class="cardpanel__close" aria-label="close">×</button>
         <h2 class="cardpanel__title"></h2>
         <div class="cardpanel__body"></div>
-        <a class="cardpanel__more" href="#">full reference and where else it is raised →</a>
+        <div class="cardpanel__also"></div>
+        <a class="cardpanel__more" href="#">full reference →</a>
       </aside>
 
       <div class="nowline">

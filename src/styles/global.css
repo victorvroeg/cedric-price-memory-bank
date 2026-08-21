@@ -258,13 +258,51 @@ a:hover {
 .scrub__segment:hover {
   opacity: 1;
 }
+/* A reference standing on the timeline where it is raised. Ahead of the
+   playhead it is something coming; behind, something already said. Both are
+   places you can go. */
 .scrub__card {
   position: absolute;
-  top: 2px;
-  width: 1px;
-  height: 4px;
-  background: var(--fg-dim);
+  top: -7px;
+  width: 9px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  transform: translateX(-4px);
+  z-index: 3;
 }
+.scrub__card::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 1px;
+  height: 12px;
+  background: var(--fg);
+  opacity: 0.85;
+  transition: opacity 160ms ease, height 160ms ease, top 160ms ease;
+}
+.scrub__card::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--fg);
+  opacity: 0.85;
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+/* already said: still there, quieter */
+.scrub__card.is-past::before,
+.scrub__card.is-past::after { opacity: 0.3; }
+.scrub__card:hover::before,
+.scrub__card:focus-visible::before { opacity: 1; top: 1px; height: 18px; }
+.scrub__card:hover::after,
+.scrub__card:focus-visible::after { opacity: 1; transform: scale(1.5); }
 .scrub__playhead {
   position: absolute;
   top: 0;
@@ -739,12 +777,26 @@ a:hover {
   bottom: 96px;
   width: min(30em, 62vw);
   max-height: 58svh;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   padding: 22px 24px;
   background: rgba(10, 10, 10, 0.94);
   border: 1px solid var(--hairline);
   backdrop-filter: blur(8px);
 }
+/* The panel orients you; the reference page holds the whole essay. Clamp the
+   body so the threads underneath are never pushed off the bottom. */
+.cardpanel__body {
+  max-height: 9.5em;
+  overflow: hidden;
+  flex: 0 1 auto;
+  -webkit-mask-image: linear-gradient(180deg, #000 76%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 76%, transparent 100%);
+}
+.cardpanel__also,
+.cardpanel__more { flex: 0 0 auto; }
+
 .cardpanel__close {
   position: absolute;
   top: 8px;
@@ -966,3 +1018,60 @@ a:hover {
   .topicfield.is-leaving .topicfield__item { animation: none; }
   .projection.is-recessed { transition: none; }
 }
+
+
+/* ——— who else raises this ——— */
+
+.cardpanel__also {
+  margin: 12px 0 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+}
+.cardpanel__alsolead {
+  margin: 0 0 3px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+}
+.cardpanel__jump {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  padding: 2px 0;
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.35;
+  color: var(--fg-dim);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 140ms ease, border-color 140ms ease;
+}
+.cardpanel__jump:hover,
+.cardpanel__jump:focus-visible {
+  color: var(--fg);
+  border-bottom-color: var(--hairline);
+}
+/* a thread that leaves this cross-cut announces itself */
+.cardpanel__jump--away::after {
+  content: " ↗";
+  opacity: 0.6;
+}
+
+.cardpanel__who { font-weight: 700; }
+.cardpanel__topic {
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-size: 0.85em;
+  opacity: 0.8;
+}
+.cardpanel__at { font-variant-numeric: tabular-nums; opacity: 0.7; }
+.cardpanel__who + .cardpanel__topic::before,
+.cardpanel__topic + .cardpanel__at::before,
+.cardpanel__who + .cardpanel__at::before { content: " · "; opacity: 0.5; }
+.cardpanel__rest { font-style: italic; opacity: 0.75; }

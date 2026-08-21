@@ -20,14 +20,18 @@ interface Item {
   hls: string;
   start: number;
   end: number;
-  cards: { time: number; title: string }[];
+  cards: { time: number; title: string; id: string }[];
 }
 
 interface Data {
   items: Item[];
   topic: { label: string; colour: string };
   base: string;
-  cards: Record<string, { slug: string; body: string }>;
+  cards: Record<string, {
+    slug: string;
+    body: string;
+    also: { slug: string; name: string; time: number; topicId: string | null; topicLabel: string | null }[];
+  }>;
   music: { tracks: string[]; seed: number };
 }
 
@@ -126,19 +130,25 @@ function init(data: Data, root: HTMLElement) {
     if (nowSpeaker) nowSpeaker.textContent = `${item.name} — ${item.jobtitle}`;
   }
 
-  async function playItem(i: number, viaGesture = false): Promise<void> {
+  async function playItem(i: number, viaGesture = false, at?: number): Promise<void> {
     const t0 = performance.now();
     current = i;
     const item = items[i];
+    const from = at ?? item.start;
     const standby = els[1 - active];
     const el = singleMode ? els[0] : standby;
 
     if (!singleMode && !viaGesture) {
       // standby should already be parked on item.start
     } else {
-      await attach(el, item.hls, item.start);
-      if (el.readyState >= 1) el.currentTime = item.start;
-      else el.addEventListener("loadedmetadata", () => (el.currentTime = item.start), { once: true });
+      await attach(el, item.hls, from);
+      if (el.readyState >= 1) el.currentTime = from;
+      else el.addEventListener("loadedmetadata", () => (el.currentTime = from), { once: true });
+    }
+    // a parked element sits on the in-point; a reference asks for a later one
+    if (at !== undefined && !viaGesture) {
+      if (el.readyState >= 1) el.currentTime = at;
+      else el.addEventListener("loadedmetadata", () => (el.currentTime = at), { once: true });
     }
 
     try {
@@ -221,6 +231,7 @@ function init(data: Data, root: HTMLElement) {
     if (!el.paused && el.currentTime >= item.end - 0.12) advance();
     const pos = offsets[current] + Math.min(Math.max(el.currentTime - item.start, 0), item.end - item.start);
     if (playhead) playhead.style.left = `${(pos / total) * 100}%`;
+    markTicks(pos / total);
     if (nowIndex) nowIndex.textContent = `${current + 1} / ${items.length}`;
     markSpeaker();
     if (nowCard) {
@@ -250,6 +261,8 @@ function init(data: Data, root: HTMLElement) {
   // A reference opens on hover and the film keeps running — reading about
   // Price's Candles should not cost you the sentence that mentioned them.
   // Clicking pins it, for touch and for anyone who wants to follow a link.
+  const fmt = (t: number) =>
+    `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, "0")}`;
   const panel = root.querySelector<HTMLElement>(".cardpanel");
   let pinned = false;
   let closeTimer: number | undefined;
@@ -263,6 +276,75 @@ function init(data: Data, root: HTMLElement) {
     panel.querySelector<HTMLElement>(".cardpanel__body")!.innerHTML = card.body;
     panel.querySelector<HTMLAnchorElement>(".cardpanel__more")!.href =
       `${data.base}/card/${card.slug}/`;
+
+    // Who else raises this, and can we get there from here? An appearance
+    // inside this cross-cut is a jump; one outside it is a link into that
+    // person's own interview, at the moment they say it.
+    const also = panel.querySelector<HTMLElement>(".cardpanel__also")!;
+    also.textContent = "";
+    const others = (card.also ?? []).filter(
+      (a) => !(current >= 0 && a.slug === items[current].slug &&
+               Math.abs(a.time - els[active].currentTime) < 30),
+    );
+    if (others.length) {
+      // What you can reach without leaving comes first; a long tail belongs on
+      // the reference's own page, not crammed into a panel over the film.
+      const ranked = others
+        .map((a) => ({
+          a,
+          here: items.findIndex(
+            (it) => it.slug === a.slug && a.time >= it.start && a.time < it.end,
+          ),
+        }))
+        .sort((x, y) => (y.here >= 0 ? 1 : 0) - (x.here >= 0 ? 1 : 0));
+      const SHOWN = 6;
+
+      const lead = document.createElement("p");
+      lead.className = "cardpanel__alsolead";
+      lead.textContent = others.length === 1 ? "also raised by" : `also raised by ${others.length} others`;
+      also.appendChild(lead);
+
+      for (const { a, here } of ranked.slice(0, SHOWN)) {
+        const mk = (cls: string, text: string) => {
+          const n = document.createElement("span");
+          n.className = cls;
+          n.textContent = text;
+          return n;
+        };
+        const fill = (node: HTMLElement) => {
+          node.appendChild(mk("cardpanel__who", a.name));
+          if (a.topicLabel) node.appendChild(mk("cardpanel__topic", a.topicLabel));
+          node.appendChild(mk("cardpanel__at", fmt(a.time)));
+        };
+        if (here >= 0) {
+          const b = document.createElement("button");
+          b.className = "cardpanel__jump";
+          fill(b);
+          b.title = `hear ${a.name} on this, in this cross-cut`;
+          b.addEventListener("click", () => {
+            closeCard(true);
+            dim(true);
+            void playItem(here, true, Math.max(a.time - 4, items[here].start));
+          });
+          also.appendChild(b);
+        } else {
+          const link = document.createElement("a");
+          link.className = "cardpanel__jump cardpanel__jump--away";
+          fill(link);
+          link.title = `${a.name}'s interview, at this moment`;
+          link.href = `${data.base}/interview/${a.slug}/#t=${a.time.toFixed(1)}`;
+          also.appendChild(link);
+        }
+      }
+
+      if (others.length > SHOWN) {
+        const rest = document.createElement("a");
+        rest.className = "cardpanel__jump cardpanel__rest";
+        rest.textContent = `and ${others.length - SHOWN} more`;
+        rest.href = `${data.base}/card/${card.slug}/`;
+        also.appendChild(rest);
+      }
+    }
     panel.hidden = false;
     panel.classList.toggle("is-pinned", pinned);
   }
@@ -294,6 +376,46 @@ function init(data: Data, root: HTMLElement) {
   if (debug) {
     (window as unknown as { cpmbScore: unknown }).cpmbScore = score;
     setInterval(() => score && report(`bed ${JSON.stringify(score.state)}`), 2000);
+  }
+
+  // --- references on the timeline ------------------------------------------
+  // Every name this cross-cut raises, standing on the scrub where it is
+  // raised. Ahead of the playhead they are things coming; behind, things
+  // already said. Either way they are clickable, so a reference is somewhere
+  // you can go rather than something you had to be present for.
+  function posOf(i: number, t: number): number {
+    const item = items[i];
+    const within = Math.min(Math.max(t - item.start, 0), item.end - item.start);
+    return (offsets[i] + within) / total;
+  }
+
+  const ticks: { el: HTMLButtonElement; at: number }[] = [];
+  function layoutCards(): void {
+    if (!scrub) return;
+    for (const el of scrub.querySelectorAll(".scrub__card")) el.remove();
+    ticks.length = 0;
+    items.forEach((item, i) => {
+      for (const c of item.cards) {
+        const at = posOf(i, c.time);
+        const b = document.createElement("button");
+        b.className = "scrub__card";
+        b.style.left = `${at * 100}%`;
+        b.title = `${c.title} — ${item.name}`;
+        b.setAttribute("aria-label", `${c.title}, raised by ${item.name}`);
+        b.addEventListener("click", (e) => {
+          e.stopPropagation();
+          dim(true);
+          void playItem(i, true, Math.max(c.time - 4, item.start));
+        });
+        b.addEventListener("pointerenter", () => openCard(c.title));
+        b.addEventListener("pointerleave", closeSoon);
+        scrub.appendChild(b);
+        ticks.push({ el: b, at });
+      }
+    });
+  }
+  function markTicks(pos: number): void {
+    for (const t of ticks) t.el.classList.toggle("is-past", t.at < pos - 0.001);
   }
 
   // --- the topic field -----------------------------------------------------
@@ -508,6 +630,7 @@ function init(data: Data, root: HTMLElement) {
   }
   setTimeout(warmPlaylists, 1200);   // after the first frame is on screen
 
+  layoutCards();
   score?.swell();
   void autostart();
 }

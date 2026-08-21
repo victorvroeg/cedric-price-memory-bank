@@ -43,10 +43,18 @@ function init(data: ScreenData, root: HTMLElement) {
 
   // Placeholder footage has arbitrary length; stretch the map to fit it so
   // the demo stays coherent. Real footage keeps the archive's own basis.
+  // A reference in a cross-cut can send you here, to the moment somebody says
+  // it. Honour #t=seconds on arrival.
+  const wanted = parseFloat((location.hash.match(/t=([\d.]+)/) ?? [])[1] ?? "");
+
   video.addEventListener("loadedmetadata", () => {
     if (data.source!.placeholder && isFinite(video.duration) && video.duration > 0) {
       basis = video.duration;
       layoutScrub();
+    }
+    if (isFinite(wanted) && wanted > 0) {
+      video.currentTime = Math.min(wanted, (video.duration || basis) - 0.1);
+      void video.play().catch(() => {});
     }
     paintBloom();
   });
