@@ -39,6 +39,16 @@
   --fg-dim: rgba(255, 255, 255, 0.55);
   --hairline: rgba(255, 255, 255, 0.18);
   --font: "Apercu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* The margin every column on the stage is measured from. Named once so a
+     row added later cannot quietly line up somewhere else: the switch under
+     the timeline did exactly that, and sat seven pixels in from the rest. */
+  --gutter: clamp(48px, 7vw, 110px);
+}
+
+@media (max-width: 720px) {
+  :root {
+    --gutter: clamp(20px, 6vw, 48px);
+  }
 }
 
 * {
@@ -148,7 +158,7 @@ a:hover {
 .projection {
   position: relative;
   margin: 0 auto;
-  width: calc(100% - 2 * clamp(48px, 7vw, 110px));
+  width: calc(100% - 2 * var(--gutter));
 }
 
 .projection__bloom {
@@ -238,7 +248,7 @@ a:hover {
 .scrub {
   position: relative;
   margin: 26px auto 0;
-  width: calc(100% - 2 * clamp(48px, 7vw, 110px));
+  width: calc(100% - 2 * var(--gutter));
   height: 22px;
   cursor: pointer;
 }
@@ -317,7 +327,7 @@ a:hover {
   justify-content: space-between;
   gap: 2em;
   margin: 10px auto 0;
-  width: calc(100% - 2 * clamp(48px, 7vw, 110px));
+  width: calc(100% - 2 * var(--gutter));
   font-size: 14px;
   min-height: 1.4em;
 }
@@ -341,7 +351,7 @@ a:hover {
 
 .topics {
   margin: 26px auto 0;
-  width: calc(100% - 2 * clamp(48px, 7vw, 110px));
+  width: calc(100% - 2 * var(--gutter));
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em 1.6em;
@@ -397,7 +407,7 @@ a:hover {
   position: relative;
   z-index: 10;
   margin: 30px auto 0;
-  width: calc(100% - 2 * clamp(48px, 7vw, 110px));
+  width: calc(100% - 2 * var(--gutter));
   text-align: center;
 }
 .enter__link {
@@ -480,12 +490,6 @@ a:hover {
 @media (max-width: 720px) {
   .stage {
     width: 100vw;
-  }
-  .projection,
-  .scrub,
-  .nowline,
-  .topics {
-    width: calc(100% - 2 * clamp(20px, 6vw, 48px));
   }
   .title--left {
     transform: translate(-38%, -50%) rotate(270deg);
@@ -770,7 +774,7 @@ a:hover {
 .cardpanel {
   position: absolute;
   z-index: 30;
-  right: clamp(48px, 7vw, 110px);
+  right: var(--gutter);
   bottom: 96px;
   width: min(30em, 62vw);
   max-height: 58svh;
@@ -1376,7 +1380,7 @@ a:hover {
 /* Not a description of where you are, which both edges already give: the one
    thing that is nowhere else on screen, which is the way to the other axis. */
 .modeswitch {
-  width: calc(100% - 2 * clamp(48px, 7vw, 110px));
+  width: calc(100% - 2 * var(--gutter));
   margin: 12px auto 0;
   font-size: 13px;
 }
