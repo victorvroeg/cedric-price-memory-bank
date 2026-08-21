@@ -1,7 +1,7 @@
 ---
 import type { Topic } from "../lib/content";
 import { cards, topics as allTopics } from "../lib/content";
-import { crossCut } from "../lib/crosscut";
+import { crossCut, published } from "../lib/crosscut";
 import { safeBody, appearances } from "../lib/cards";
 import { musicTracks, seedOf } from "../lib/music";
 
@@ -20,11 +20,20 @@ const field = [...allTopics.values()]
   .map((t) => ({
     slug: t.slug,
     label: t.label,
-    colour: t.colour,
     voices: new Set(crossCut(t.slug).playable.map((i) => i.slug)).size,
   }))
   .filter((t) => t.voices > 0)
   .sort((a, b) => a.label.localeCompare(b.label));
+
+// What each speaker themselves covers, so the menu can open the way the 2014
+// one did: this person's topics first, then everyone else's.
+const speakerTopics: Record<string, string[]> = {};
+for (const iv of published()) {
+  const seen: string[] = [];
+  for (const seg of [...iv.segments].sort((a, b) => a.start - b.start))
+    if (!seen.includes(seg.topicId) && allTopics.has(seg.topicId)) seen.push(seg.topicId);
+  speakerTopics[iv.slug] = seen;
+}
 
 // only the cards this cross-cut can actually raise
 const usedCards = new Set(playable.flatMap((i) => i.cards.map((c) => c.title)));
@@ -32,6 +41,13 @@ const clientData = {
   items: playable,
   topic: { label: topic.label, colour: topic.colour },
   base: import.meta.env.BASE_URL.replace(/\/$/, ""),
+  field,
+  speakerTopics,
+  here: topic.slug,
+  // everyone in the archive, so the right-hand title opens as a door too
+  people: published()
+    .map((iv) => ({ slug: iv.slug, name: iv.interviewee.name, jobtitle: iv.interviewee.jobtitle }))
+    .sort((a, b) => a.name.localeCompare(b.name)),
   music: { tracks: musicTracks(), seed: seedOf(topic.slug) },
   // Each reference carries every other moment it is raised, anywhere in the
   // archive. A name mentioned in passing is not just a footnote on this turn;
@@ -66,11 +82,14 @@ const clientData = {
 
 <main class="void">
   <div class="stage stage--crosscut">
-    <h1 class="title title--left" style={`color:${topic.colour}`}>
+    <h1 class="title title--left title--following" style={`color:${topic.colour}`}>
       <button class="topicdoor" aria-expanded="false" aria-controls="topicfield"
               title="every topic in the archive">{topic.label}</button>
     </h1>
-    <p class="title title--right">{playable.length ? playable[0].name : ""}</p>
+    <p class="title title--right title--idle">
+      <button class="peopledoor" aria-expanded="false" aria-controls="topicfield"
+              title="everyone in the archive">{playable.length ? playable[0].name : ""}</button>
+    </p>
 
     <figure class:list={["projection", { "projection--dead": !playable.length }]}>
       <canvas class="projection__bloom" aria-hidden="true"></canvas>
@@ -126,6 +145,7 @@ const clientData = {
               {playable[0].name} — {playable[0].jobtitle}
             </span>
             <span class="nowline__card" />
+            <span class="nowline__following">following the topic</span>
             <span class="nowline__time">1 / {playable.length}</span>
           </div>
         </>
@@ -158,19 +178,7 @@ const clientData = {
 
   <nav class="topicfield" id="topicfield" hidden aria-label="Every topic in the archive">
     <button class="topicfield__close" aria-label="close">×</button>
-    <ul class="topicfield__list">
-      {field.map((t, n) => (
-        <li>
-          <a
-            href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/topic/${t.slug}/`}
-            class:list={["topicfield__item", { "is-current": t.slug === topic.slug }]}
-            style={`--c:${t.colour};--n:${t.voices};--i:${n}`}
-          >
-            {t.label}<sup>{t.voices}</sup>
-          </a>
-        </li>
-      ))}
-    </ul>
+    <div class="topicfield__row"></div>
   </nav>
 
   <script type="application/json" id="cpmb-crosscut" set:html={JSON.stringify(clientData)} />

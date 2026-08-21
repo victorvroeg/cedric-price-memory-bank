@@ -35,6 +35,10 @@ interface Data {
     also: { slug: string; name: string; time: number; topicId: string | null; topicLabel: string | null }[];
   }>;
   music: { tracks: string[]; seed: number };
+  field: { slug: string; label: string; voices: number }[];
+  speakerTopics: Record<string, string[]>;
+  people: { slug: string; name: string; jobtitle: string }[];
+  here: string;
 }
 
 const dataEl = document.getElementById("cpmb-crosscut");
@@ -132,7 +136,9 @@ function init(data: Data, root: HTMLElement) {
   // The topic (left title) is the constant of the page; the speaker (right
   // title) changes with every cut — the "change of slide".
   function setTitles(item: Item): void {
-    if (titleR) titleR.textContent = item.name;
+    // write into the door, not over it
+    const label = titleR?.querySelector<HTMLElement>(".peopledoor") ?? titleR;
+    if (label) label.textContent = item.name;
     if (nowSpeaker) nowSpeaker.textContent = `${item.name} — ${item.jobtitle}`;
   }
 
@@ -479,32 +485,121 @@ function init(data: Data, root: HTMLElement) {
   // rest of the archive stands up behind it — same hover grammar as a
   // reference, same rule: the film keeps talking.
   const door = root.querySelector<HTMLButtonElement>(".topicdoor");
+  const peopleDoor = root.querySelector<HTMLButtonElement>(".peopledoor");
   const fieldEl = document.querySelector<HTMLElement>(".topicfield");
+  const fieldRow = fieldEl?.querySelector<HTMLElement>(".topicfield__row");
   let fieldPinned = false;
   let fieldTimer: number | undefined;
   let fieldOpenedAt = 0;
+  let mode: "topics" | "people" = "topics";
 
-  function openField(pin = false): void {
-    if (!fieldEl || !door) return;
+  const topicLabel = new Map(data.field.map((t) => [t.slug, t.label]));
+
+  function heading(text: string): HTMLElement {
+    const h = document.createElement("h3");
+    h.className = "topicfield__head";
+    h.textContent = text;
+    return h;
+  }
+
+  function list(): HTMLUListElement {
+    const ul = document.createElement("ul");
+    ul.className = "topicfield__list";
+    return ul;
+  }
+
+  function entry(label: string, href: string, active: boolean, i: number): HTMLLIElement {
+    const li = document.createElement("li");
+    li.style.setProperty("--i", String(i));
+    const a = document.createElement("a");
+    a.className = active ? "topicfield__item is-current" : "topicfield__item";
+    a.href = href;
+    a.textContent = label;
+    li.appendChild(a);
+    return li;
+  }
+
+  // The 2014 menu, which was a list and not a cloud: what the person on screen
+  // covers, then everyone else's. Same for the people door: who is in this
+  // cross-cut, then the whole archive.
+  function buildField(): void {
+    if (!fieldRow) return;
+    fieldRow.textContent = "";
+    let i = 0;
+
+    if (mode === "topics") {
+      const who = current >= 0 ? items[current] : items[0];
+      const theirs = (data.speakerTopics[who.slug] ?? []).filter((t) => topicLabel.has(t));
+      const rest = data.field.map((t) => t.slug).filter((t) => !theirs.includes(t));
+
+      fieldRow.appendChild(heading(`${who.name} on`));
+      const a = list();
+      for (const t of theirs)
+        a.appendChild(entry(topicLabel.get(t)!, `${data.base}/topic/${t}/`, t === data.here, i++));
+      fieldRow.appendChild(a);
+
+      fieldRow.appendChild(heading("others on"));
+      const b = list();
+      for (const t of rest)
+        b.appendChild(entry(topicLabel.get(t)!, `${data.base}/topic/${t}/`, t === data.here, i++));
+      fieldRow.appendChild(b);
+    } else {
+      const inCut: string[] = [];
+      for (const it of items) if (!inCut.includes(it.slug)) inCut.push(it.slug);
+      const here = current >= 0 ? items[current].slug : null;
+
+      fieldRow.appendChild(heading(`on ${data.topic.label.toLowerCase()}`));
+      const a = list();
+      inCut.forEach((slug) => {
+        const p = data.people.find((x) => x.slug === slug);
+        if (!p) return;
+        const li = entry(p.name, `${data.base}/interview/${slug}/`, slug === here, i++);
+        // inside this cross-cut, their turn is a jump rather than a page
+        li.querySelector("a")!.addEventListener("click", (e) => {
+          e.preventDefault();
+          const n = items.findIndex((it) => it.slug === slug);
+          if (n < 0) return;
+          closeField(true);
+          dim(true);
+          void playItem(n, true);
+        });
+        a.appendChild(li);
+      });
+      fieldRow.appendChild(a);
+
+      fieldRow.appendChild(heading("whole interviews"));
+      const b = list();
+      for (const p of data.people)
+        b.appendChild(entry(p.name, `${data.base}/interview/${p.slug}/`, false, i++));
+      fieldRow.appendChild(b);
+    }
+  }
+
+  function openField(which: "topics" | "people", pin = false): void {
+    if (!fieldEl) return;
     clearTimeout(fieldTimer);
     if (pin) fieldPinned = true;
+    mode = which;
+    buildField();
     if (fieldEl.hidden) fieldOpenedAt = performance.now();
     clearTimeout(leaving);
     fieldEl.classList.remove("is-leaving");
     fieldEl.hidden = false;
-    door.setAttribute("aria-expanded", "true");
+    door?.setAttribute("aria-expanded", String(which === "topics"));
+    peopleDoor?.setAttribute("aria-expanded", String(which === "people"));
     projection.classList.add("is-recessed");
     root.classList.add("is-fielded");
   }
+
   let leaving: number | undefined;
   function closeField(force = false): void {
-    if (!fieldEl || !door || fieldEl.hidden) return;
+    if (!fieldEl || fieldEl.hidden) return;
     if (fieldPinned && !force) return;
     fieldPinned = false;
-    door.setAttribute("aria-expanded", "false");
+    door?.setAttribute("aria-expanded", "false");
+    peopleDoor?.setAttribute("aria-expanded", "false");
     projection.classList.remove("is-recessed");
     root.classList.remove("is-fielded");
-    // let it go the way it came, then take it out of the page
     fieldEl.classList.add("is-leaving");
     clearTimeout(leaving);
     leaving = window.setTimeout(() => {
@@ -517,20 +612,18 @@ function init(data: Data, root: HTMLElement) {
     fieldTimer = window.setTimeout(() => closeField(), 360);
   }
 
-  door?.addEventListener("pointerenter", () => openField());
-  door?.addEventListener("pointerleave", closeFieldSoon);
-  door?.addEventListener("focus", () => openField());
-  door?.addEventListener("click", () => {
-    // On a touch screen the tap fires pointerenter first, so by the time the
-    // click lands the field is already up. Treat that as one gesture and pin
-    // it, rather than opening and shutting in the same finger-press.
-    if (fieldEl?.hidden || performance.now() - fieldOpenedAt < 500) openField(true);
-    else closeField(true);
-  });
+  for (const [btn, which] of [[door, "topics"], [peopleDoor, "people"]] as const) {
+    btn?.addEventListener("pointerenter", () => openField(which));
+    btn?.addEventListener("pointerleave", closeFieldSoon);
+    btn?.addEventListener("focus", () => openField(which));
+    btn?.addEventListener("click", () => {
+      if (fieldEl?.hidden || mode !== which || performance.now() - fieldOpenedAt < 500) openField(which, true);
+      else closeField(true);
+    });
+  }
   fieldEl?.addEventListener("pointerenter", () => clearTimeout(fieldTimer));
   fieldEl?.addEventListener("pointerleave", closeFieldSoon);
   fieldEl?.querySelector(".topicfield__close")?.addEventListener("click", () => closeField(true));
-  // anywhere that is not a topic is a way out
   fieldEl?.addEventListener("click", (e) => {
     if (!(e.target as Element).closest(".topicfield__item")) closeField(true);
   });

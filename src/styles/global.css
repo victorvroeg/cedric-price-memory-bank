@@ -854,9 +854,13 @@ a:hover {
 
 
 
-/* ——— the topic field: the whole archive standing behind one word ——— */
+/* ——— the menus: the 2014 overlay, which was a list and not a cloud ———
+   Centred column, 32px items, all the same size and all white; the one you
+   are on is underlined and green. The film keeps playing behind a 40% scrim,
+   because the menu is a place you are passing through, not a page. */
 
-.topicdoor {
+.topicdoor,
+.peopledoor {
   background: none;
   border: 0;
   padding: 0;
@@ -866,7 +870,8 @@ a:hover {
   text-transform: inherit;
   cursor: pointer;
 }
-.topicdoor::after {
+.topicdoor::after,
+.peopledoor::after {
   content: "";
   display: block;
   height: 1px;
@@ -877,148 +882,125 @@ a:hover {
 }
 .topicdoor:hover::after,
 .topicdoor:focus-visible::after,
-.topicdoor[aria-expanded="true"]::after { opacity: 0.55; }
+.topicdoor[aria-expanded="true"]::after,
+.peopledoor:hover::after,
+.peopledoor:focus-visible::after,
+.peopledoor[aria-expanded="true"]::after { opacity: 0.55; }
 
-/* While the field is up, the page's own furniture steps back — otherwise the
-   speaker names and the now-line read straight through the topic list. */
+/* Which thread are you on? The lit edge is the answer. */
+.title--following { opacity: 1; }
+.title--idle { opacity: 0.38; transition: opacity 240ms ease; }
+.title--idle:hover { opacity: 0.7; }
+
 .stage--crosscut.is-fielded .scrub,
 .stage--crosscut.is-fielded .nowline,
-.stage--crosscut.is-fielded .topics,
-.stage--crosscut.is-fielded .title--right {
+.stage--crosscut.is-fielded .topics {
   opacity: 0;
   pointer-events: none;
   transition: opacity 260ms ease;
 }
 
-/* The film does not stop for this. It recedes, the way a projection does when
-   the house lights come half up, and keeps talking behind the list. */
 .projection.is-recessed {
-  opacity: 0.36;
-  filter: saturate(0.7);
-  transition: opacity 420ms ease, filter 420ms ease;
+  opacity: 0.5;
+  transition: opacity 420ms ease;
 }
 
 .topicfield {
   position: absolute;
   inset: 0;
   z-index: 20;
-  display: grid;
-  align-content: center;
-  justify-items: center;
-  gap: 26px;
-  padding: 6vh clamp(20px, 6vw, 90px);
-  background:
-    radial-gradient(120% 90% at 50% 50%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.93) 72%);
+  display: block;
   overflow-y: auto;
+  padding: 60px 0 48px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.55);
   animation: field-in 300ms ease both;
 }
-.topicfield.is-leaving { animation: field-out 300ms ease both; }
-@keyframes field-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-
-.topicfield__close {
-  position: absolute;
-  top: clamp(12px, 3vh, 34px);
-  right: clamp(16px, 4vw, 46px);
-  background: none;
-  border: 0;
-  padding: 6px 10px;
-  font: inherit;
-  font-size: 26px;
-  line-height: 1;
-  color: var(--fg-dim);
-  cursor: pointer;
-  transition: color 160ms ease;
-}
-.topicfield__close:hover,
-.topicfield__close:focus-visible { color: var(--fg); }
 .topicfield[hidden] { display: none; }
-@keyframes field-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
+.topicfield.is-leaving { animation: field-out 300ms ease both; }
+@keyframes field-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes field-out { from { opacity: 1; } to { opacity: 0; } }
 
-.topicfield__lead {
-  margin: 0;
-  font-size: 11px;
-  letter-spacing: 3.5px;
-  text-transform: uppercase;
-  color: var(--fg-dim);
+.topicfield__row {
+  max-width: 560px;
+  margin: 0 auto;
 }
+.topicfield__head {
+  margin: 30px 0 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.66);
+  text-transform: lowercase;
+}
+.topicfield__head:first-child { margin-top: 0; }
 
 .topicfield__list {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: baseline;
-  gap: 0.3em 0.85em;
-  max-width: 74ch;
+  font-size: clamp(20px, 2.5vw, 32px);
+  line-height: 1.13;
+}
+.topicfield__list li {
+  padding: 11px 0;
+  animation: field-item-in 380ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--i, 0) * 9ms);
+}
+@keyframes field-item-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+.topicfield.is-leaving .topicfield__list li {
+  animation: field-item-out 240ms ease both;
+  animation-delay: calc(var(--i, 0) * 4ms);
+}
+@keyframes field-item-out {
+  from { opacity: 1; transform: none; }
+  to { opacity: 0; transform: translateY(-8px); }
 }
 
-/* The topic colours are the design's colours. They are fresh on black and
-   they stay fresh — no opacity, no wash. Weight is carried by size alone,
-   the way it is on a poster. */
 .topicfield__item {
-  display: inline-block;
-  color: var(--c);
-  border-bottom: 0;          /* the global link hairline would fence every word */
+  color: #fff;
+  border-bottom: 0;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.5px;
-  /* voices, steeply: one voice is a footnote, thirteen is a headline */
-  font-size: clamp(13px, calc(9px + var(--n) * var(--n) * 0.055vw + var(--n) * 0.28vw), 84px);
-  line-height: 0.98;
-  transform-origin: 50% 60%;
-  transition: transform 200ms cubic-bezier(0.2, 0.9, 0.25, 1), filter 200ms ease;
-  animation: field-item-in 420ms cubic-bezier(0.16, 1, 0.3, 1) both;
-  animation-delay: calc(var(--i) * 13ms);
-}
-@keyframes field-item-in {
-  from { opacity: 0; transform: translateY(14px) scale(0.94); filter: blur(3px); }
-  to { opacity: 1; transform: none; filter: none; }
-}
-/* leaving is the same move, reversed and quicker */
-.topicfield.is-leaving .topicfield__item {
-  animation: field-item-out 260ms ease both;
-  animation-delay: calc(var(--i) * 5ms);
-}
-@keyframes field-item-out {
-  from { opacity: 1; transform: none; filter: none; }
-  to { opacity: 0; transform: translateY(-10px) scale(0.97); filter: blur(4px); }
+  transition: color 140ms ease;
 }
 .topicfield__item:hover,
-.topicfield__item:focus-visible {
-  transform: scale(1.06);
-  filter: brightness(1.25);
-}
+.topicfield__item:focus-visible { text-decoration: underline; text-underline-offset: 6px; }
 .topicfield__item.is-current {
+  color: #aefea0;
   text-decoration: underline;
   text-underline-offset: 6px;
-  text-decoration-thickness: 2px;
 }
-.topicfield__item sup {
-  font-size: 0.3em;
-  font-weight: 400;
-  letter-spacing: 0;
-  margin-left: 0.25em;
-  opacity: 0.65;
-  vertical-align: super;
+
+.topicfield__close {
+  position: fixed;
+  top: 16px;
+  right: clamp(16px, 4vw, 50px);
+  z-index: 2;
+  background: none;
+  border: 0;
+  padding: 6px 10px;
+  font: inherit;
+  font-size: 22px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
 }
+.topicfield__close:hover,
+.topicfield__close:focus-visible { color: #fff; }
 
 @media (prefers-reduced-motion: reduce) {
   .topicfield,
-  .topicfield__item,
   .topicfield.is-leaving,
-  .topicfield.is-leaving .topicfield__item { animation: none; }
+  .topicfield__list li,
+  .topicfield.is-leaving .topicfield__list li { animation: none; }
   .projection.is-recessed { transition: none; }
 }
-
 
 /* ——— who else raises this ——— */
 
@@ -1200,3 +1182,12 @@ a:hover {
   transition: opacity 300ms ease;
 }
 .projection.is-loading .projection__loader { opacity: 0.9; }
+
+/* Say which thread you are on, in words, where the eye already is. */
+.nowline__following {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  white-space: nowrap;
+}

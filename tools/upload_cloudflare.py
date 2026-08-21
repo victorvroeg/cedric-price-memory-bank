@@ -23,7 +23,11 @@ from pathlib import Path
 ACCOUNT = "203f021085d63c5fbac9c49b6f5c903c"
 API = f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT}/stream"
 TOKEN = (Path.home() / ".cpmb-cf-token").read_text().strip()
-CHUNK = 100 * 1024 * 1024  # 100 MB; must be a multiple of 256 KiB
+# 25 MB, a multiple of 256 KiB. Smaller than it needs to be on a good line,
+# deliberately: every completed chunk is a checkpoint, and on a bad line the
+# difference between losing 25 MB and losing 100 MB is the difference between
+# a shrug and starting the file again.
+CHUNK = 25 * 1024 * 1024
 EXTS = {".mov", ".mp4", ".m4v"}
 RETRY_STATUS = {408, 429, 500, 502, 503, 504, 520, 521, 522, 523, 524}
 
@@ -41,7 +45,7 @@ def req(url, method, headers, data=None):
     for k, v in headers.items():
         r.add_header(k, v)
     try:
-        with urllib.request.urlopen(r, timeout=600) as resp:
+        with urllib.request.urlopen(r, timeout=180) as resp:
             return resp.status, dict(resp.headers), resp.read()
     except urllib.error.HTTPError as e:
         return e.code, dict(e.headers), e.read()
