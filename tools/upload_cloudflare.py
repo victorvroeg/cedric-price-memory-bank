@@ -25,6 +25,15 @@ API = f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT}/stream"
 TOKEN = (Path.home() / ".cpmb-cf-token").read_text().strip()
 CHUNK = 100 * 1024 * 1024  # 100 MB; must be a multiple of 256 KiB
 EXTS = {".mov", ".mp4", ".m4v"}
+RETRY_STATUS = {408, 429, 500, 502, 503, 504, 520, 521, 522, 523, 524}
+
+
+class TransientHTTP(Exception):
+    """A status worth waiting out rather than giving up on."""
+
+    def __init__(self, status: int):
+        super().__init__(f"HTTP {status}")
+        self.status = status
 
 
 def req(url, method, headers, data=None):
@@ -77,7 +86,9 @@ def send(location: str, path: Path, start: int) -> int:
             # An hour-long transfer will meet a dropped connection sooner or
             # later; that is weather, not failure. tus already knows how to
             # resume, so ask the server where it got to and carry on from
-            # there rather than losing the file.
+            # there rather than losing the file. Cloudflare's own 5xx —
+            # especially 520, which means its edge could not reach its origin —
+            # is the same kind of weather and gets the same treatment.
             for attempt in range(1, 7):
                 try:
                     status, headers, body = req(location, "PATCH", {
@@ -86,10 +97,13 @@ def send(location: str, path: Path, start: int) -> int:
                         "Upload-Offset": str(sent),
                         "Content-Type": "application/offset+octet-stream",
                     }, data=chunk)
-                    break
-                except (TimeoutError, OSError) as e:
+                    if status not in RETRY_STATUS:
+                        break
+                    raise TransientHTTP(status)
+                except (TimeoutError, OSError, TransientHTTP) as e:
                     wait = min(2 ** attempt, 30)
-                    print(f"    network hiccup ({type(e).__name__}), "
+                    what = f"HTTP {e.status}" if isinstance(e, TransientHTTP) else type(e).__name__
+                    print(f"    network hiccup ({what}), "
                           f"retry {attempt}/6 in {wait}s", flush=True)
                     time.sleep(wait)
                     here = offset(location)

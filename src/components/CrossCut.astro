@@ -116,7 +116,7 @@ const clientData = {
         <h2 class="cardpanel__title"></h2>
         <div class="cardpanel__body"></div>
         <div class="cardpanel__also"></div>
-        <a class="cardpanel__more" href="#">full reference →</a>
+        <button class="cardpanel__more" type="button">read the full reference →</button>
       </aside>
 
       <div class="nowline">
@@ -141,6 +141,17 @@ const clientData = {
         <span class="topic topic--awaiting" title="film not yet online">{a.name}</span>
       ))}
     </nav>
+  </div>
+
+  <div class="reference" hidden role="dialog" aria-modal="true" aria-label="Reference">
+    <article class="reference__sheet">
+      <button class="reference__close" aria-label="close and carry on watching">×</button>
+      <figure class="reference__figure" hidden><img class="reference__img" alt="" /></figure>
+      <h2 class="reference__title"></h2>
+      <p class="reference__sub"></p>
+      <div class="reference__body"></div>
+      <p class="reference__resume">close to carry on watching</p>
+    </article>
   </div>
 
   <nav class="topicfield" id="topicfield" hidden aria-label="Every topic in the archive">

@@ -30,6 +30,8 @@ interface Data {
   cards: Record<string, {
     slug: string;
     body: string;
+    subtitle?: string | null;
+    image?: string | null;
     also: { slug: string; name: string; time: number; topicId: string | null; topicLabel: string | null }[];
   }>;
   music: { tracks: string[]; seed: number };
@@ -274,8 +276,7 @@ function init(data: Data, root: HTMLElement) {
     if (pin) pinned = true;
     panel.querySelector<HTMLElement>(".cardpanel__title")!.textContent = title;
     panel.querySelector<HTMLElement>(".cardpanel__body")!.innerHTML = card.body;
-    panel.querySelector<HTMLAnchorElement>(".cardpanel__more")!.href =
-      `${data.base}/card/${card.slug}/`;
+    panel.dataset.card = title;
 
     // Who else raises this, and can we get there from here? An appearance
     // inside this cross-cut is a jump; one outside it is a link into that
@@ -362,6 +363,57 @@ function init(data: Data, root: HTMLElement) {
     clearTimeout(closeTimer);
     closeTimer = window.setTimeout(() => closeCard(), 320);
   }
+
+  // Hovering shows you enough to decide. Asking for the whole thing is a
+  // different act: the film waits, because you have chosen to read rather
+  // than to watch, and it is still there when you close it.
+  const sheet = document.querySelector<HTMLElement>(".reference");
+  let heldByReference = false;
+
+  function openReference(title: string): void {
+    const card = data.cards[title];
+    if (!sheet || !card) return;
+    sheet.querySelector<HTMLElement>(".reference__title")!.textContent = title;
+    sheet.querySelector<HTMLElement>(".reference__body")!.innerHTML = card.body;
+    const sub = sheet.querySelector<HTMLElement>(".reference__sub")!;
+    sub.textContent = card.subtitle ?? "";
+    sub.hidden = !card.subtitle;
+    const fig = sheet.querySelector<HTMLElement>(".reference__figure")!;
+    const img = sheet.querySelector<HTMLImageElement>(".reference__img")!;
+    if (card.image) {
+      img.src = card.image;
+      img.alt = title;
+      fig.hidden = false;
+    } else {
+      fig.hidden = true;
+    }
+    sheet.hidden = false;
+    closeCard(true);
+    if (!els[active].paused) {
+      heldByReference = true;
+      els[active].pause();
+      projection.classList.remove("is-playing");
+    }
+    sheet.querySelector<HTMLButtonElement>(".reference__close")!.focus();
+  }
+
+  function closeReference(): void {
+    if (!sheet || sheet.hidden) return;
+    sheet.hidden = true;
+    if (heldByReference) {
+      heldByReference = false;
+      void els[active].play().then(() => projection.classList.add("is-playing"));
+    }
+  }
+
+  panel?.querySelector<HTMLButtonElement>(".cardpanel__more")
+    ?.addEventListener("click", () => openReference(panel.dataset.card ?? ""));
+  sheet?.querySelector<HTMLButtonElement>(".reference__close")
+    ?.addEventListener("click", closeReference);
+  sheet?.addEventListener("click", (e) => {
+    if (!(e.target as Element).closest(".reference__sheet")) closeReference();
+  });
+  addEventListener("keydown", (e) => { if (e.key === "Escape") closeReference(); });
 
   panel?.addEventListener("pointerenter", () => clearTimeout(closeTimer));
   panel?.addEventListener("pointerleave", closeSoon);
