@@ -870,6 +870,13 @@ a:hover {
   text-transform: inherit;
   cursor: pointer;
 }
+/* The right edge is lowercase because in 2014 it read "memory bank". A
+   speaker's name is not that: it is set like the theme opposite it, since the
+   two are the same kind of thing. */
+.peopledoor {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
 .topicdoor::after,
 .peopledoor::after {
   content: "";
