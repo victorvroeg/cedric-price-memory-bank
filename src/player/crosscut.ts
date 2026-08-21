@@ -740,6 +740,21 @@ function init(data: Data, root: HTMLElement) {
   // Park the first two films so the opening tap is instant. playItem starts
   // on the *standby* element (els[1] while active=0), so the first item is
   // parked there and the second on els[0].
+  // On this page the theme is fixed and the speakers change under it. This has
+  // to exist before the first setTitles(), which asks it to repaint: declaring
+  // it further down left the opening call reaching into the dead zone, and the
+  // whole cross-cut died on arrival with nothing on screen to say so.
+  const axis = makeMode(root, {
+    kind: "theme",
+    base: data.base,
+    theme: { slug: data.here, label: data.topic.label, colour: data.topic.colour },
+    get speaker() {
+      const it = items[current < 0 ? 0 : current];
+      return { slug: it.slug, name: it.name };
+    },
+    at: () => els[active].currentTime,
+  });
+
   park(els[1], items[0]);
   if (items[1]) park(els[0], items[1]);
   setTitles(items[0]);
@@ -820,18 +835,6 @@ function init(data: Data, root: HTMLElement) {
     report(`warmed ${seen.size - 1} further playlists`);
   }
   setTimeout(warmPlaylists, 1200);   // after the first frame is on screen
-
-  // On this page the theme is fixed and the speakers change under it.
-  const axis = makeMode(root, {
-    kind: "theme",
-    base: data.base,
-    theme: { slug: data.here, label: data.topic.label, colour: data.topic.colour },
-    get speaker() {
-      const it = items[current < 0 ? 0 : current];
-      return { slug: it.slug, name: it.name };
-    },
-    at: () => els[active].currentTime,
-  });
 
   // Arriving from the switch: start on the speaker you were already hearing.
   const from = new URLSearchParams(location.search).get("from");
