@@ -301,6 +301,54 @@ function init(data: Data, root: HTMLElement) {
     scoreBtn.addEventListener("click", () => paint(score.toggle()));
   }
 
+  // --- the topic field -----------------------------------------------------
+  // One word on the left is the only sign of where you are. Lean on it and the
+  // rest of the archive stands up behind it — same hover grammar as a
+  // reference, same rule: the film keeps talking.
+  const door = root.querySelector<HTMLButtonElement>(".topicdoor");
+  const fieldEl = document.querySelector<HTMLElement>(".topicfield");
+  let fieldPinned = false;
+  let fieldTimer: number | undefined;
+  let fieldOpenedAt = 0;
+
+  function openField(pin = false): void {
+    if (!fieldEl || !door) return;
+    clearTimeout(fieldTimer);
+    if (pin) fieldPinned = true;
+    if (fieldEl.hidden) fieldOpenedAt = performance.now();
+    fieldEl.hidden = false;
+    door.setAttribute("aria-expanded", "true");
+    projection.classList.add("is-recessed");
+    root.classList.add("is-fielded");
+  }
+  function closeField(force = false): void {
+    if (!fieldEl || !door || fieldEl.hidden) return;
+    if (fieldPinned && !force) return;
+    fieldEl.hidden = true;
+    fieldPinned = false;
+    door.setAttribute("aria-expanded", "false");
+    projection.classList.remove("is-recessed");
+    root.classList.remove("is-fielded");
+  }
+  function closeFieldSoon(): void {
+    clearTimeout(fieldTimer);
+    fieldTimer = window.setTimeout(() => closeField(), 360);
+  }
+
+  door?.addEventListener("pointerenter", () => openField());
+  door?.addEventListener("pointerleave", closeFieldSoon);
+  door?.addEventListener("focus", () => openField());
+  door?.addEventListener("click", () => {
+    // On a touch screen the tap fires pointerenter first, so by the time the
+    // click lands the field is already up. Treat that as one gesture and pin
+    // it, rather than opening and shutting in the same finger-press.
+    if (fieldEl?.hidden || performance.now() - fieldOpenedAt < 500) openField(true);
+    else closeField(true);
+  });
+  fieldEl?.addEventListener("pointerenter", () => clearTimeout(fieldTimer));
+  fieldEl?.addEventListener("pointerleave", closeFieldSoon);
+  addEventListener("keydown", (e) => { if (e.key === "Escape") closeField(true); });
+
   // --- bloom ---------------------------------------------------------------
   const bloomer = makeBloom(bloom);
   function paintBloom(): void {

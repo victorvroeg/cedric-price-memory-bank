@@ -103,6 +103,7 @@ a:hover {
 /* ——— the void and its rotated titles (2014: .title--left/--right) ——— */
 
 .void {
+  position: relative;
   min-height: 100svh;
   display: grid;
   grid-template-rows: 1fr auto;
@@ -832,3 +833,133 @@ a:hover {
 .controls__sound.is-off { color: var(--fg); }
 .controls button.is-off .controls__label { text-decoration: line-through; }
 .controls__score.is-off { opacity: 0.4; }
+
+/* ——— the topic field: the whole archive standing behind one word ——— */
+
+.topicdoor {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+}
+.topicdoor::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin-top: 3px;
+  background: currentColor;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+.topicdoor:hover::after,
+.topicdoor:focus-visible::after,
+.topicdoor[aria-expanded="true"]::after { opacity: 0.55; }
+
+/* While the field is up, the page's own furniture steps back — otherwise the
+   speaker names and the now-line read straight through the topic list. */
+.stage--crosscut.is-fielded .scrub,
+.stage--crosscut.is-fielded .nowline,
+.stage--crosscut.is-fielded .topics,
+.stage--crosscut.is-fielded .title--right {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 260ms ease;
+}
+
+/* The film does not stop for this. It recedes, the way a projection does when
+   the house lights come half up, and keeps talking behind the list. */
+.projection.is-recessed {
+  opacity: 0.36;
+  filter: saturate(0.7);
+  transition: opacity 420ms ease, filter 420ms ease;
+}
+
+.topicfield {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 26px;
+  padding: 6vh clamp(20px, 6vw, 90px);
+  background:
+    radial-gradient(120% 90% at 50% 50%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.93) 72%);
+  overflow-y: auto;
+  animation: field-in 260ms ease both;
+}
+.topicfield[hidden] { display: none; }
+@keyframes field-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.topicfield__lead {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+}
+
+.topicfield__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.42em 1.05em;
+  max-width: 66ch;
+}
+
+.topicfield__item {
+  display: inline-block;
+  color: var(--c);
+  opacity: 0.52;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  /* weight is voices: a topic four people circle stands larger */
+  font-size: clamp(14px, calc(12px + var(--n) * 0.42vw), 34px);
+  line-height: 1.05;
+  transition: opacity 180ms ease, transform 180ms ease;
+  animation: field-item-in 300ms ease both;
+  animation-delay: calc(var(--i) * 11ms);
+}
+@keyframes field-item-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 0.52; transform: none; }
+}
+.topicfield__item:hover,
+.topicfield__item:focus-visible {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+.topicfield__item.is-current {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+}
+.topicfield__item sup {
+  font-size: 0.42em;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-left: 0.25em;
+  opacity: 0.65;
+  vertical-align: super;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .topicfield,
+  .topicfield__item { animation: none; }
+  .topicfield__item { opacity: 0.52; }
+  .projection.is-recessed { transition: none; }
+}

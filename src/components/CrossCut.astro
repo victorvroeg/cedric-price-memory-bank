@@ -1,6 +1,6 @@
 ---
 import type { Topic } from "../lib/content";
-import { cards } from "../lib/content";
+import { cards, topics as allTopics } from "../lib/content";
 import { crossCut } from "../lib/crosscut";
 import { safeBody } from "../lib/cards";
 import { musicTracks, seedOf } from "../lib/music";
@@ -12,6 +12,19 @@ const { topic } = Astro.props;
 const { playable, awaiting } = crossCut(topic.slug);
 const total = playable.reduce((a, i) => a + (i.end - i.start), 0);
 const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+
+// Every topic that has something to play, for the field behind the title.
+// Weight is voices, not segments: a topic four people circle is a bigger
+// thing in this archive than one somebody returns to four times.
+const field = [...allTopics.values()]
+  .map((t) => ({
+    slug: t.slug,
+    label: t.label,
+    colour: t.colour,
+    voices: new Set(crossCut(t.slug).playable.map((i) => i.slug)).size,
+  }))
+  .filter((t) => t.voices > 0)
+  .sort((a, b) => a.label.localeCompare(b.label));
 
 // only the cards this cross-cut can actually raise
 const usedCards = new Set(playable.flatMap((i) => i.cards.map((c) => c.title)));
@@ -37,7 +50,10 @@ const clientData = {
 
 <main class="void">
   <div class="stage stage--crosscut">
-    <h1 class="title title--left" style={`color:${topic.colour}`}>{topic.label}</h1>
+    <h1 class="title title--left" style={`color:${topic.colour}`}>
+      <button class="topicdoor" aria-expanded="false" aria-controls="topicfield"
+              title="every topic in the archive">{topic.label}</button>
+    </h1>
     <p class="title title--right">{playable.length ? playable[0].name : ""}</p>
 
     <figure class:list={["projection", { "projection--dead": !playable.length }]}>
@@ -119,6 +135,23 @@ const clientData = {
       ))}
     </nav>
   </div>
+
+  <nav class="topicfield" id="topicfield" hidden aria-label="Every topic in the archive">
+    <p class="topicfield__lead">cut sideways</p>
+    <ul class="topicfield__list">
+      {field.map((t, n) => (
+        <li>
+          <a
+            href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/topic/${t.slug}/`}
+            class:list={["topicfield__item", { "is-current": t.slug === topic.slug }]}
+            style={`--c:${t.colour};--n:${t.voices};--i:${n}`}
+          >
+            {t.label}<sup>{t.voices}</sup>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
 
   <script type="application/json" id="cpmb-crosscut" set:html={JSON.stringify(clientData)} />
 </main>
