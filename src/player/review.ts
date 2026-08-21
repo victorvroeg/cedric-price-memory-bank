@@ -374,7 +374,7 @@ function start(d: Data) {
   }
 
   document.getElementById("revert")!.onclick = () => {
-    if (!confirm("Discard your changes and go back to what the archive holds?")) return;
+    if (!confirm("Discard your changes and go back to what the memory bank holds?")) return;
     localStorage.removeItem(KEY);
     location.reload();
   };

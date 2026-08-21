@@ -50,7 +50,7 @@ const data = {
         </label>
       </div>
       <p>
-        {interview.draft ? "DRAFT — not in the archive" : "published"} ·
+        {interview.draft ? "DRAFT — not in the memory bank" : "published"} ·
         {interview.segments.length} segments · {Math.round(interview.video.duration ?? 0)}s
         {data.cues.length ? ` · transcript ${data.corrected ? "corrected" : "uncorrected"}` : " · no transcript"}
       </p>
@@ -87,7 +87,7 @@ const data = {
     </div>
 
     <footer class="review__foot">
-      <button id="propose" class="primary">Approve &amp; send to the archive</button>
+      <button id="propose" class="primary">Approve and send to memory bank</button>
       <button id="download">Download file</button>
       <button id="export">Copy JSON</button>
       <button id="revert">Discard my changes</button>
