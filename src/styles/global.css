@@ -777,3 +777,21 @@ a:hover {
 .cardpanel__close { opacity: 0; transition: opacity 160ms ease; }
 .cardpanel.is-pinned .cardpanel__close,
 .cardpanel:hover .cardpanel__close { opacity: 1; }
+
+/* the music bed's only visible part: a switch you can find and forget */
+.nowline__score {
+  background: none;
+  border: 0;
+  padding: 0 0 0 0.2em;
+  margin-left: -1.4em;
+  font: inherit;
+  font-size: 15px;
+  line-height: 1;
+  color: var(--fg-dim);
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 160ms ease, color 160ms ease;
+}
+.nowline__score:hover,
+.nowline__score:focus-visible { opacity: 1; color: var(--fg); }
+.nowline__score.is-off { opacity: 0.28; text-decoration: line-through; }

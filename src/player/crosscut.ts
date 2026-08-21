@@ -11,6 +11,7 @@
 
 import type Hls from "hls.js";
 import { makeBloom } from "./bloom";
+import { makeScore } from "./score";
 
 interface Item {
   slug: string;
@@ -27,6 +28,7 @@ interface Data {
   topic: { label: string; colour: string };
   base: string;
   cards: Record<string, { slug: string; body: string }>;
+  music: { tracks: string[]; seed: number };
 }
 
 const dataEl = document.getElementById("cpmb-crosscut");
@@ -111,6 +113,9 @@ function init(data: Data, root: HTMLElement) {
 
   function dim(on: boolean): void {
     projection.classList.toggle("is-dimmed", on);
+    // The bed follows the picture: gone means music, arrived means speech.
+    if (on) score?.swell();
+    else score?.under();
   }
 
   // The topic (left title) is the constant of the page; the speaker (right
@@ -196,6 +201,7 @@ function init(data: Data, root: HTMLElement) {
       els[active].pause();
       projection.classList.remove("is-playing");
       dim(false);
+      score?.out();
       report(`end of cross-cut. mean gap ${gaps.length ? (gaps.reduce((a, b) => a + b) / gaps.length).toFixed(0) : "—"}ms over ${gaps.length} cuts`);
       current = -1;
       advancing = false;
@@ -278,11 +284,36 @@ function init(data: Data, root: HTMLElement) {
     ?.addEventListener("click", () => closeCard(true));
   addEventListener("keydown", (e) => { if (e.key === "Escape") closeCard(true); });
 
+  // --- the bed -------------------------------------------------------------
+  // Music the tool steers: up while a film is being fetched, under while
+  // somebody talks. Nothing is baked into the video.
+  const score = makeScore(data.music?.tracks ?? [], data.music?.seed ?? 0);
+  const scoreBtn = root.querySelector<HTMLButtonElement>(".nowline__score");
+  if (debug) (window as unknown as { cpmbScore: unknown }).cpmbScore = score;
+  if (score && scoreBtn) {
+    scoreBtn.hidden = false;
+    const paint = (on: boolean) => {
+      scoreBtn.setAttribute("aria-pressed", String(on));
+      scoreBtn.classList.toggle("is-off", !on);
+      scoreBtn.title = on ? "music bed on — click to silence it" : "music bed off — click to bring it back";
+    };
+    paint(score.wanted);
+    scoreBtn.addEventListener("click", () => paint(score.toggle()));
+  }
+
   // --- bloom ---------------------------------------------------------------
   const bloomer = makeBloom(bloom);
   function paintBloom(): void {
     if (reducedMotion && !els[active].paused) return;
     bloomer.paint(els[active]);
+  }
+
+  // A stall is a gap like any other: the bed covers it, the way a cut is
+  // covered, so waiting sounds like part of the film rather than a fault.
+  for (const el of els) {
+    el.addEventListener("waiting", () => { if (el === els[active]) score?.swell(); });
+    el.addEventListener("playing", () => { if (el === els[active]) score?.under(); });
+    el.addEventListener("pause", () => { if (el === els[active] && !advancing) score?.swell(); });
   }
 
   // --- input ---------------------------------------------------------------
@@ -343,7 +374,7 @@ function init(data: Data, root: HTMLElement) {
   async function autostart(): Promise<void> {
     try {
       await playItem(0, true);
-      if (!els[active].paused) return;
+      if (!els[active].paused) { score?.allow(); return; }
     } catch { /* fall through to muted */ }
     for (const el of els) el.muted = true;
     projection.classList.add("is-muted");
@@ -361,6 +392,7 @@ function init(data: Data, root: HTMLElement) {
     if (!projection.classList.contains("is-muted")) return;
     for (const el of els) el.muted = false;
     projection.classList.remove("is-muted");
+    score?.allow();
   }
   for (const ev of ["pointerdown", "keydown"] as const) {
     addEventListener(ev, unmute, { once: true, capture: true });
@@ -401,5 +433,6 @@ function init(data: Data, root: HTMLElement) {
   }
   setTimeout(warmPlaylists, 1200);   // after the first frame is on screen
 
+  score?.swell();
   void autostart();
 }
