@@ -38,22 +38,22 @@ export function makeMode(root: HTMLElement, view: ModeView): { update(): void; s
   el?.replaceChildren(button);
 
   function update(): void {
-    // Not "follow X". The edge already says X, and a visitor reading both at
-    // once concluded they were following it already. This says what the click
-    // gets you instead, which is the only thing the screen does not show.
+    // No names here. Both of them are already set down the edges, and naming
+    // one again put the same two words on screen three times over. This says
+    // only what the click gets you; the theme's colour does the pointing.
     if (view.kind() === "theme") {
       const s = view.speaker();
-      verb.textContent = "stay with";
-      what.textContent = s.name;
+      verb.textContent = "hear";
+      what.textContent = "this whole interview";
       what.style.color = "";
       button.title = `${s.name}'s whole interview, carrying on from here`;
       button.disabled = false;
     } else {
       const t = view.theme();
-      verb.textContent = "everyone on";
-      what.textContent = t?.label ?? "";
+      verb.textContent = "hear";
+      what.textContent = "everyone on this theme";
       what.style.color = t?.colour ?? "";
-      button.title = t ? `hear everyone in the archive on ${t.label}` : "";
+      button.title = t ? `everyone in the archive on ${t.label}` : "";
       button.disabled = !t;
     }
   }
