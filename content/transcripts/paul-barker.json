@@ -1,1168 +1,1168 @@
 {
- "slug": "paul-barker",
- "language": "en",
- "model": "mlx-community/whisper-large-v3-mlx",
- "corrected": false,
- "cues": [
-  {
-   "start": 0.0,
-   "end": 8.0,
-   "text": "I was invited along to a party in Notting Hill, which in those days was not the smart Notting Hill you now know."
-  },
-  {
-   "start": 8.0,
-   "end": 18.0,
-   "text": "Invited to a party by a friend of mine who was trying to make a living as an independent filmmaker, a man called Morris Hatton."
-  },
-  {
-   "start": 18.0,
-   "end": 26.0,
-   "text": "And suddenly my wife and I turned up. This would be in early 1965."
-  },
-  {
-   "start": 26.0,
-   "end": 30.0,
-   "text": "I'd just become deputy editor of the magazine News Society."
-  },
-  {
-   "start": 30.0,
-   "end": 34.5,
-   "text": "And my friend Morris said, here's a chap you should meet."
-  },
-  {
-   "start": 34.5,
-   "end": 41.5,
-   "text": "And so Cedric appeared looming through the grey smoke of a party of that kind."
-  },
-  {
-   "start": 41.5,
-   "end": 46.5,
-   "text": "And we went out into the garden so we could hear each other speak."
-  },
-  {
-   "start": 46.5,
-   "end": 53.5,
-   "text": "And Cedric said, well, yes, News Society, he said, News Society."
-  },
-  {
-   "start": 53.5,
-   "end": 57.96,
-   "text": "excellent magazine, not enough jokes, you should meet my friend Bannam."
-  },
-  {
-   "start": 58.94,
-   "end": 62.66,
-   "text": "That was the architecture and design critic Peter Rayner Bannam,"
-  },
-  {
-   "start": 63.86,
-   "end": 64.66,
-   "text": "whom I'd never met."
-  },
-  {
-   "start": 66.54,
-   "end": 68.2,
-   "text": "And I thought, well, that's an idea."
-  },
-  {
-   "start": 68.98,
-   "end": 71.96,
-   "text": "So next day I rang Bannam,"
-  },
-  {
-   "start": 72.12,
-   "end": 75.6,
-   "text": "who became our architecture and design correspondent,"
-  },
-  {
-   "start": 75.84,
-   "end": 78.72,
-   "text": "and he wrote some wonderful articles,"
-  },
-  {
-   "start": 79.42,
-   "end": 83.28,
-   "text": "often of a kind that might have been inspired by Cedric in a way."
-  },
-  {
-   "start": 83.28,
-   "end": 93.0,
-   "text": "he would take some perfectly ordinary object, I mean one of the best known cases was the"
-  },
-  {
-   "start": 93.0,
-   "end": 101.16,
-   "text": "manufacture of an ice cream cornet, or the growth of the new kind of crisp, not the old"
-  },
-  {
-   "start": 101.16,
-   "end": 106.38,
-   "text": "fashioned crisp but a very special crisp with special flavors, and analyze it with all the"
-  },
-  {
-   "start": 106.38,
-   "end": 113.26,
-   "text": "techniques of an art historian, as if he were looking at a Giotto or Guido Renna or whatever."
-  },
-  {
-   "start": 114.38,
-   "end": 120.54,
-   "text": "And so I was very grateful to Cedric for that, and we continued to see each other. And"
-  },
-  {
-   "start": 121.82,
-   "end": 130.3,
-   "text": "the thing about that joke was that I think that Cedric realised that jokes and wit were one way"
-  },
-  {
-   "start": 130.3,
-   "end": 135.5,
-   "text": "to put your point across. So many people think that to put your point across you've got to be"
-  },
-  {
-   "start": 135.5,
-   "end": 143.48,
-   "text": "deeply serious and boring all the time, which Sadiq wasn't. From that meeting we"
-  },
-  {
-   "start": 143.48,
-   "end": 148.16,
-   "text": "saw each other a lot. New South also thought that there were things to be"
-  },
-  {
-   "start": 148.16,
-   "end": 154.58,
-   "text": "said for jokes and for provoking people and there was a lot of discussion at"
-  },
-  {
-   "start": 154.58,
-   "end": 160.64,
-   "text": "that time as indeed there is now. What exactly the role of Parliament was, was"
-  },
-  {
-   "start": 160.64,
-   "end": 164.9,
-   "text": "it properly representing the majority of the country, was it buried in a little"
-  },
-  {
-   "start": 164.9,
-   "end": 176.66,
-   "text": "whole of its own that wasn't very interesting. And one of the phrases of the day was pop-up."
-  },
-  {
-   "start": 176.66,
-   "end": 182.66,
-   "text": "It is again now isn't it, we talk about pop-up restaurants. Anyway it was in there then."
-  },
-  {
-   "start": 182.66,
-   "end": 189.6,
-   "text": "I thought well let's have a pop-up parliament. Let's pull down this old Gothic thing, over"
-  },
-  {
-   "start": 189.6,
-   "end": 196.6,
-   "text": "and done with, not entirely seriously of course, and replace it with something high tech and"
-  },
-  {
-   "start": 196.6,
-   "end": 203.6,
-   "text": "all that. So I rang Cedric up and said, would he like to write that? Now I didn't realise"
-  },
-  {
-   "start": 205.0,
-   "end": 211.18,
-   "text": "what I was getting myself into because Cedric was not a writer actually, not in the novel"
-  },
-  {
-   "start": 211.18,
-   "end": 221.42,
-   "text": "sense of the word. He was a spark off of ideas, brilliant actually. But like many architects,"
-  },
-  {
-   "start": 221.42,
-   "end": 228.22,
-   "text": "it's not unusual to find architects can't write. It doesn't somehow fit with their discipline."
-  },
-  {
-   "start": 228.22,
-   "end": 237.02,
-   "text": "You get a series of statements, but not a persuasive article. And this article we talked"
-  },
-  {
-   "start": 237.02,
-   "end": 244.22,
-   "text": "about for quite a long time, and it didn't come, and it didn't come, and it didn't come."
-  },
-  {
-   "start": 244.22,
-   "end": 250.14,
-   "text": "And Cedric was then in his, not in the office that he became famous for in Alfred Place,"
-  },
-  {
-   "start": 250.14,
-   "end": 256.78,
-   "text": "but it was in George Street behind the Wallace Collection. So I wandered along there, and"
-  },
-  {
-   "start": 256.78,
-   "end": 263.46,
-   "text": "I said, Cedric, we're going to have to talk this article through. And eventually the article"
-  },
-  {
-   "start": 263.46,
-   "end": 268.84,
-   "text": "did appear as by Cedric Price, but if you persevere to the end there's little footnotes"
-  },
-  {
-   "start": 268.84,
-   "end": 276.46,
-   "text": "saying this article is the result of many conversations between the editor and Mr Price."
-  },
-  {
-   "start": 276.46,
-   "end": 284.3,
-   "text": "Well as you might imagine, it was, like everybody in the 60s, it was important to clear the"
-  },
-  {
-   "start": 284.3,
-   "end": 291.1,
-   "text": "space so you pulled the existing building down, you didn't try to adapt it in any way"
-  },
-  {
-   "start": 291.1,
-   "end": 300.54,
-   "text": "And you created something which very much depended on electronic and technological instant"
-  },
-  {
-   "start": 300.54,
-   "end": 306.22,
-   "text": "communication between voters and members of parliament."
-  },
-  {
-   "start": 306.22,
-   "end": 310.6,
-   "text": "So you didn't have the members of parliament here in this lovely box and the voters out"
-  },
-  {
-   "start": 310.6,
-   "end": 316.26,
-   "text": "here whom you consulted once every five years."
-  },
-  {
-   "start": 316.26,
-   "end": 318.54,
-   "text": "The idea was to create a continuous dialogue."
-  },
-  {
-   "start": 318.54,
-   "end": 325.32,
-   "text": "dialogue. Would have been hell actually probably. That was the idea. And actually in a funny"
-  },
-  {
-   "start": 325.32,
-   "end": 332.32,
-   "text": "sort of way with the arrival of social media, something like that is actually happening."
-  },
-  {
-   "start": 332.92,
-   "end": 339.92,
-   "text": "I'm sure members of parliament feel for better or worse really. They're drawn much more."
-  },
-  {
-   "start": 340.82,
-   "end": 347.5,
-   "text": "So it was a beginning shot at that time. And I don't think either Cedric or I thought this"
-  },
-  {
-   "start": 347.5,
-   "end": 354.5,
-   "text": "with a project that anyone would ever build or demolish. But it was a way of pushing the"
-  },
-  {
-   "start": 354.5,
-   "end": 363.5,
-   "text": "argument forward through built form rather than just simply stating what you felt."
-  },
-  {
-   "start": 363.5,
-   "end": 371.5,
-   "text": "And so it was sometime after that that Cedric approached me with the idea for Pottery's"
-  },
-  {
-   "start": 371.5,
-   "end": 379.56,
-   "text": "think belt because given the experience of the Pop-Up Parliament where he"
-  },
-  {
-   "start": 379.56,
-   "end": 383.74,
-   "text": "realized that I could get blood out of a stone editorially, in other words"
-  },
-  {
-   "start": 383.74,
-   "end": 389.4,
-   "text": "something that a general public might read as opposed to an architectural"
-  },
-  {
-   "start": 389.4,
-   "end": 398.62,
-   "text": "public. Potter's think belt was to be cited in the landscape where Cedric was"
-  },
-  {
-   "start": 398.62,
-   "end": 405.5,
-   "text": "was a child, in fact. North of Birmingham you have this area called the Potteries, for"
-  },
-  {
-   "start": 405.5,
-   "end": 412.5,
-   "text": "the obvious reason that that is where the one element in the Industrial Revolution began."
-  },
-  {
-   "start": 412.5,
-   "end": 419.5,
-   "text": "It was an area of manufacture of ceramics at one end, or simply old-fashioned plates"
-  },
-  {
-   "start": 419.92,
-   "end": 426.92,
-   "text": "and dishes at the other. At the top of the ladder was a Wedgwood family, who created"
-  },
-  {
-   "start": 426.92,
-   "end": 430.92,
-   "text": "who created a very special kind of English ceramics."
-  },
-  {
-   "start": 430.92,
-   "end": 435.92,
-   "text": "And at the bottom were people who were making just mugs to put your tea in."
-  },
-  {
-   "start": 435.92,
-   "end": 438.92,
-   "text": "And it was a big business."
-  },
-  {
-   "start": 438.92,
-   "end": 444.92,
-   "text": "But like a lot of businesses in the post-war period in Britain,"
-  },
-  {
-   "start": 444.92,
-   "end": 446.92,
-   "text": "it had gone into decline."
-  },
-  {
-   "start": 446.92,
-   "end": 450.92,
-   "text": "In fact, it had been going into decline for quite a long time,"
-  },
-  {
-   "start": 450.92,
-   "end": 454.92,
-   "text": "partly through international competition"
-  },
-  {
-   "start": 454.92,
-   "end": 463.8,
-   "text": "and partly through just bad practice by the people running the factories who were very"
-  },
-  {
-   "start": 463.8,
-   "end": 467.68,
-   "text": "reluctant to invest new money in it."
-  },
-  {
-   "start": 467.68,
-   "end": 471.6,
-   "text": "So it was a rather desperate area, and in some ways if you were to go there now it's"
-  },
-  {
-   "start": 471.6,
-   "end": 473.16,
-   "text": "still a rather desperate area."
-  },
-  {
-   "start": 473.16,
-   "end": 475.88,
-   "text": "There was nothing beautiful about it."
-  },
-  {
-   "start": 475.88,
-   "end": 479.68,
-   "text": "No money had been put into buildings."
-  },
-  {
-   "start": 479.68,
-   "end": 489.0,
-   "text": "And Cedric's idea was to take this area, which he knew well, take the example of an attempt"
-  },
-  {
-   "start": 489.0,
-   "end": 494.88,
-   "text": "to build a new university there at a place called Keele, which had never been very successful."
-  },
-  {
-   "start": 494.88,
-   "end": 498.14,
-   "text": "It was always a rather timid launch."
-  },
-  {
-   "start": 498.14,
-   "end": 500.68,
-   "text": "It was always looking over its shoulder at other people."
-  },
-  {
-   "start": 500.68,
-   "end": 507.92,
-   "text": "And he wanted to create something which would build on the existing rail network to an extent,"
-  },
-  {
-   "start": 507.92,
-   "end": 515.32,
-   "text": "because the place was festooned with small railway lines because of the industrial background."
-  },
-  {
-   "start": 515.32,
-   "end": 518.64,
-   "text": "It was quite easy to get from one place to the other."
-  },
-  {
-   "start": 518.64,
-   "end": 526.28,
-   "text": "And he envisaged starting a university of 20,000 students immediately, who would go"
-  },
-  {
-   "start": 526.28,
-   "end": 536.6,
-   "text": "from place to place, rather than building an aesthetically wonderful university."
-  },
-  {
-   "start": 536.6,
-   "end": 540.94,
-   "text": "would have this thing which was more closely integrated with the community, you would have"
-  },
-  {
-   "start": 540.94,
-   "end": 547.6,
-   "text": "the community making much more use of the university. You wanted to have more people"
-  },
-  {
-   "start": 547.6,
-   "end": 554.54,
-   "text": "drawn in. Other people at the time were thinking already of using mass media, particularly"
-  },
-  {
-   "start": 554.54,
-   "end": 560.16,
-   "text": "the newly popular television, which it's hard to think had a time when it was not popular,"
-  },
-  {
-   "start": 560.16,
-   "end": 566.08,
-   "text": "but anyway it was only becoming popular. And not very far away they created something called"
-  },
-  {
-   "start": 566.08,
-   "end": 573.08,
-   "text": "the Open University, which was based on the mass media and based in the new town of Milton"
-  },
-  {
-   "start": 573.08,
-   "end": 580.42,
-   "text": "Keynes. And in a strange way, the Open University was building on Cedric's idea, but not using"
-  },
-  {
-   "start": 580.42,
-   "end": 586.16,
-   "text": "anything of the built form at all. They were just using the content."
-  },
-  {
-   "start": 586.16,
-   "end": 593.16,
-   "text": "I'm just writing a long article about Nonplan because of the four people who wrote it, I'm"
-  },
-  {
-   "start": 593.16,
-   "end": 598.16,
-   "text": "I'm the only one still alive. I'm an exhibit from the past."
-  },
-  {
-   "start": 598.16,
-   "end": 614.16,
-   "text": "And the two moving spirits on this attempt to again jolt people into thinking about what is the purpose of planning."
-  },
-  {
-   "start": 614.16,
-   "end": 624.16,
-   "text": "planning the two moving space with myself and a geographer called Peter Hall, who has"
-  },
-  {
-   "start": 624.16,
-   "end": 629.68,
-   "text": "just himself died and I'm just in the middle of writing a sort of tribute piece for, which"
-  },
-  {
-   "start": 629.68,
-   "end": 634.16,
-   "text": "is basically about how he and I collaborated on non-plan."
-  },
-  {
-   "start": 634.16,
-   "end": 642.0,
-   "text": "Though he became a planner and great figure of a quite different sort, but at that time,"
-  },
-  {
-   "start": 642.0,
-   "end": 646.5,
-   "text": "like the rest of us in the mid-60s."
-  },
-  {
-   "start": 646.5,
-   "end": 648.56,
-   "text": "We thought you could play around with anything really."
-  },
-  {
-   "start": 648.56,
-   "end": 654.38,
-   "text": "Anything went really, was the point, intellectually as well."
-  },
-  {
-   "start": 654.38,
-   "end": 661.54,
-   "text": "And Peter wrote for us a very great deal"
-  },
-  {
-   "start": 661.54,
-   "end": 668.74,
-   "text": "on matters of urban change, often on planning."
-  },
-  {
-   "start": 668.74,
-   "end": 677.78,
-   "text": "But also he had a wide grasp of so many subjects, particularly based on his experience of America."
-  },
-  {
-   "start": 677.78,
-   "end": 688.3,
-   "text": "And both of us were dismayed and made angry by how modernist planning and architecture"
-  },
-  {
-   "start": 688.3,
-   "end": 694.06,
-   "text": "had worked out on the ground, not what it was like in a book by Le Corbusier, but what"
-  },
-  {
-   "start": 694.06,
-   "end": 697.78,
-   "text": "it was like when you built it."
-  },
-  {
-   "start": 697.78,
-   "end": 705.14,
-   "text": "And particularly of course the claims that both planners and architects at the time usually"
-  },
-  {
-   "start": 705.14,
-   "end": 713.68,
-   "text": "made for the way they were able to reshape the society that they were in, which involved"
-  },
-  {
-   "start": 713.68,
-   "end": 723.2,
-   "text": "a great deal of demolition of existing property, which could have been reused."
-  },
-  {
-   "start": 723.2,
-   "end": 729.16,
-   "text": "I lived in the East End of London which was being destroyed by planning schemes, almost"
-  },
-  {
-   "start": 729.16,
-   "end": 735.66,
-   "text": "more than it had been destroyed by the Luftwaffe."
-  },
-  {
-   "start": 735.66,
-   "end": 742.12,
-   "text": "So Peter and I were having a bite to eat and we thought to ourselves, well, would it be"
-  },
-  {
-   "start": 742.12,
-   "end": 744.68,
-   "text": "any worse if there was no planning at all?"
-  },
-  {
-   "start": 744.68,
-   "end": 747.32,
-   "text": "After all, the cities we've got weren't planned."
-  },
-  {
-   "start": 747.32,
-   "end": 754.08,
-   "text": "They just grew up over centuries and planners had this program."
-  },
-  {
-   "start": 754.08,
-   "end": 757.76,
-   "text": "Architects, particularly modernist architects, had this program."
-  },
-  {
-   "start": 757.76,
-   "end": 761.56,
-   "text": "For example, the tower blocks were an excellent idea for families."
-  },
-  {
-   "start": 761.56,
-   "end": 764.56,
-   "text": "It was one of the more obvious things."
-  },
-  {
-   "start": 764.56,
-   "end": 770.2,
-   "text": "And it was just an unhappy situation."
-  },
-  {
-   "start": 770.2,
-   "end": 774.44,
-   "text": "And once again, rather than purely say that,"
-  },
-  {
-   "start": 774.44,
-   "end": 776.64,
-   "text": "we thought we should try to demonstrate it."
-  },
-  {
-   "start": 776.64,
-   "end": 781.24,
-   "text": "And as we were talking, the idea of something called non-plan,"
-  },
-  {
-   "start": 782.68,
-   "end": 786.7,
-   "text": "which now I've entered the language a bit, cropped up."
-  },
-  {
-   "start": 786.74,
-   "end": 789.68,
-   "text": "In other words, we should have a special issue of the magazine"
-  },
-  {
-   "start": 789.68,
-   "end": 796.56,
-   "text": "which would propose the idea that if we had no planning,"
-  },
-  {
-   "start": 797.22,
-   "end": 800.28,
-   "text": "if we perhaps listened to what people wanted for their houses"
-  },
-  {
-   "start": 800.28,
-   "end": 803.48,
-   "text": "as opposed to imposing something on them, perhaps it would be okay."
-  },
-  {
-   "start": 804.44,
-   "end": 813.34,
-   "text": "And so we agreed to do that. We also thought we should have some fellow writers on this."
-  },
-  {
-   "start": 813.34,
-   "end": 819.94,
-   "text": "And the two writers we went to immediately, there was no question about it, was Cedric,"
-  },
-  {
-   "start": 819.94,
-   "end": 826.96,
-   "text": "who was the most iconoclastic architect we knew, and Banham, the man he'd originally"
-  },
-  {
-   "start": 826.96,
-   "end": 836.62,
-   "text": "recommended to us and both of them immediately said yes. The structure of non-plan was that"
-  },
-  {
-   "start": 836.62,
-   "end": 842.7,
-   "text": "there would be a couple of general articles, an introduction and a conclusion. And in between"
-  },
-  {
-   "start": 842.7,
-   "end": 848.88,
-   "text": "those, in order to infuriate people, because that was part of the point, there would be"
-  },
-  {
-   "start": 848.88,
-   "end": 856.14,
-   "text": "three case studies of bits of England that might be improved, we would argue, destroyed"
-  },
-  {
-   "start": 856.14,
-   "end": 863.74,
-   "text": "other people might argue, by being treated as areas that could be subjected to non-plan."
-  },
-  {
-   "start": 863.74,
-   "end": 871.82,
-   "text": "It took quite a long time to write because I became editor of the magazine in early 1968."
-  },
-  {
-   "start": 871.82,
-   "end": 880.44,
-   "text": "1968 was a year of explosions throughout the world on the student campuses and there were"
-  },
-  {
-   "start": 880.44,
-   "end": 885.06,
-   "text": "lots of other things to write about apart from writing about non-plan."
-  },
-  {
-   "start": 885.06,
-   "end": 889.78,
-   "text": "But we did eventually write it. I wrote both the introduction, Peter and I wrote most of"
-  },
-  {
-   "start": 889.78,
-   "end": 898.78,
-   "text": "the conclusion. Bannum decided to write about East Anglia as the set piece example. Peter"
-  },
-  {
-   "start": 900.1,
-   "end": 907.1,
-   "text": "Hall wrote about East Midlands. Cedric himself wrote about the area of the New Forest on"
-  },
-  {
-   "start": 907.94,
-   "end": 913.26,
-   "text": "South Coast, which again, as in the case of the Thinkbelt, he knew well that apparently"
-  },
-  {
-   "start": 913.26,
-   "end": 918.7,
-   "text": "he'd moved there to escape bombing during the war and had spent quite a bit of time"
-  },
-  {
-   "start": 918.7,
-   "end": 927.16,
-   "text": "with his grandfather, I think. Everybody wrote bits and put it together and we published"
-  },
-  {
-   "start": 927.16,
-   "end": 935.6,
-   "text": "it in the Special History. And it's quite interesting, it provoked a mixture of anger"
-  },
-  {
-   "start": 935.6,
-   "end": 940.66,
-   "text": "and sort of stunned silence. People couldn't believe that we were making this suggestion"
-  },
-  {
-   "start": 940.66,
-   "end": 949.2,
-   "text": "because planning was one of those sacred things."
-  },
-  {
-   "start": 949.2,
-   "end": 954.0,
-   "text": "If something wasn't planned, it wasn't quite real, really."
-  },
-  {
-   "start": 954.22,
-   "end": 958.64,
-   "text": "I mean, there's an excellent book by a historian called Tony Yud,"
-  },
-  {
-   "start": 959.46,
-   "end": 962.06,
-   "text": "which is just called Post-War,"
-  },
-  {
-   "start": 962.18,
-   "end": 964.86,
-   "text": "and he takes the whole of Western Europe"
-  },
-  {
-   "start": 964.86,
-   "end": 968.56,
-   "text": "and tries to understand whether,"
-  },
-  {
-   "start": 968.56,
-   "end": 974.82,
-   "text": "in partial imitation of the Soviet system or for some other reason, everything was much"
-  },
-  {
-   "start": 974.82,
-   "end": 980.88,
-   "text": "better if it was planned rather than if it was just allowed to happen, which was a new"
-  },
-  {
-   "start": 980.88,
-   "end": 988.48,
-   "text": "idea really, and of course in many places has now dwindled. But I would say that in"
-  },
-  {
-   "start": 988.48,
-   "end": 994.74,
-   "text": "England at any rate in the 1960s the idea that everything had to be planned. You needed"
-  },
-  {
-   "start": 994.74,
-   "end": 1001.28,
-   "text": "to get the facts and the figures, then you plan something. It was at its height. And"
-  },
-  {
-   "start": 1001.28,
-   "end": 1007.78,
-   "text": "a lot of people made a living out of this kind of thing, either as professionals or"
-  },
-  {
-   "start": 1007.78,
-   "end": 1019.78,
-   "text": "as teachers or whatever. And people ask themselves, well, is this anarchy, letting anything happen,"
-  },
-  {
-   "start": 1019.78,
-   "end": 1026.12,
-   "text": "Or is it kind of a covert new form of capitalism where you're just providing a new market so"
-  },
-  {
-   "start": 1026.12,
-   "end": 1028.16,
-   "text": "people can make their money out of it?"
-  },
-  {
-   "start": 1028.16,
-   "end": 1030.62,
-   "text": "A bit of both, really."
-  },
-  {
-   "start": 1030.62,
-   "end": 1034.14,
-   "text": "The philosopher Wittgenstein had a theory."
-  },
-  {
-   "start": 1034.14,
-   "end": 1038.34,
-   "text": "He didn't mind what he ate, provided it was always the same."
-  },
-  {
-   "start": 1038.34,
-   "end": 1042.42,
-   "text": "And in terms of appearance, that was Cedric."
-  },
-  {
-   "start": 1042.42,
-   "end": 1049.32,
-   "text": "He was always dressed the same, with his striped black-white shirt, his loose collar, his black"
-  },
-  {
-   "start": 1049.32,
-   "end": 1057.72,
-   "text": "knitted tie is cigar and if you were talking to him at the office it was a glass of brandy."
-  },
-  {
-   "start": 1057.72,
-   "end": 1066.56,
-   "text": "That was Cedric. An amazingly recognisable figure. The office he was mostly known for"
-  },
-  {
-   "start": 1066.56,
-   "end": 1072.24,
-   "text": "was an office in a side street called Alfred Place, not far from the main buildings of the"
-  },
-  {
-   "start": 1072.24,
-   "end": 1078.9,
-   "text": "University of London, not very far either from the post office tower which Peter Rainer Branham"
-  },
-  {
-   "start": 1078.9,
-   "end": 1084.3,
-   "text": "once said it was the only building that had been built since the Second World War in London"
-  },
-  {
-   "start": 1084.3,
-   "end": 1092.2,
-   "text": "that could deserve a space in the same skyline as St Paul's Cathedral. So, you know, very"
-  },
-  {
-   "start": 1092.2,
-   "end": 1097.84,
-   "text": "much Cedric territory. The office was above a shop of some sort. I can't remember what"
-  },
-  {
-   "start": 1097.84,
-   "end": 1104.18,
-   "text": "the shop was. So you went up some stairs, got the top, and there was... when you got"
-  },
-  {
-   "start": 1104.18,
-   "end": 1110.74,
-   "text": "the top of the stairs there was some unfortunate character who was some kind of assistant sitting"
-  },
-  {
-   "start": 1110.74,
-   "end": 1115.46,
-   "text": "there whose main job as far as I could see was to make sure that the radio was always turned to"
-  },
-  {
-   "start": 1115.46,
-   "end": 1125.62,
-   "text": "Radio 4 and he would probably have talked to one or two of these assistants, Steve Mullin, Will"
-  },
-  {
-   "start": 1125.62,
-   "end": 1132.74,
-   "text": "Alsop. There was always some such person there but Cedric wouldn't be there. Cedric would be one stage"
-  },
-  {
-   "start": 1132.74,
-   "end": 1139.94,
-   "text": "further up in the building in the white room, which was a room painted white. It was a quite"
-  },
-  {
-   "start": 1139.94,
-   "end": 1149.3,
-   "text": "large room. It was the full width of the building, I think. And there would be piles of papers"
-  },
-  {
-   "start": 1149.3,
-   "end": 1154.92,
-   "text": "and bits of drawings and all the rest of it. You'd be offered a glass of brandy, because"
-  },
-  {
-   "start": 1154.92,
-   "end": 1161.24,
-   "text": "there was always a glass of brandy, and you would talk for the next two hours, which is"
-  },
-  {
-   "start": 1161.24,
-   "end": 1165.24,
-   "text": "which is why you couldn't gather that often because you had other things to do."
-  },
-  {
-   "start": 1166.24,
-   "end": 1172.24,
-   "text": "But it was always very enjoyable and from time to time somebody else would bob up,"
-  },
-  {
-   "start": 1172.24,
-   "end": 1176.24,
-   "text": "the General Secretary of the trade union movement or whoever."
-  },
-  {
-   "start": 1177.24,
-   "end": 1182.24,
-   "text": "He was a very generous host when he gave a party."
-  },
-  {
-   "start": 1183.24,
-   "end": 1187.24,
-   "text": "And he came round here to our house a few times."
-  },
-  {
-   "start": 1187.24,
-   "end": 1192.84,
-   "text": "times. The first time he came he deeply embarrassed my wife because he'd gone upstairs to wash his"
-  },
-  {
-   "start": 1192.84,
-   "end": 1198.36,
-   "text": "hands and he came back down and said he'd never seen such a beautiful object. I thought what on"
-  },
-  {
-   "start": 1198.36,
-   "end": 1205.32,
-   "text": "earth has he seen? Sally had been trying to save soap by moulding the old bits of soap together,"
-  },
-  {
-   "start": 1205.32,
-   "end": 1212.04,
-   "text": "you see, sort of some blue, some brown, some yellow, some white in a beautiful ball. So he"
-  },
-  {
-   "start": 1212.04,
-   "end": 1217.32,
-   "text": "They brought this all down to tell us that was the future."
-  },
-  {
-   "start": 1217.32,
-   "end": 1223.88,
-   "text": "Curiously, there's a Palestinian activist and philosopher"
-  },
-  {
-   "start": 1223.88,
-   "end": 1225.7,
-   "text": "called Edward Said."
-  },
-  {
-   "start": 1225.7,
-   "end": 1229.28,
-   "text": "He's one of the founders of the Divine Orchestra"
-  },
-  {
-   "start": 1229.28,
-   "end": 1233.44,
-   "text": "between Israelis and Palestinians,"
-  },
-  {
-   "start": 1233.44,
-   "end": 1237.78,
-   "text": "and very much the New York intellectual."
-  },
-  {
-   "start": 1237.78,
-   "end": 1241.72,
-   "text": "But he told a friend of mine that the height of his career"
-  },
-  {
-   "start": 1241.72,
-   "end": 1249.1,
-   "text": "was when he went to a dinner party in Manhattan somewhere, and his fellow guest was Sid Charisse,"
-  },
-  {
-   "start": 1249.1,
-   "end": 1257.96,
-   "text": "the dancer for An American in Paris. Well, when Cedric was in Las Vegas for some event,"
-  },
-  {
-   "start": 1257.96,
-   "end": 1264.72,
-   "text": "I don't think he was a gambler, but he would believe very strongly in the ethos of Las"
-  },
-  {
-   "start": 1264.72,
-   "end": 1271.72,
-   "text": "Vegas, as you get in the Venturi book on learning from Las Vegas. That was his scene. And he"
-  },
-  {
-   "start": 1272.4,
-   "end": 1279.4,
-   "text": "was in a restaurant sitting there having his supper with a friend. And he noticed across"
-  },
-  {
-   "start": 1279.4,
-   "end": 1286.4,
-   "text": "the dance floor in the restaurant there was Cid Charisse sitting there. Well, Cid Charisse"
-  },
-  {
-   "start": 1286.84,
-   "end": 1291.82,
-   "text": "never wanted to lose his opportunities of this kind, so he went across to Cid Charisse"
-  },
-  {
-   "start": 1291.82,
-   "end": 1294.26,
-   "text": "and said, can I have a dance?"
-  },
-  {
-   "start": 1294.26,
-   "end": 1297.88,
-   "text": "And so the height of that trip, and perhaps of more than that"
-  },
-  {
-   "start": 1297.88,
-   "end": 1300.18,
-   "text": "for Cedric, was that that was the night"
-  },
-  {
-   "start": 1300.18,
-   "end": 1302.1,
-   "text": "I danced with Cedris."
-  },
-  {
-   "start": 1302.1,
-   "end": 1303.84,
-   "text": "It's something that I never managed"
-  },
-  {
-   "start": 1303.84,
-   "end": 1307.32,
-   "text": "to pin down in talking to him, the extent to which he would"
-  },
-  {
-   "start": 1307.32,
-   "end": 1312.64,
-   "text": "have liked, really in his heart, to have built more."
-  },
-  {
-   "start": 1312.64,
-   "end": 1314.78,
-   "text": "He always maintained, at least in talking to me,"
-  },
-  {
-   "start": 1314.78,
-   "end": 1316.74,
-   "text": "that yes, he did want to build more,"
-  },
-  {
-   "start": 1316.74,
-   "end": 1318.62,
-   "text": "but there was this problem with the bureaucrats"
-  },
-  {
-   "start": 1318.62,
-   "end": 1320.74,
-   "text": "and there was that problem."
-  },
-  {
-   "start": 1320.74,
-   "end": 1327.74,
-   "text": "But I'm not sure. I think for him building was a kind of dialogue."
-  },
-  {
-   "start": 1327.74,
-   "end": 1332.74,
-   "text": "And of course he did such beautiful drawings in particular."
-  },
-  {
-   "start": 1332.74,
-   "end": 1339.74,
-   "text": "Whatever I may half jokingly say about him as a writer, he was brilliant."
-  },
-  {
-   "start": 1339.74,
-   "end": 1344.74,
-   "text": "As a speaker, his lectures were wonderful. I went to a few of them."
-  },
-  {
-   "start": 1344.74,
-   "end": 1353.54,
-   "text": "And he could just take an audience and turn them around in his hand."
-  },
-  {
-   "start": 1353.54,
-   "end": 1367.02,
-   "text": "And teach people not through long, elaborate arguments, but through jokes, through observations,"
-  },
-  {
-   "start": 1367.02,
-   "end": 1373.06,
-   "text": "through asking questions to which there was no obvious answer."
-  },
-  {
-   "start": 1373.06,
-   "end": 1381.06,
-   "text": "And I think it's an intellectual power that he has."
-  },
-  {
-   "start": 1381.06,
-   "end": 1389.92,
-   "text": "I can't see, speaking as a non-architect, I can't see much evidence that architecture"
-  },
-  {
-   "start": 1389.92,
-   "end": 1395.06,
-   "text": "has gone in a way that he would approve of."
-  },
-  {
-   "start": 1395.06,
-   "end": 1396.32,
-   "text": "I can't see that at all."
-  }
- ]
+  "slug": "paul-barker",
+  "language": "en",
+  "model": "mlx-community/whisper-large-v3-mlx",
+  "corrected": false,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 8.0,
+      "text": "I was invited along to a party in Notting Hill, which in those days was not the smart Notting Hill you now know."
+    },
+    {
+      "start": 8.0,
+      "end": 18.0,
+      "text": "Invited to a party by a friend of mine who was trying to make a living as an independent filmmaker, a man called Morris Hatton."
+    },
+    {
+      "start": 18.0,
+      "end": 26.0,
+      "text": "And suddenly my wife and I turned up. This would be in early 1965."
+    },
+    {
+      "start": 26.0,
+      "end": 30.0,
+      "text": "I'd just become deputy editor of the magazine News Society."
+    },
+    {
+      "start": 30.0,
+      "end": 34.5,
+      "text": "And my friend Morris said, here's a chap you should meet."
+    },
+    {
+      "start": 34.5,
+      "end": 41.5,
+      "text": "And so Cedric appeared looming through the grey smoke of a party of that kind."
+    },
+    {
+      "start": 41.5,
+      "end": 46.5,
+      "text": "And we went out into the garden so we could hear each other speak."
+    },
+    {
+      "start": 46.5,
+      "end": 53.5,
+      "text": "And Cedric said, well, yes, News Society, he said, News Society."
+    },
+    {
+      "start": 53.5,
+      "end": 57.96,
+      "text": "excellent magazine, not enough jokes, you should meet my friend Bannam."
+    },
+    {
+      "start": 58.94,
+      "end": 62.66,
+      "text": "That was the architecture and design critic Peter Rayner Bannam,"
+    },
+    {
+      "start": 63.86,
+      "end": 64.66,
+      "text": "whom I'd never met."
+    },
+    {
+      "start": 66.54,
+      "end": 68.2,
+      "text": "And I thought, well, that's an idea."
+    },
+    {
+      "start": 68.98,
+      "end": 71.96,
+      "text": "So next day I rang Bannam,"
+    },
+    {
+      "start": 72.12,
+      "end": 75.6,
+      "text": "who became our architecture and design correspondent,"
+    },
+    {
+      "start": 75.84,
+      "end": 78.72,
+      "text": "and he wrote some wonderful articles,"
+    },
+    {
+      "start": 79.42,
+      "end": 83.28,
+      "text": "often of a kind that might have been inspired by Cedric in a way."
+    },
+    {
+      "start": 83.28,
+      "end": 93.0,
+      "text": "he would take some perfectly ordinary object, I mean one of the best known cases was the"
+    },
+    {
+      "start": 93.0,
+      "end": 101.16,
+      "text": "manufacture of an ice cream cornet, or the growth of the new kind of crisp, not the old"
+    },
+    {
+      "start": 101.16,
+      "end": 106.38,
+      "text": "fashioned crisp but a very special crisp with special flavors, and analyze it with all the"
+    },
+    {
+      "start": 106.38,
+      "end": 113.26,
+      "text": "techniques of an art historian, as if he were looking at a Giotto or Guido Renna or whatever."
+    },
+    {
+      "start": 114.38,
+      "end": 120.54,
+      "text": "And so I was very grateful to Cedric for that, and we continued to see each other. And"
+    },
+    {
+      "start": 121.82,
+      "end": 130.3,
+      "text": "the thing about that joke was that I think that Cedric realised that jokes and wit were one way"
+    },
+    {
+      "start": 130.3,
+      "end": 135.5,
+      "text": "to put your point across. So many people think that to put your point across you've got to be"
+    },
+    {
+      "start": 135.5,
+      "end": 143.48,
+      "text": "deeply serious and boring all the time, which Sadiq wasn't. From that meeting we"
+    },
+    {
+      "start": 143.48,
+      "end": 148.16,
+      "text": "saw each other a lot. New South also thought that there were things to be"
+    },
+    {
+      "start": 148.16,
+      "end": 154.58,
+      "text": "said for jokes and for provoking people and there was a lot of discussion at"
+    },
+    {
+      "start": 154.58,
+      "end": 160.64,
+      "text": "that time as indeed there is now. What exactly the role of Parliament was, was"
+    },
+    {
+      "start": 160.64,
+      "end": 164.9,
+      "text": "it properly representing the majority of the country, was it buried in a little"
+    },
+    {
+      "start": 164.9,
+      "end": 176.66,
+      "text": "whole of its own that wasn't very interesting. And one of the phrases of the day was pop-up."
+    },
+    {
+      "start": 176.66,
+      "end": 182.66,
+      "text": "It is again now isn't it, we talk about pop-up restaurants. Anyway it was in there then."
+    },
+    {
+      "start": 182.66,
+      "end": 189.6,
+      "text": "I thought well let's have a pop-up parliament. Let's pull down this old Gothic thing, over"
+    },
+    {
+      "start": 189.6,
+      "end": 196.6,
+      "text": "and done with, not entirely seriously of course, and replace it with something high tech and"
+    },
+    {
+      "start": 196.6,
+      "end": 203.6,
+      "text": "all that. So I rang Cedric up and said, would he like to write that? Now I didn't realise"
+    },
+    {
+      "start": 205.0,
+      "end": 211.18,
+      "text": "what I was getting myself into because Cedric was not a writer actually, not in the novel"
+    },
+    {
+      "start": 211.18,
+      "end": 221.42,
+      "text": "sense of the word. He was a spark off of ideas, brilliant actually. But like many architects,"
+    },
+    {
+      "start": 221.42,
+      "end": 228.22,
+      "text": "it's not unusual to find architects can't write. It doesn't somehow fit with their discipline."
+    },
+    {
+      "start": 228.22,
+      "end": 237.02,
+      "text": "You get a series of statements, but not a persuasive article. And this article we talked"
+    },
+    {
+      "start": 237.02,
+      "end": 244.22,
+      "text": "about for quite a long time, and it didn't come, and it didn't come, and it didn't come."
+    },
+    {
+      "start": 244.22,
+      "end": 250.14,
+      "text": "And Cedric was then in his, not in the office that he became famous for in Alfred Place,"
+    },
+    {
+      "start": 250.14,
+      "end": 256.78,
+      "text": "but it was in George Street behind the Wallace Collection. So I wandered along there, and"
+    },
+    {
+      "start": 256.78,
+      "end": 263.46,
+      "text": "I said, Cedric, we're going to have to talk this article through. And eventually the article"
+    },
+    {
+      "start": 263.46,
+      "end": 268.84,
+      "text": "did appear as by Cedric Price, but if you persevere to the end there's little footnotes"
+    },
+    {
+      "start": 268.84,
+      "end": 276.46,
+      "text": "saying this article is the result of many conversations between the editor and Mr Price."
+    },
+    {
+      "start": 276.46,
+      "end": 284.3,
+      "text": "Well as you might imagine, it was, like everybody in the 60s, it was important to clear the"
+    },
+    {
+      "start": 284.3,
+      "end": 291.1,
+      "text": "space so you pulled the existing building down, you didn't try to adapt it in any way"
+    },
+    {
+      "start": 291.1,
+      "end": 300.54,
+      "text": "And you created something which very much depended on electronic and technological instant"
+    },
+    {
+      "start": 300.54,
+      "end": 306.22,
+      "text": "communication between voters and members of parliament."
+    },
+    {
+      "start": 306.22,
+      "end": 310.6,
+      "text": "So you didn't have the members of parliament here in this lovely box and the voters out"
+    },
+    {
+      "start": 310.6,
+      "end": 316.26,
+      "text": "here whom you consulted once every five years."
+    },
+    {
+      "start": 316.26,
+      "end": 318.54,
+      "text": "The idea was to create a continuous dialogue."
+    },
+    {
+      "start": 318.54,
+      "end": 325.32,
+      "text": "dialogue. Would have been hell actually probably. That was the idea. And actually in a funny"
+    },
+    {
+      "start": 325.32,
+      "end": 332.32,
+      "text": "sort of way with the arrival of social media, something like that is actually happening."
+    },
+    {
+      "start": 332.92,
+      "end": 339.92,
+      "text": "I'm sure members of parliament feel for better or worse really. They're drawn much more."
+    },
+    {
+      "start": 340.82,
+      "end": 347.5,
+      "text": "So it was a beginning shot at that time. And I don't think either Cedric or I thought this"
+    },
+    {
+      "start": 347.5,
+      "end": 354.5,
+      "text": "with a project that anyone would ever build or demolish. But it was a way of pushing the"
+    },
+    {
+      "start": 354.5,
+      "end": 363.5,
+      "text": "argument forward through built form rather than just simply stating what you felt."
+    },
+    {
+      "start": 363.5,
+      "end": 371.5,
+      "text": "And so it was sometime after that that Cedric approached me with the idea for Pottery's"
+    },
+    {
+      "start": 371.5,
+      "end": 379.56,
+      "text": "Thinkbelt because given the experience of the Pop-Up Parliament where he"
+    },
+    {
+      "start": 379.56,
+      "end": 383.74,
+      "text": "realized that I could get blood out of a stone editorially, in other words"
+    },
+    {
+      "start": 383.74,
+      "end": 389.4,
+      "text": "something that a general public might read as opposed to an architectural"
+    },
+    {
+      "start": 389.4,
+      "end": 398.62,
+      "text": "public. Potteries Thinkbelt was to be cited in the landscape where Cedric was"
+    },
+    {
+      "start": 398.62,
+      "end": 405.5,
+      "text": "was a child, in fact. North of Birmingham you have this area called the Potteries, for"
+    },
+    {
+      "start": 405.5,
+      "end": 412.5,
+      "text": "the obvious reason that that is where the one element in the Industrial Revolution began."
+    },
+    {
+      "start": 412.5,
+      "end": 419.5,
+      "text": "It was an area of manufacture of ceramics at one end, or simply old-fashioned plates"
+    },
+    {
+      "start": 419.92,
+      "end": 426.92,
+      "text": "and dishes at the other. At the top of the ladder was a Wedgwood family, who created"
+    },
+    {
+      "start": 426.92,
+      "end": 430.92,
+      "text": "who created a very special kind of English ceramics."
+    },
+    {
+      "start": 430.92,
+      "end": 435.92,
+      "text": "And at the bottom were people who were making just mugs to put your tea in."
+    },
+    {
+      "start": 435.92,
+      "end": 438.92,
+      "text": "And it was a big business."
+    },
+    {
+      "start": 438.92,
+      "end": 444.92,
+      "text": "But like a lot of businesses in the post-war period in Britain,"
+    },
+    {
+      "start": 444.92,
+      "end": 446.92,
+      "text": "it had gone into decline."
+    },
+    {
+      "start": 446.92,
+      "end": 450.92,
+      "text": "In fact, it had been going into decline for quite a long time,"
+    },
+    {
+      "start": 450.92,
+      "end": 454.92,
+      "text": "partly through international competition"
+    },
+    {
+      "start": 454.92,
+      "end": 463.8,
+      "text": "and partly through just bad practice by the people running the factories who were very"
+    },
+    {
+      "start": 463.8,
+      "end": 467.68,
+      "text": "reluctant to invest new money in it."
+    },
+    {
+      "start": 467.68,
+      "end": 471.6,
+      "text": "So it was a rather desperate area, and in some ways if you were to go there now it's"
+    },
+    {
+      "start": 471.6,
+      "end": 473.16,
+      "text": "still a rather desperate area."
+    },
+    {
+      "start": 473.16,
+      "end": 475.88,
+      "text": "There was nothing beautiful about it."
+    },
+    {
+      "start": 475.88,
+      "end": 479.68,
+      "text": "No money had been put into buildings."
+    },
+    {
+      "start": 479.68,
+      "end": 489.0,
+      "text": "And Cedric's idea was to take this area, which he knew well, take the example of an attempt"
+    },
+    {
+      "start": 489.0,
+      "end": 494.88,
+      "text": "to build a new university there at a place called Keele, which had never been very successful."
+    },
+    {
+      "start": 494.88,
+      "end": 498.14,
+      "text": "It was always a rather timid launch."
+    },
+    {
+      "start": 498.14,
+      "end": 500.68,
+      "text": "It was always looking over its shoulder at other people."
+    },
+    {
+      "start": 500.68,
+      "end": 507.92,
+      "text": "And he wanted to create something which would build on the existing rail network to an extent,"
+    },
+    {
+      "start": 507.92,
+      "end": 515.32,
+      "text": "because the place was festooned with small railway lines because of the industrial background."
+    },
+    {
+      "start": 515.32,
+      "end": 518.64,
+      "text": "It was quite easy to get from one place to the other."
+    },
+    {
+      "start": 518.64,
+      "end": 526.28,
+      "text": "And he envisaged starting a university of 20,000 students immediately, who would go"
+    },
+    {
+      "start": 526.28,
+      "end": 536.6,
+      "text": "from place to place, rather than building an aesthetically wonderful university."
+    },
+    {
+      "start": 536.6,
+      "end": 540.94,
+      "text": "would have this thing which was more closely integrated with the community, you would have"
+    },
+    {
+      "start": 540.94,
+      "end": 547.6,
+      "text": "the community making much more use of the university. You wanted to have more people"
+    },
+    {
+      "start": 547.6,
+      "end": 554.54,
+      "text": "drawn in. Other people at the time were thinking already of using mass media, particularly"
+    },
+    {
+      "start": 554.54,
+      "end": 560.16,
+      "text": "the newly popular television, which it's hard to think had a time when it was not popular,"
+    },
+    {
+      "start": 560.16,
+      "end": 566.08,
+      "text": "but anyway it was only becoming popular. And not very far away they created something called"
+    },
+    {
+      "start": 566.08,
+      "end": 573.08,
+      "text": "the Open University, which was based on the mass media and based in the new town of Milton"
+    },
+    {
+      "start": 573.08,
+      "end": 580.42,
+      "text": "Keynes. And in a strange way, the Open University was building on Cedric's idea, but not using"
+    },
+    {
+      "start": 580.42,
+      "end": 586.16,
+      "text": "anything of the built form at all. They were just using the content."
+    },
+    {
+      "start": 586.16,
+      "end": 593.16,
+      "text": "I'm just writing a long article about Nonplan because of the four people who wrote it, I'm"
+    },
+    {
+      "start": 593.16,
+      "end": 598.16,
+      "text": "I'm the only one still alive. I'm an exhibit from the past."
+    },
+    {
+      "start": 598.16,
+      "end": 614.16,
+      "text": "And the two moving spirits on this attempt to again jolt people into thinking about what is the purpose of planning."
+    },
+    {
+      "start": 614.16,
+      "end": 624.16,
+      "text": "planning the two moving space with myself and a geographer called Peter Hall, who has"
+    },
+    {
+      "start": 624.16,
+      "end": 629.68,
+      "text": "just himself died and I'm just in the middle of writing a sort of tribute piece for, which"
+    },
+    {
+      "start": 629.68,
+      "end": 634.16,
+      "text": "is basically about how he and I collaborated on non-plan."
+    },
+    {
+      "start": 634.16,
+      "end": 642.0,
+      "text": "Though he became a planner and great figure of a quite different sort, but at that time,"
+    },
+    {
+      "start": 642.0,
+      "end": 646.5,
+      "text": "like the rest of us in the mid-60s."
+    },
+    {
+      "start": 646.5,
+      "end": 648.56,
+      "text": "We thought you could play around with anything really."
+    },
+    {
+      "start": 648.56,
+      "end": 654.38,
+      "text": "Anything went really, was the point, intellectually as well."
+    },
+    {
+      "start": 654.38,
+      "end": 661.54,
+      "text": "And Peter wrote for us a very great deal"
+    },
+    {
+      "start": 661.54,
+      "end": 668.74,
+      "text": "on matters of urban change, often on planning."
+    },
+    {
+      "start": 668.74,
+      "end": 677.78,
+      "text": "But also he had a wide grasp of so many subjects, particularly based on his experience of America."
+    },
+    {
+      "start": 677.78,
+      "end": 688.3,
+      "text": "And both of us were dismayed and made angry by how modernist planning and architecture"
+    },
+    {
+      "start": 688.3,
+      "end": 694.06,
+      "text": "had worked out on the ground, not what it was like in a book by Le Corbusier, but what"
+    },
+    {
+      "start": 694.06,
+      "end": 697.78,
+      "text": "it was like when you built it."
+    },
+    {
+      "start": 697.78,
+      "end": 705.14,
+      "text": "And particularly of course the claims that both planners and architects at the time usually"
+    },
+    {
+      "start": 705.14,
+      "end": 713.68,
+      "text": "made for the way they were able to reshape the society that they were in, which involved"
+    },
+    {
+      "start": 713.68,
+      "end": 723.2,
+      "text": "a great deal of demolition of existing property, which could have been reused."
+    },
+    {
+      "start": 723.2,
+      "end": 729.16,
+      "text": "I lived in the East End of London which was being destroyed by planning schemes, almost"
+    },
+    {
+      "start": 729.16,
+      "end": 735.66,
+      "text": "more than it had been destroyed by the Luftwaffe."
+    },
+    {
+      "start": 735.66,
+      "end": 742.12,
+      "text": "So Peter and I were having a bite to eat and we thought to ourselves, well, would it be"
+    },
+    {
+      "start": 742.12,
+      "end": 744.68,
+      "text": "any worse if there was no planning at all?"
+    },
+    {
+      "start": 744.68,
+      "end": 747.32,
+      "text": "After all, the cities we've got weren't planned."
+    },
+    {
+      "start": 747.32,
+      "end": 754.08,
+      "text": "They just grew up over centuries and planners had this program."
+    },
+    {
+      "start": 754.08,
+      "end": 757.76,
+      "text": "Architects, particularly modernist architects, had this program."
+    },
+    {
+      "start": 757.76,
+      "end": 761.56,
+      "text": "For example, the tower blocks were an excellent idea for families."
+    },
+    {
+      "start": 761.56,
+      "end": 764.56,
+      "text": "It was one of the more obvious things."
+    },
+    {
+      "start": 764.56,
+      "end": 770.2,
+      "text": "And it was just an unhappy situation."
+    },
+    {
+      "start": 770.2,
+      "end": 774.44,
+      "text": "And once again, rather than purely say that,"
+    },
+    {
+      "start": 774.44,
+      "end": 776.64,
+      "text": "we thought we should try to demonstrate it."
+    },
+    {
+      "start": 776.64,
+      "end": 781.24,
+      "text": "And as we were talking, the idea of something called non-plan,"
+    },
+    {
+      "start": 782.68,
+      "end": 786.7,
+      "text": "which now I've entered the language a bit, cropped up."
+    },
+    {
+      "start": 786.74,
+      "end": 789.68,
+      "text": "In other words, we should have a special issue of the magazine"
+    },
+    {
+      "start": 789.68,
+      "end": 796.56,
+      "text": "which would propose the idea that if we had no planning,"
+    },
+    {
+      "start": 797.22,
+      "end": 800.28,
+      "text": "if we perhaps listened to what people wanted for their houses"
+    },
+    {
+      "start": 800.28,
+      "end": 803.48,
+      "text": "as opposed to imposing something on them, perhaps it would be okay."
+    },
+    {
+      "start": 804.44,
+      "end": 813.34,
+      "text": "And so we agreed to do that. We also thought we should have some fellow writers on this."
+    },
+    {
+      "start": 813.34,
+      "end": 819.94,
+      "text": "And the two writers we went to immediately, there was no question about it, was Cedric,"
+    },
+    {
+      "start": 819.94,
+      "end": 826.96,
+      "text": "who was the most iconoclastic architect we knew, and Banham, the man he'd originally"
+    },
+    {
+      "start": 826.96,
+      "end": 836.62,
+      "text": "recommended to us and both of them immediately said yes. The structure of non-plan was that"
+    },
+    {
+      "start": 836.62,
+      "end": 842.7,
+      "text": "there would be a couple of general articles, an introduction and a conclusion. And in between"
+    },
+    {
+      "start": 842.7,
+      "end": 848.88,
+      "text": "those, in order to infuriate people, because that was part of the point, there would be"
+    },
+    {
+      "start": 848.88,
+      "end": 856.14,
+      "text": "three case studies of bits of England that might be improved, we would argue, destroyed"
+    },
+    {
+      "start": 856.14,
+      "end": 863.74,
+      "text": "other people might argue, by being treated as areas that could be subjected to non-plan."
+    },
+    {
+      "start": 863.74,
+      "end": 871.82,
+      "text": "It took quite a long time to write because I became editor of the magazine in early 1968."
+    },
+    {
+      "start": 871.82,
+      "end": 880.44,
+      "text": "1968 was a year of explosions throughout the world on the student campuses and there were"
+    },
+    {
+      "start": 880.44,
+      "end": 885.06,
+      "text": "lots of other things to write about apart from writing about non-plan."
+    },
+    {
+      "start": 885.06,
+      "end": 889.78,
+      "text": "But we did eventually write it. I wrote both the introduction, Peter and I wrote most of"
+    },
+    {
+      "start": 889.78,
+      "end": 898.78,
+      "text": "the conclusion. Bannum decided to write about East Anglia as the set piece example. Peter"
+    },
+    {
+      "start": 900.1,
+      "end": 907.1,
+      "text": "Hall wrote about East Midlands. Cedric himself wrote about the area of the New Forest on"
+    },
+    {
+      "start": 907.94,
+      "end": 913.26,
+      "text": "South Coast, which again, as in the case of the Thinkbelt, he knew well that apparently"
+    },
+    {
+      "start": 913.26,
+      "end": 918.7,
+      "text": "he'd moved there to escape bombing during the war and had spent quite a bit of time"
+    },
+    {
+      "start": 918.7,
+      "end": 927.16,
+      "text": "with his grandfather, I think. Everybody wrote bits and put it together and we published"
+    },
+    {
+      "start": 927.16,
+      "end": 935.6,
+      "text": "it in the Special History. And it's quite interesting, it provoked a mixture of anger"
+    },
+    {
+      "start": 935.6,
+      "end": 940.66,
+      "text": "and sort of stunned silence. People couldn't believe that we were making this suggestion"
+    },
+    {
+      "start": 940.66,
+      "end": 949.2,
+      "text": "because planning was one of those sacred things."
+    },
+    {
+      "start": 949.2,
+      "end": 954.0,
+      "text": "If something wasn't planned, it wasn't quite real, really."
+    },
+    {
+      "start": 954.22,
+      "end": 958.64,
+      "text": "I mean, there's an excellent book by a historian called Tony Yud,"
+    },
+    {
+      "start": 959.46,
+      "end": 962.06,
+      "text": "which is just called Post-War,"
+    },
+    {
+      "start": 962.18,
+      "end": 964.86,
+      "text": "and he takes the whole of Western Europe"
+    },
+    {
+      "start": 964.86,
+      "end": 968.56,
+      "text": "and tries to understand whether,"
+    },
+    {
+      "start": 968.56,
+      "end": 974.82,
+      "text": "in partial imitation of the Soviet system or for some other reason, everything was much"
+    },
+    {
+      "start": 974.82,
+      "end": 980.88,
+      "text": "better if it was planned rather than if it was just allowed to happen, which was a new"
+    },
+    {
+      "start": 980.88,
+      "end": 988.48,
+      "text": "idea really, and of course in many places has now dwindled. But I would say that in"
+    },
+    {
+      "start": 988.48,
+      "end": 994.74,
+      "text": "England at any rate in the 1960s the idea that everything had to be planned. You needed"
+    },
+    {
+      "start": 994.74,
+      "end": 1001.28,
+      "text": "to get the facts and the figures, then you plan something. It was at its height. And"
+    },
+    {
+      "start": 1001.28,
+      "end": 1007.78,
+      "text": "a lot of people made a living out of this kind of thing, either as professionals or"
+    },
+    {
+      "start": 1007.78,
+      "end": 1019.78,
+      "text": "as teachers or whatever. And people ask themselves, well, is this anarchy, letting anything happen,"
+    },
+    {
+      "start": 1019.78,
+      "end": 1026.12,
+      "text": "Or is it kind of a covert new form of capitalism where you're just providing a new market so"
+    },
+    {
+      "start": 1026.12,
+      "end": 1028.16,
+      "text": "people can make their money out of it?"
+    },
+    {
+      "start": 1028.16,
+      "end": 1030.62,
+      "text": "A bit of both, really."
+    },
+    {
+      "start": 1030.62,
+      "end": 1034.14,
+      "text": "The philosopher Wittgenstein had a theory."
+    },
+    {
+      "start": 1034.14,
+      "end": 1038.34,
+      "text": "He didn't mind what he ate, provided it was always the same."
+    },
+    {
+      "start": 1038.34,
+      "end": 1042.42,
+      "text": "And in terms of appearance, that was Cedric."
+    },
+    {
+      "start": 1042.42,
+      "end": 1049.32,
+      "text": "He was always dressed the same, with his striped black-white shirt, his loose collar, his black"
+    },
+    {
+      "start": 1049.32,
+      "end": 1057.72,
+      "text": "knitted tie is cigar and if you were talking to him at the office it was a glass of brandy."
+    },
+    {
+      "start": 1057.72,
+      "end": 1066.56,
+      "text": "That was Cedric. An amazingly recognisable figure. The office he was mostly known for"
+    },
+    {
+      "start": 1066.56,
+      "end": 1072.24,
+      "text": "was an office in a side street called Alfred Place, not far from the main buildings of the"
+    },
+    {
+      "start": 1072.24,
+      "end": 1078.9,
+      "text": "University of London, not very far either from the post office tower which Peter Rainer Branham"
+    },
+    {
+      "start": 1078.9,
+      "end": 1084.3,
+      "text": "once said it was the only building that had been built since the Second World War in London"
+    },
+    {
+      "start": 1084.3,
+      "end": 1092.2,
+      "text": "that could deserve a space in the same skyline as St Paul's Cathedral. So, you know, very"
+    },
+    {
+      "start": 1092.2,
+      "end": 1097.84,
+      "text": "much Cedric territory. The office was above a shop of some sort. I can't remember what"
+    },
+    {
+      "start": 1097.84,
+      "end": 1104.18,
+      "text": "the shop was. So you went up some stairs, got the top, and there was... when you got"
+    },
+    {
+      "start": 1104.18,
+      "end": 1110.74,
+      "text": "the top of the stairs there was some unfortunate character who was some kind of assistant sitting"
+    },
+    {
+      "start": 1110.74,
+      "end": 1115.46,
+      "text": "there whose main job as far as I could see was to make sure that the radio was always turned to"
+    },
+    {
+      "start": 1115.46,
+      "end": 1125.62,
+      "text": "Radio 4 and he would probably have talked to one or two of these assistants, Steve Mullin, Will"
+    },
+    {
+      "start": 1125.62,
+      "end": 1132.74,
+      "text": "Alsop. There was always some such person there but Cedric wouldn't be there. Cedric would be one stage"
+    },
+    {
+      "start": 1132.74,
+      "end": 1139.94,
+      "text": "further up in the building in the white room, which was a room painted white. It was a quite"
+    },
+    {
+      "start": 1139.94,
+      "end": 1149.3,
+      "text": "large room. It was the full width of the building, I think. And there would be piles of papers"
+    },
+    {
+      "start": 1149.3,
+      "end": 1154.92,
+      "text": "and bits of drawings and all the rest of it. You'd be offered a glass of brandy, because"
+    },
+    {
+      "start": 1154.92,
+      "end": 1161.24,
+      "text": "there was always a glass of brandy, and you would talk for the next two hours, which is"
+    },
+    {
+      "start": 1161.24,
+      "end": 1165.24,
+      "text": "which is why you couldn't gather that often because you had other things to do."
+    },
+    {
+      "start": 1166.24,
+      "end": 1172.24,
+      "text": "But it was always very enjoyable and from time to time somebody else would bob up,"
+    },
+    {
+      "start": 1172.24,
+      "end": 1176.24,
+      "text": "the General Secretary of the trade union movement or whoever."
+    },
+    {
+      "start": 1177.24,
+      "end": 1182.24,
+      "text": "He was a very generous host when he gave a party."
+    },
+    {
+      "start": 1183.24,
+      "end": 1187.24,
+      "text": "And he came round here to our house a few times."
+    },
+    {
+      "start": 1187.24,
+      "end": 1192.84,
+      "text": "times. The first time he came he deeply embarrassed my wife because he'd gone upstairs to wash his"
+    },
+    {
+      "start": 1192.84,
+      "end": 1198.36,
+      "text": "hands and he came back down and said he'd never seen such a beautiful object. I thought what on"
+    },
+    {
+      "start": 1198.36,
+      "end": 1205.32,
+      "text": "earth has he seen? Sally had been trying to save soap by moulding the old bits of soap together,"
+    },
+    {
+      "start": 1205.32,
+      "end": 1212.04,
+      "text": "you see, sort of some blue, some brown, some yellow, some white in a beautiful ball. So he"
+    },
+    {
+      "start": 1212.04,
+      "end": 1217.32,
+      "text": "They brought this all down to tell us that was the future."
+    },
+    {
+      "start": 1217.32,
+      "end": 1223.88,
+      "text": "Curiously, there's a Palestinian activist and philosopher"
+    },
+    {
+      "start": 1223.88,
+      "end": 1225.7,
+      "text": "called Edward Said."
+    },
+    {
+      "start": 1225.7,
+      "end": 1229.28,
+      "text": "He's one of the founders of the Divine Orchestra"
+    },
+    {
+      "start": 1229.28,
+      "end": 1233.44,
+      "text": "between Israelis and Palestinians,"
+    },
+    {
+      "start": 1233.44,
+      "end": 1237.78,
+      "text": "and very much the New York intellectual."
+    },
+    {
+      "start": 1237.78,
+      "end": 1241.72,
+      "text": "But he told a friend of mine that the height of his career"
+    },
+    {
+      "start": 1241.72,
+      "end": 1249.1,
+      "text": "was when he went to a dinner party in Manhattan somewhere, and his fellow guest was Sid Charisse,"
+    },
+    {
+      "start": 1249.1,
+      "end": 1257.96,
+      "text": "the dancer for An American in Paris. Well, when Cedric was in Las Vegas for some event,"
+    },
+    {
+      "start": 1257.96,
+      "end": 1264.72,
+      "text": "I don't think he was a gambler, but he would believe very strongly in the ethos of Las"
+    },
+    {
+      "start": 1264.72,
+      "end": 1271.72,
+      "text": "Vegas, as you get in the Venturi book on learning from Las Vegas. That was his scene. And he"
+    },
+    {
+      "start": 1272.4,
+      "end": 1279.4,
+      "text": "was in a restaurant sitting there having his supper with a friend. And he noticed across"
+    },
+    {
+      "start": 1279.4,
+      "end": 1286.4,
+      "text": "the dance floor in the restaurant there was Cid Charisse sitting there. Well, Cid Charisse"
+    },
+    {
+      "start": 1286.84,
+      "end": 1291.82,
+      "text": "never wanted to lose his opportunities of this kind, so he went across to Cid Charisse"
+    },
+    {
+      "start": 1291.82,
+      "end": 1294.26,
+      "text": "and said, can I have a dance?"
+    },
+    {
+      "start": 1294.26,
+      "end": 1297.88,
+      "text": "And so the height of that trip, and perhaps of more than that"
+    },
+    {
+      "start": 1297.88,
+      "end": 1300.18,
+      "text": "for Cedric, was that that was the night"
+    },
+    {
+      "start": 1300.18,
+      "end": 1302.1,
+      "text": "I danced with Cedris."
+    },
+    {
+      "start": 1302.1,
+      "end": 1303.84,
+      "text": "It's something that I never managed"
+    },
+    {
+      "start": 1303.84,
+      "end": 1307.32,
+      "text": "to pin down in talking to him, the extent to which he would"
+    },
+    {
+      "start": 1307.32,
+      "end": 1312.64,
+      "text": "have liked, really in his heart, to have built more."
+    },
+    {
+      "start": 1312.64,
+      "end": 1314.78,
+      "text": "He always maintained, at least in talking to me,"
+    },
+    {
+      "start": 1314.78,
+      "end": 1316.74,
+      "text": "that yes, he did want to build more,"
+    },
+    {
+      "start": 1316.74,
+      "end": 1318.62,
+      "text": "but there was this problem with the bureaucrats"
+    },
+    {
+      "start": 1318.62,
+      "end": 1320.74,
+      "text": "and there was that problem."
+    },
+    {
+      "start": 1320.74,
+      "end": 1327.74,
+      "text": "But I'm not sure. I think for him building was a kind of dialogue."
+    },
+    {
+      "start": 1327.74,
+      "end": 1332.74,
+      "text": "And of course he did such beautiful drawings in particular."
+    },
+    {
+      "start": 1332.74,
+      "end": 1339.74,
+      "text": "Whatever I may half jokingly say about him as a writer, he was brilliant."
+    },
+    {
+      "start": 1339.74,
+      "end": 1344.74,
+      "text": "As a speaker, his lectures were wonderful. I went to a few of them."
+    },
+    {
+      "start": 1344.74,
+      "end": 1353.54,
+      "text": "And he could just take an audience and turn them around in his hand."
+    },
+    {
+      "start": 1353.54,
+      "end": 1367.02,
+      "text": "And teach people not through long, elaborate arguments, but through jokes, through observations,"
+    },
+    {
+      "start": 1367.02,
+      "end": 1373.06,
+      "text": "through asking questions to which there was no obvious answer."
+    },
+    {
+      "start": 1373.06,
+      "end": 1381.06,
+      "text": "And I think it's an intellectual power that he has."
+    },
+    {
+      "start": 1381.06,
+      "end": 1389.92,
+      "text": "I can't see, speaking as a non-architect, I can't see much evidence that architecture"
+    },
+    {
+      "start": 1389.92,
+      "end": 1395.06,
+      "text": "has gone in a way that he would approve of."
+    },
+    {
+      "start": 1395.06,
+      "end": 1396.32,
+      "text": "I can't see that at all."
+    }
+  ]
 }

@@ -1,1703 +1,1703 @@
 {
- "slug": "carlos-villanueva-brandt",
- "language": "en",
- "model": "mlx-community/whisper-large-v3-mlx",
- "corrected": false,
- "cues": [
-  {
-   "start": 0.0,
-   "end": 6.0,
-   "text": "Cedric was obviously part of the school when I was a student."
-  },
-  {
-   "start": 6.0,
-   "end": 10.0,
-   "text": "So really my contact with Cedric came about as a student."
-  },
-  {
-   "start": 10.0,
-   "end": 14.0,
-   "text": "He was in the building a lot. He was no longer teaching."
-  },
-  {
-   "start": 14.0,
-   "end": 19.0,
-   "text": "He was involved in a number of high profile projects."
-  },
-  {
-   "start": 19.0,
-   "end": 22.0,
-   "text": "So he redesigned the South Bank for instance and so on."
-  },
-  {
-   "start": 22.0,
-   "end": 25.0,
-   "text": "He did a project for the South Bank and so on."
-  },
-  {
-   "start": 25.0,
-   "end": 29.0,
-   "text": "But he was a character. He was a friend of Alvin's. He came to Jury's."
-  },
-  {
-   "start": 29.0,
-   "end": 36.24,
-   "text": "So basically the wit and intelligence that Cedric had was something that you experienced firsthand."
-  },
-  {
-   "start": 37.3,
-   "end": 41.8,
-   "text": "It wasn't, I mean, it would be wrong to say he didn't play to the gallery."
-  },
-  {
-   "start": 43.26,
-   "end": 47.12,
-   "text": "I think like Peter Cook, he was a character who played to the gallery."
-  },
-  {
-   "start": 47.28,
-   "end": 50.64,
-   "text": "So whenever he spoke, he wanted the room to be listening."
-  },
-  {
-   "start": 51.76,
-   "end": 54.62,
-   "text": "But I think he was also an incredible intelligence."
-  },
-  {
-   "start": 54.62,
-   "end": 59.12,
-   "text": "So he would react to what you said or what was actually put in front of him."
-  },
-  {
-   "start": 59.72,
-   "end": 62.84,
-   "text": "So my first meetings with him were always at juries."
-  },
-  {
-   "start": 64.3,
-   "end": 65.54,
-   "text": "So he was there."
-  },
-  {
-   "start": 66.12,
-   "end": 71.56,
-   "text": "He was pampered and spoilt by Alvin."
-  },
-  {
-   "start": 71.9,
-   "end": 75.12,
-   "text": "So there's famous stories, you know, he'd be given a cigar as he came in"
-  },
-  {
-   "start": 75.12,
-   "end": 79.32,
-   "text": "and a bottle of brandy would appear under his chair"
-  },
-  {
-   "start": 79.32,
-   "end": 83.94,
-   "text": "and he would sit there and just fill his glass up and talk."
-  },
-  {
-   "start": 84.62,
-   "end": 90.06,
-   "text": "So there were in those days quite a number of high profile juries as it were,"
-  },
-  {
-   "start": 90.06,
-   "end": 92.62,
-   "text": "where people came from outside and so on, and you know,"
-  },
-  {
-   "start": 92.62,
-   "end": 96.62,
-   "text": "you as one as a student went to all these things to see what was said."
-  },
-  {
-   "start": 96.62,
-   "end": 102.38,
-   "text": "And I think right from first year, I think going to these public juries,"
-  },
-  {
-   "start": 102.38,
-   "end": 111.42,
-   "text": "you suddenly realise that Cedric was something that someone who you would go home and ponder about what he said."
-  },
-  {
-   "start": 111.42,
-   "end": 116.02,
-   "text": "And I think what was always really important was that he never said anything in an academic way."
-  },
-  {
-   "start": 116.82,
-   "end": 119.52,
-   "text": "He never said anything like a sort of professor or a teacher."
-  },
-  {
-   "start": 119.76,
-   "end": 122.48,
-   "text": "He would sort of remark on something."
-  },
-  {
-   "start": 123.04,
-   "end": 131.34,
-   "text": "It's rare to meet someone in the architectural environment in particular who is willing to talk about private things."
-  },
-  {
-   "start": 132.48,
-   "end": 136.44,
-   "text": "You know, I think architects are quite facade-like."
-  },
-  {
-   "start": 136.44,
-   "end": 141.1,
-   "text": "you know they wear black and they do this and they behave in a particular way and they only talk"
-  },
-  {
-   "start": 141.1,
-   "end": 147.0,
-   "text": "about design um and i i think you know me personally you know i talk about fishing and"
-  },
-  {
-   "start": 147.0,
-   "end": 152.68,
-   "text": "football and so on you know i mean i i i think you know we are all human and i think cedric"
-  },
-  {
-   "start": 152.68,
-   "end": 158.86,
-   "text": "excelled at that he he he was a person who you felt warmth towards and i think he also felt"
-  },
-  {
-   "start": 158.86,
-   "end": 163.6,
-   "text": "warmth and admiration which i think is part of this friendship because you were sharing"
-  },
-  {
-   "start": 163.6,
-   "end": 165.9,
-   "text": "and understanding of what was around you,"
-  },
-  {
-   "start": 166.0,
-   "end": 168.16,
-   "text": "not simply because you were sort of architects"
-  },
-  {
-   "start": 168.16,
-   "end": 170.44,
-   "text": "who were being sort of portrayed."
-  },
-  {
-   "start": 171.08,
-   "end": 174.6,
-   "text": "Yeah, I think the uniqueness"
-  },
-  {
-   "start": 174.6,
-   "end": 178.2,
-   "text": "was actually the level of sort of invention"
-  },
-  {
-   "start": 178.2,
-   "end": 181.32,
-   "text": "and imagination that he could bring to the conversation,"
-  },
-  {
-   "start": 182.12,
-   "end": 184.26,
-   "text": "a level of unpredictability,"
-  },
-  {
-   "start": 185.46,
-   "end": 187.78,
-   "text": "a level of easy intelligence."
-  },
-  {
-   "start": 189.12,
-   "end": 190.9,
-   "text": "So in many ways,"
-  },
-  {
-   "start": 191.1,
-   "end": 193.42,
-   "text": "when I say that a lot is written"
-  },
-  {
-   "start": 193.42,
-   "end": 197.82,
-   "text": "and said and a lot is quoted and you know they're the archive of his tapes and I go to all these"
-  },
-  {
-   "start": 197.82,
-   "end": 202.94,
-   "text": "things and I thoroughly enjoy them I don't I'm not not complaining about them but in a way I think"
-  },
-  {
-   "start": 202.94,
-   "end": 207.8,
-   "text": "maybe the sign of friendship and this relationship that I'm talking about meant that he would say"
-  },
-  {
-   "start": 207.8,
-   "end": 212.04,
-   "text": "something to you you you'd go home and think about it and then you'd forget what he said"
-  },
-  {
-   "start": 212.04,
-   "end": 217.08,
-   "text": "so in a sense that's what what the true sign of you know someone actually affecting you in one"
-  },
-  {
-   "start": 217.08,
-   "end": 222.4,
-   "text": "way or another was really about which wasn't ah I've got a quote you know he said this or he did"
-  },
-  {
-   "start": 222.4,
-   "end": 227.6,
-   "text": "that or he made a reference. It was pretty much a capacity to see what you were trying"
-  },
-  {
-   "start": 227.6,
-   "end": 233.2,
-   "text": "to do, to understand where you were coming from and then to actually add something which"
-  },
-  {
-   "start": 233.2,
-   "end": 238.58,
-   "text": "possibly was well beyond what you had thought the possibilities were. And I think that made"
-  },
-  {
-   "start": 238.58,
-   "end": 251.7,
-   "text": "it very important. He was a sort of extraordinary Englishman. I think that there were a series"
-  },
-  {
-   "start": 251.7,
-   "end": 261.06,
-   "text": "of extraordinary Englishmen that affected me when I was young and when I was a student."
-  },
-  {
-   "start": 261.06,
-   "end": 266.42,
-   "text": "I think John Somersom was one, Bob Evans was another one and Cedric was there. They were"
-  },
-  {
-   "start": 266.42,
-   "end": 275.32,
-   "text": "all three completely different men. Somersom was the grandee, old gentleman and carer of"
-  },
-  {
-   "start": 275.32,
-   "end": 279.34,
-   "text": "the CERN museum and so on and he came in his bicycle and his amazing tweed suits and so"
-  },
-  {
-   "start": 279.34,
-   "end": 289.34,
-   "text": "Bob was a wonderful family man, working-class boy, plastic bag full of books and so on."
-  },
-  {
-   "start": 289.34,
-   "end": 294.64,
-   "text": "And Cedric summed them both up in a funny way."
-  },
-  {
-   "start": 294.64,
-   "end": 298.1,
-   "text": "So even the way Cedric looked was extraordinary."
-  },
-  {
-   "start": 298.1,
-   "end": 301.1,
-   "text": "He looked like a politician in a sense, with his hairstyle."
-  },
-  {
-   "start": 301.1,
-   "end": 305.92,
-   "text": "He looked like an old-fashioned Englishman with his thing all pulled back and his cigar."
-  },
-  {
-   "start": 305.92,
-   "end": 312.12,
-   "text": "And then the stiff collar, the black silk tie, and the striped shirt, and then the hush"
-  },
-  {
-   "start": 312.12,
-   "end": 315.1,
-   "text": "puppy shoes, you know, brothel creepers underneath."
-  },
-  {
-   "start": 315.1,
-   "end": 317.18,
-   "text": "I mean, it's sort of complete."
-  },
-  {
-   "start": 317.18,
-   "end": 325.8,
-   "text": "He was a mixture between, I suppose, the foot area was like a sort of geography teacher,"
-  },
-  {
-   "start": 325.8,
-   "end": 331.84,
-   "text": "the trousers were like school uniform, and the top was like a sort of bowler hat city"
-  },
-  {
-   "start": 331.84,
-   "end": 333.22,
-   "text": "person."
-  },
-  {
-   "start": 333.22,
-   "end": 338.72,
-   "text": "And then in this extraordinary persona, you know, who used to come into a room, this incredible"
-  },
-  {
-   "start": 338.72,
-   "end": 340.94,
-   "text": "intelligence would come out."
-  },
-  {
-   "start": 340.94,
-   "end": 345.08,
-   "text": "So I think that he was unique, really unique."
-  },
-  {
-   "start": 345.08,
-   "end": 348.28,
-   "text": "I mean, unique even to look at."
-  },
-  {
-   "start": 348.28,
-   "end": 353.82,
-   "text": "In a sense he was, you know, his hair was always come back with sort of hair gel and"
-  },
-  {
-   "start": 353.82,
-   "end": 356.08,
-   "text": "you know, et cetera, et cetera."
-  },
-  {
-   "start": 356.08,
-   "end": 367.94,
-   "text": "And in many ways, I think, in a world of delirious New York, Manhattan transcripts, the things"
-  },
-  {
-   "start": 367.94,
-   "end": 369.02,
-   "text": "which were happening."
-  },
-  {
-   "start": 369.02,
-   "end": 374.32,
-   "text": "I mean, Bernard Chewmey was red-scarfed already."
-  },
-  {
-   "start": 374.32,
-   "end": 377.18,
-   "text": "He would never be seen without it."
-  },
-  {
-   "start": 377.18,
-   "end": 381.84,
-   "text": "Nigel Coates, who then came to teach me how to have his glasses and looked the part."
-  },
-  {
-   "start": 381.84,
-   "end": 383.32,
-   "text": "He was a fashion person."
-  },
-  {
-   "start": 383.32,
-   "end": 385.16,
-   "text": "And Cedric was an anachronism."
-  },
-  {
-   "start": 386.32,
-   "end": 389.36,
-   "text": "And I think that made him stand out a lot"
-  },
-  {
-   "start": 389.36,
-   "end": 392.46,
-   "text": "because I think a lot of the things I then went on to do"
-  },
-  {
-   "start": 392.46,
-   "end": 396.5,
-   "text": "had this Englishness that I'm talking about,"
-  },
-  {
-   "start": 396.66,
-   "end": 398.86,
-   "text": "this sort of slight eccentricity."
-  },
-  {
-   "start": 399.06,
-   "end": 401.94,
-   "text": "So when we moved on to do NATO,"
-  },
-  {
-   "start": 402.12,
-   "end": 403.26,
-   "text": "when I was in diploma school,"
-  },
-  {
-   "start": 403.36,
-   "end": 404.84,
-   "text": "when I was in Dip 10 and so on,"
-  },
-  {
-   "start": 405.66,
-   "end": 407.6,
-   "text": "it was all kind of old-fashioned shirts"
-  },
-  {
-   "start": 407.6,
-   "end": 409.84,
-   "text": "with the collar done up and old coats."
-  },
-  {
-   "start": 409.84,
-   "end": 412.22,
-   "text": "and, you know, it was sort of some weird mixture"
-  },
-  {
-   "start": 412.22,
-   "end": 414.52,
-   "text": "back to the 40s with sort of punk."
-  },
-  {
-   "start": 415.7,
-   "end": 417.4,
-   "text": "And I'm not saying he was punk,"
-  },
-  {
-   "start": 417.5,
-   "end": 418.84,
-   "text": "but I'm just simply saying he was quite extraordinary"
-  },
-  {
-   "start": 419.38,
-   "end": 420.62,
-   "text": "in that sense, you know,"
-  },
-  {
-   "start": 420.7,
-   "end": 423.58,
-   "text": "between the sort of studio jacket, the stiff collar."
-  },
-  {
-   "start": 423.78,
-   "end": 424.92,
-   "text": "The stiff collar, you see, the stiff collar,"
-  },
-  {
-   "start": 425.08,
-   "end": 427.76,
-   "text": "I'm still sort of bewildered by that."
-  },
-  {
-   "start": 428.86,
-   "end": 430.56,
-   "text": "I mean, I don't know if he ever wore a stiff collar,"
-  },
-  {
-   "start": 430.66,
-   "end": 432.18,
-   "text": "but they are really quite unpleasant."
-  },
-  {
-   "start": 433.74,
-   "end": 437.08,
-   "text": "And he had one every day, and his tie on every day."
-  },
-  {
-   "start": 437.08,
-   "end": 445.88,
-   "text": "So, you know, I think he was quite a striking figure within the whole process of what I was seeing at the AA."
-  },
-  {
-   "start": 446.14,
-   "end": 449.62,
-   "text": "I think the other thing which was important is what I said before,"
-  },
-  {
-   "start": 449.78,
-   "end": 457.56,
-   "text": "that I never got from Cedric this sense of an academic pretention or trajectory."
-  },
-  {
-   "start": 458.76,
-   "end": 462.98,
-   "text": "So with Somerson, he was a great scholar and he was an absolutely charming man."
-  },
-  {
-   "start": 462.98,
-   "end": 466.14,
-   "text": "with Bob Evans in his own quiet way,"
-  },
-  {
-   "start": 466.6,
-   "end": 468.02,
-   "text": "he'd invite you around for tea."
-  },
-  {
-   "start": 468.2,
-   "end": 469.18,
-   "text": "He was a true friend."
-  },
-  {
-   "start": 469.3,
-   "end": 470.88,
-   "text": "I mean, I'd go to his house for tea and so on."
-  },
-  {
-   "start": 471.7,
-   "end": 472.74,
-   "text": "You've got a sense, you know,"
-  },
-  {
-   "start": 472.8,
-   "end": 474.76,
-   "text": "God, this man's read all this and he's amazing"
-  },
-  {
-   "start": 474.76,
-   "end": 476.7,
-   "text": "and he's teaching in Cambridge and he's written this"
-  },
-  {
-   "start": 476.7,
-   "end": 477.5,
-   "text": "and he's written this essay."
-  },
-  {
-   "start": 477.7,
-   "end": 478.92,
-   "text": "With Cedric, you never got that."
-  },
-  {
-   "start": 480.04,
-   "end": 482.58,
-   "text": "Somehow, you didn't think, is he a great architect?"
-  },
-  {
-   "start": 483.72,
-   "end": 485.42,
-   "text": "You sort of didn't decide."
-  },
-  {
-   "start": 486.04,
-   "end": 488.24,
-   "text": "Is he a great draftsman?"
-  },
-  {
-   "start": 488.9,
-   "end": 490.14,
-   "text": "He was a good drawer, actually."
-  },
-  {
-   "start": 491.32,
-   "end": 492.36,
-   "text": "You sort of think, yeah,"
-  },
-  {
-   "start": 492.36,
-   "end": 494.96,
-   "text": "but would I do lots of drawings of little ants?"
-  },
-  {
-   "start": 494.96,
-   "end": 497.32,
-   "text": "He drew people everywhere, which is great."
-  },
-  {
-   "start": 497.32,
-   "end": 498.56,
-   "text": "I used to love that."
-  },
-  {
-   "start": 498.56,
-   "end": 501.36,
-   "text": "Every other architect did some pretentious sort of view."
-  },
-  {
-   "start": 502.96,
-   "end": 504.56,
-   "text": "Is he a great writer?"
-  },
-  {
-   "start": 504.56,
-   "end": 506.44,
-   "text": "In a way, there was one book on Cedric"
-  },
-  {
-   "start": 506.44,
-   "end": 508.36,
-   "text": "that was published in those days,"
-  },
-  {
-   "start": 508.36,
-   "end": 509.84,
-   "text": "but it's great."
-  },
-  {
-   "start": 509.84,
-   "end": 512.8,
-   "text": "You've sort of read up about his projects and so on,"
-  },
-  {
-   "start": 512.8,
-   "end": 514.36,
-   "text": "his seminal projects."
-  },
-  {
-   "start": 514.36,
-   "end": 517.28,
-   "text": "I think that the other thing that's important to point out"
-  },
-  {
-   "start": 517.28,
-   "end": 518.84,
-   "text": "is a lot of people say that this,"
-  },
-  {
-   "start": 518.84,
-   "end": 521.12,
-   "text": "when I was a student in the 70s"
-  },
-  {
-   "start": 522.36,
-   "end": 528.2,
-   "text": "well late 70s and 80s you know a lot of people referred to this as the heyday of the AA. Well"
-  },
-  {
-   "start": 528.2,
-   "end": 535.48,
-   "text": "it wasn't. It wasn't sort of presented in that way. You didn't feel that. It was just a smaller"
-  },
-  {
-   "start": 535.48,
-   "end": 541.24,
-   "text": "place and there were some quite interesting people around. And it was more of a focus for"
-  },
-  {
-   "start": 541.8,
-   "end": 548.6,
-   "text": "practitioners than it is now. So the bar was the bar. I mean people would come and hang around in"
-  },
-  {
-   "start": 548.6,
-   "end": 553.96,
-   "text": "the bar and you'd meet you know famous architects as it were in the bar um but it wasn't a sort of"
-  },
-  {
-   "start": 553.96,
-   "end": 560.92,
-   "text": "you know a place it never had the sort of sense of of of what i think i can only think so i've"
-  },
-  {
-   "start": 560.92,
-   "end": 565.88,
-   "text": "never been to in that environment but you know it didn't have that sense of a sort of an american"
-  },
-  {
-   "start": 565.88,
-   "end": 570.68,
-   "text": "university where the great professor walks in you know and then therefore you know everybody has to"
-  },
-  {
-   "start": 570.68,
-   "end": 576.76,
-   "text": "sit up and listen it wasn't the aa was this sort of place where debates took place and people came"
-  },
-  {
-   "start": 576.76,
-   "end": 579.88,
-   "text": "because it was a fun thing to do."
-  },
-  {
-   "start": 580.88,
-   "end": 582.92,
-   "text": "Cedric came, I think he had a great time."
-  },
-  {
-   "start": 583.7,
-   "end": 585.38,
-   "text": "He didn't come here to pontificate, as I said."
-  },
-  {
-   "start": 585.44,
-   "end": 587.4,
-   "text": "I think he came here because he liked the discussion."
-  },
-  {
-   "start": 588.3,
-   "end": 591.2,
-   "text": "And, you know, so much so that I think the Cedrics"
-  },
-  {
-   "start": 591.2,
-   "end": 594.3,
-   "text": "and the like in those days came to the parties."
-  },
-  {
-   "start": 595.22,
-   "end": 596.76,
-   "text": "So we had lots of parties."
-  },
-  {
-   "start": 597.28,
-   "end": 600.4,
-   "text": "You know, I think 1977 when I came"
-  },
-  {
-   "start": 600.4,
-   "end": 605.12,
-   "text": "was the first AA carnival since the 40s"
-  },
-  {
-   "start": 605.12,
-   "end": 606.92,
-   "text": "or maybe even pre-war."
-  },
-  {
-   "start": 607.54,
-   "end": 610.14,
-   "text": "So there was this big party, you know, 2,500 people,"
-  },
-  {
-   "start": 610.32,
-   "end": 612.64,
-   "text": "and there was a trapeze artist across Chinx Yard,"
-  },
-  {
-   "start": 612.82,
-   "end": 615.38,
-   "text": "and, you know, there were custard fights in the bar and so on."
-  },
-  {
-   "start": 616.04,
-   "end": 619.32,
-   "text": "You know, Cedric and people like Cedric would come to those parties."
-  },
-  {
-   "start": 620.08,
-   "end": 622.48,
-   "text": "It was a sort of different atmosphere, I think."
-  },
-  {
-   "start": 623.08,
-   "end": 626.18,
-   "text": "So I don't think it was that, you know, that the AA attracted him."
-  },
-  {
-   "start": 626.18,
-   "end": 630.18,
-   "text": "I think the AA was his sort of gravitational point,"
-  },
-  {
-   "start": 631.04,
-   "end": 633.28,
-   "text": "and he was part of that process."
-  },
-  {
-   "start": 633.28,
-   "end": 640.56,
-   "text": "There is a key relationship between what I call physical and social structures,"
-  },
-  {
-   "start": 640.56,
-   "end": 644.92,
-   "text": "i.e. that space is made up of the relationship between those two things."
-  },
-  {
-   "start": 644.92,
-   "end": 649.3,
-   "text": "So therefore I think the Fun Palace sort of in a sense sums that up."
-  },
-  {
-   "start": 649.3,
-   "end": 655.78,
-   "text": "It suggests the idea that space is never just a space that gets inhabited."
-  },
-  {
-   "start": 655.78,
-   "end": 657.76,
-   "text": "So it's a bit like the comment I was saying about the AA."
-  },
-  {
-   "start": 657.76,
-   "end": 659.56,
-   "text": "The AA didn't exist and Cedric came to it."
-  },
-  {
-   "start": 659.56,
-   "end": 661.0,
-   "text": "The AA and Cedric were one."
-  },
-  {
-   "start": 661.0,
-   "end": 666.76,
-   "text": "So I think it begins to suggest that. I think in the sort of bit that I don't think is so relevant"
-  },
-  {
-   "start": 666.76,
-   "end": 672.28,
-   "text": "is the idea of flexibility. I think another one that people look at is the idea of performance"
-  },
-  {
-   "start": 672.28,
-   "end": 675.84,
-   "text": "or event. I don't think that's so interesting either. I think it's much more to do with the"
-  },
-  {
-   "start": 675.84,
-   "end": 682.1,
-   "text": "idea of seeing something working, that has people in it. It's a sort of social structure that works"
-  },
-  {
-   "start": 682.1,
-   "end": 687.28,
-   "text": "with a physical structure. I think that's very interesting. I think that the Think Belt project"
-  },
-  {
-   "start": 687.28,
-   "end": 691.12,
-   "text": "is also interesting for that reason. It's talking about a system, you know, it's"
-  },
-  {
-   "start": 691.12,
-   "end": 694.66,
-   "text": "actually talking about education in a different way and that's terrific. So"
-  },
-  {
-   "start": 694.66,
-   "end": 697.84,
-   "text": "that is interesting to me today because I think maybe architects should be"
-  },
-  {
-   "start": 697.84,
-   "end": 701.62,
-   "text": "thinking at that level. A lot of architects are thinking on a very banal"
-  },
-  {
-   "start": 701.62,
-   "end": 707.28,
-   "text": "level of, you know, still form-making even though, you know, it's not talked about"
-  },
-  {
-   "start": 707.28,
-   "end": 716.08,
-   "text": "at this very day, you know, on whatever it is today, the 8th of May 2014."
-  },
-  {
-   "start": 716.08,
-   "end": 720.54,
-   "text": "I think there's still an obsession with this making of objects."
-  },
-  {
-   "start": 720.54,
-   "end": 723.44,
-   "text": "And I think both of those, of Cedric's projects,"
-  },
-  {
-   "start": 724.36,
-   "end": 729.78,
-   "text": "were basically not really talking about the object."
-  },
-  {
-   "start": 730.38,
-   "end": 733.12,
-   "text": "They were talking about the relationship of the object"
-  },
-  {
-   "start": 733.12,
-   "end": 738.96,
-   "text": "to the context within which they sat."
-  },
-  {
-   "start": 739.06,
-   "end": 740.92,
-   "text": "And that context was actually a social context,"
-  },
-  {
-   "start": 741.0,
-   "end": 743.08,
-   "text": "an economic context, and a political context."
-  },
-  {
-   "start": 743.08,
-   "end": 749.74,
-   "text": "I think that in terms of the grittiness of how the projects were presented,"
-  },
-  {
-   "start": 750.74,
-   "end": 756.1,
-   "text": "I think that that light-hearted attitude that he had, which I mentioned before,"
-  },
-  {
-   "start": 756.68,
-   "end": 760.1,
-   "text": "possibly would be out of place today,"
-  },
-  {
-   "start": 760.86,
-   "end": 769.12,
-   "text": "because someone would make those two projects a lot more sort of theorising, political, strong."
-  },
-  {
-   "start": 769.12,
-   "end": 773.28,
-   "text": "they'd be saying, no, no, this is the equivalent of the open university and so on."
-  },
-  {
-   "start": 773.56,
-   "end": 775.86,
-   "text": "Whereas Cedric was, again, in that playfulness,"
-  },
-  {
-   "start": 776.06,
-   "end": 779.8,
-   "text": "actually suggesting things that foretold the future."
-  },
-  {
-   "start": 780.6,
-   "end": 785.06,
-   "text": "Yes, I think Cedric's emphasis on enabling, I think, is very, very important."
-  },
-  {
-   "start": 786.54,
-   "end": 792.24,
-   "text": "I think, possibly, it's something that he never articulated"
-  },
-  {
-   "start": 792.24,
-   "end": 795.48,
-   "text": "beyond the realm of architecture."
-  },
-  {
-   "start": 795.48,
-   "end": 799.08,
-   "text": "and I think it's something that is very close to my heart."
-  },
-  {
-   "start": 799.24,
-   "end": 804.88,
-   "text": "So I think the idea of an architect not simply being a sort of form maker"
-  },
-  {
-   "start": 804.88,
-   "end": 807.74,
-   "text": "or an object maker is very, very important."
-  },
-  {
-   "start": 809.46,
-   "end": 814.38,
-   "text": "So, but as far as my experience with Cedric was concerned,"
-  },
-  {
-   "start": 814.38,
-   "end": 820.14,
-   "text": "I never really saw him becoming sort of involved at the bigger scale of urbanism"
-  },
-  {
-   "start": 820.14,
-   "end": 825.44,
-   "text": "or the bigger scale of politics or at the bigger scale of sort of the,"
-  },
-  {
-   "start": 825.48,
-   "end": 831.12,
-   "text": "politics that govern the making of space. It's not a conversation I ever had with"
-  },
-  {
-   "start": 831.12,
-   "end": 836.1,
-   "text": "him or ever heard him talk about. So he did do these big projects for instance"
-  },
-  {
-   "start": 836.1,
-   "end": 840.18,
-   "text": "he did the project for the South Bank where he kind of sort of he created"
-  },
-  {
-   "start": 840.18,
-   "end": 843.48,
-   "text": "these whole new spaces you know the whole thing became much more of a public"
-  },
-  {
-   "start": 843.48,
-   "end": 849.06,
-   "text": "space. But whether he was saying something about the politics of London"
-  },
-  {
-   "start": 849.06,
-   "end": 854.16,
-   "text": "or about cities and so on I'm not so sure. So I think enabling he was he was"
-  },
-  {
-   "start": 854.16,
-   "end": 861.76,
-   "text": "very intelligent about the idea that an architect doesn't have to resort to object making. So I"
-  },
-  {
-   "start": 861.76,
-   "end": 868.16,
-   "text": "think that was his vision of enabling and I think maybe everything that he did including his funny"
-  },
-  {
-   "start": 868.16,
-   "end": 872.8,
-   "text": "stories of let's say dinner with plates that you could see through to the floor and so on you know"
-  },
-  {
-   "start": 872.8,
-   "end": 878.0,
-   "text": "all these were like I think this is there's some some some extraordinary thing that he did I think"
-  },
-  {
-   "start": 878.0,
-   "end": 881.84,
-   "text": "he served food with see-through plates so that people could see their knees while they were"
-  },
-  {
-   "start": 881.84,
-   "end": 886.96,
-   "text": "eating on a glass table, you know, and it was all laid out. I think there's a video actually of it,"
-  },
-  {
-   "start": 888.32,
-   "end": 892.32,
-   "text": "so that, you know, when you finished eating your course you could then see your knees and everybody"
-  },
-  {
-   "start": 892.32,
-   "end": 896.88,
-   "text": "else's knees on the table, you know, and he sort of, he thought that was amusing, you know. But I"
-  },
-  {
-   "start": 896.88,
-   "end": 900.64,
-   "text": "think, you know, that's a really architectural project in a sense, you know, so I think he was"
-  },
-  {
-   "start": 900.64,
-   "end": 906.08,
-   "text": "doing it all the time, but I think his enabling was of a particular scale. I think it wasn't that"
-  },
-  {
-   "start": 906.08,
-   "end": 913.84,
-   "text": "enabling of that on the one hand is fashionable of alternative practice, you know, I don't think"
-  },
-  {
-   "start": 913.84,
-   "end": 918.8,
-   "text": "he was into that at all. I think what he was just simply saying is that the strictures of what an"
-  },
-  {
-   "start": 918.8,
-   "end": 926.4,
-   "text": "architect is are not sacred, were not sacred, and therefore that's why he worked in his manner. And"
-  },
-  {
-   "start": 926.4,
-   "end": 932.4,
-   "text": "I think actually a lot of his actions, as I was saying before, his being there, were just as"
-  },
-  {
-   "start": 932.4,
-   "end": 940.4,
-   "text": "critical in his making of what his world was than the actual things he was drawing or writing upon."
-  },
-  {
-   "start": 940.4,
-   "end": 946.44,
-   "text": "I think where it's difficult to pin it down is that I think a lot of people were quite political"
-  },
-  {
-   "start": 946.44,
-   "end": 953.58,
-   "text": "at the time, you know, quite social at the time. Cedric wasn't. I mean, I'm not so clear as to"
-  },
-  {
-   "start": 953.58,
-   "end": 956.38,
-   "text": "what his position was."
-  },
-  {
-   "start": 957.54,
-   "end": 959.32,
-   "text": "You know, again, he was an extraordinary guy."
-  },
-  {
-   "start": 959.32,
-   "end": 961.32,
-   "text": "You know, he was sort of..."
-  },
-  {
-   "start": 962.22,
-   "end": 968.62,
-   "text": "looked sort of like a conservative who was an artist,"
-  },
-  {
-   "start": 969.56,
-   "end": 971.5,
-   "text": "if you see what I mean, in terms of his physical appearance"
-  },
-  {
-   "start": 971.5,
-   "end": 972.72,
-   "text": "and the way he talked."
-  },
-  {
-   "start": 973.22,
-   "end": 975.46,
-   "text": "But actually, his political leadings?"
-  },
-  {
-   "start": 976.44,
-   "end": 979.82,
-   "text": "Harder to point out."
-  },
-  {
-   "start": 980.14,
-   "end": 981.98,
-   "text": "Now, I think the other thing that's important"
-  },
-  {
-   "start": 981.98,
-   "end": 984.14,
-   "text": "in terms of the deflation that Rem talks about."
-  },
-  {
-   "start": 984.26,
-   "end": 986.0,
-   "text": "I mean, he was an enfant terrible."
-  },
-  {
-   "start": 987.36,
-   "end": 988.8,
-   "text": "I mean, he was a provocateur."
-  },
-  {
-   "start": 989.72,
-   "end": 990.92,
-   "text": "So, you know, that was delightful."
-  },
-  {
-   "start": 991.42,
-   "end": 992.18,
-   "text": "That was great."
-  },
-  {
-   "start": 992.98,
-   "end": 994.4,
-   "text": "You know, and as I said before,"
-  },
-  {
-   "start": 994.46,
-   "end": 995.82,
-   "text": "I don't think he took himself that seriously,"
-  },
-  {
-   "start": 996.02,
-   "end": 997.74,
-   "text": "but he probably did, but didn't."
-  },
-  {
-   "start": 998.18,
-   "end": 1000.08,
-   "text": "So I think he was very good"
-  },
-  {
-   "start": 1000.08,
-   "end": 1002.48,
-   "text": "at taking the sort of pretension"
-  },
-  {
-   "start": 1002.48,
-   "end": 1004.26,
-   "text": "that architects could put onto something"
-  },
-  {
-   "start": 1004.26,
-   "end": 1005.1,
-   "text": "out of the room."
-  },
-  {
-   "start": 1006.16,
-   "end": 1009.36,
-   "text": "Definitely, delight was part of his agenda."
-  },
-  {
-   "start": 1009.5,
-   "end": 1010.62,
-   "text": "I mean, he was a happy bloke."
-  },
-  {
-   "start": 1010.62,
-   "end": 1013.82,
-   "text": "in fact actually I think the last time I"
-  },
-  {
-   "start": 1013.82,
-   "end": 1017.06,
-   "text": "I saw Cedric I was"
-  },
-  {
-   "start": 1017.06,
-   "end": 1019.12,
-   "text": "quite upset actually he was"
-  },
-  {
-   "start": 1019.12,
-   "end": 1021.96,
-   "text": "old and he"
-  },
-  {
-   "start": 1021.96,
-   "end": 1024.54,
-   "text": "I can't remember there was sort of an exhibition"
-  },
-  {
-   "start": 1024.54,
-   "end": 1027.7,
-   "text": "near my office near John Street near"
-  },
-  {
-   "start": 1027.7,
-   "end": 1031.18,
-   "text": "Guilford Street where my office is and I walked"
-  },
-  {
-   "start": 1031.18,
-   "end": 1034.3,
-   "text": "over after the office and I saw him in there and he was"
-  },
-  {
-   "start": 1034.3,
-   "end": 1036.98,
-   "text": "he was pretty gone I mean he was"
-  },
-  {
-   "start": 1036.98,
-   "end": 1040.26,
-   "text": "old and so on and Eleanor was sort of getting him in and out"
-  },
-  {
-   "start": 1040.26,
-   "end": 1041.24,
-   "text": "of a taxi and so on."
-  },
-  {
-   "start": 1041.32,
-   "end": 1042.68,
-   "text": "And it was a very sad thing to see."
-  },
-  {
-   "start": 1042.8,
-   "end": 1043.14,
-   "text": "I mean, obviously,"
-  },
-  {
-   "start": 1043.18,
-   "end": 1044.18,
-   "text": "it's going to happen to all of us."
-  },
-  {
-   "start": 1044.38,
-   "end": 1045.76,
-   "text": "So I'm not thinking"
-  },
-  {
-   "start": 1045.76,
-   "end": 1046.7,
-   "text": "we're going to get away with it."
-  },
-  {
-   "start": 1046.82,
-   "end": 1048.3,
-   "text": "But it was sad"
-  },
-  {
-   "start": 1048.3,
-   "end": 1049.54,
-   "text": "because actually Cedric"
-  },
-  {
-   "start": 1049.54,
-   "end": 1050.66,
-   "text": "was beaming all the time."
-  },
-  {
-   "start": 1050.82,
-   "end": 1051.7,
-   "text": "You know, he was a happy bloke."
-  },
-  {
-   "start": 1051.76,
-   "end": 1052.94,
-   "text": "Like I say, I never saw him angry."
-  },
-  {
-   "start": 1053.46,
-   "end": 1054.82,
-   "text": "I mean, I said earlier"
-  },
-  {
-   "start": 1054.82,
-   "end": 1055.88,
-   "text": "that I didn't see him passionate."
-  },
-  {
-   "start": 1055.98,
-   "end": 1056.66,
-   "text": "He was passionate."
-  },
-  {
-   "start": 1057.22,
-   "end": 1059.12,
-   "text": "You know, he would argue his corner,"
-  },
-  {
-   "start": 1059.22,
-   "end": 1061.0,
-   "text": "but always with humour and lightness."
-  },
-  {
-   "start": 1061.06,
-   "end": 1061.5,
-   "text": "So I think, yes,"
-  },
-  {
-   "start": 1061.56,
-   "end": 1062.78,
-   "text": "delight was partly there."
-  },
-  {
-   "start": 1063.42,
-   "end": 1064.24,
-   "text": "And maybe, you know,"
-  },
-  {
-   "start": 1064.66,
-   "end": 1066.22,
-   "text": "Rem is again right about that."
-  },
-  {
-   "start": 1066.22,
-   "end": 1069.88,
-   "text": "I think delight was something"
-  },
-  {
-   "start": 1069.88,
-   "end": 1076.7,
-   "text": "that architects weren't so used to expressing when Cedric was around."
-  },
-  {
-   "start": 1076.9,
-   "end": 1079.3,
-   "text": "People took themselves quite seriously, in a sense."
-  },
-  {
-   "start": 1079.88,
-   "end": 1085.7,
-   "text": "So I think Peter Cook was sort of famous"
-  },
-  {
-   "start": 1085.7,
-   "end": 1088.68,
-   "text": "while I was a student for being a sort of architect of delight."
-  },
-  {
-   "start": 1089.04,
-   "end": 1092.28,
-   "text": "He was interested in Japan and he'd made friends with Isozaki"
-  },
-  {
-   "start": 1092.28,
-   "end": 1095.36,
-   "text": "and he talked about layers in Tokyo and so on."
-  },
-  {
-   "start": 1096.14,
-   "end": 1099.36,
-   "text": "But again, you see, he had a great sense of humour about it,"
-  },
-  {
-   "start": 1099.36,
-   "end": 1100.92,
-   "text": "but it was all very structured."
-  },
-  {
-   "start": 1102.46,
-   "end": 1104.94,
-   "text": "Cedric Walson, I think Cedric actually did enjoy"
-  },
-  {
-   "start": 1104.94,
-   "end": 1107.16,
-   "text": "getting up in the morning and doing his own thing."
-  },
-  {
-   "start": 1107.56,
-   "end": 1109.56,
-   "text": "And as I said, I think some people"
-  },
-  {
-   "start": 1109.56,
-   "end": 1112.14,
-   "text": "had very close relationships with him,"
-  },
-  {
-   "start": 1112.2,
-   "end": 1113.2,
-   "text": "and I think they obviously,"
-  },
-  {
-   "start": 1113.94,
-   "end": 1115.42,
-   "text": "they were enjoyable relationships."
-  },
-  {
-   "start": 1115.42,
-   "end": 1118.6,
-   "text": "They were never sycophantic,"
-  },
-  {
-   "start": 1119.12,
-   "end": 1120.8,
-   "text": "something we discussed earlier."
-  },
-  {
-   "start": 1120.96,
-   "end": 1123.62,
-   "text": "I think they enjoyed his company."
-  },
-  {
-   "start": 1123.86,
-   "end": 1126.24,
-   "text": "He was fun to be with, and I think he enjoyed things."
-  },
-  {
-   "start": 1126.32,
-   "end": 1128.08,
-   "text": "He enjoyed drawing. He enjoyed architecture."
-  },
-  {
-   "start": 1128.08,
-   "end": 1130.98,
-   "text": "he enjoyed learning, he enjoyed being here and so on."
-  },
-  {
-   "start": 1131.6,
-   "end": 1136.94,
-   "text": "So yes, I think so, and I think maybe that is something that he's left as a legacy"
-  },
-  {
-   "start": 1136.94,
-   "end": 1143.04,
-   "text": "to quite a number of people, to actually just take architecture off its pedestal"
-  },
-  {
-   "start": 1143.04,
-   "end": 1144.62,
-   "text": "and see it in a different way."
-  },
-  {
-   "start": 1144.84,
-   "end": 1151.12,
-   "text": "I think it's a very important role, but I would also say that it's also a live role."
-  },
-  {
-   "start": 1151.12,
-   "end": 1160.92,
-   "text": "I think that somehow to think that Cedric was the only character who could do that is problematic."
-  },
-  {
-   "start": 1161.82,
-   "end": 1164.94,
-   "text": "I think in a sense there probably are some Cedrics around."
-  },
-  {
-   "start": 1165.8,
-   "end": 1167.26,
-   "text": "They certainly won't be called Cedric."
-  },
-  {
-   "start": 1167.74,
-   "end": 1168.94,
-   "text": "It's an extraordinary name."
-  },
-  {
-   "start": 1168.94,
-   "end": 1183.38,
-   "text": "But there are probably some Cedrics around that should equally be given opportunity to informally have a tremendous influence on what's happening."
-  },
-  {
-   "start": 1184.04,
-   "end": 1190.2,
-   "text": "And again, Cedric was always, just to use the pun, priceless at doing that."
-  },
-  {
-   "start": 1190.34,
-   "end": 1194.72,
-   "text": "Because he was always with the big players, but he was never a big player."
-  },
-  {
-   "start": 1195.46,
-   "end": 1197.64,
-   "text": "So he was there with every world architect."
-  },
-  {
-   "start": 1197.64,
-   "end": 1199.58,
-   "text": "and what had he built?"
-  },
-  {
-   "start": 1200.02,
-   "end": 1200.86,
-   "text": "You know, it's a sort of, you know,"
-  },
-  {
-   "start": 1200.9,
-   "end": 1202.84,
-   "text": "if you were going to compare, you know, CVs,"
-  },
-  {
-   "start": 1203.72,
-   "end": 1205.38,
-   "text": "how much did he earn?"
-  },
-  {
-   "start": 1206.34,
-   "end": 1207.86,
-   "text": "You want to compare CVs, you know,"
-  },
-  {
-   "start": 1207.88,
-   "end": 1209.34,
-   "text": "but there he was, he was always a player"
-  },
-  {
-   "start": 1209.34,
-   "end": 1211.54,
-   "text": "and I think maybe in a sense,"
-  },
-  {
-   "start": 1211.6,
-   "end": 1213.08,
-   "text": "it's not that there are no Cedrics now,"
-  },
-  {
-   "start": 1213.16,
-   "end": 1215.52,
-   "text": "I think it's that maybe we don't allow enough Cedrics"
-  },
-  {
-   "start": 1215.52,
-   "end": 1217.36,
-   "text": "into the conversation as we used to."
-  },
-  {
-   "start": 1218.42,
-   "end": 1220.16,
-   "text": "I think the whole education,"
-  },
-  {
-   "start": 1220.44,
-   "end": 1222.86,
-   "text": "the whole Englishness that I was talking about,"
-  },
-  {
-   "start": 1222.86,
-   "end": 1225.1,
-   "text": "the system of individuality,"
-  },
-  {
-   "start": 1225.28,
-   "end": 1226.82,
-   "text": "which was absolutely critical,"
-  },
-  {
-   "start": 1227.64,
-   "end": 1231.88,
-   "text": "after the war years, you know, in terms of education and so on, has now changed."
-  },
-  {
-   "start": 1231.88,
-   "end": 1236.48,
-   "text": "I think it's more process based and happening elsewhere."
-  },
-  {
-   "start": 1236.48,
-   "end": 1238.16,
-   "text": "So, you know, I think"
-  },
-  {
-   "start": 1239.48,
-   "end": 1242.08,
-   "text": "to me, even though I'm not an Englishman,"
-  },
-  {
-   "start": 1242.76,
-   "end": 1245.72,
-   "text": "he was the epitome of an Englishman"
-  },
-  {
-   "start": 1245.72,
-   "end": 1248.44,
-   "text": "and of a system that allowed the free thinker."
-  },
-  {
-   "start": 1249.68,
-   "end": 1252.32,
-   "text": "Now, some people were very critical of that and would say, you know,"
-  },
-  {
-   "start": 1252.32,
-   "end": 1256.28,
-   "text": "that's being a dilettante or being, you know, sort of not focused enough."
-  },
-  {
-   "start": 1256.28,
-   "end": 1263.38,
-   "text": "but I think in a way that that worries me so I think no legacy or no evolution of what Cedric"
-  },
-  {
-   "start": 1263.38,
-   "end": 1269.3,
-   "text": "was doing is possible unless you allow the maverick thinker to exist again and I think that's"
-  },
-  {
-   "start": 1269.86,
-   "end": 1276.78,
-   "text": "difficult at the moment I'm not saying it won't change but I think it's things the conditions"
-  },
-  {
-   "start": 1276.78,
-   "end": 1282.2,
-   "text": "have changed so I think his his legacy is what he did and maybe what you guys are doing and"
-  },
-  {
-   "start": 1282.2,
-   "end": 1290.0,
-   "text": "what the books will say. But I think my urge towards the future is that I would"
-  },
-  {
-   "start": 1290.0,
-   "end": 1294.8,
-   "text": "have thought he would have wanted you to piece the pieces together in whichever"
-  },
-  {
-   "start": 1294.8,
-   "end": 1300.96,
-   "text": "way you thought fit, rather than the way that they should go together."
-  }
- ]
+  "slug": "carlos-villanueva-brandt",
+  "language": "en",
+  "model": "mlx-community/whisper-large-v3-mlx",
+  "corrected": false,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 6.0,
+      "text": "Cedric was obviously part of the school when I was a student."
+    },
+    {
+      "start": 6.0,
+      "end": 10.0,
+      "text": "So really my contact with Cedric came about as a student."
+    },
+    {
+      "start": 10.0,
+      "end": 14.0,
+      "text": "He was in the building a lot. He was no longer teaching."
+    },
+    {
+      "start": 14.0,
+      "end": 19.0,
+      "text": "He was involved in a number of high profile projects."
+    },
+    {
+      "start": 19.0,
+      "end": 22.0,
+      "text": "So he redesigned the South Bank for instance and so on."
+    },
+    {
+      "start": 22.0,
+      "end": 25.0,
+      "text": "He did a project for the South Bank and so on."
+    },
+    {
+      "start": 25.0,
+      "end": 29.0,
+      "text": "But he was a character. He was a friend of Alvin's. He came to Jury's."
+    },
+    {
+      "start": 29.0,
+      "end": 36.24,
+      "text": "So basically the wit and intelligence that Cedric had was something that you experienced firsthand."
+    },
+    {
+      "start": 37.3,
+      "end": 41.8,
+      "text": "It wasn't, I mean, it would be wrong to say he didn't play to the gallery."
+    },
+    {
+      "start": 43.26,
+      "end": 47.12,
+      "text": "I think like Peter Cook, he was a character who played to the gallery."
+    },
+    {
+      "start": 47.28,
+      "end": 50.64,
+      "text": "So whenever he spoke, he wanted the room to be listening."
+    },
+    {
+      "start": 51.76,
+      "end": 54.62,
+      "text": "But I think he was also an incredible intelligence."
+    },
+    {
+      "start": 54.62,
+      "end": 59.12,
+      "text": "So he would react to what you said or what was actually put in front of him."
+    },
+    {
+      "start": 59.72,
+      "end": 62.84,
+      "text": "So my first meetings with him were always at juries."
+    },
+    {
+      "start": 64.3,
+      "end": 65.54,
+      "text": "So he was there."
+    },
+    {
+      "start": 66.12,
+      "end": 71.56,
+      "text": "He was pampered and spoilt by Alvin."
+    },
+    {
+      "start": 71.9,
+      "end": 75.12,
+      "text": "So there's famous stories, you know, he'd be given a cigar as he came in"
+    },
+    {
+      "start": 75.12,
+      "end": 79.32,
+      "text": "and a bottle of brandy would appear under his chair"
+    },
+    {
+      "start": 79.32,
+      "end": 83.94,
+      "text": "and he would sit there and just fill his glass up and talk."
+    },
+    {
+      "start": 84.62,
+      "end": 90.06,
+      "text": "So there were in those days quite a number of high profile juries as it were,"
+    },
+    {
+      "start": 90.06,
+      "end": 92.62,
+      "text": "where people came from outside and so on, and you know,"
+    },
+    {
+      "start": 92.62,
+      "end": 96.62,
+      "text": "you as one as a student went to all these things to see what was said."
+    },
+    {
+      "start": 96.62,
+      "end": 102.38,
+      "text": "And I think right from first year, I think going to these public juries,"
+    },
+    {
+      "start": 102.38,
+      "end": 111.42,
+      "text": "you suddenly realise that Cedric was something that someone who you would go home and ponder about what he said."
+    },
+    {
+      "start": 111.42,
+      "end": 116.02,
+      "text": "And I think what was always really important was that he never said anything in an academic way."
+    },
+    {
+      "start": 116.82,
+      "end": 119.52,
+      "text": "He never said anything like a sort of professor or a teacher."
+    },
+    {
+      "start": 119.76,
+      "end": 122.48,
+      "text": "He would sort of remark on something."
+    },
+    {
+      "start": 123.04,
+      "end": 131.34,
+      "text": "It's rare to meet someone in the architectural environment in particular who is willing to talk about private things."
+    },
+    {
+      "start": 132.48,
+      "end": 136.44,
+      "text": "You know, I think architects are quite facade-like."
+    },
+    {
+      "start": 136.44,
+      "end": 141.1,
+      "text": "you know they wear black and they do this and they behave in a particular way and they only talk"
+    },
+    {
+      "start": 141.1,
+      "end": 147.0,
+      "text": "about design um and i i think you know me personally you know i talk about fishing and"
+    },
+    {
+      "start": 147.0,
+      "end": 152.68,
+      "text": "football and so on you know i mean i i i think you know we are all human and i think cedric"
+    },
+    {
+      "start": 152.68,
+      "end": 158.86,
+      "text": "excelled at that he he he was a person who you felt warmth towards and i think he also felt"
+    },
+    {
+      "start": 158.86,
+      "end": 163.6,
+      "text": "warmth and admiration which i think is part of this friendship because you were sharing"
+    },
+    {
+      "start": 163.6,
+      "end": 165.9,
+      "text": "and understanding of what was around you,"
+    },
+    {
+      "start": 166.0,
+      "end": 168.16,
+      "text": "not simply because you were sort of architects"
+    },
+    {
+      "start": 168.16,
+      "end": 170.44,
+      "text": "who were being sort of portrayed."
+    },
+    {
+      "start": 171.08,
+      "end": 174.6,
+      "text": "Yeah, I think the uniqueness"
+    },
+    {
+      "start": 174.6,
+      "end": 178.2,
+      "text": "was actually the level of sort of invention"
+    },
+    {
+      "start": 178.2,
+      "end": 181.32,
+      "text": "and imagination that he could bring to the conversation,"
+    },
+    {
+      "start": 182.12,
+      "end": 184.26,
+      "text": "a level of unpredictability,"
+    },
+    {
+      "start": 185.46,
+      "end": 187.78,
+      "text": "a level of easy intelligence."
+    },
+    {
+      "start": 189.12,
+      "end": 190.9,
+      "text": "So in many ways,"
+    },
+    {
+      "start": 191.1,
+      "end": 193.42,
+      "text": "when I say that a lot is written"
+    },
+    {
+      "start": 193.42,
+      "end": 197.82,
+      "text": "and said and a lot is quoted and you know they're the archive of his tapes and I go to all these"
+    },
+    {
+      "start": 197.82,
+      "end": 202.94,
+      "text": "things and I thoroughly enjoy them I don't I'm not not complaining about them but in a way I think"
+    },
+    {
+      "start": 202.94,
+      "end": 207.8,
+      "text": "maybe the sign of friendship and this relationship that I'm talking about meant that he would say"
+    },
+    {
+      "start": 207.8,
+      "end": 212.04,
+      "text": "something to you you you'd go home and think about it and then you'd forget what he said"
+    },
+    {
+      "start": 212.04,
+      "end": 217.08,
+      "text": "so in a sense that's what what the true sign of you know someone actually affecting you in one"
+    },
+    {
+      "start": 217.08,
+      "end": 222.4,
+      "text": "way or another was really about which wasn't ah I've got a quote you know he said this or he did"
+    },
+    {
+      "start": 222.4,
+      "end": 227.6,
+      "text": "that or he made a reference. It was pretty much a capacity to see what you were trying"
+    },
+    {
+      "start": 227.6,
+      "end": 233.2,
+      "text": "to do, to understand where you were coming from and then to actually add something which"
+    },
+    {
+      "start": 233.2,
+      "end": 238.58,
+      "text": "possibly was well beyond what you had thought the possibilities were. And I think that made"
+    },
+    {
+      "start": 238.58,
+      "end": 251.7,
+      "text": "it very important. He was a sort of extraordinary Englishman. I think that there were a series"
+    },
+    {
+      "start": 251.7,
+      "end": 261.06,
+      "text": "of extraordinary Englishmen that affected me when I was young and when I was a student."
+    },
+    {
+      "start": 261.06,
+      "end": 266.42,
+      "text": "I think John Somersom was one, Bob Evans was another one and Cedric was there. They were"
+    },
+    {
+      "start": 266.42,
+      "end": 275.32,
+      "text": "all three completely different men. Somersom was the grandee, old gentleman and carer of"
+    },
+    {
+      "start": 275.32,
+      "end": 279.34,
+      "text": "the CERN museum and so on and he came in his bicycle and his amazing tweed suits and so"
+    },
+    {
+      "start": 279.34,
+      "end": 289.34,
+      "text": "Bob was a wonderful family man, working-class boy, plastic bag full of books and so on."
+    },
+    {
+      "start": 289.34,
+      "end": 294.64,
+      "text": "And Cedric summed them both up in a funny way."
+    },
+    {
+      "start": 294.64,
+      "end": 298.1,
+      "text": "So even the way Cedric looked was extraordinary."
+    },
+    {
+      "start": 298.1,
+      "end": 301.1,
+      "text": "He looked like a politician in a sense, with his hairstyle."
+    },
+    {
+      "start": 301.1,
+      "end": 305.92,
+      "text": "He looked like an old-fashioned Englishman with his thing all pulled back and his cigar."
+    },
+    {
+      "start": 305.92,
+      "end": 312.12,
+      "text": "And then the stiff collar, the black silk tie, and the striped shirt, and then the hush"
+    },
+    {
+      "start": 312.12,
+      "end": 315.1,
+      "text": "puppy shoes, you know, brothel creepers underneath."
+    },
+    {
+      "start": 315.1,
+      "end": 317.18,
+      "text": "I mean, it's sort of complete."
+    },
+    {
+      "start": 317.18,
+      "end": 325.8,
+      "text": "He was a mixture between, I suppose, the foot area was like a sort of geography teacher,"
+    },
+    {
+      "start": 325.8,
+      "end": 331.84,
+      "text": "the trousers were like school uniform, and the top was like a sort of bowler hat city"
+    },
+    {
+      "start": 331.84,
+      "end": 333.22,
+      "text": "person."
+    },
+    {
+      "start": 333.22,
+      "end": 338.72,
+      "text": "And then in this extraordinary persona, you know, who used to come into a room, this incredible"
+    },
+    {
+      "start": 338.72,
+      "end": 340.94,
+      "text": "intelligence would come out."
+    },
+    {
+      "start": 340.94,
+      "end": 345.08,
+      "text": "So I think that he was unique, really unique."
+    },
+    {
+      "start": 345.08,
+      "end": 348.28,
+      "text": "I mean, unique even to look at."
+    },
+    {
+      "start": 348.28,
+      "end": 353.82,
+      "text": "In a sense he was, you know, his hair was always come back with sort of hair gel and"
+    },
+    {
+      "start": 353.82,
+      "end": 356.08,
+      "text": "you know, et cetera, et cetera."
+    },
+    {
+      "start": 356.08,
+      "end": 367.94,
+      "text": "And in many ways, I think, in a world of delirious New York, Manhattan transcripts, the things"
+    },
+    {
+      "start": 367.94,
+      "end": 369.02,
+      "text": "which were happening."
+    },
+    {
+      "start": 369.02,
+      "end": 374.32,
+      "text": "I mean, Bernard Chewmey was red-scarfed already."
+    },
+    {
+      "start": 374.32,
+      "end": 377.18,
+      "text": "He would never be seen without it."
+    },
+    {
+      "start": 377.18,
+      "end": 381.84,
+      "text": "Nigel Coates, who then came to teach me how to have his glasses and looked the part."
+    },
+    {
+      "start": 381.84,
+      "end": 383.32,
+      "text": "He was a fashion person."
+    },
+    {
+      "start": 383.32,
+      "end": 385.16,
+      "text": "And Cedric was an anachronism."
+    },
+    {
+      "start": 386.32,
+      "end": 389.36,
+      "text": "And I think that made him stand out a lot"
+    },
+    {
+      "start": 389.36,
+      "end": 392.46,
+      "text": "because I think a lot of the things I then went on to do"
+    },
+    {
+      "start": 392.46,
+      "end": 396.5,
+      "text": "had this Englishness that I'm talking about,"
+    },
+    {
+      "start": 396.66,
+      "end": 398.86,
+      "text": "this sort of slight eccentricity."
+    },
+    {
+      "start": 399.06,
+      "end": 401.94,
+      "text": "So when we moved on to do NATO,"
+    },
+    {
+      "start": 402.12,
+      "end": 403.26,
+      "text": "when I was in diploma school,"
+    },
+    {
+      "start": 403.36,
+      "end": 404.84,
+      "text": "when I was in Dip 10 and so on,"
+    },
+    {
+      "start": 405.66,
+      "end": 407.6,
+      "text": "it was all kind of old-fashioned shirts"
+    },
+    {
+      "start": 407.6,
+      "end": 409.84,
+      "text": "with the collar done up and old coats."
+    },
+    {
+      "start": 409.84,
+      "end": 412.22,
+      "text": "and, you know, it was sort of some weird mixture"
+    },
+    {
+      "start": 412.22,
+      "end": 414.52,
+      "text": "back to the 40s with sort of punk."
+    },
+    {
+      "start": 415.7,
+      "end": 417.4,
+      "text": "And I'm not saying he was punk,"
+    },
+    {
+      "start": 417.5,
+      "end": 418.84,
+      "text": "but I'm just simply saying he was quite extraordinary"
+    },
+    {
+      "start": 419.38,
+      "end": 420.62,
+      "text": "in that sense, you know,"
+    },
+    {
+      "start": 420.7,
+      "end": 423.58,
+      "text": "between the sort of studio jacket, the stiff collar."
+    },
+    {
+      "start": 423.78,
+      "end": 424.92,
+      "text": "The stiff collar, you see, the stiff collar,"
+    },
+    {
+      "start": 425.08,
+      "end": 427.76,
+      "text": "I'm still sort of bewildered by that."
+    },
+    {
+      "start": 428.86,
+      "end": 430.56,
+      "text": "I mean, I don't know if he ever wore a stiff collar,"
+    },
+    {
+      "start": 430.66,
+      "end": 432.18,
+      "text": "but they are really quite unpleasant."
+    },
+    {
+      "start": 433.74,
+      "end": 437.08,
+      "text": "And he had one every day, and his tie on every day."
+    },
+    {
+      "start": 437.08,
+      "end": 445.88,
+      "text": "So, you know, I think he was quite a striking figure within the whole process of what I was seeing at the AA."
+    },
+    {
+      "start": 446.14,
+      "end": 449.62,
+      "text": "I think the other thing which was important is what I said before,"
+    },
+    {
+      "start": 449.78,
+      "end": 457.56,
+      "text": "that I never got from Cedric this sense of an academic pretention or trajectory."
+    },
+    {
+      "start": 458.76,
+      "end": 462.98,
+      "text": "So with Somerson, he was a great scholar and he was an absolutely charming man."
+    },
+    {
+      "start": 462.98,
+      "end": 466.14,
+      "text": "with Bob Evans in his own quiet way,"
+    },
+    {
+      "start": 466.6,
+      "end": 468.02,
+      "text": "he'd invite you around for tea."
+    },
+    {
+      "start": 468.2,
+      "end": 469.18,
+      "text": "He was a true friend."
+    },
+    {
+      "start": 469.3,
+      "end": 470.88,
+      "text": "I mean, I'd go to his house for tea and so on."
+    },
+    {
+      "start": 471.7,
+      "end": 472.74,
+      "text": "You've got a sense, you know,"
+    },
+    {
+      "start": 472.8,
+      "end": 474.76,
+      "text": "God, this man's read all this and he's amazing"
+    },
+    {
+      "start": 474.76,
+      "end": 476.7,
+      "text": "and he's teaching in Cambridge and he's written this"
+    },
+    {
+      "start": 476.7,
+      "end": 477.5,
+      "text": "and he's written this essay."
+    },
+    {
+      "start": 477.7,
+      "end": 478.92,
+      "text": "With Cedric, you never got that."
+    },
+    {
+      "start": 480.04,
+      "end": 482.58,
+      "text": "Somehow, you didn't think, is he a great architect?"
+    },
+    {
+      "start": 483.72,
+      "end": 485.42,
+      "text": "You sort of didn't decide."
+    },
+    {
+      "start": 486.04,
+      "end": 488.24,
+      "text": "Is he a great draftsman?"
+    },
+    {
+      "start": 488.9,
+      "end": 490.14,
+      "text": "He was a good drawer, actually."
+    },
+    {
+      "start": 491.32,
+      "end": 492.36,
+      "text": "You sort of think, yeah,"
+    },
+    {
+      "start": 492.36,
+      "end": 494.96,
+      "text": "but would I do lots of drawings of little ants?"
+    },
+    {
+      "start": 494.96,
+      "end": 497.32,
+      "text": "He drew people everywhere, which is great."
+    },
+    {
+      "start": 497.32,
+      "end": 498.56,
+      "text": "I used to love that."
+    },
+    {
+      "start": 498.56,
+      "end": 501.36,
+      "text": "Every other architect did some pretentious sort of view."
+    },
+    {
+      "start": 502.96,
+      "end": 504.56,
+      "text": "Is he a great writer?"
+    },
+    {
+      "start": 504.56,
+      "end": 506.44,
+      "text": "In a way, there was one book on Cedric"
+    },
+    {
+      "start": 506.44,
+      "end": 508.36,
+      "text": "that was published in those days,"
+    },
+    {
+      "start": 508.36,
+      "end": 509.84,
+      "text": "but it's great."
+    },
+    {
+      "start": 509.84,
+      "end": 512.8,
+      "text": "You've sort of read up about his projects and so on,"
+    },
+    {
+      "start": 512.8,
+      "end": 514.36,
+      "text": "his seminal projects."
+    },
+    {
+      "start": 514.36,
+      "end": 517.28,
+      "text": "I think that the other thing that's important to point out"
+    },
+    {
+      "start": 517.28,
+      "end": 518.84,
+      "text": "is a lot of people say that this,"
+    },
+    {
+      "start": 518.84,
+      "end": 521.12,
+      "text": "when I was a student in the 70s"
+    },
+    {
+      "start": 522.36,
+      "end": 528.2,
+      "text": "well late 70s and 80s you know a lot of people referred to this as the heyday of the AA. Well"
+    },
+    {
+      "start": 528.2,
+      "end": 535.48,
+      "text": "it wasn't. It wasn't sort of presented in that way. You didn't feel that. It was just a smaller"
+    },
+    {
+      "start": 535.48,
+      "end": 541.24,
+      "text": "place and there were some quite interesting people around. And it was more of a focus for"
+    },
+    {
+      "start": 541.8,
+      "end": 548.6,
+      "text": "practitioners than it is now. So the bar was the bar. I mean people would come and hang around in"
+    },
+    {
+      "start": 548.6,
+      "end": 553.96,
+      "text": "the bar and you'd meet you know famous architects as it were in the bar um but it wasn't a sort of"
+    },
+    {
+      "start": 553.96,
+      "end": 560.92,
+      "text": "you know a place it never had the sort of sense of of of what i think i can only think so i've"
+    },
+    {
+      "start": 560.92,
+      "end": 565.88,
+      "text": "never been to in that environment but you know it didn't have that sense of a sort of an american"
+    },
+    {
+      "start": 565.88,
+      "end": 570.68,
+      "text": "university where the great professor walks in you know and then therefore you know everybody has to"
+    },
+    {
+      "start": 570.68,
+      "end": 576.76,
+      "text": "sit up and listen it wasn't the aa was this sort of place where debates took place and people came"
+    },
+    {
+      "start": 576.76,
+      "end": 579.88,
+      "text": "because it was a fun thing to do."
+    },
+    {
+      "start": 580.88,
+      "end": 582.92,
+      "text": "Cedric came, I think he had a great time."
+    },
+    {
+      "start": 583.7,
+      "end": 585.38,
+      "text": "He didn't come here to pontificate, as I said."
+    },
+    {
+      "start": 585.44,
+      "end": 587.4,
+      "text": "I think he came here because he liked the discussion."
+    },
+    {
+      "start": 588.3,
+      "end": 591.2,
+      "text": "And, you know, so much so that I think the Cedrics"
+    },
+    {
+      "start": 591.2,
+      "end": 594.3,
+      "text": "and the like in those days came to the parties."
+    },
+    {
+      "start": 595.22,
+      "end": 596.76,
+      "text": "So we had lots of parties."
+    },
+    {
+      "start": 597.28,
+      "end": 600.4,
+      "text": "You know, I think 1977 when I came"
+    },
+    {
+      "start": 600.4,
+      "end": 605.12,
+      "text": "was the first AA carnival since the 40s"
+    },
+    {
+      "start": 605.12,
+      "end": 606.92,
+      "text": "or maybe even pre-war."
+    },
+    {
+      "start": 607.54,
+      "end": 610.14,
+      "text": "So there was this big party, you know, 2,500 people,"
+    },
+    {
+      "start": 610.32,
+      "end": 612.64,
+      "text": "and there was a trapeze artist across Chinx Yard,"
+    },
+    {
+      "start": 612.82,
+      "end": 615.38,
+      "text": "and, you know, there were custard fights in the bar and so on."
+    },
+    {
+      "start": 616.04,
+      "end": 619.32,
+      "text": "You know, Cedric and people like Cedric would come to those parties."
+    },
+    {
+      "start": 620.08,
+      "end": 622.48,
+      "text": "It was a sort of different atmosphere, I think."
+    },
+    {
+      "start": 623.08,
+      "end": 626.18,
+      "text": "So I don't think it was that, you know, that the AA attracted him."
+    },
+    {
+      "start": 626.18,
+      "end": 630.18,
+      "text": "I think the AA was his sort of gravitational point,"
+    },
+    {
+      "start": 631.04,
+      "end": 633.28,
+      "text": "and he was part of that process."
+    },
+    {
+      "start": 633.28,
+      "end": 640.56,
+      "text": "There is a key relationship between what I call physical and social structures,"
+    },
+    {
+      "start": 640.56,
+      "end": 644.92,
+      "text": "i.e. that space is made up of the relationship between those two things."
+    },
+    {
+      "start": 644.92,
+      "end": 649.3,
+      "text": "So therefore I think the Fun Palace sort of in a sense sums that up."
+    },
+    {
+      "start": 649.3,
+      "end": 655.78,
+      "text": "It suggests the idea that space is never just a space that gets inhabited."
+    },
+    {
+      "start": 655.78,
+      "end": 657.76,
+      "text": "So it's a bit like the comment I was saying about the AA."
+    },
+    {
+      "start": 657.76,
+      "end": 659.56,
+      "text": "The AA didn't exist and Cedric came to it."
+    },
+    {
+      "start": 659.56,
+      "end": 661.0,
+      "text": "The AA and Cedric were one."
+    },
+    {
+      "start": 661.0,
+      "end": 666.76,
+      "text": "So I think it begins to suggest that. I think in the sort of bit that I don't think is so relevant"
+    },
+    {
+      "start": 666.76,
+      "end": 672.28,
+      "text": "is the idea of flexibility. I think another one that people look at is the idea of performance"
+    },
+    {
+      "start": 672.28,
+      "end": 675.84,
+      "text": "or event. I don't think that's so interesting either. I think it's much more to do with the"
+    },
+    {
+      "start": 675.84,
+      "end": 682.1,
+      "text": "idea of seeing something working, that has people in it. It's a sort of social structure that works"
+    },
+    {
+      "start": 682.1,
+      "end": 687.28,
+      "text": "with a physical structure. I think that's very interesting. I think that the Thinkbelt project"
+    },
+    {
+      "start": 687.28,
+      "end": 691.12,
+      "text": "is also interesting for that reason. It's talking about a system, you know, it's"
+    },
+    {
+      "start": 691.12,
+      "end": 694.66,
+      "text": "actually talking about education in a different way and that's terrific. So"
+    },
+    {
+      "start": 694.66,
+      "end": 697.84,
+      "text": "that is interesting to me today because I think maybe architects should be"
+    },
+    {
+      "start": 697.84,
+      "end": 701.62,
+      "text": "thinking at that level. A lot of architects are thinking on a very banal"
+    },
+    {
+      "start": 701.62,
+      "end": 707.28,
+      "text": "level of, you know, still form-making even though, you know, it's not talked about"
+    },
+    {
+      "start": 707.28,
+      "end": 716.08,
+      "text": "at this very day, you know, on whatever it is today, the 8th of May 2014."
+    },
+    {
+      "start": 716.08,
+      "end": 720.54,
+      "text": "I think there's still an obsession with this making of objects."
+    },
+    {
+      "start": 720.54,
+      "end": 723.44,
+      "text": "And I think both of those, of Cedric's projects,"
+    },
+    {
+      "start": 724.36,
+      "end": 729.78,
+      "text": "were basically not really talking about the object."
+    },
+    {
+      "start": 730.38,
+      "end": 733.12,
+      "text": "They were talking about the relationship of the object"
+    },
+    {
+      "start": 733.12,
+      "end": 738.96,
+      "text": "to the context within which they sat."
+    },
+    {
+      "start": 739.06,
+      "end": 740.92,
+      "text": "And that context was actually a social context,"
+    },
+    {
+      "start": 741.0,
+      "end": 743.08,
+      "text": "an economic context, and a political context."
+    },
+    {
+      "start": 743.08,
+      "end": 749.74,
+      "text": "I think that in terms of the grittiness of how the projects were presented,"
+    },
+    {
+      "start": 750.74,
+      "end": 756.1,
+      "text": "I think that that light-hearted attitude that he had, which I mentioned before,"
+    },
+    {
+      "start": 756.68,
+      "end": 760.1,
+      "text": "possibly would be out of place today,"
+    },
+    {
+      "start": 760.86,
+      "end": 769.12,
+      "text": "because someone would make those two projects a lot more sort of theorising, political, strong."
+    },
+    {
+      "start": 769.12,
+      "end": 773.28,
+      "text": "they'd be saying, no, no, this is the equivalent of the open university and so on."
+    },
+    {
+      "start": 773.56,
+      "end": 775.86,
+      "text": "Whereas Cedric was, again, in that playfulness,"
+    },
+    {
+      "start": 776.06,
+      "end": 779.8,
+      "text": "actually suggesting things that foretold the future."
+    },
+    {
+      "start": 780.6,
+      "end": 785.06,
+      "text": "Yes, I think Cedric's emphasis on enabling, I think, is very, very important."
+    },
+    {
+      "start": 786.54,
+      "end": 792.24,
+      "text": "I think, possibly, it's something that he never articulated"
+    },
+    {
+      "start": 792.24,
+      "end": 795.48,
+      "text": "beyond the realm of architecture."
+    },
+    {
+      "start": 795.48,
+      "end": 799.08,
+      "text": "and I think it's something that is very close to my heart."
+    },
+    {
+      "start": 799.24,
+      "end": 804.88,
+      "text": "So I think the idea of an architect not simply being a sort of form maker"
+    },
+    {
+      "start": 804.88,
+      "end": 807.74,
+      "text": "or an object maker is very, very important."
+    },
+    {
+      "start": 809.46,
+      "end": 814.38,
+      "text": "So, but as far as my experience with Cedric was concerned,"
+    },
+    {
+      "start": 814.38,
+      "end": 820.14,
+      "text": "I never really saw him becoming sort of involved at the bigger scale of urbanism"
+    },
+    {
+      "start": 820.14,
+      "end": 825.44,
+      "text": "or the bigger scale of politics or at the bigger scale of sort of the,"
+    },
+    {
+      "start": 825.48,
+      "end": 831.12,
+      "text": "politics that govern the making of space. It's not a conversation I ever had with"
+    },
+    {
+      "start": 831.12,
+      "end": 836.1,
+      "text": "him or ever heard him talk about. So he did do these big projects for instance"
+    },
+    {
+      "start": 836.1,
+      "end": 840.18,
+      "text": "he did the project for the South Bank where he kind of sort of he created"
+    },
+    {
+      "start": 840.18,
+      "end": 843.48,
+      "text": "these whole new spaces you know the whole thing became much more of a public"
+    },
+    {
+      "start": 843.48,
+      "end": 849.06,
+      "text": "space. But whether he was saying something about the politics of London"
+    },
+    {
+      "start": 849.06,
+      "end": 854.16,
+      "text": "or about cities and so on I'm not so sure. So I think enabling he was he was"
+    },
+    {
+      "start": 854.16,
+      "end": 861.76,
+      "text": "very intelligent about the idea that an architect doesn't have to resort to object making. So I"
+    },
+    {
+      "start": 861.76,
+      "end": 868.16,
+      "text": "think that was his vision of enabling and I think maybe everything that he did including his funny"
+    },
+    {
+      "start": 868.16,
+      "end": 872.8,
+      "text": "stories of let's say dinner with plates that you could see through to the floor and so on you know"
+    },
+    {
+      "start": 872.8,
+      "end": 878.0,
+      "text": "all these were like I think this is there's some some some extraordinary thing that he did I think"
+    },
+    {
+      "start": 878.0,
+      "end": 881.84,
+      "text": "he served food with see-through plates so that people could see their knees while they were"
+    },
+    {
+      "start": 881.84,
+      "end": 886.96,
+      "text": "eating on a glass table, you know, and it was all laid out. I think there's a video actually of it,"
+    },
+    {
+      "start": 888.32,
+      "end": 892.32,
+      "text": "so that, you know, when you finished eating your course you could then see your knees and everybody"
+    },
+    {
+      "start": 892.32,
+      "end": 896.88,
+      "text": "else's knees on the table, you know, and he sort of, he thought that was amusing, you know. But I"
+    },
+    {
+      "start": 896.88,
+      "end": 900.64,
+      "text": "think, you know, that's a really architectural project in a sense, you know, so I think he was"
+    },
+    {
+      "start": 900.64,
+      "end": 906.08,
+      "text": "doing it all the time, but I think his enabling was of a particular scale. I think it wasn't that"
+    },
+    {
+      "start": 906.08,
+      "end": 913.84,
+      "text": "enabling of that on the one hand is fashionable of alternative practice, you know, I don't think"
+    },
+    {
+      "start": 913.84,
+      "end": 918.8,
+      "text": "he was into that at all. I think what he was just simply saying is that the strictures of what an"
+    },
+    {
+      "start": 918.8,
+      "end": 926.4,
+      "text": "architect is are not sacred, were not sacred, and therefore that's why he worked in his manner. And"
+    },
+    {
+      "start": 926.4,
+      "end": 932.4,
+      "text": "I think actually a lot of his actions, as I was saying before, his being there, were just as"
+    },
+    {
+      "start": 932.4,
+      "end": 940.4,
+      "text": "critical in his making of what his world was than the actual things he was drawing or writing upon."
+    },
+    {
+      "start": 940.4,
+      "end": 946.44,
+      "text": "I think where it's difficult to pin it down is that I think a lot of people were quite political"
+    },
+    {
+      "start": 946.44,
+      "end": 953.58,
+      "text": "at the time, you know, quite social at the time. Cedric wasn't. I mean, I'm not so clear as to"
+    },
+    {
+      "start": 953.58,
+      "end": 956.38,
+      "text": "what his position was."
+    },
+    {
+      "start": 957.54,
+      "end": 959.32,
+      "text": "You know, again, he was an extraordinary guy."
+    },
+    {
+      "start": 959.32,
+      "end": 961.32,
+      "text": "You know, he was sort of..."
+    },
+    {
+      "start": 962.22,
+      "end": 968.62,
+      "text": "looked sort of like a conservative who was an artist,"
+    },
+    {
+      "start": 969.56,
+      "end": 971.5,
+      "text": "if you see what I mean, in terms of his physical appearance"
+    },
+    {
+      "start": 971.5,
+      "end": 972.72,
+      "text": "and the way he talked."
+    },
+    {
+      "start": 973.22,
+      "end": 975.46,
+      "text": "But actually, his political leadings?"
+    },
+    {
+      "start": 976.44,
+      "end": 979.82,
+      "text": "Harder to point out."
+    },
+    {
+      "start": 980.14,
+      "end": 981.98,
+      "text": "Now, I think the other thing that's important"
+    },
+    {
+      "start": 981.98,
+      "end": 984.14,
+      "text": "in terms of the deflation that Rem talks about."
+    },
+    {
+      "start": 984.26,
+      "end": 986.0,
+      "text": "I mean, he was an enfant terrible."
+    },
+    {
+      "start": 987.36,
+      "end": 988.8,
+      "text": "I mean, he was a provocateur."
+    },
+    {
+      "start": 989.72,
+      "end": 990.92,
+      "text": "So, you know, that was delightful."
+    },
+    {
+      "start": 991.42,
+      "end": 992.18,
+      "text": "That was great."
+    },
+    {
+      "start": 992.98,
+      "end": 994.4,
+      "text": "You know, and as I said before,"
+    },
+    {
+      "start": 994.46,
+      "end": 995.82,
+      "text": "I don't think he took himself that seriously,"
+    },
+    {
+      "start": 996.02,
+      "end": 997.74,
+      "text": "but he probably did, but didn't."
+    },
+    {
+      "start": 998.18,
+      "end": 1000.08,
+      "text": "So I think he was very good"
+    },
+    {
+      "start": 1000.08,
+      "end": 1002.48,
+      "text": "at taking the sort of pretension"
+    },
+    {
+      "start": 1002.48,
+      "end": 1004.26,
+      "text": "that architects could put onto something"
+    },
+    {
+      "start": 1004.26,
+      "end": 1005.1,
+      "text": "out of the room."
+    },
+    {
+      "start": 1006.16,
+      "end": 1009.36,
+      "text": "Definitely, delight was part of his agenda."
+    },
+    {
+      "start": 1009.5,
+      "end": 1010.62,
+      "text": "I mean, he was a happy bloke."
+    },
+    {
+      "start": 1010.62,
+      "end": 1013.82,
+      "text": "in fact actually I think the last time I"
+    },
+    {
+      "start": 1013.82,
+      "end": 1017.06,
+      "text": "I saw Cedric I was"
+    },
+    {
+      "start": 1017.06,
+      "end": 1019.12,
+      "text": "quite upset actually he was"
+    },
+    {
+      "start": 1019.12,
+      "end": 1021.96,
+      "text": "old and he"
+    },
+    {
+      "start": 1021.96,
+      "end": 1024.54,
+      "text": "I can't remember there was sort of an exhibition"
+    },
+    {
+      "start": 1024.54,
+      "end": 1027.7,
+      "text": "near my office near John Street near"
+    },
+    {
+      "start": 1027.7,
+      "end": 1031.18,
+      "text": "Guilford Street where my office is and I walked"
+    },
+    {
+      "start": 1031.18,
+      "end": 1034.3,
+      "text": "over after the office and I saw him in there and he was"
+    },
+    {
+      "start": 1034.3,
+      "end": 1036.98,
+      "text": "he was pretty gone I mean he was"
+    },
+    {
+      "start": 1036.98,
+      "end": 1040.26,
+      "text": "old and so on and Eleanor was sort of getting him in and out"
+    },
+    {
+      "start": 1040.26,
+      "end": 1041.24,
+      "text": "of a taxi and so on."
+    },
+    {
+      "start": 1041.32,
+      "end": 1042.68,
+      "text": "And it was a very sad thing to see."
+    },
+    {
+      "start": 1042.8,
+      "end": 1043.14,
+      "text": "I mean, obviously,"
+    },
+    {
+      "start": 1043.18,
+      "end": 1044.18,
+      "text": "it's going to happen to all of us."
+    },
+    {
+      "start": 1044.38,
+      "end": 1045.76,
+      "text": "So I'm not thinking"
+    },
+    {
+      "start": 1045.76,
+      "end": 1046.7,
+      "text": "we're going to get away with it."
+    },
+    {
+      "start": 1046.82,
+      "end": 1048.3,
+      "text": "But it was sad"
+    },
+    {
+      "start": 1048.3,
+      "end": 1049.54,
+      "text": "because actually Cedric"
+    },
+    {
+      "start": 1049.54,
+      "end": 1050.66,
+      "text": "was beaming all the time."
+    },
+    {
+      "start": 1050.82,
+      "end": 1051.7,
+      "text": "You know, he was a happy bloke."
+    },
+    {
+      "start": 1051.76,
+      "end": 1052.94,
+      "text": "Like I say, I never saw him angry."
+    },
+    {
+      "start": 1053.46,
+      "end": 1054.82,
+      "text": "I mean, I said earlier"
+    },
+    {
+      "start": 1054.82,
+      "end": 1055.88,
+      "text": "that I didn't see him passionate."
+    },
+    {
+      "start": 1055.98,
+      "end": 1056.66,
+      "text": "He was passionate."
+    },
+    {
+      "start": 1057.22,
+      "end": 1059.12,
+      "text": "You know, he would argue his corner,"
+    },
+    {
+      "start": 1059.22,
+      "end": 1061.0,
+      "text": "but always with humour and lightness."
+    },
+    {
+      "start": 1061.06,
+      "end": 1061.5,
+      "text": "So I think, yes,"
+    },
+    {
+      "start": 1061.56,
+      "end": 1062.78,
+      "text": "delight was partly there."
+    },
+    {
+      "start": 1063.42,
+      "end": 1064.24,
+      "text": "And maybe, you know,"
+    },
+    {
+      "start": 1064.66,
+      "end": 1066.22,
+      "text": "Rem is again right about that."
+    },
+    {
+      "start": 1066.22,
+      "end": 1069.88,
+      "text": "I think delight was something"
+    },
+    {
+      "start": 1069.88,
+      "end": 1076.7,
+      "text": "that architects weren't so used to expressing when Cedric was around."
+    },
+    {
+      "start": 1076.9,
+      "end": 1079.3,
+      "text": "People took themselves quite seriously, in a sense."
+    },
+    {
+      "start": 1079.88,
+      "end": 1085.7,
+      "text": "So I think Peter Cook was sort of famous"
+    },
+    {
+      "start": 1085.7,
+      "end": 1088.68,
+      "text": "while I was a student for being a sort of architect of delight."
+    },
+    {
+      "start": 1089.04,
+      "end": 1092.28,
+      "text": "He was interested in Japan and he'd made friends with Isozaki"
+    },
+    {
+      "start": 1092.28,
+      "end": 1095.36,
+      "text": "and he talked about layers in Tokyo and so on."
+    },
+    {
+      "start": 1096.14,
+      "end": 1099.36,
+      "text": "But again, you see, he had a great sense of humour about it,"
+    },
+    {
+      "start": 1099.36,
+      "end": 1100.92,
+      "text": "but it was all very structured."
+    },
+    {
+      "start": 1102.46,
+      "end": 1104.94,
+      "text": "Cedric Walson, I think Cedric actually did enjoy"
+    },
+    {
+      "start": 1104.94,
+      "end": 1107.16,
+      "text": "getting up in the morning and doing his own thing."
+    },
+    {
+      "start": 1107.56,
+      "end": 1109.56,
+      "text": "And as I said, I think some people"
+    },
+    {
+      "start": 1109.56,
+      "end": 1112.14,
+      "text": "had very close relationships with him,"
+    },
+    {
+      "start": 1112.2,
+      "end": 1113.2,
+      "text": "and I think they obviously,"
+    },
+    {
+      "start": 1113.94,
+      "end": 1115.42,
+      "text": "they were enjoyable relationships."
+    },
+    {
+      "start": 1115.42,
+      "end": 1118.6,
+      "text": "They were never sycophantic,"
+    },
+    {
+      "start": 1119.12,
+      "end": 1120.8,
+      "text": "something we discussed earlier."
+    },
+    {
+      "start": 1120.96,
+      "end": 1123.62,
+      "text": "I think they enjoyed his company."
+    },
+    {
+      "start": 1123.86,
+      "end": 1126.24,
+      "text": "He was fun to be with, and I think he enjoyed things."
+    },
+    {
+      "start": 1126.32,
+      "end": 1128.08,
+      "text": "He enjoyed drawing. He enjoyed architecture."
+    },
+    {
+      "start": 1128.08,
+      "end": 1130.98,
+      "text": "he enjoyed learning, he enjoyed being here and so on."
+    },
+    {
+      "start": 1131.6,
+      "end": 1136.94,
+      "text": "So yes, I think so, and I think maybe that is something that he's left as a legacy"
+    },
+    {
+      "start": 1136.94,
+      "end": 1143.04,
+      "text": "to quite a number of people, to actually just take architecture off its pedestal"
+    },
+    {
+      "start": 1143.04,
+      "end": 1144.62,
+      "text": "and see it in a different way."
+    },
+    {
+      "start": 1144.84,
+      "end": 1151.12,
+      "text": "I think it's a very important role, but I would also say that it's also a live role."
+    },
+    {
+      "start": 1151.12,
+      "end": 1160.92,
+      "text": "I think that somehow to think that Cedric was the only character who could do that is problematic."
+    },
+    {
+      "start": 1161.82,
+      "end": 1164.94,
+      "text": "I think in a sense there probably are some Cedrics around."
+    },
+    {
+      "start": 1165.8,
+      "end": 1167.26,
+      "text": "They certainly won't be called Cedric."
+    },
+    {
+      "start": 1167.74,
+      "end": 1168.94,
+      "text": "It's an extraordinary name."
+    },
+    {
+      "start": 1168.94,
+      "end": 1183.38,
+      "text": "But there are probably some Cedrics around that should equally be given opportunity to informally have a tremendous influence on what's happening."
+    },
+    {
+      "start": 1184.04,
+      "end": 1190.2,
+      "text": "And again, Cedric was always, just to use the pun, priceless at doing that."
+    },
+    {
+      "start": 1190.34,
+      "end": 1194.72,
+      "text": "Because he was always with the big players, but he was never a big player."
+    },
+    {
+      "start": 1195.46,
+      "end": 1197.64,
+      "text": "So he was there with every world architect."
+    },
+    {
+      "start": 1197.64,
+      "end": 1199.58,
+      "text": "and what had he built?"
+    },
+    {
+      "start": 1200.02,
+      "end": 1200.86,
+      "text": "You know, it's a sort of, you know,"
+    },
+    {
+      "start": 1200.9,
+      "end": 1202.84,
+      "text": "if you were going to compare, you know, CVs,"
+    },
+    {
+      "start": 1203.72,
+      "end": 1205.38,
+      "text": "how much did he earn?"
+    },
+    {
+      "start": 1206.34,
+      "end": 1207.86,
+      "text": "You want to compare CVs, you know,"
+    },
+    {
+      "start": 1207.88,
+      "end": 1209.34,
+      "text": "but there he was, he was always a player"
+    },
+    {
+      "start": 1209.34,
+      "end": 1211.54,
+      "text": "and I think maybe in a sense,"
+    },
+    {
+      "start": 1211.6,
+      "end": 1213.08,
+      "text": "it's not that there are no Cedrics now,"
+    },
+    {
+      "start": 1213.16,
+      "end": 1215.52,
+      "text": "I think it's that maybe we don't allow enough Cedrics"
+    },
+    {
+      "start": 1215.52,
+      "end": 1217.36,
+      "text": "into the conversation as we used to."
+    },
+    {
+      "start": 1218.42,
+      "end": 1220.16,
+      "text": "I think the whole education,"
+    },
+    {
+      "start": 1220.44,
+      "end": 1222.86,
+      "text": "the whole Englishness that I was talking about,"
+    },
+    {
+      "start": 1222.86,
+      "end": 1225.1,
+      "text": "the system of individuality,"
+    },
+    {
+      "start": 1225.28,
+      "end": 1226.82,
+      "text": "which was absolutely critical,"
+    },
+    {
+      "start": 1227.64,
+      "end": 1231.88,
+      "text": "after the war years, you know, in terms of education and so on, has now changed."
+    },
+    {
+      "start": 1231.88,
+      "end": 1236.48,
+      "text": "I think it's more process based and happening elsewhere."
+    },
+    {
+      "start": 1236.48,
+      "end": 1238.16,
+      "text": "So, you know, I think"
+    },
+    {
+      "start": 1239.48,
+      "end": 1242.08,
+      "text": "to me, even though I'm not an Englishman,"
+    },
+    {
+      "start": 1242.76,
+      "end": 1245.72,
+      "text": "he was the epitome of an Englishman"
+    },
+    {
+      "start": 1245.72,
+      "end": 1248.44,
+      "text": "and of a system that allowed the free thinker."
+    },
+    {
+      "start": 1249.68,
+      "end": 1252.32,
+      "text": "Now, some people were very critical of that and would say, you know,"
+    },
+    {
+      "start": 1252.32,
+      "end": 1256.28,
+      "text": "that's being a dilettante or being, you know, sort of not focused enough."
+    },
+    {
+      "start": 1256.28,
+      "end": 1263.38,
+      "text": "but I think in a way that that worries me so I think no legacy or no evolution of what Cedric"
+    },
+    {
+      "start": 1263.38,
+      "end": 1269.3,
+      "text": "was doing is possible unless you allow the maverick thinker to exist again and I think that's"
+    },
+    {
+      "start": 1269.86,
+      "end": 1276.78,
+      "text": "difficult at the moment I'm not saying it won't change but I think it's things the conditions"
+    },
+    {
+      "start": 1276.78,
+      "end": 1282.2,
+      "text": "have changed so I think his his legacy is what he did and maybe what you guys are doing and"
+    },
+    {
+      "start": 1282.2,
+      "end": 1290.0,
+      "text": "what the books will say. But I think my urge towards the future is that I would"
+    },
+    {
+      "start": 1290.0,
+      "end": 1294.8,
+      "text": "have thought he would have wanted you to piece the pieces together in whichever"
+    },
+    {
+      "start": 1294.8,
+      "end": 1300.96,
+      "text": "way you thought fit, rather than the way that they should go together."
+    }
+  ]
 }
