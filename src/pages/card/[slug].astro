@@ -24,8 +24,8 @@ const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).p
       <ul>
         {where.map((a) => (
           <li>
-            <a href={`${base}/interview/${a.slug}/?t=${Math.floor(a.time)}`}>
-              {a.name} <span class="dim">— {fmt(a.time)}</span>
+            <a href={`${base}/interview/${a.slug}/#t=${Math.floor(a.time)}`}>
+              {a.name} <span class="dim">· {fmt(a.time)}</span>
             </a>
             {a.topicId && (
               <> <span class="dim">while speaking about</span>{" "}

@@ -271,22 +271,24 @@ a:hover {
 /* A reference standing on the timeline where it is raised. Ahead of the
    playhead it is something coming; behind, something already said. Both are
    places you can go. */
+/* The drawn pin stays hairline; the button around it is finger-sized, so an
+   aim that is off by a few pixels opens the reference instead of seeking. */
 .scrub__card {
   position: absolute;
   top: -7px;
-  width: 9px;
-  height: 20px;
+  width: 28px;
+  height: 26px;
   padding: 0;
   border: 0;
   background: none;
   cursor: pointer;
-  transform: translateX(-4px);
+  transform: translateX(-14px);
   z-index: 3;
 }
 .scrub__card::before {
   content: "";
   position: absolute;
-  left: 4px;
+  left: calc(50% - 0.5px);
   top: 4px;
   width: 1px;
   height: 12px;
@@ -297,7 +299,7 @@ a:hover {
 .scrub__card::after {
   content: "";
   position: absolute;
-  left: 2px;
+  left: calc(50% - 2.5px);
   top: 0;
   width: 5px;
   height: 5px;
@@ -305,6 +307,13 @@ a:hover {
   background: var(--fg);
   opacity: 0.85;
   transition: opacity 160ms ease, transform 160ms ease;
+}
+@media (max-width: 720px) {
+  .scrub__card {
+    width: 44px;
+    height: 32px;
+    transform: translateX(-22px);
+  }
 }
 /* already said: still there, quieter */
 .scrub__card.is-past::before,
@@ -418,6 +427,36 @@ a:hover {
   color: var(--fg-dim);
 }
 .enter__link:hover {
+  color: var(--fg);
+}
+.doorcard {
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  place-content: center;
+  gap: 18px;
+  text-align: center;
+  background: var(--bg);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 600ms ease;
+}
+.doorcard.is-shown {
+  opacity: 1;
+}
+.doorcard__count {
+  margin: 0;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+}
+.doorcard__how {
+  margin: 0;
+  font-size: clamp(17px, 2.4vw, 26px);
+  font-weight: 600;
+  line-height: 1.45;
   color: var(--fg);
 }
 
@@ -956,6 +995,8 @@ a:hover {
   text-align: center;
   background: rgba(0, 0, 0, 0.55);
   animation: field-in 300ms ease both;
+  /* the list runs past the fold; the fade says so */
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 70px), transparent);
 }
 .topicfield[hidden] { display: none; }
 .topicfield.is-leaving { animation: field-out 300ms ease both; }
@@ -965,6 +1006,17 @@ a:hover {
 .topicfield__row {
   max-width: 560px;
   margin: 0 auto;
+}
+@media (min-width: 960px) {
+  .topicfield__row { max-width: 920px; }
+  .topicfield__list { columns: 2; column-gap: 48px; }
+  .topicfield__list li { break-inside: avoid; }
+}
+.topicfield__sub {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.55);
 }
 .topicfield__head {
   margin: 30px 0 10px;
@@ -1248,9 +1300,16 @@ a:hover {
   color: #fff;
 }
 .titlebar__job {
-  margin: 0 0 6px;
+  margin: 0 0 2px;
   font-size: clamp(11px, 1vw, 14px);
   color: #999;
+}
+.titlebar__when {
+  margin: 0 0 6px;
+  font-size: clamp(10px, 0.85vw, 12px);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #777;
 }
 .titlebar__on {
   margin: 0;
@@ -1313,6 +1372,22 @@ a:hover {
 }
 .menu__mark:hover,
 .menu__mark:focus-visible { opacity: 0.72; }
+.menu__items {
+  display: flex;
+  gap: 1.4em;
+  align-items: baseline;
+}
+.menu__items[hidden] { display: none; }
+.menu__about {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: var(--fg-dim);
+  cursor: pointer;
+}
+.menu__about:hover,
+.menu__about:focus-visible { color: var(--fg); }
 
 .colofon {
   position: fixed;

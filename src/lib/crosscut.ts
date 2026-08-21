@@ -17,6 +17,8 @@ export interface CrossCutItem {
   slug: string;
   name: string;
   jobtitle: string;
+  /** ISO date the interview was filmed, "" when unknown */
+  recorded: string;
   hls: string | null;
   start: number;
   end: number;
@@ -51,6 +53,7 @@ export function crossCut(topicId: string): CrossCut {
         slug: iv.slug,
         name: iv.interviewee.name,
         jobtitle: iv.interviewee.jobtitle,
+        recorded: iv.recorded ?? "",
         hls: iv.video.hls,
         start: s.start,
         end: s.end,
@@ -88,6 +91,7 @@ export function wholeFilm(slug: string): CrossCutItem | null {
     slug: iv.slug,
     name: iv.interviewee.name,
     jobtitle: iv.interviewee.jobtitle,
+    recorded: iv.recorded ?? "",
     hls: iv.video.hls,
     start: 0,
     end,

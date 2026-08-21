@@ -35,6 +35,8 @@ const usedCards = new Set();
 
 for (const [slug, iv] of interviews) {
   if (!iv.title || !iv.interviewee?.name) errors.push(`${slug}: missing identity fields`);
+  if (!iv.draft && !/^\d{4}-\d{2}-\d{2}$/.test(iv.recorded ?? ""))
+    errors.push(`${slug}: published but has no recorded date (the site shows "filmed <month year>")`);
   if (iv.draft) warnings.push(`${slug} is a DRAFT — excluded from the archive until approved`);
   else if (!(iv.segments ?? []).length) errors.push(`${slug}: published but has no segments`);
   for (const [i, s] of (iv.segments ?? []).entries()) {
@@ -71,6 +73,16 @@ for (let i = 0; i < entries.length; i++)
 
 for (const t of topics.keys()) if (!usedTopics.has(t)) warnings.push(`topic "${t}" is unused`);
 for (const c of cards.keys()) if (!usedCards.has(c)) warnings.push(`card "${c}" is never placed`);
+
+// Moments travel in the fragment, never the query: the player reads #t= only.
+import { execSync } from "node:child_process";
+try {
+  const hits = execSync(
+    "grep -rnF --include='*.astro' --include='*.ts' -- '?t=' src/ || true",
+    { cwd: ROOT, encoding: "utf8" }
+  ).trim();
+  if (hits) errors.push(`links using ?t= (the player only reads #t=):\n${hits}`);
+} catch { /* grep unavailable: skip the check */ }
 
 for (const w of warnings) console.warn("WARN  " + w);
 for (const e of errors) console.error("ERROR " + e);

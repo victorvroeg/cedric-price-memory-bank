@@ -25,6 +25,7 @@ interface Item {
   slug: string;
   name: string;
   jobtitle: string;
+  recorded: string;
   hls: string;
   start: number;
   end: number;
@@ -112,6 +113,7 @@ function init(data: Data, root: HTMLElement) {
   let skipped = 0;
   let pendingStart = 0;
   let lastTheme: string | null = null;
+  let lastSpeaker: string | null = null;
   const gaps: number[] = [];
 
   async function attach(el: HTMLVideoElement, url: string, at = 0): Promise<void> {
@@ -170,6 +172,14 @@ function init(data: Data, root: HTMLElement) {
   const titleCard = makeTitleCard(root);
   const barName = root.querySelector<HTMLElement>(".titlebar__name");
   const barJob = root.querySelector<HTMLElement>(".titlebar__job");
+  const barWhen = root.querySelector<HTMLElement>(".titlebar__when");
+
+  const MONTHS = ["January", "February", "March", "April", "May", "June", "July",
+    "August", "September", "October", "November", "December"];
+  function filmed(recorded: string): string {
+    const m = /^(\d{4})-(\d{2})/.exec(recorded);
+    return m ? `filmed ${MONTHS[Number(m[2]) - 1]} ${m[1]}` : "";
+  }
 
   function setTitles(item: Item): void {
     // write into the door, not over it
@@ -185,6 +195,7 @@ function init(data: Data, root: HTMLElement) {
       }
     }
     if (barJob) barJob.textContent = item.jobtitle;
+    if (barWhen) barWhen.textContent = filmed(item.recorded);
     titleCard.show();   // a cut changes the answer, so say it again
     paintAxis();
 
@@ -283,6 +294,19 @@ function init(data: Data, root: HTMLElement) {
     void playItem(next).finally(() => (advancing = false));
   }
 
+  // The URL carries the moment, so a copied address, a reload, or the back
+  // button lands where the visitor was, not at the top of the page.
+  let lastMomentWrite = 0;
+  function writeMoment(): void {
+    if (current < 0) return;
+    const el = els[active];
+    const t = el.currentTime.toFixed(1);
+    const path = axisKind === "theme" && followed
+      ? `${data.base}/topic/${followed}/?from=${items[current].slug}`
+      : `${data.base}/interview/${items[current].slug}/`;
+    history.replaceState(null, "", `${path}#t=${t}`);
+  }
+
   // --- boundary watch + playhead ------------------------------------------
   setInterval(() => {
     if (current < 0) return;
@@ -295,6 +319,15 @@ function init(data: Data, root: HTMLElement) {
     markSpeaker();
     const running = themeNow()?.slug ?? null;
     if (running !== lastTheme) { lastTheme = running; paintAxis(); }
+    // The rail is repainted on every cut, but a repaint that fails must not
+    // leave it naming the previous speaker: the tick is the backstop.
+    const speaking = item.slug;
+    if (speaking !== lastSpeaker) { lastSpeaker = speaking; paintAxis(); }
+    const nowMs = performance.now();
+    if (!el.paused && nowMs - lastMomentWrite > 2000) {
+      lastMomentWrite = nowMs;
+      writeMoment();
+    }
     if (nowCard) {
       const card = [...item.cards].reverse().find((c) => c.time <= el.currentTime);
       const title = card?.title ?? "";
@@ -525,7 +558,7 @@ function init(data: Data, root: HTMLElement) {
         const b = document.createElement("button");
         b.className = "scrub__card";
         b.style.left = `${at * 100}%`;
-        b.title = `${c.title} — ${item.name}`;
+        b.title = `${c.title} · ${item.name}`;
         b.setAttribute("aria-label", `${c.title}, raised by ${item.name}`);
         b.addEventListener("click", (e) => {
           e.stopPropagation();
@@ -819,7 +852,7 @@ function init(data: Data, root: HTMLElement) {
     return ul;
   }
 
-  function entry(label: string, href: string, active: boolean, i: number): HTMLLIElement {
+  function entry(label: string, href: string, active: boolean, i: number, sub?: string): HTMLLIElement {
     const li = document.createElement("li");
     li.style.setProperty("--i", String(i));
     const a = document.createElement("a");
@@ -827,6 +860,12 @@ function init(data: Data, root: HTMLElement) {
     a.href = href;
     a.textContent = label;
     li.appendChild(a);
+    if (sub) {
+      const s = document.createElement("span");
+      s.className = "topicfield__sub";
+      s.textContent = sub;
+      li.appendChild(s);
+    }
     return li;
   }
 
@@ -889,11 +928,11 @@ function init(data: Data, root: HTMLElement) {
       });
       fieldRow.appendChild(a);
 
-      fieldRow.appendChild(heading("whole interviews"));
+      fieldRow.appendChild(heading(`whole interviews (${data.people.length})`));
       const b = list();
       for (const p of data.people) {
         const li = entry(p.name, `${data.base}/interview/${p.slug}/`,
-                         axisKind === "speaker" && p.slug === here, i++);
+                         axisKind === "speaker" && p.slug === here, i++, p.jobtitle);
         li.querySelector("a")!.addEventListener("click", (e) => {
           e.preventDefault();
           closeField(true);

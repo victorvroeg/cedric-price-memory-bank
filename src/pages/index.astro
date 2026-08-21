@@ -1,7 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
 import { intro } from "../lib/content";
-import { topicsWithSegments, crossCut } from "../lib/crosscut";
+import { topicsWithSegments, crossCut, published } from "../lib/crosscut";
 
 // The front door, as in 2014: the intro film first, the archive behind it.
 // (2014 route table: "/" -> intro, "/memory-bank" -> the archive.)
@@ -17,6 +17,7 @@ const wander = [...counts.keys()].filter((slug) => {
   return new Set(cut.playable.map((i) => i.slug)).size > 1;
 });
 const enter = `${base}/topics/`;
+const voices = published().length;
 ---
 
 <Base title="Cedric Price Memory Bank" current="bank">
@@ -43,6 +44,14 @@ const enter = `${base}/topics/`;
         <a class="enter__link" href={enter} data-enter data-wander={wander.join(" ")}
            >Enter the Memory Bank</a>
       </nav>
+
+      <div class="doorcard" data-doorcard hidden>
+        <p class="doorcard__count">{voices} people remember Cedric Price.</p>
+        <p class="doorcard__how">
+          Follow a person through their interview,<br />
+          or follow an idea sideways through everyone.
+        </p>
+      </div>
     </div>
   </main>
 </Base>
@@ -112,10 +121,27 @@ const enter = `${base}/topics/`;
       clearInterval(timer);
       timer = undefined;
     });
-    // The film ends by handing the visitor over, the way it used to.
+    // The film ends by handing the visitor over, the way it used to,
+    // pausing just long enough to say the one thing the archive never says.
+    const doorcard = document.querySelector<HTMLElement>("[data-doorcard]");
     video.addEventListener("ended", () => {
       projection.classList.add("is-dimmed");
-      setTimeout(() => (location.href = enter.href), 320);
+      if (!doorcard) {
+        setTimeout(() => (location.href = enter.href), 320);
+        return;
+      }
+      doorcard.hidden = false;
+      requestAnimationFrame(() => doorcard.classList.add("is-shown"));
+      const go = () => (location.href = enter.href);
+      doorcard.addEventListener("click", go, { once: true });
+      setTimeout(go, 4200);
+    });
+
+    // A backgrounded tab pauses the film; coming back should not mean a
+    // frozen face with no play control.
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState !== "visible") return;
+      if (video.paused && !video.ended && video.currentTime > 0) void video.play();
     });
   }
 </script>

@@ -36,7 +36,12 @@ const href = (p: string) => (import.meta.env.BASE_URL + "/" + p).replace(/\/+/g,
   </head>
   <body>
     <nav class="menu" aria-label="Site">
-      <button class="menu__mark" aria-expanded="false" aria-controls="colofon">Memory Bank</button>
+      <button class="menu__mark" aria-expanded="false" aria-controls="menu-items">Memory Bank</button>
+      <div class="menu__items" id="menu-items" hidden>
+        <button class="menu__about" aria-controls="colofon">About</button>
+        <a href={href("/topics/")} aria-current={current === "topics" ? "page" : undefined}>Themes</a>
+        <a href={href("/cards/")} aria-current={current === "cards" ? "page" : undefined}>References</a>
+      </div>
     </nav>
 
     <div class="colofon" id="colofon" hidden role="dialog" aria-modal="true" aria-label="Colofon">
@@ -52,25 +57,41 @@ const href = (p: string) => (import.meta.env.BASE_URL + "/" + p).replace(/\/+/g,
 
     <script>
       // The colofon is a thing you look at, not a place you go. Nothing that
-      // is playing stops for it.
+      // is playing stops for it. The mark unfolds the three doors out of the
+      // player: About, Themes, References.
       const mark = document.querySelector<HTMLButtonElement>(".menu__mark");
+      const items = document.querySelector<HTMLElement>(".menu__items");
+      const about = document.querySelector<HTMLButtonElement>(".menu__about");
       const sheet = document.querySelector<HTMLElement>(".colofon");
+      const fold = () => {
+        if (!items || items.hidden) return;
+        items.hidden = true;
+        mark?.setAttribute("aria-expanded", "false");
+      };
       const shut = () => {
         if (!sheet || sheet.hidden) return;
         sheet.hidden = true;
-        mark?.setAttribute("aria-expanded", "false");
       };
       mark?.addEventListener("click", () => {
-        if (!sheet) return;
-        const open = sheet.hidden;
-        sheet.hidden = !open;
+        if (!items) return;
+        const open = items.hidden;
+        items.hidden = !open;
         mark.setAttribute("aria-expanded", String(open));
+        if (!open) shut();
+      });
+      about?.addEventListener("click", () => {
+        if (sheet) sheet.hidden = false;
       });
       sheet?.querySelector(".colofon__close")?.addEventListener("click", shut);
       sheet?.addEventListener("click", (e) => {
         if (!(e.target as Element).closest(".colofon__sheet")) shut();
       });
-      addEventListener("keydown", (e) => { if (e.key === "Escape") shut(); });
+      addEventListener("keydown", (e) => {
+        if (e.key === "Escape") { shut(); fold(); }
+      });
+      addEventListener("pointerdown", (e) => {
+        if (!(e.target as Element).closest(".menu")) fold();
+      });
     </script>
   </body>
 </html>

@@ -8,6 +8,9 @@ cd "$(git rev-parse --show-toplevel)"
 REMOTE="$(git remote get-url origin)"
 SHA="$(git rev-parse --short HEAD)"
 
+# A stale dist mixes bundle hashes across builds; always start clean.
+rm -rf dist
+
 npm run build:pages
 touch dist/.nojekyll
 

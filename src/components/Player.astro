@@ -23,6 +23,13 @@ interface Props {
 const { topic, interview } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
+const MONTHS = ["January", "February", "March", "April", "May", "June", "July",
+  "August", "September", "October", "November", "December"];
+const filmed = (recorded: string | undefined): string => {
+  const m = /^(\d{4})-(\d{2})/.exec(recorded ?? "");
+  return m ? `filmed ${MONTHS[Number(m[2]) - 1]} ${m[1]}` : "";
+};
+
 const cut = topic ? crossCut(topic.slug) : null;
 const whole = interview ? wholeFilm(interview.slug) : null;
 const items = topic ? cut!.playable : whole ? [whole] : [];
@@ -111,13 +118,14 @@ const clientData = {
                   href={`${base}/interview/${speaker?.slug ?? ""}/`}
                   title="watch the whole interview">{speaker?.name ?? ""}</a></h2>
                 <p class="titlebar__job">{speaker?.jobtitle ?? ""}</p>
+                <p class="titlebar__when">{filmed(speaker?.recorded)}</p>
                 <p class="titlebar__on">
                   <span class="titlebar__prep">on</span>
                   <span class="titlebar__topic" style={opening ? `color:${opening.colour}` : undefined}>{opening?.label ?? ""}</span>
                 </p>
               </div>
               <p class="modesay" hidden aria-live="polite"></p>
-              <div class="projection__sound">Sound is off — click the film to turn it on</div>
+              <div class="projection__sound">Sound is off. Click the film to turn it on</div>
             </>
           ) : (
             <p class="dead-note">
