@@ -33,6 +33,8 @@ interface Data {
     body: string;
     subtitle?: string | null;
     image?: string | null;
+    external?: string | null;
+    location?: string | null;
     also: { slug: string; name: string; time: number; topicId: string | null; topicLabel: string | null }[];
   }>;
   music: { tracks: string[]; seed: number };
@@ -412,6 +414,21 @@ function init(data: Data, root: HTMLElement) {
     } else {
       fig.hidden = true;
     }
+    // where it is, and where to read more: the two links the 2014 blocks had
+    const links = sheet.querySelector<HTMLElement>(".reference__links")!;
+    links.textContent = "";
+    for (const [href, label] of [[card.external, "more about this"], [card.location, "where it is"]] as const) {
+      if (!href) continue;
+      const a = document.createElement("a");
+      a.className = "reference__link";
+      a.href = href.replace(/^http:\/\//, "https://");
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.textContent = label;
+      links.appendChild(a);
+    }
+    links.hidden = !links.childElementCount;
+
     sheet.hidden = false;
     closeCard(true);
     if (!els[active].paused) {

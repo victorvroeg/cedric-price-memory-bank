@@ -1240,3 +1240,88 @@ a:hover {
   text-underline-offset: 8px;
   text-decoration-thickness: 2px;
 }
+
+.reference__links {
+  display: flex;
+  gap: 22px;
+  margin: 18px 0 0;
+}
+.reference__links[hidden] { display: none; }
+.reference__link {
+  font-size: 12px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #222;
+  text-decoration: none;
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 2px;
+  transition: border-color 140ms ease;
+}
+.reference__link:hover { border-bottom-color: #222; }
+
+/* ——— the mark, and the colofon behind it ——— */
+
+.menu__mark {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: var(--fg);
+  cursor: pointer;
+  transition: opacity 160ms ease;
+}
+.menu__mark:hover,
+.menu__mark:focus-visible { opacity: 0.72; }
+
+.colofon {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  display: grid;
+  place-items: center;
+  padding: clamp(16px, 5vh, 60px) clamp(16px, 5vw, 60px);
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(6px);
+  animation: reference-in 220ms ease both;
+}
+.colofon[hidden] { display: none; }
+.colofon__sheet {
+  position: relative;
+  width: min(42em, 100%);
+  max-height: 100%;
+  overflow-y: auto;
+  padding: clamp(22px, 3vw, 40px);
+  background: #fff;
+  color: #222;
+  animation: reference-rise 260ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.colofon__close {
+  position: absolute;
+  top: 6px;
+  right: 12px;
+  background: none;
+  border: 0;
+  padding: 6px 8px;
+  font: inherit;
+  font-size: 26px;
+  line-height: 1;
+  color: #888;
+  cursor: pointer;
+}
+.colofon__close:hover { color: #000; }
+.colofon__title {
+  margin: 0 0 16px;
+  font-size: clamp(20px, 2.4vw, 30px);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.colofon__body { font-size: 15px; line-height: 1.62; }
+.colofon__body p { margin: 0 0 0.9em; }
+.colofon__body a { color: #222; }
+.colofon__home {
+  margin: 22px 0 0;
+  font-size: 12px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+.colofon__home a { color: #222; text-decoration: none; border-bottom: 1px solid #bbb; }

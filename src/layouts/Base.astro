@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import { colofon } from "../lib/content";
+import { safeBody } from "../lib/cards";
 
 interface Props {
   title: string;
@@ -34,11 +36,41 @@ const href = (p: string) => (import.meta.env.BASE_URL + "/" + p).replace(/\/+/g,
   </head>
   <body>
     <nav class="menu" aria-label="Site">
-      <a href={href("/")} aria-current={current === "bank" ? "page" : undefined}>Memory Bank</a>
-      <a href={href("/topics/")} aria-current={current === "topics" ? "page" : undefined}>Topics</a>
-      <a href={href("/cards/")} aria-current={current === "cards" ? "page" : undefined}>References</a>
-      <a href={href("/colofon/")} aria-current={current === "colofon" ? "page" : undefined}>Colofon</a>
+      <button class="menu__mark" aria-expanded="false" aria-controls="colofon">Memory Bank</button>
     </nav>
+
+    <div class="colofon" id="colofon" hidden role="dialog" aria-modal="true" aria-label="Colofon">
+      <article class="colofon__sheet">
+        <button class="colofon__close" aria-label="close">×</button>
+        <h2 class="colofon__title">{colofon.title}</h2>
+        <div class="colofon__body" set:html={safeBody(colofon.body)} />
+        <p class="colofon__home"><a href={href("/")}>back to the beginning</a></p>
+      </article>
+    </div>
+
     <slot />
+
+    <script>
+      // The colofon is a thing you look at, not a place you go. Nothing that
+      // is playing stops for it.
+      const mark = document.querySelector<HTMLButtonElement>(".menu__mark");
+      const sheet = document.querySelector<HTMLElement>(".colofon");
+      const shut = () => {
+        if (!sheet || sheet.hidden) return;
+        sheet.hidden = true;
+        mark?.setAttribute("aria-expanded", "false");
+      };
+      mark?.addEventListener("click", () => {
+        if (!sheet) return;
+        const open = sheet.hidden;
+        sheet.hidden = !open;
+        mark.setAttribute("aria-expanded", String(open));
+      });
+      sheet?.querySelector(".colofon__close")?.addEventListener("click", shut);
+      sheet?.addEventListener("click", (e) => {
+        if (!(e.target as Element).closest(".colofon__sheet")) shut();
+      });
+      addEventListener("keydown", (e) => { if (e.key === "Escape") shut(); });
+    </script>
   </body>
 </html>

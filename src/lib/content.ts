@@ -41,6 +41,10 @@ export interface Card {
   title: string;
   body: string;
   image: string | null;
+  /** from the studio's INFO BLOCKS record, which the 2014 web copy lost */
+  subtitle?: string | null;
+  external?: string | null;
+  location?: string | null;
 }
 
 function loadDir<T>(glob: Record<string, unknown>): Map<string, T> {
