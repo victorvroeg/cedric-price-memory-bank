@@ -14,14 +14,14 @@
 //      the Web Audio path has its own failure (a context that never leaves
 //      'suspended' plays nothing at all while looking perfectly healthy).
 
-// Victor has called this too loud twice. The brief is "really, really subtle":
-// under speech the bed should be felt rather than heard — the room having a
-// temperature, not a piece of music playing. Do not raise these on the theory
-// that the films are about to get louder; ask him first.
+// Victor has called this too loud twice, then (Aug 2026) ruled a sustained
+// bed out entirely: music belongs to the crossing between two speakers or
+// subjects, and nowhere else. So the bed swells in the dark between cuts and,
+// once the new voice lands, fades all the way out over TAIL seconds and stops.
+// There is no under-speech level any more; do not reintroduce one, ask him.
 const SWELL = 0.17;   // nobody is speaking
-const UNDER = 0.018;  // somebody is — and the sentence wins, always
 const RISE = 2.4;     // seconds to come up: slow, like a room filling
-const DUCK = 1.0;     // seconds to get out of the way: faster, speech wins
+const TAIL = 6.0;     // the letting-go once somebody speaks: gone in six
 const OUT = 5.5;      // the long fade at the end of a cross-cut
 
 export interface Score {
@@ -121,16 +121,24 @@ export function makeScore(tracks: string[], seed = 0): Score | null {
     addEventListener("keydown", go, true);
   }
 
+  let stopTimer: number | undefined;
   function apply(seconds: number): void {
     const to = allowed ? level : 0;
     ramp(to, seconds);
-    if (to > 0) start();
+    if (to > 0) { clearTimeout(stopTimer); start(); }
+  }
+
+  // Once a fade to silence has finished, stop the element too: a paused bed
+  // cannot be accidentally audible, and costs nothing while people talk.
+  function stopAfter(seconds: number): void {
+    clearTimeout(stopTimer);
+    stopTimer = window.setTimeout(() => { if (level === 0) el.pause(); }, (seconds + 0.3) * 1000);
   }
 
   return {
     swell() { level = SWELL; apply(RISE); },
-    under() { level = UNDER; apply(DUCK); },
-    out() { level = 0; apply(OUT); },
+    under() { level = 0; apply(TAIL); stopAfter(TAIL); },
+    out() { level = 0; apply(OUT); stopAfter(OUT); },
     allow() {
       if (allowed) return;
       allowed = true;
