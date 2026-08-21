@@ -318,6 +318,10 @@ function init(data: Data, root: HTMLElement) {
 
   // --- input ---------------------------------------------------------------
   projection.querySelector(".projection__frame")?.addEventListener("click", () => {
+    // While the film is silent, the frame means one thing only: turn the sound
+    // on. It must not also pause — clicking for sound and getting a stopped
+    // picture reads as a broken page.
+    if (projection.classList.contains("is-muted")) { unmute(); return; }
     if (current < 0) {
       // first gesture: unlock the element that will stay standby; the other
       // one gets its play() directly from this gesture inside playItem.
@@ -393,9 +397,21 @@ function init(data: Data, root: HTMLElement) {
     for (const el of els) el.muted = false;
     projection.classList.remove("is-muted");
     score?.allow();
+    // Whatever was said while the page was silent was not heard. If we are
+    // still near the top of this turn, take it from the top; deeper in, leave
+    // the visitor where they are rather than throwing away minutes.
+    const el = els[active];
+    if (current >= 0 && el.currentTime - items[current].start < 25) {
+      el.currentTime = items[current].start;
+    }
   }
   for (const ev of ["pointerdown", "keydown"] as const) {
-    addEventListener(ev, unmute, { once: true, capture: true });
+    addEventListener(ev, (e) => {
+      // the frame has its own handler above; let it speak for itself
+      const t = e.target;
+      if (t instanceof Element && t.closest(".projection__frame")) return;
+      unmute();
+    }, { capture: true });
   }
 
   // Clicking a name jumps to that person's turn on this topic.

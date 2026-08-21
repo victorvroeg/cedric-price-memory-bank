@@ -9,8 +9,12 @@
 // on a media element. Where there is no Web Audio at all we fall back to
 // volume and accept that iOS will play the bed flat.
 
-const SWELL = 0.4;    // nobody is speaking
-const UNDER = 0.055;  // somebody is
+// Set by ear against these interviews, not by taste in the abstract: the films
+// sit around -20 dBFS of speech and the bed's own level is about -17 dBFS, so
+// UNDER puts the music roughly 15 dB under the talking — present in the room,
+// never competing for the sentence. 0.055 was 27 dB down, which is silence.
+const SWELL = 0.5;    // nobody is speaking
+const UNDER = 0.13;   // somebody is
 const RISE = 2.4;     // seconds to come up: slow, like a room filling
 const DUCK = 1.0;     // seconds to get out of the way: faster — speech wins
 const OUT = 5.5;      // the long fade at the end of a cross-cut

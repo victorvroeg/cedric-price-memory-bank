@@ -681,20 +681,42 @@ a:hover {
 #saved { margin-left: auto; }
 
 /* sound state — the film starts itself; sound arrives on the first click */
+/* The browser, not us, decides whether a page may arrive with sound. When it
+   says no, this line is the whole difference between an archive and a silent
+   film — so it says what it is and where to click, and it breathes. */
 .projection__sound {
   position: absolute;
-  right: 10px;
-  bottom: 10px;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
   z-index: 4;
-  font-size: 11px;
-  letter-spacing: 2px;
+  padding: 7px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.62);
+  font-size: 12px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: var(--fg-dim);
+  white-space: nowrap;
+  color: var(--fg);
   opacity: 0;
   transition: opacity 300ms ease;
   pointer-events: none;
 }
-.projection.is-muted .projection__sound { opacity: 1; }
+.projection.is-muted .projection__sound {
+  opacity: 1;
+  animation: sound-breath 2.6s ease-in-out infinite;
+}
+@keyframes sound-breath {
+  0%, 100% { opacity: 0.62; }
+  50% { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .projection.is-muted .projection__sound { animation: none; }
+}
+@media (max-width: 640px) {
+  .projection__sound { font-size: 11px; letter-spacing: 1px; padding: 6px 10px; }
+}
 .projection.is-playing .projection__hint { opacity: 0; }
 
 /* ——— reference cards: a name raised in passing is a door ——— */
@@ -782,8 +804,7 @@ a:hover {
 .nowline__score {
   background: none;
   border: 0;
-  padding: 0 0 0 0.2em;
-  margin-left: -1.4em;
+  padding: 0;
   font: inherit;
   font-size: 15px;
   line-height: 1;
