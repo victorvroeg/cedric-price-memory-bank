@@ -1,0 +1,1383 @@
+{
+ "slug": "will-alsop",
+ "language": "en",
+ "model": "mlx-community/whisper-large-v3-mlx",
+ "corrected": false,
+ "cues": [
+  {
+   "start": 0.0,
+   "end": 6.48,
+   "text": "When I first started at Cedric, it was a very small office, as it always had been."
+  },
+  {
+   "start": 6.48,
+   "end": 11.68,
+   "text": "I think there was a secretary, two other people and me."
+  },
+  {
+   "start": 11.68,
+   "end": 16.88,
+   "text": "And the reason that he took me on is that at that time he had just got the InterAction"
+  },
+  {
+   "start": 16.88,
+   "end": 18.88,
+   "text": "Centre as a project."
+  },
+  {
+   "start": 18.88,
+   "end": 22.64,
+   "text": "Work had commenced on it, not too far."
+  },
+  {
+   "start": 22.64,
+   "end": 27.68,
+   "text": "And I was a humble assistant."
+  },
+  {
+   "start": 27.68,
+   "end": 32.6,
+   "text": "which I thought was a very good project. As it turned out, it was the last thing he actually"
+  },
+  {
+   "start": 32.6,
+   "end": 39.78,
+   "text": "ever built, but no one knew that at the time. And Cedric was very interesting in that because"
+  },
+  {
+   "start": 39.78,
+   "end": 47.82,
+   "text": "Ed Berman, who was the client, who was an American but lived in London for a long time,"
+  },
+  {
+   "start": 47.82,
+   "end": 54.24,
+   "text": "and started off observing that there were... He came out of the theatre background and"
+  },
+  {
+   "start": 54.24,
+   "end": 58.56,
+   "text": "observing a lot of kids not going to school, hanging around on the streets."
+  },
+  {
+   "start": 58.56,
+   "end": 62.58,
+   "text": "So he started dressing up as a clown, pushing a street cart,"
+  },
+  {
+   "start": 62.58,
+   "end": 66.66,
+   "text": "but the cart was full of toys and other games and other things."
+  },
+  {
+   "start": 66.66,
+   "end": 69.72,
+   "text": "It's like the Pied Piper of Hamelin, a little bit."
+  },
+  {
+   "start": 69.72,
+   "end": 73.44,
+   "text": "And then that was very popular and then he formalised it a bit and then more people"
+  },
+  {
+   "start": 73.44,
+   "end": 75.76,
+   "text": "came in and the whole thing grew as a sort of"
+  },
+  {
+   "start": 75.76,
+   "end": 78.14,
+   "text": "community action sort of group."
+  },
+  {
+   "start": 78.14,
+   "end": 80.6,
+   "text": "And it got to the point where"
+  },
+  {
+   "start": 80.6,
+   "end": 83.6,
+   "text": "it was very successful. It had a city farm,"
+  },
+  {
+   "start": 83.6,
+   "end": 91.72,
+   "text": "very early city farm, quite a common concept as you know, and they needed a new building."
+  },
+  {
+   "start": 91.72,
+   "end": 96.26,
+   "text": "And the borough of Camden here in London, they said well you can have this piece of"
+  },
+  {
+   "start": 96.26,
+   "end": 107.7,
+   "text": "land via railway until 2002, otherwise more or less a 25 year period. So it was not a"
+  },
+  {
+   "start": 107.7,
+   "end": 112.5,
+   "text": "lot of money but they raised a bit of money and that was interesting. So this was during"
+  },
+  {
+   "start": 112.5,
+   "end": 120.88,
+   "text": "a period of high inflation in the UK, very high inflation. So it was decided that, this"
+  },
+  {
+   "start": 120.88,
+   "end": 126.48,
+   "text": "is an important point because it suited Cedric perfectly, the money they had would buy a"
+  },
+  {
+   "start": 126.48,
+   "end": 132.56,
+   "text": "drainage system, a concrete slab and a steel frame. It was better to spend that money now"
+  },
+  {
+   "start": 132.56,
+   "end": 136.74,
+   "text": "because if you waited the price would go up significantly and therefore you would always"
+  },
+  {
+   "start": 136.74,
+   "end": 141.38,
+   "text": "be chasing the money. So you might as well spend what you had and then there can be a"
+  },
+  {
+   "start": 141.38,
+   "end": 146.12,
+   "text": "Of course, in effect, you had a one-to-one model of the building."
+  },
+  {
+   "start": 147.26,
+   "end": 149.84,
+   "text": "And I often think, and I'm sure Cedric thought,"
+  },
+  {
+   "start": 150.0,
+   "end": 153.46,
+   "text": "that in a way it was more useful like that"
+  },
+  {
+   "start": 153.46,
+   "end": 155.2,
+   "text": "than actually finishing the building."
+  },
+  {
+   "start": 156.32,
+   "end": 161.04,
+   "text": "Because Ed's outfit was a bit anarchic, I have to say,"
+  },
+  {
+   "start": 161.52,
+   "end": 163.52,
+   "text": "and there was a high turnover of people."
+  },
+  {
+   "start": 164.3,
+   "end": 166.9,
+   "text": "So every two weeks, my job was to..."
+  },
+  {
+   "start": 166.9,
+   "end": 169.06,
+   "text": "This was after the frame went up and everything."
+  },
+  {
+   "start": 169.06,
+   "end": 176.06,
+   "text": "My job was to go there and have a conversation with all the people in the different departments."
+  },
+  {
+   "start": 176.06,
+   "end": 181.06,
+   "text": "There was silkscreen printing, there was car maintenance, there was some physical exercise."
+  },
+  {
+   "start": 181.06,
+   "end": 185.06,
+   "text": "It was like a school and there was a pub in there."
+  },
+  {
+   "start": 185.06,
+   "end": 192.06,
+   "text": "We'd actually chalk out various areas on the ground and say, yeah, that's what I want."
+  },
+  {
+   "start": 192.06,
+   "end": 196.06,
+   "text": "A month later, it would be somebody else in charge of silkscreen printing."
+  },
+  {
+   "start": 196.06,
+   "end": 197.74,
+   "text": "And you had different ideas."
+  },
+  {
+   "start": 197.74,
+   "end": 201.86,
+   "text": "So nothing really ever resolved itself on the plan."
+  },
+  {
+   "start": 201.86,
+   "end": 206.58,
+   "text": "And in the meantime, we were doing some of the details"
+  },
+  {
+   "start": 206.58,
+   "end": 209.18,
+   "text": "in readiness for when they got the other money."
+  },
+  {
+   "start": 211.72,
+   "end": 213.28,
+   "text": "When it came to the details,"
+  },
+  {
+   "start": 215.06,
+   "end": 219.8,
+   "text": "Cedric didn't have much to say about these things."
+  },
+  {
+   "start": 222.02,
+   "end": 224.38,
+   "text": "I was not exactly experienced either."
+  },
+  {
+   "start": 224.38,
+   "end": 231.16,
+   "text": "by that time the more experienced assistant at Cedric he had moved on, I found myself"
+  },
+  {
+   "start": 231.16,
+   "end": 238.16,
+   "text": "in charge of the project. And when I had a genuine question I'd say to Cedric in the"
+  },
+  {
+   "start": 238.16,
+   "end": 244.84,
+   "text": "mornings, I've got an issue, he'd say I'll talk to you later about that, which meant"
+  },
+  {
+   "start": 244.84,
+   "end": 248.88,
+   "text": "he never did talk to you about it, so you just had to sort of resolve it yourself. The"
+  },
+  {
+   "start": 248.88,
+   "end": 253.54,
+   "text": "one thing that he did, there were two things that he said to me which I think were important."
+  },
+  {
+   "start": 253.54,
+   "end": 260.62,
+   "text": "which was related to the detailing, that everything you should take apart from the steel frame,"
+  },
+  {
+   "start": 260.62,
+   "end": 265.64,
+   "text": "everything else in the building you should be able to take apart with a standard bicycle"
+  },
+  {
+   "start": 265.64,
+   "end": 274.5,
+   "text": "spanner. I thought that was interesting. The other thing he said, never take a decision"
+  },
+  {
+   "start": 274.5,
+   "end": 282.3,
+   "text": "until you have to. Which I think was really good, I still think about that today. Why"
+  },
+  {
+   "start": 282.3,
+   "end": 285.56,
+   "text": "Why would you decide that you're going to do this when you don't have to take that decision"
+  },
+  {
+   "start": 285.56,
+   "end": 291.34,
+   "text": "because in a month it might look a bit different and then you do something else."
+  },
+  {
+   "start": 291.34,
+   "end": 292.34,
+   "text": "I think that's true."
+  },
+  {
+   "start": 292.34,
+   "end": 295.54,
+   "text": "It's one of the problems with getting planning permission."
+  },
+  {
+   "start": 295.54,
+   "end": 300.54,
+   "text": "Everything is so fixed that actually as you go on and evolve the detail of the building"
+  },
+  {
+   "start": 300.54,
+   "end": 305.02,
+   "text": "and you're actually in the process of building, it might be something much better to do but"
+  },
+  {
+   "start": 305.02,
+   "end": 308.56,
+   "text": "actually by law you're fixed to what you've already got permission for."
+  },
+  {
+   "start": 308.56,
+   "end": 317.32,
+   "text": "I probably last went to that building in the early 21st century, 2001, 2002."
+  },
+  {
+   "start": 317.32,
+   "end": 320.8,
+   "text": "Occasionally I like to go back, very occasionally."
+  },
+  {
+   "start": 320.8,
+   "end": 323.48,
+   "text": "No one ever changed anything."
+  },
+  {
+   "start": 323.48,
+   "end": 324.48,
+   "text": "And that was the reality."
+  },
+  {
+   "start": 324.48,
+   "end": 328.94,
+   "text": "And that has to make you think, and of course if Cedric had still been around then, surely"
+  },
+  {
+   "start": 328.94,
+   "end": 334.32,
+   "text": "he'd be thinking, you know, the notion of flexibility, uncertainty, and uncertainty"
+  },
+  {
+   "start": 334.32,
+   "end": 340.76,
+   "text": "underpinned much of his thinking related to architecture in general. You had to examine"
+  },
+  {
+   "start": 340.76,
+   "end": 347.76,
+   "text": "that. You had to say, well, in the end, you don't need to move everything unless it's"
+  },
+  {
+   "start": 347.76,
+   "end": 356.06,
+   "text": "a real emergency or a complete change in thought because people in themselves are really adaptable."
+  },
+  {
+   "start": 356.06,
+   "end": 360.42,
+   "text": "They can make anything out of anything. If I give you a couple of sheds put together"
+  },
+  {
+   "start": 360.42,
+   "end": 362.02,
+   "text": "and a bit of a tent, you can live in it."
+  },
+  {
+   "start": 362.46,
+   "end": 364.76,
+   "text": "It's not a house, but it is a home."
+  },
+  {
+   "start": 365.54,
+   "end": 367.5,
+   "text": "And I think the same is true,"
+  },
+  {
+   "start": 367.68,
+   "end": 369.32,
+   "text": "particularly when it came to a community centre."
+  },
+  {
+   "start": 370.06,
+   "end": 373.8,
+   "text": "However, the building itself was highly successful"
+  },
+  {
+   "start": 373.8,
+   "end": 376.02,
+   "text": "and it was well used."
+  },
+  {
+   "start": 377.66,
+   "end": 379.84,
+   "text": "Whether people liked it or not, I don't know."
+  },
+  {
+   "start": 380.02,
+   "end": 381.78,
+   "text": "That didn't seem to be the point."
+  },
+  {
+   "start": 382.3,
+   "end": 384.94,
+   "text": "They used it and it performed a useful purpose."
+  },
+  {
+   "start": 385.3,
+   "end": 386.96,
+   "text": "But people of all ages, it wasn't just children,"
+  },
+  {
+   "start": 386.96,
+   "end": 391.82,
+   "text": "It was all ages, because a lot of problems at that time in that part of London."
+  },
+  {
+   "start": 392.12,
+   "end": 393.76,
+   "text": "Did Cedric have a real interest in the build?"
+  },
+  {
+   "start": 394.36,
+   "end": 400.9,
+   "text": "I've often pondered that, because he still had plenty of active life as an architect left in him at that time."
+  },
+  {
+   "start": 401.66,
+   "end": 406.0,
+   "text": "He wasn't exactly short of contacts."
+  },
+  {
+   "start": 406.12,
+   "end": 414.64,
+   "text": "He was very well connected, and opportunities to build did come his way, or requests."
+  },
+  {
+   "start": 415.5,
+   "end": 416.7,
+   "text": "But he didn't do it."
+  },
+  {
+   "start": 416.7,
+   "end": 425.02,
+   "text": "I mean, I think there was something, was it a greenhouse or something in Paris, which failed, I think, for financial reasons."
+  },
+  {
+   "start": 425.08,
+   "end": 427.72,
+   "text": "I don't really know the story because it was after my time with him."
+  },
+  {
+   "start": 428.52,
+   "end": 431.3,
+   "text": "I think he was genuinely disappointed not to build that."
+  },
+  {
+   "start": 431.44,
+   "end": 434.48,
+   "text": "I think he really wanted to build that because he found that interesting."
+  },
+  {
+   "start": 435.46,
+   "end": 437.2,
+   "text": "But did he really want to build it?"
+  },
+  {
+   "start": 437.44,
+   "end": 439.8,
+   "text": "And I've often pondered that question."
+  },
+  {
+   "start": 442.12,
+   "end": 443.8,
+   "text": "I think that he didn't really."
+  },
+  {
+   "start": 443.8,
+   "end": 452.18,
+   "text": "He enjoyed the conversations, he enjoyed the discussion around the project, he enjoyed"
+  },
+  {
+   "start": 452.18,
+   "end": 457.88,
+   "text": "clearly the discussion around architecture and what it meant in general and he was a"
+  },
+  {
+   "start": 457.88,
+   "end": 461.62,
+   "text": "very good critic which is why he was very popular to come to juries here and many other"
+  },
+  {
+   "start": 461.62,
+   "end": 463.7,
+   "text": "places."
+  },
+  {
+   "start": 463.7,
+   "end": 469.5,
+   "text": "That's what he enjoyed and of course we all tend to pursue what we enjoy."
+  },
+  {
+   "start": 469.5,
+   "end": 480.88,
+   "text": "He didn't enjoy minutes of meetings, the possible legal aspects of building, the minutiae of"
+  },
+  {
+   "start": 480.88,
+   "end": 483.88,
+   "text": "the building regs."
+  },
+  {
+   "start": 483.88,
+   "end": 489.8,
+   "text": "These are all things which I think he just didn't want to do that."
+  },
+  {
+   "start": 489.8,
+   "end": 494.08,
+   "text": "The clue there was when I was asking him how to resolve a certain detail and I couldn't"
+  },
+  {
+   "start": 494.08,
+   "end": 495.08,
+   "text": "see him for dust."
+  },
+  {
+   "start": 495.08,
+   "end": 496.08,
+   "text": "He was off."
+  },
+  {
+   "start": 496.08,
+   "end": 501.28,
+   "text": "He was very critical of the school, but he would also participate in the school at the same time."
+  },
+  {
+   "start": 501.84,
+   "end": 504.4,
+   "text": "He was always very critical of Alvin."
+  },
+  {
+   "start": 504.86,
+   "end": 509.22,
+   "text": "Very rude to us, just around the corner, about Alvin."
+  },
+  {
+   "start": 509.36,
+   "end": 514.78,
+   "text": "I thought, well, Alvin's not my best man in the world, but he's certainly not the worst."
+  },
+  {
+   "start": 515.64,
+   "end": 519.74,
+   "text": "And I didn't understand that inevitably, without Alvin, this place would have closed."
+  },
+  {
+   "start": 519.74,
+   "end": 521.9,
+   "text": "There's no doubt about it."
+  },
+  {
+   "start": 521.9,
+   "end": 526.1,
+   "text": "and he saved the school and it went on and did what it did."
+  },
+  {
+   "start": 526.1,
+   "end": 529.96,
+   "text": "Which is strange. So I think that Elvin,"
+  },
+  {
+   "start": 529.96,
+   "end": 533.62,
+   "text": "sorry, I think that Cedric sometimes"
+  },
+  {
+   "start": 533.62,
+   "end": 538.0,
+   "text": "deliberately set up people not as enemies but as"
+  },
+  {
+   "start": 538.0,
+   "end": 540.94,
+   "text": "they were, they were, he was like"
+  },
+  {
+   "start": 540.94,
+   "end": 544.4,
+   "text": "practicing in his own head, I think,"
+  },
+  {
+   "start": 544.4,
+   "end": 547.46,
+   "text": "what he really thought about the education here at the school"
+  },
+  {
+   "start": 547.46,
+   "end": 551.16,
+   "text": "and what he was doing. He had no intention of doing anything about it."
+  },
+  {
+   "start": 551.16,
+   "end": 556.76,
+   "text": "and he would come here and give the odd lecture and things but um and yeah i think he's very happy"
+  },
+  {
+   "start": 556.76,
+   "end": 561.56,
+   "text": "to do that sometimes students would go around and see him upstairs because obviously in the"
+  },
+  {
+   "start": 561.56,
+   "end": 568.54,
+   "text": "upstairs around the corner i say upstairs because he had the room at the top of his office his"
+  },
+  {
+   "start": 568.54,
+   "end": 577.56,
+   "text": "office is on one two three floors first second and fourth floor and the top floor was the white"
+  },
+  {
+   "start": 577.56,
+   "end": 583.72,
+   "text": "room or also known as East Grinstead. It was called East Grinstead so that if somebody"
+  },
+  {
+   "start": 583.72,
+   "end": 589.42,
+   "text": "called for him and the secretary said, I'm sorry, he's in East Grinstead, she wasn't"
+  },
+  {
+   "start": 589.42,
+   "end": 593.54,
+   "text": "actually telling a lie, but actually he was upstairs, but there was no phone link up there."
+  },
+  {
+   "start": 594.02,
+   "end": 599.76,
+   "text": "He would disappear up there for a long time with his sketchbook, the newspapers, the brandy"
+  },
+  {
+   "start": 599.76,
+   "end": 605.04,
+   "text": "and the cigar. The McAlpines were worried, the organisation, that they had to do something"
+  },
+  {
+   "start": 605.04,
+   "end": 611.2,
+   "text": "about the conditions of building sites. Otherwise it becomes an unattractive job and they wouldn't"
+  },
+  {
+   "start": 611.2,
+   "end": 618.02,
+   "text": "be able to get the employees to work, particularly in central London sites. So by that time if"
+  },
+  {
+   "start": 618.02,
+   "end": 624.24,
+   "text": "you were working in Mayfair on site, let's say people working on building sites at lunchtime"
+  },
+  {
+   "start": 624.24,
+   "end": 628.76,
+   "text": "would go and have a drink in the pub. It wouldn't happen today. They found that they were not"
+  },
+  {
+   "start": 628.76,
+   "end": 634.26,
+   "text": "allowed to go into the pub because of the way that they were dressed. So we looked at"
+  },
+  {
+   "start": 634.26,
+   "end": 639.26,
+   "text": "all the aspects of the clothes, ripping off stuff so you could actually look alright,"
+  },
+  {
+   "start": 639.26,
+   "end": 642.26,
+   "text": "so you could go to the pub if you wanted to."
+  },
+  {
+   "start": 642.26,
+   "end": 651.26,
+   "text": "It was really the beginning of blue jeans in terms of as part of your working outfit"
+  },
+  {
+   "start": 651.26,
+   "end": 655.26,
+   "text": "and with a lot of talking to experts."
+  },
+  {
+   "start": 655.26,
+   "end": 662.26,
+   "text": "Young men working on building sites in the cult in blue jeans would actually suffer later in life"
+  },
+  {
+   "start": 662.26,
+   "end": 667.26,
+   "text": "arthritis and other things because it's not the right clothing to wear."
+  },
+  {
+   "start": 667.26,
+   "end": 673.26,
+   "text": "When I first started at Cedric, the office hours were 10 o'clock in the morning until 6."
+  },
+  {
+   "start": 673.26,
+   "end": 680.26,
+   "text": "And that suited me just fine. Not too early."
+  },
+  {
+   "start": 680.26,
+   "end": 689.26,
+   "text": "And that worked well. Very often you'd arrive in the morning"
+  },
+  {
+   "start": 689.26,
+   "end": 692.1,
+   "text": "and just sit down and get on with whatever you were doing."
+  },
+  {
+   "start": 694.3,
+   "end": 699.48,
+   "text": "And Cedric, he had a small compartment on the main floor,"
+  },
+  {
+   "start": 699.48,
+   "end": 702.6,
+   "text": "on the second floor, where reception also was."
+  },
+  {
+   "start": 703.34,
+   "end": 706.62,
+   "text": "And he would sit there and he would take phone calls there."
+  },
+  {
+   "start": 706.72,
+   "end": 708.92,
+   "text": "So he would do all his phone calls in the morning"
+  },
+  {
+   "start": 708.92,
+   "end": 710.96,
+   "text": "and then when he finished those phone calls,"
+  },
+  {
+   "start": 711.08,
+   "end": 714.44,
+   "text": "he would go upstairs to the white room or East Gwynstead."
+  },
+  {
+   "start": 714.44,
+   "end": 721.56,
+   "text": "And he would then, but it was in that gap between phone calls and going upstairs that"
+  },
+  {
+   "start": 721.56,
+   "end": 722.74,
+   "text": "his son talked to you."
+  },
+  {
+   "start": 722.74,
+   "end": 726.42,
+   "text": "Not necessarily about what you were doing, but anything that he was thinking."
+  },
+  {
+   "start": 726.42,
+   "end": 732.9,
+   "text": "And we discussed things that were in journals and other aspects."
+  },
+  {
+   "start": 732.9,
+   "end": 734.9,
+   "text": "And he was a great one for anecdotes."
+  },
+  {
+   "start": 734.9,
+   "end": 742.2,
+   "text": "But of course every man particularly, more than women, as they get older they like anecdotes."
+  },
+  {
+   "start": 742.2,
+   "end": 746.84,
+   "text": "because actually it's good. I find I do it myself with my own employees."
+  },
+  {
+   "start": 748.02,
+   "end": 752.9,
+   "text": "And because it's a way of learning, it's a way of sort of passing on things."
+  },
+  {
+   "start": 753.16,
+   "end": 758.72,
+   "text": "When we got to 1976, which was a famously very hot summer here in London,"
+  },
+  {
+   "start": 759.58,
+   "end": 764.38,
+   "text": "his office had large windows. It wasn't very big, facing east and south."
+  },
+  {
+   "start": 765.48,
+   "end": 766.86,
+   "text": "No air conditioning, of course."
+  },
+  {
+   "start": 767.28,
+   "end": 771.2,
+   "text": "And by the time it got to two o'clock in the afternoon, you couldn't work in the office."
+  },
+  {
+   "start": 771.2,
+   "end": 777.56,
+   "text": "I mean it was just unbearable. So I had this idea, I said look, why don't we start at 7"
+  },
+  {
+   "start": 777.56,
+   "end": 783.56,
+   "text": "o'clock in the morning and just work for seven hours and go home at 2, because it would be"
+  },
+  {
+   "start": 783.56,
+   "end": 787.8,
+   "text": "better. He loved that because it was playing with time. He was always interested in the"
+  },
+  {
+   "start": 787.8,
+   "end": 794.72,
+   "text": "concept of time and therefore you're playing with time in the context of the office. And"
+  },
+  {
+   "start": 794.72,
+   "end": 799.82,
+   "text": "that's what we did. It was a real struggle getting there at 7, but you get used to it"
+  },
+  {
+   "start": 799.82,
+   "end": 804.32,
+   "text": "after a while. And it clearly was a struggle for the Secretary to get there at 7, but he"
+  },
+  {
+   "start": 804.32,
+   "end": 810.36,
+   "text": "wanted to be there before you, to make a point. It always amused me. So he'd arrive and there"
+  },
+  {
+   "start": 810.36,
+   "end": 813.22,
+   "text": "he was, but he was out of breath, he'd just run up the stairs."
+  },
+  {
+   "start": 813.22,
+   "end": 820.56,
+   "text": "What was the Hot Stuff Club? It was an excuse to drink, I think, and it involved Patricia"
+  },
+  {
+   "start": 820.56,
+   "end": 826.36,
+   "text": "Dawkins, who was the Secretary for quite a long time, who was a very nice girl, lots"
+  },
+  {
+   "start": 826.36,
+   "end": 833.36,
+   "text": "of fun and I think the Hot Stuff Club involved certainly Frank Newby and David Alford. I"
+  },
+  {
+   "start": 835.86,
+   "end": 842.86,
+   "text": "think the then leader of the Trade Union Congress was also a part of it and they had to have"
+  },
+  {
+   "start": 843.7,
+   "end": 850.7,
+   "text": "a woman and that was Patricia. Us young men were kept well away from the Hot Stuff Club."
+  },
+  {
+   "start": 850.7,
+   "end": 860.28,
+   "text": "from the Hot Stuff Club. But just to go back to Trode, brother, and the White Room, when"
+  },
+  {
+   "start": 860.28,
+   "end": 866.98,
+   "text": "there was celebration, I mean he loved birthdays and any reason to celebrate something. Or"
+  },
+  {
+   "start": 866.98,
+   "end": 874.58,
+   "text": "it might be the 21st birthday of the office, I think that might have been the Smarty incident"
+  },
+  {
+   "start": 874.58,
+   "end": 881.58,
+   "text": "in the White Room. So it was a big party and the umbrellas which were filled with Smarties"
+  },
+  {
+   "start": 883.12,
+   "end": 888.96,
+   "text": "and you opened them and they fell everywhere. I can't remember much else but Trode also"
+  },
+  {
+   "start": 888.96,
+   "end": 894.88,
+   "text": "loved board games and there was a fairly new board game at the time called Escape from"
+  },
+  {
+   "start": 894.88,
+   "end": 901.88,
+   "text": "Cold Dits and we'd have evenings where we would play this and Trode would actually,"
+  },
+  {
+   "start": 901.88,
+   "end": 907.68,
+   "text": "But actually all the food was all tied up in brown paper and bits of string."
+  },
+  {
+   "start": 907.88,
+   "end": 910.0,
+   "text": "And he always had to be the Nazi."
+  },
+  {
+   "start": 910.74,
+   "end": 913.36,
+   "text": "Because I think he had a helmet and jackboots."
+  },
+  {
+   "start": 914.7,
+   "end": 916.2,
+   "text": "And you had to have the Nazi."
+  },
+  {
+   "start": 916.38,
+   "end": 919.68,
+   "text": "And everyone else was sort of dressed up in old clothes with bits of string around you"
+  },
+  {
+   "start": 919.68,
+   "end": 922.06,
+   "text": "as though you were escaping from a prison camp."
+  },
+  {
+   "start": 922.96,
+   "end": 925.56,
+   "text": "And then there was lots of drink."
+  },
+  {
+   "start": 925.76,
+   "end": 930.76,
+   "text": "But then he had to drink the wine out of old tin mugs and everything."
+  },
+  {
+   "start": 930.76,
+   "end": 937.74,
+   "text": "It was all nicely done, just under one low watt light bulb that was bare."
+  },
+  {
+   "start": 937.92,
+   "end": 939.48,
+   "text": "It was a horrible light."
+  },
+  {
+   "start": 940.3,
+   "end": 942.46,
+   "text": "It was all about effect and having fun."
+  },
+  {
+   "start": 942.58,
+   "end": 946.88,
+   "text": "It was about removing yourself from all the other stuff you were doing in the day."
+  },
+  {
+   "start": 947.08,
+   "end": 948.62,
+   "text": "It was an alternative life."
+  },
+  {
+   "start": 949.18,
+   "end": 952.96,
+   "text": "In some ways, I think the White Room was an alternative life."
+  },
+  {
+   "start": 953.46,
+   "end": 954.94,
+   "text": "It was certainly a retreat."
+  },
+  {
+   "start": 955.24,
+   "end": 957.94,
+   "text": "It was a place to think about other things and to do other things."
+  },
+  {
+   "start": 957.94,
+   "end": 962.94,
+   "text": "And of course, I'm sure if Cedric was here and you asked him what was the White Room,"
+  },
+  {
+   "start": 962.94,
+   "end": 968.94,
+   "text": "that's where I did my work. But he did much more than that up there, much more."
+  },
+  {
+   "start": 968.94,
+   "end": 975.94,
+   "text": "You can understand the statement as to the role of the architect as being to enable things"
+  },
+  {
+   "start": 975.94,
+   "end": 982.94,
+   "text": "in a number of practical ways. I mean, he always said that if somebody asked an architect"
+  },
+  {
+   "start": 982.94,
+   "end": 989.26,
+   "text": "design a new house, maybe it's a divorce that's required. So it's always looking behind the"
+  },
+  {
+   "start": 989.26,
+   "end": 994.4,
+   "text": "reasons as to why you think you need a new building. So if there's any way of not building"
+  },
+  {
+   "start": 994.4,
+   "end": 999.68,
+   "text": "a building and solving this problem. So it's very much, I mean, at that time when I came"
+  },
+  {
+   "start": 999.68,
+   "end": 1005.18,
+   "text": "into that, when I was a student here, people like Karl Popper were very influential in"
+  },
+  {
+   "start": 1005.18,
+   "end": 1010.5,
+   "text": "the whole idea of problem solving. But of course, later in life, and I came to this"
+  },
+  {
+   "start": 1010.5,
+   "end": 1018.2,
+   "text": "conclusion as well. You think, well, you can't characterize architecture as simply being"
+  },
+  {
+   "start": 1018.2,
+   "end": 1024.94,
+   "text": "problem solving because lots of other people can solve problems. Architecture is certainly"
+  },
+  {
+   "start": 1024.94,
+   "end": 1031.7,
+   "text": "something else. Don't ask me what. Don't, you dare. But there is something else and"
+  },
+  {
+   "start": 1031.7,
+   "end": 1038.12,
+   "text": "that's why it's not always about solving problems. But at that time, Cedric would have said,"
+  },
+  {
+   "start": 1038.12,
+   "end": 1042.44,
+   "text": "Every day in the newspaper there is a series of things that architects could address, because"
+  },
+  {
+   "start": 1042.44,
+   "end": 1047.84,
+   "text": "there are problems if you read a news article in a particular way."
+  },
+  {
+   "start": 1047.84,
+   "end": 1053.66,
+   "text": "There's an architectural solution, but architecture in the widest sense of the word."
+  },
+  {
+   "start": 1053.66,
+   "end": 1060.52,
+   "text": "So the role as an enabler was certainly a part of his vocabulary and part of his attitude."
+  },
+  {
+   "start": 1060.52,
+   "end": 1067.74,
+   "text": "I think to a certain extent Cedric's major preoccupation sounds cruel, but it's actually"
+  },
+  {
+   "start": 1067.74,
+   "end": 1074.74,
+   "text": "quite good, was himself, I have to say. I think he was very aware of who he was, his"
+  },
+  {
+   "start": 1075.6,
+   "end": 1082.3,
+   "text": "background and how respected he was, but all being it, albeit, it was a very particular"
+  },
+  {
+   "start": 1082.3,
+   "end": 1089.3,
+   "text": "taste which didn't suit everyone. You can't imagine Cedric Price having a conversation"
+  },
+  {
+   "start": 1089.86,
+   "end": 1096.86,
+   "text": "with Richard Meyer, can you, because it was chalk and cheese. I think that I often wonder"
+  },
+  {
+   "start": 1097.74,
+   "end": 1102.74,
+   "text": "if he, with Joan Littlewood, had actually built the Fun Palace,"
+  },
+  {
+   "start": 1103.66,
+   "end": 1107.1,
+   "text": "what that might have changed in his life."
+  },
+  {
+   "start": 1107.76,
+   "end": 1111.74,
+   "text": "I think he was very disappointed in particular that that project never occurred."
+  },
+  {
+   "start": 1112.34,
+   "end": 1114.46,
+   "text": "Because again, it was the perfect project for him,"
+  },
+  {
+   "start": 1114.72,
+   "end": 1116.66,
+   "text": "and she was the perfect client as well,"
+  },
+  {
+   "start": 1117.22,
+   "end": 1120.3,
+   "text": "because she was completely mad, in a good way."
+  },
+  {
+   "start": 1121.04,
+   "end": 1124.2,
+   "text": "She was very inventive, she was trying to invent what theatre was"
+  },
+  {
+   "start": 1124.2,
+   "end": 1127.14,
+   "text": "and how theatre was delivered to the general public"
+  },
+  {
+   "start": 1127.14,
+   "end": 1131.3,
+   "text": "and what the role of the public was and the audience was and different ways of doing it."
+  },
+  {
+   "start": 1131.3,
+   "end": 1136.1,
+   "text": "Which was perfect for Cedric because that's what he's trying to do with architecture and building."
+  },
+  {
+   "start": 1136.82,
+   "end": 1143.54,
+   "text": "And everything was a question mark and unresolved. I think that lack of resolution was an important"
+  },
+  {
+   "start": 1143.54,
+   "end": 1152.9,
+   "text": "part of the work. Had he built it, of course, I don't know. I think he was, and I get angry as"
+  },
+  {
+   "start": 1152.9,
+   "end": 1158.9,
+   "text": "well you know that the Santa Pompidou would not be as it was without without"
+  },
+  {
+   "start": 1158.9,
+   "end": 1163.86,
+   "text": "the fun pass and I get angry about that not because I mean it's what one thing"
+  },
+  {
+   "start": 1163.86,
+   "end": 1167.68,
+   "text": "leads to another we don't own any ideas you know once you've talked about an"
+  },
+  {
+   "start": 1167.68,
+   "end": 1174.86,
+   "text": "idea it's belongs to the world but Richard Rogers and piano have never"
+  },
+  {
+   "start": 1174.86,
+   "end": 1179.3,
+   "text": "really acknowledged Cedric public as far as I know I've never heard them make any"
+  },
+  {
+   "start": 1179.3,
+   "end": 1185.18,
+   "text": "reference. I can never imagine how they could do that without referring to precedents. It"
+  },
+  {
+   "start": 1185.18,
+   "end": 1192.18,
+   "text": "didn't come out of nowhere, for example. So I think that Cedric was quite disappointed,"
+  },
+  {
+   "start": 1192.54,
+   "end": 1196.24,
+   "text": "quite offended by that, that he had done a lot of groundwork. It was very interesting"
+  },
+  {
+   "start": 1196.24,
+   "end": 1203.24,
+   "text": "at the time. That's why it was well published and well known by a wide range of people."
+  },
+  {
+   "start": 1203.24,
+   "end": 1208.62,
+   "text": "And then the Popadou Center comes. Well, I mean, that's it. It's not it. I mean, it would"
+  },
+  {
+   "start": 1208.62,
+   "end": 1212.52,
+   "text": "have been very different had Cedric been doing but there was an aesthetic based in there."
+  },
+  {
+   "start": 1212.52,
+   "end": 1217.86,
+   "text": "I mean I think that there were other things going on at the time which you had to, all"
+  },
+  {
+   "start": 1217.86,
+   "end": 1224.0,
+   "text": "the test rigs for the vertical takeoff aircraft, it's called the flying bedstead, looked like"
+  },
+  {
+   "start": 1224.0,
+   "end": 1231.42,
+   "text": "the Fun Palace. I mean really did. But that's the whole thing, it's a sort of test bed for"
+  },
+  {
+   "start": 1231.42,
+   "end": 1236.86,
+   "text": "trying something out and it's exactly the same philosophy with buildings in a way the"
+  },
+  {
+   "start": 1236.86,
+   "end": 1242.24,
+   "text": "interaction centre which I've already discussed, in a way was a test bed for trying something"
+  },
+  {
+   "start": 1242.24,
+   "end": 1249.1,
+   "text": "out. The problem there was it really wasn't the right people with the right kind of..."
+  },
+  {
+   "start": 1249.1,
+   "end": 1254.66,
+   "text": "they had lots of energy but not energy for that in the actual building. Did that matter?"
+  },
+  {
+   "start": 1254.66,
+   "end": 1264.84,
+   "text": "Not really. I think the McAfee project was also a perfect project for Cedric. It was"
+  },
+  {
+   "start": 1264.84,
+   "end": 1273.6,
+   "text": "about making life better for a particular set of people in terms of food, clothes, safety,"
+  },
+  {
+   "start": 1273.6,
+   "end": 1277.78,
+   "text": "health and safety. He was very quickly on to health and safety. I don't know what he"
+  },
+  {
+   "start": 1277.78,
+   "end": 1284.28,
+   "text": "thought later in life when health and safety had become a menace, but nonetheless, the"
+  },
+  {
+   "start": 1284.28,
+   "end": 1289.2,
+   "text": "idea of saving life, having conditions, it's actually good for humanity. I think that was"
+  },
+  {
+   "start": 1289.2,
+   "end": 1298.2,
+   "text": "important to him. In a way Cedric's role is a sort of conscience really, particularly"
+  },
+  {
+   "start": 1298.2,
+   "end": 1305.3,
+   "text": "to other architects, maybe to others as well. Often when I'm thinking about a new project,"
+  },
+  {
+   "start": 1305.3,
+   "end": 1309.78,
+   "text": "fiddling around and scratching my head, sometimes I feel Cedric sitting on my shoulder like"
+  },
+  {
+   "start": 1309.78,
+   "end": 1316.44,
+   "text": "some sort of parrot and says, don't do that. How dare you think that. In a way I think"
+  },
+  {
+   "start": 1316.44,
+   "end": 1323.44,
+   "text": "quite a good role, I'm very happy with that, very thankful for it. And for a long time,"
+  },
+  {
+   "start": 1323.44,
+   "end": 1330.32,
+   "text": "you know, I've been teaching in Vienna for quite a while, you know, I occasionally bring"
+  },
+  {
+   "start": 1330.32,
+   "end": 1339.88,
+   "text": "up Cedric in conversation. A whole body of students never heard of him, had no idea who"
+  },
+  {
+   "start": 1339.88,
+   "end": 1345.88,
+   "text": "Cedric Price was, which I found a bit upsetting. I found in the last five to six years in particular"
+  },
+  {
+   "start": 1345.88,
+   "end": 1349.88,
+   "text": "Now students come up to me and say, you used to work for Cedric."
+  },
+  {
+   "start": 1349.88,
+   "end": 1353.88,
+   "text": "And they wanted a conversation. In much the same way as they're very aware of"
+  },
+  {
+   "start": 1353.88,
+   "end": 1357.88,
+   "text": "Archigram. Archigram went completely out of fashion I suppose"
+  },
+  {
+   "start": 1357.88,
+   "end": 1361.88,
+   "text": "in some way, or out of the consciousness of the younger architect."
+  },
+  {
+   "start": 1361.88,
+   "end": 1365.88,
+   "text": "They're now back in and I think that"
+  },
+  {
+   "start": 1365.88,
+   "end": 1369.88,
+   "text": "I always take that, which would be a certain compliment"
+  },
+  {
+   "start": 1369.88,
+   "end": 1373.88,
+   "text": "to Cedric, is that the more interesting students"
+  },
+  {
+   "start": 1373.88,
+   "end": 1379.92,
+   "text": "gone beyond the idea of style. Where it's going is a whole other film that we might"
+  },
+  {
+   "start": 1379.92,
+   "end": 1386.92,
+   "text": "make in the future. But I think that's good. There's no assumptions, really. I think that's"
+  },
+  {
+   "start": 1386.92,
+   "end": 1389.42,
+   "text": "a good attitude to maintain."
+  }
+ ]
+}

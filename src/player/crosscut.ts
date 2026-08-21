@@ -218,6 +218,7 @@ function init(data: Data, root: HTMLElement) {
       const card = [...item.cards].reverse().find((c) => c.time <= el.currentTime);
       const title = card?.title ?? "";
       if (nowCard.dataset.title !== title) {
+        if (pinned) return;   // leave a pinned reference alone
         nowCard.dataset.title = title;
         nowCard.textContent = "";
         if (title) {
@@ -225,7 +226,10 @@ function init(data: Data, root: HTMLElement) {
           const b = document.createElement("button");
           b.className = "nowline__cardlink";
           b.textContent = title;
-          b.onclick = () => openCard(title);
+          b.addEventListener("pointerenter", () => openCard(title));
+          b.addEventListener("pointerleave", closeSoon);
+          b.addEventListener("click", () => openCard(title, true));
+          b.addEventListener("focus", () => openCard(title));
           nowCard.appendChild(b);
         }
       }
@@ -234,31 +238,45 @@ function init(data: Data, root: HTMLElement) {
   }, 120);
 
   // --- reference cards -------------------------------------------------------
+  // A reference opens on hover and the film keeps running — reading about
+  // Price's Candles should not cost you the sentence that mentioned them.
+  // Clicking pins it, for touch and for anyone who wants to follow a link.
   const panel = root.querySelector<HTMLElement>(".cardpanel");
-  let resumeAfterCard = false;
+  let pinned = false;
+  let closeTimer: number | undefined;
 
-  function openCard(title: string): void {
+  function openCard(title: string, pin = false): void {
     const card = data.cards[title];
     if (!panel || !card) return;
+    clearTimeout(closeTimer);
+    if (pin) pinned = true;
     panel.querySelector<HTMLElement>(".cardpanel__title")!.textContent = title;
     panel.querySelector<HTMLElement>(".cardpanel__body")!.innerHTML = card.body;
     panel.querySelector<HTMLAnchorElement>(".cardpanel__more")!.href =
       `${data.base}/card/${card.slug}/`;
     panel.hidden = false;
-    // reading is not watching: hold the film rather than talk over it
-    resumeAfterCard = !els[active].paused;
-    els[active].pause();
+    panel.classList.toggle("is-pinned", pinned);
   }
 
-  function closeCard(): void {
+  function closeCard(force = false): void {
     if (!panel || panel.hidden) return;
+    if (pinned && !force) return;
     panel.hidden = true;
-    if (resumeAfterCard) void els[active].play();
-    resumeAfterCard = false;
+    pinned = false;
+    panel.classList.remove("is-pinned");
   }
 
-  panel?.querySelector<HTMLButtonElement>(".cardpanel__close")?.addEventListener("click", closeCard);
-  addEventListener("keydown", (e) => { if (e.key === "Escape") closeCard(); });
+  // a moment's grace, so the pointer can travel from the name into the panel
+  function closeSoon(): void {
+    clearTimeout(closeTimer);
+    closeTimer = window.setTimeout(() => closeCard(), 320);
+  }
+
+  panel?.addEventListener("pointerenter", () => clearTimeout(closeTimer));
+  panel?.addEventListener("pointerleave", closeSoon);
+  panel?.querySelector<HTMLButtonElement>(".cardpanel__close")
+    ?.addEventListener("click", () => closeCard(true));
+  addEventListener("keydown", (e) => { if (e.key === "Escape") closeCard(true); });
 
   // --- bloom ---------------------------------------------------------------
   const bloomer = makeBloom(bloom);

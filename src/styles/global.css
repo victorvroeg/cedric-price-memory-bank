@@ -770,3 +770,10 @@ a:hover {
 @media (max-width: 720px) {
   .cardpanel { right: 12px; left: 12px; width: auto; bottom: 74px; }
 }
+
+/* the panel follows the pointer's intent, not a click */
+.cardpanel { transition: opacity 160ms ease; }
+.cardpanel[hidden] { display: none; }
+.cardpanel__close { opacity: 0; transition: opacity 160ms ease; }
+.cardpanel.is-pinned .cardpanel__close,
+.cardpanel:hover .cardpanel__close { opacity: 1; }
