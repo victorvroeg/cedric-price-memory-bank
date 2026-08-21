@@ -717,7 +717,6 @@ a:hover {
 @media (max-width: 640px) {
   .projection__sound { font-size: 11px; letter-spacing: 1px; padding: 6px 10px; }
 }
-.projection.is-playing .projection__hint { opacity: 0; }
 
 /* ——— reference cards: a name raised in passing is a door ——— */
 
@@ -800,19 +799,36 @@ a:hover {
 .cardpanel.is-pinned .cardpanel__close,
 .cardpanel:hover .cardpanel__close { opacity: 1; }
 
-/* the music bed's only visible part: a switch you can find and forget */
-.nowline__score {
+/* Sound is never a riddle: the state is on screen and the switch does not move.
+   Left of it, the bed's own switch. */
+.controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+}
+.controls button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   background: none;
   border: 0;
-  padding: 0;
+  padding: 2px 0;
   font: inherit;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1;
   color: var(--fg-dim);
   cursor: pointer;
-  opacity: 0.5;
-  transition: opacity 160ms ease, color 160ms ease;
+  transition: color 160ms ease, opacity 160ms ease;
 }
-.nowline__score:hover,
-.nowline__score:focus-visible { opacity: 1; color: var(--fg); }
-.nowline__score.is-off { opacity: 0.28; text-decoration: line-through; }
+.controls button:hover,
+.controls button:focus-visible { color: var(--fg); }
+.controls__label {
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+/* sound off is a fault to be fixed, not a setting to be admired */
+.controls__sound.is-off { color: var(--fg); }
+.controls button.is-off .controls__label { text-decoration: line-through; }
+.controls__score.is-off { opacity: 0.4; }

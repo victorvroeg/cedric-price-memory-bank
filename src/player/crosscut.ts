@@ -288,7 +288,7 @@ function init(data: Data, root: HTMLElement) {
   // Music the tool steers: up while a film is being fetched, under while
   // somebody talks. Nothing is baked into the video.
   const score = makeScore(data.music?.tracks ?? [], data.music?.seed ?? 0);
-  const scoreBtn = root.querySelector<HTMLButtonElement>(".nowline__score");
+  const scoreBtn = root.querySelector<HTMLButtonElement>(".controls__score");
   if (debug) (window as unknown as { cpmbScore: unknown }).cpmbScore = score;
   if (score && scoreBtn) {
     scoreBtn.hidden = false;
@@ -392,10 +392,29 @@ function init(data: Data, root: HTMLElement) {
     }
   }
 
+  const soundBtn = root.querySelector<HTMLButtonElement>(".controls__sound");
+  function paintSound(): void {
+    if (!soundBtn) return;
+    const off = projection.classList.contains("is-muted");
+    soundBtn.setAttribute("aria-pressed", String(!off));
+    soundBtn.classList.toggle("is-off", off);
+    soundBtn.title = off ? "sound is off — click to turn it on" : "sound is on — click to mute";
+    soundBtn.querySelector("span[aria-hidden]")!.textContent = off ? "🔇" : "🔊";
+  }
+  soundBtn?.addEventListener("click", () => {
+    if (projection.classList.contains("is-muted")) unmute();
+    else {
+      for (const el of els) el.muted = true;
+      projection.classList.add("is-muted");
+      paintSound();
+    }
+  });
+
   function unmute(): void {
     if (!projection.classList.contains("is-muted")) return;
     for (const el of els) el.muted = false;
     projection.classList.remove("is-muted");
+    paintSound();
     score?.allow();
     // Whatever was said while the page was silent was not heard. If we are
     // still near the top of this turn, take it from the top; deeper in, leave
@@ -450,5 +469,5 @@ function init(data: Data, root: HTMLElement) {
   setTimeout(warmPlaylists, 1200);   // after the first frame is on screen
 
   score?.swell();
-  void autostart();
+  void autostart().then(paintSound);
 }
