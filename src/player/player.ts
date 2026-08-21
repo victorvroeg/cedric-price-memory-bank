@@ -123,14 +123,27 @@ function init(data: Data, root: HTMLElement) {
   // in the film's own clock, swapped whenever the element changes films.
   const captioned = new Set(data.captioned ?? []);
   const capToggle = root.querySelector<HTMLButtonElement>(".captions-toggle");
+  const capText = root.querySelector<HTMLElement>(".projection__captions");
   let captionsOn = false;
   try { captionsOn = localStorage.getItem("cpmb-captions") === "on"; } catch { /* private mode */ }
 
   function applyCaptionMode(): void {
+    // Tracks stay hidden either way: cues fire, the browser never draws them.
+    // The site draws its own line, in its own type.
     for (const el of els)
-      for (const t of el.textTracks) t.mode = captionsOn ? "showing" : "hidden";
+      for (const t of el.textTracks) t.mode = "hidden";
+    if (!captionsOn && capText) { capText.hidden = true; capText.textContent = ""; }
     capToggle?.setAttribute("aria-pressed", String(captionsOn));
     capToggle?.classList.toggle("is-on", captionsOn);
+  }
+
+  function paintCaption(el: HTMLVideoElement): void {
+    if (!capText || !captionsOn) return;
+    const cues = el.textTracks[0]?.activeCues;
+    let line = "";
+    if (cues) for (let k = 0; k < cues.length; k++) line += (k ? " " : "") + (cues[k] as VTTCue).text;
+    if (capText.textContent !== line) capText.textContent = line;
+    capText.hidden = !line;
   }
 
   function setTrack(el: HTMLVideoElement, slug: string): void {
@@ -379,8 +392,13 @@ function init(data: Data, root: HTMLElement) {
       lastMomentWrite = nowMs;
       writeMoment();
     }
+    paintCaption(el);
+    // The label under the bar and the dot on the bar are the same reference:
+    // they share the theme's colour, and the dot breathes while it is current.
+    const card = [...item.cards].reverse().find((c) => c.time <= el.currentTime);
+    for (const t of ticks)
+      t.el.classList.toggle("is-now", !!card && t.i === current && t.time === card.time);
     if (nowCard) {
-      const card = [...item.cards].reverse().find((c) => c.time <= el.currentTime);
       const title = card?.title ?? "";
       if (nowCard.dataset.title !== title) {
         if (pinned) return;   // leave a pinned reference alone
@@ -598,7 +616,7 @@ function init(data: Data, root: HTMLElement) {
     return (offsets[i] + within) / total;
   }
 
-  const ticks: { el: HTMLButtonElement; at: number }[] = [];
+  const ticks: { el: HTMLButtonElement; at: number; i: number; time: number }[] = [];
   function layoutCards(): void {
     if (!scrub) return;
     for (const el of scrub.querySelectorAll(".scrub__card")) el.remove();
@@ -619,7 +637,7 @@ function init(data: Data, root: HTMLElement) {
         b.addEventListener("pointerenter", () => openCard(c.title));
         b.addEventListener("pointerleave", closeSoon);
         scrub.appendChild(b);
-        ticks.push({ el: b, at });
+        ticks.push({ el: b, at, i, time: c.time });
       }
     });
   }
@@ -770,6 +788,8 @@ function init(data: Data, root: HTMLElement) {
       barTopic.textContent = theme.label;
       barTopic.style.color = theme.colour;
     }
+    // the running theme's colour, for whatever marks the current reference
+    root.style.setProperty("--nowref", theme?.colour ?? "");
     axis.update();
   }
 
