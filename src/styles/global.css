@@ -874,6 +874,7 @@ a:hover {
    speaker's name is not that: it is set like the theme opposite it, since the
    two are the same kind of thing. */
 .peopledoor {
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
