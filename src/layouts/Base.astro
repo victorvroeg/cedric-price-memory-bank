@@ -16,6 +16,18 @@ const href = (p: string) => (import.meta.env.BASE_URL + "/" + p).replace(/\/+/g,
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content="The Cedric Price Memory Bank — interviews with the network of Cedric Price, cut sideways by topic." />
+    <!-- CP / MB, recovered from the 2014 site: same mark, same archive -->
+    <link rel="icon" type="image/png" sizes="32x32" href={href("/favicon-32x32.png")} />
+    <link rel="icon" type="image/png" sizes="16x16" href={href("/favicon-16x16.png")} />
+    <link rel="icon" type="image/png" sizes="96x96" href={href("/favicon-96x96.png")} />
+    <link rel="icon" type="image/png" sizes="192x192" href={href("/favicon-192x192.png")} />
+    <link rel="apple-touch-icon" sizes="180x180" href={href("/apple-touch-icon-180x180.png")} />
+    <link rel="apple-touch-icon" sizes="152x152" href={href("/apple-touch-icon-152x152.png")} />
+    <link rel="apple-touch-icon" sizes="120x120" href={href("/apple-touch-icon-120x120.png")} />
+    <link rel="apple-touch-icon" sizes="76x76" href={href("/apple-touch-icon-76x76.png")} />
+    <link rel="shortcut icon" href={href("/favicon.ico")} />
+    <meta name="theme-color" content="#000000" />
+
     <!-- open the connection to the video host while the page is still parsing -->
     <link rel="preconnect" href="https://customer-syg1o9n270h63juf.cloudflarestream.com" crossorigin />
     <link rel="dns-prefetch" href="https://customer-syg1o9n270h63juf.cloudflarestream.com" />
