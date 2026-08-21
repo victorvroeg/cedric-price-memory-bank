@@ -22,6 +22,8 @@ function init(data: ScreenData, root: HTMLElement) {
   const scrub = root.querySelector<HTMLElement>(".scrub");
   const playhead = root.querySelector<HTMLElement>(".scrub__playhead");
   const nowTopic = root.querySelector<HTMLElement>(".nowline__topic");
+  const edgeTopic = root.querySelector<HTMLElement>(".title--left");
+  const barTopic = root.querySelector<HTMLElement>(".titlebar__topic");
   const nowCard = root.querySelector<HTMLElement>(".nowline__card");
   const nowTime = root.querySelector<HTMLElement>(".nowline__time");
   if (!video || !data.source) return; // wounded state: static page stands
@@ -168,6 +170,12 @@ function init(data: ScreenData, root: HTMLElement) {
     if (nowTopic) {
       nowTopic.textContent = topic?.label ?? "";
       nowTopic.style.color = topic?.colour ?? "";
+    }
+    // The left edge and the title card both name whatever is being said now.
+    for (const el of [edgeTopic, barTopic]) {
+      if (!el) continue;
+      if (el.textContent !== (topic?.label ?? "")) el.textContent = topic?.label ?? "";
+      el.style.color = topic?.colour ?? "";
     }
     for (const el of root.querySelectorAll<HTMLElement>(".scrub__segment[data-topic]"))
       el.classList.toggle("is-active", !!seg && el.dataset.start === String((seg.start / data.basis) * basis));
