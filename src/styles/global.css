@@ -468,6 +468,7 @@ video::cue {
   opacity: 0;
   transition: opacity 600ms ease;
 }
+.doorcard[hidden] { display: none; }
 .doorcard.is-shown {
   opacity: 1;
 }
