@@ -1365,3 +1365,11 @@ a:hover {
   text-transform: uppercase;
 }
 .colofon__home a { color: #222; text-decoration: none; border-bottom: 1px solid #bbb; }
+
+/* A row of names means nothing without saying what they are a row of. */
+.topics__lead {
+  color: var(--fg-dim);
+  font-size: 13px;
+  white-space: nowrap;
+  margin-right: 0.2em;
+}

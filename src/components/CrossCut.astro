@@ -163,6 +163,7 @@ const clientData = {
     }
 
     <nav class="topics" aria-label="Speakers on this theme — click to hear theirs">
+      <span class="topics__lead">Also on this theme:</span>
       {playable
         .filter((i, n) => playable.findIndex((x) => x.slug === i.slug) === n)
         .map((i) => (
