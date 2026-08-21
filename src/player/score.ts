@@ -14,12 +14,12 @@
 //      the Web Audio path has its own failure (a context that never leaves
 //      'suspended' plays nothing at all while looking perfectly healthy).
 
-// TUNED AGAINST THE LIVE FILMS, WHICH ARE STILL THE OLD, VERY QUIET MASTERS
-// (-30 to -48 LUFS). Once the fold-down is wired every film sits at -18 LUFS
-// and the same bed will read about 12 dB quieter than it does now; UNDER
-// should go back up to ~0.12 in the same commit that re-wires the videos.
-const SWELL = 0.34;   // nobody is speaking
-const UNDER = 0.045;  // somebody is — and the sentence wins, always
+// Victor has called this too loud twice. The brief is "really, really subtle":
+// under speech the bed should be felt rather than heard — the room having a
+// temperature, not a piece of music playing. Do not raise these on the theory
+// that the films are about to get louder; ask him first.
+const SWELL = 0.17;   // nobody is speaking
+const UNDER = 0.018;  // somebody is — and the sentence wins, always
 const RISE = 2.4;     // seconds to come up: slow, like a room filling
 const DUCK = 1.0;     // seconds to get out of the way: faster, speech wins
 const OUT = 5.5;      // the long fade at the end of a cross-cut

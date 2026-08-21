@@ -20,7 +20,7 @@ export interface CrossCutItem {
   hls: string | null;
   start: number;
   end: number;
-  cards: { time: number; title: string }[];
+  cards: { time: number; title: string; id: string }[];
 }
 
 export interface CrossCut {
@@ -52,7 +52,11 @@ export function crossCut(topicId: string): CrossCut {
         end: s.end,
         cards: iv.cards
           .filter((c) => c.time >= s.start && c.time < s.end)
-          .map((c) => ({ time: c.time, title: cards.get(c.cardId)?.title ?? c.cardId })),
+          .map((c) => ({
+            time: c.time,
+            title: cards.get(c.cardId)?.title ?? c.cardId,
+            id: c.cardId,
+          })),
       });
     }
   }

@@ -73,12 +73,37 @@ def send(location: str, path: Path, start: int) -> int:
             if not chunk:
                 break
             t0 = time.time()
-            status, headers, body = req(location, "PATCH", {
-                "Authorization": f"Bearer {TOKEN}",
-                "Tus-Resumable": "1.0.0",
-                "Upload-Offset": str(sent),
-                "Content-Type": "application/offset+octet-stream",
-            }, data=chunk)
+
+            # An hour-long transfer will meet a dropped connection sooner or
+            # later; that is weather, not failure. tus already knows how to
+            # resume, so ask the server where it got to and carry on from
+            # there rather than losing the file.
+            for attempt in range(1, 7):
+                try:
+                    status, headers, body = req(location, "PATCH", {
+                        "Authorization": f"Bearer {TOKEN}",
+                        "Tus-Resumable": "1.0.0",
+                        "Upload-Offset": str(sent),
+                        "Content-Type": "application/offset+octet-stream",
+                    }, data=chunk)
+                    break
+                except (TimeoutError, OSError) as e:
+                    wait = min(2 ** attempt, 30)
+                    print(f"    network hiccup ({type(e).__name__}), "
+                          f"retry {attempt}/6 in {wait}s", flush=True)
+                    time.sleep(wait)
+                    here = offset(location)
+                    if here < 0:
+                        continue
+                    if here != sent:      # the chunk landed after all
+                        sent = here
+                        fh.seek(sent)
+                        chunk = fh.read(CHUNK)
+                        if not chunk:
+                            return sent
+            else:
+                raise RuntimeError(f"chunk at {sent}: six retries, giving up")
+
             if status not in (200, 204):
                 raise RuntimeError(f"chunk at {sent} failed ({status}): {body[:200]!r}")
             sent = int(headers.get("Upload-Offset", sent + len(chunk)))
