@@ -1,6 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro";
-import CrossCut from "../../components/CrossCut.astro";
+import Player from "../../components/Player.astro";
 import { topics } from "../../lib/content";
 import { topicsWithSegments } from "../../lib/crosscut";
 
@@ -15,5 +15,5 @@ const topic = topics.get(Astro.params.slug)!;
 ---
 
 <Base title={`${topic.label} — Cedric Price Memory Bank`} current="topics">
-  <CrossCut topic={topic} />
+  <Player topic={topic} />
 </Base>

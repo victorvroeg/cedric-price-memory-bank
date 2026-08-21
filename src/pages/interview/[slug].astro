@@ -1,6 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro";
-import Screen from "../../components/Screen.astro";
+import Player from "../../components/Player.astro";
 import { interviews } from "../../lib/content";
 
 export function getStaticPaths() {
@@ -11,5 +11,5 @@ const interview = interviews.get(Astro.params.slug)!;
 ---
 
 <Base title={`${interview.interviewee.name} — Cedric Price Memory Bank`} current="bank">
-  <Screen interview={interview} />
+  <Player interview={interview} />
 </Base>

@@ -1,0 +1,185 @@
+---
+// One player, two ways of moving.
+//
+// A theme page hands it everyone's turns on that theme; an interview page
+// hands it one turn that happens to be a whole film. From there the two are
+// the same object, which is what lets a visitor change axis without the
+// picture stopping: locking a theme splices its turns into the list, leaving
+// it keeps only the speaker's own film. Nothing reloads.
+//
+// The scrub and the row of chips are painted by the client rather than here,
+// because both change when the axis changes and a second server-side version
+// of the same drawing would drift out of step with the first.
+import type { Interview, Topic } from "../lib/content";
+import { topics as allTopics } from "../lib/content";
+import { crossCut, published, wholeFilm } from "../lib/crosscut";
+import { cardsFor, themeIndex } from "../lib/payload";
+import { musicTracks, seedOf } from "../lib/music";
+
+interface Props {
+  topic?: Topic;
+  interview?: Interview;
+}
+const { topic, interview } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+const cut = topic ? crossCut(topic.slug) : null;
+const whole = interview ? wholeFilm(interview.slug) : null;
+const items = topic ? cut!.playable : whole ? [whole] : [];
+const awaiting = cut?.awaiting ?? [];
+const axis: "theme" | "speaker" = topic ? "theme" : "speaker";
+
+// The word that opens on the left. On a theme page it is fixed; on an
+// interview it is whatever is being spoken about, so the client keeps it.
+const opening = topic ?? allTopics.get(items[0]?.segments[0]?.topicId ?? "") ?? null;
+const speaker = items[0] ?? null;
+
+// Every topic that has something to play, for the field behind the title.
+// Weight is voices, not segments: a topic four people circle is a bigger
+// thing in this archive than one somebody returns to four times.
+const field = [...allTopics.values()]
+  .map((t) => ({
+    slug: t.slug,
+    label: t.label,
+    voices: new Set(crossCut(t.slug).playable.map((i) => i.slug)).size,
+  }))
+  .filter((t) => t.voices > 0)
+  .sort((a, b) => a.label.localeCompare(b.label));
+
+// What each speaker themselves covers, so the menu can open the way the 2014
+// one did: this person's topics first, then everyone else's.
+const speakerTopics: Record<string, string[]> = {};
+for (const iv of published()) {
+  const seen: string[] = [];
+  for (const seg of [...iv.segments].sort((a, b) => a.start - b.start))
+    if (!seen.includes(seg.topicId) && allTopics.has(seg.topicId)) seen.push(seg.topicId);
+  speakerTopics[iv.slug] = seen;
+}
+
+const clientData = {
+  axis,
+  items,
+  base,
+  here: topic?.slug ?? null,
+  theme: topic ? { slug: topic.slug, label: topic.label, colour: topic.colour } : null,
+  themes: themeIndex(),
+  awaiting: awaiting.map((a) => a.name),
+  field,
+  speakerTopics,
+  people: published()
+    .map((iv) => ({ slug: iv.slug, name: iv.interviewee.name, jobtitle: iv.interviewee.jobtitle }))
+    .sort((a, b) => a.name.localeCompare(b.name)),
+  music: { tracks: musicTracks(), seed: seedOf(topic?.slug ?? interview?.slug ?? "") },
+  cards: cardsFor(items, base),
+};
+---
+
+{
+  /* the first playlist is wanted before any script runs */
+  items.length > 0 && items[0].hls && (
+    <link rel="preload" as="fetch" crossorigin href={items[0].hls} />
+  )
+}
+
+<main class="void">
+  <div class="stage stage--crosscut" data-axis={axis}>
+    <h1 class:list={["title", "title--left", axis === "theme" ? "title--following" : "title--idle"]}
+        style={opening ? `color:${opening.colour}` : undefined}>
+      <button class="topicdoor" aria-expanded="false" aria-controls="topicfield"
+              title="every theme in the archive">{opening?.label ?? ""}</button>
+    </h1>
+    <p class:list={["title", "title--right", axis === "speaker" ? "title--following" : "title--idle"]}>
+      <button class="peopledoor" aria-expanded="false" aria-controls="topicfield"
+              title="every speaker in the archive">{speaker?.name ?? ""}</button>
+    </p>
+
+    <figure class:list={["projection", { "projection--dead": !items.length }]}>
+      <canvas class="projection__bloom" aria-hidden="true"></canvas>
+      <div class="projection__frame">
+        {
+          items.length ? (
+            <>
+              {/* the engine parks the first turn on the SECOND element, so that one fronts */}
+              <video class="projection__video" playsinline preload="auto" aria-hidden="true" />
+              <video class="projection__video is-front" playsinline preload="auto"
+                     aria-label={axis === "theme" ? `Everyone on ${opening?.label ?? ""}` : `Interview with ${speaker?.name ?? ""}`} />
+              <div class="projection__feather" aria-hidden="true" />
+              <img class="projection__loader" src={`${base}/img/loader-ced.gif`}
+                   alt="" aria-hidden="true" width="129" height="100" />
+              <div class="titlebar">
+                <h2 class="titlebar__name"><a class="titlebar__link"
+                  href={`${base}/interview/${speaker?.slug ?? ""}/`}
+                  title="watch the whole interview">{speaker?.name ?? ""}</a></h2>
+                <p class="titlebar__job">{speaker?.jobtitle ?? ""}</p>
+                <p class="titlebar__on">
+                  <span class="titlebar__prep">on</span>
+                  <span class="titlebar__topic" style={opening ? `color:${opening.colour}` : undefined}>{opening?.label ?? ""}</span>
+                </p>
+              </div>
+              <p class="modesay" hidden aria-live="polite"></p>
+              <div class="projection__sound">Sound is off — click the film to turn it on</div>
+            </>
+          ) : (
+            <p class="dead-note">
+              No film for this is reachable yet. The interviews hold it, and
+              their films arrive as they are transcoded.
+            </p>
+          )
+        }
+        <div class="projection__dim" aria-hidden="true"></div>
+      </div>
+    </figure>
+
+    {
+      items.length > 0 && (
+        <>
+          <div class="scrub" role="slider" aria-label="Timeline" tabindex="0">
+            <div class="scrub__track" />
+            <div class="scrub__playhead" style="left:0%" />
+          </div>
+
+          <aside class="cardpanel" hidden>
+            <button class="cardpanel__close" aria-label="close">×</button>
+            <h2 class="cardpanel__title" />
+            <div class="cardpanel__body" />
+            <div class="cardpanel__also" />
+            <button class="cardpanel__more" type="button">read the full reference →</button>
+          </aside>
+
+          <nav class="modeswitch" aria-label="Follow a theme, or follow a speaker" />
+
+          <div class="nowline">
+            <span class="nowline__card" />
+          </div>
+        </>
+      )
+    }
+
+    <nav class="topics" aria-label="Where else this goes">
+      <span class="topics__lead" />
+    </nav>
+  </div>
+
+  <div class="reference" hidden role="dialog" aria-modal="true" aria-label="Reference">
+    <article class="reference__sheet">
+      <button class="reference__close" aria-label="close and carry on watching">×</button>
+      <figure class="reference__figure" hidden><img class="reference__img" alt="" /></figure>
+      <h2 class="reference__title"></h2>
+      <p class="reference__sub"></p>
+      <div class="reference__body"></div>
+      <p class="reference__links" hidden></p>
+      <p class="reference__resume">close to carry on watching</p>
+    </article>
+  </div>
+
+  <nav class="topicfield" id="topicfield" hidden aria-label="Every theme in the archive">
+    <button class="topicfield__close" aria-label="close">×</button>
+    <div class="topicfield__row"></div>
+  </nav>
+
+  <script type="application/json" id="cpmb-crosscut" set:html={JSON.stringify(clientData)} />
+</main>
+
+<script>
+  import "../player/player.ts";
+</script>

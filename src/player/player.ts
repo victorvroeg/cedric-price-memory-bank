@@ -1,4 +1,10 @@
-// The cross-cut engine (M2): play a topic across films.
+// The player. One engine, two ways of moving.
+//
+// It is handed a list of turns. A theme page hands it everyone's turns on one
+// theme; an interview page hands it a single turn that is a whole film. From
+// there they are the same thing, which is what lets somebody change axis
+// without the picture stopping: locking a theme splices that theme's turns in
+// behind the one playing, leaving a theme keeps only the speaker's own film.
 //
 // Two <video> elements rotate: while A plays its segment, B is already
 // attached to the next film and parked on its in-point; at the boundary the
@@ -22,12 +28,20 @@ interface Item {
   hls: string;
   start: number;
   end: number;
+  topicId: string | null;
+  segments: { start: number; end: number; topicId: string }[];
   cards: { time: number; title: string; id: string }[];
 }
 
+interface Theme { slug: string; label: string; colour: string }
+
 interface Data {
+  axis: "theme" | "speaker";
   items: Item[];
-  topic: { label: string; colour: string };
+  /** the theme being followed on arrival, or null on an interview */
+  theme: Theme | null;
+  themes: Record<string, { label: string; colour: string }>;
+  awaiting: string[];
   base: string;
   cards: Record<string, {
     slug: string;
@@ -42,7 +56,13 @@ interface Data {
   field: { slug: string; label: string; voices: number }[];
   speakerTopics: Record<string, string[]>;
   people: { slug: string; name: string; jobtitle: string }[];
-  here: string;
+  here: string | null;
+}
+
+/** A playlist fetched at the moment somebody crosses. */
+interface Fetched {
+  items: Item[];
+  cards: Data["cards"];
 }
 
 const dataEl = document.getElementById("cpmb-crosscut");
@@ -50,7 +70,7 @@ const root = document.querySelector<HTMLElement>(".stage--crosscut");
 if (dataEl && root) init(JSON.parse(dataEl.textContent!) as Data, root);
 
 function init(data: Data, root: HTMLElement) {
-  const items = data.items;
+  let items = data.items;
   if (!items.length) return;
 
   const projection = root.querySelector<HTMLElement>(".projection")!;
@@ -60,9 +80,7 @@ function init(data: Data, root: HTMLElement) {
   const playhead = root.querySelector<HTMLElement>(".scrub__playhead");
   const titleL = root.querySelector<HTMLElement>(".title--left");
   const titleR = root.querySelector<HTMLElement>(".title--right");
-  const nowSpeaker = root.querySelector<HTMLElement>(".nowline__topic");
   const nowCard = root.querySelector<HTMLElement>(".nowline__card");
-  const nowIndex = root.querySelector<HTMLElement>(".nowline__time");
   const debug = new URLSearchParams(location.search).has("debug")
     ? Object.assign(document.body.appendChild(document.createElement("div")), { className: "debug" })
     : null;
@@ -72,9 +90,18 @@ function init(data: Data, root: HTMLElement) {
   const hlsBySrc = new Map<HTMLVideoElement, { url: string; hls: Hls | null }>();
   let HlsCtor: typeof Hls | null = null;
 
-  const total = items.reduce((a, i) => a + (i.end - i.start), 0);
-  const offsets: number[] = [];
-  items.reduce((a, i) => (offsets.push(a), a + (i.end - i.start)), 0);
+  // The list can change under the visitor, so its measurements are not
+  // constants: every splice recomputes them and repaints what draws from them.
+  let total = 0;
+  let offsets: number[] = [];
+  let axisKind: "theme" | "speaker" = data.axis;
+  let followed: string | null = data.theme?.slug ?? null;
+
+  function measure(): void {
+    offsets = [];
+    total = items.reduce((a, i) => (offsets.push(a), a + (i.end - i.start)), 0) || 1;
+  }
+  measure();
 
   let active = 0;        // index into els
   let current = -1;      // index into items (what the active element shows)
@@ -84,6 +111,7 @@ function init(data: Data, root: HTMLElement) {
   let seeking = false;
   let skipped = 0;
   let pendingStart = 0;
+  let lastTheme: string | null = null;
   const gaps: number[] = [];
 
   async function attach(el: HTMLVideoElement, url: string, at = 0): Promise<void> {
@@ -158,7 +186,7 @@ function init(data: Data, root: HTMLElement) {
     }
     if (barJob) barJob.textContent = item.jobtitle;
     titleCard.show();   // a cut changes the answer, so say it again
-    axis.update();
+    paintAxis();
 
   }
 
@@ -265,6 +293,8 @@ function init(data: Data, root: HTMLElement) {
     if (playhead) playhead.style.left = `${(pos / total) * 100}%`;
     markTicks(pos / total);
     markSpeaker();
+    const running = themeNow()?.slug ?? null;
+    if (running !== lastTheme) { lastTheme = running; paintAxis(); }
     if (nowCard) {
       const card = [...item.cards].reverse().find((c) => c.time <= el.currentTime);
       const title = card?.title ?? "";
@@ -350,7 +380,6 @@ function init(data: Data, root: HTMLElement) {
           const b = document.createElement("button");
           b.className = "cardpanel__jump";
           fill(b);
-          x
           b.addEventListener("click", () => {
             closeCard(true);
             dim(true);
@@ -514,6 +543,254 @@ function init(data: Data, root: HTMLElement) {
     for (const t of ticks) t.el.classList.toggle("is-past", t.at < pos - 0.001);
   }
 
+  // --- the two axes --------------------------------------------------------
+  // Whatever the list is, at any instant one theme is being spoken and one
+  // person is speaking. Which of the two you are following is the only
+  // difference between the two ways of watching, and it is a variable.
+
+  function themeOf(slug: string | null): Theme | null {
+    if (!slug) return null;
+    const t = data.themes[slug];
+    return t ? { slug, label: t.label, colour: t.colour } : null;
+  }
+
+  function themeNow(): Theme | null {
+    if (current < 0) return themeOf(items[0]?.topicId ?? items[0]?.segments[0]?.topicId ?? null);
+    const item = items[current];
+    const t = els[active].currentTime;
+    const seg = item.segments.find((x) => t >= x.start && t < x.end)
+      ?? item.segments.find((x) => t < x.end);
+    return themeOf(seg?.topicId ?? item.topicId);
+  }
+
+  function speakerNow(): { slug: string; name: string } {
+    const it = items[current < 0 ? 0 : current];
+    return { slug: it.slug, name: it.name };
+  }
+
+  // The scrub is drawn here rather than on the server because it is drawn
+  // again every time the list changes, and a second version of the same
+  // drawing would drift away from this one.
+  function paintTrack(): void {
+    const track = scrub?.querySelector<HTMLElement>(".scrub__track");
+    if (!track) return;
+    track.textContent = "";
+    const put = (width: number, colour: string | null, title: string) => {
+      if (width <= 0) return;
+      const span = document.createElement("span");
+      span.className = "scrub__segment";
+      span.style.width = `${(width / total) * 100}%`;
+      span.style.background = colour ?? "transparent";
+      if (title) span.title = title;
+      track.appendChild(span);
+    };
+    for (const item of items) {
+      let cursor = item.start;
+      for (const seg of item.segments) {
+        const from = Math.max(seg.start, item.start);
+        const to = Math.min(seg.end, item.end);
+        if (to <= from) continue;
+        put(from - cursor, null, "");
+        const t = data.themes[seg.topicId];
+        put(to - from, t?.colour ?? "#666", `${item.name} on ${t?.label ?? seg.topicId}`);
+        cursor = to;
+      }
+      put(item.end - cursor, null, "");
+    }
+  }
+
+  // The row underneath: on a theme, everyone else who speaks on it; on a
+  // person, everything else they speak about.
+  const chips = root.querySelector<HTMLElement>(".topics");
+  const chipLead = chips?.querySelector<HTMLElement>(".topics__lead");
+
+  function paintChips(): void {
+    if (!chips) return;
+    for (const old of chips.querySelectorAll(".topic")) old.remove();
+    const add = (label: string, colour: string, title: string, go: () => void, key: [string, string]) => {
+      const b = document.createElement("button");
+      b.className = "topic";
+      b.type = "button";
+      b.textContent = label;
+      b.title = title;
+      b.style.setProperty("--topic-colour", colour);
+      b.dataset[key[0]] = key[1];
+      b.addEventListener("click", go);
+      chips.appendChild(b);
+    };
+
+    if (axisKind === "theme") {
+      const theme = themeOf(followed) ?? themeNow();
+      if (chipLead) chipLead.textContent = "Also on this theme:";
+      const seen: string[] = [];
+      items.forEach((it) => { if (!seen.includes(it.slug)) seen.push(it.slug); });
+      for (const slug of seen) {
+        const it = items.find((x) => x.slug === slug)!;
+        add(it.name, theme?.colour ?? "#666", `hear ${it.name} on ${theme?.label ?? "this"}`,
+            () => {
+              const from = current < 0 ? 0 : current;
+              const next = items.findIndex((x, n) => x.slug === slug && n > from);
+              const i = next >= 0 ? next : items.findIndex((x) => x.slug === slug);
+              if (i < 0) return;
+              dim(true);
+              void playItem(i, true);
+            }, ["speaker", slug]);
+      }
+      for (const name of data.awaiting ?? []) {
+        const span = document.createElement("span");
+        span.className = "topic topic--awaiting";
+        span.textContent = name;
+        span.title = "film not yet online";
+        chips.appendChild(span);
+      }
+    } else {
+      const it = items[current < 0 ? 0 : current];
+      if (chipLead) chipLead.textContent = "Themes in this interview:";
+      const seen: string[] = [];
+      for (const seg of it.segments) if (!seen.includes(seg.topicId)) seen.push(seg.topicId);
+      for (const slug of seen) {
+        const t = data.themes[slug];
+        if (!t) continue;
+        // A theme chip moves the playhead. It does not change what you are
+        // following: that is what the switch under the timeline is for.
+        add(t.label, t.colour, `jump to where ${it.name} speaks on ${t.label}`,
+            () => {
+              const now = els[active].currentTime;
+              const runs = it.segments.filter((x) => x.topicId === slug);
+              const next = runs.find((x) => x.start > now + 0.5) ?? runs[0];
+              if (!next) return;
+              els[active].currentTime = next.start;
+            }, ["topic", slug]);
+      }
+    }
+    markSpeaker();
+  }
+
+  // Which edge is lit, and what the crossing offers.
+  function paintAxis(): void {
+    const theme = themeNow();
+    root.dataset.axis = axisKind;
+    if (titleL) {
+      const label = titleL.querySelector<HTMLElement>(".topicdoor") ?? titleL;
+      if (theme && label.textContent !== theme.label) label.textContent = theme.label;
+      titleL.style.color = theme?.colour ?? "";
+      titleL.classList.toggle("title--following", axisKind === "theme");
+      titleL.classList.toggle("title--idle", axisKind !== "theme");
+    }
+    if (titleR) {
+      titleR.classList.toggle("title--following", axisKind === "speaker");
+      titleR.classList.toggle("title--idle", axisKind !== "speaker");
+    }
+    const barTopic = root.querySelector<HTMLElement>(".titlebar__topic");
+    if (barTopic && theme) {
+      barTopic.textContent = theme.label;
+      barTopic.style.color = theme.colour;
+    }
+    axis.update();
+  }
+
+  function relayout(): void {
+    measure();
+    paintTrack();
+    layoutCards();
+    paintChips();
+    paintAxis();
+  }
+
+  async function fetchList(url: string): Promise<Fetched | null> {
+    try {
+      const r = await fetch(url);
+      if (!r.ok) return null;
+      return (await r.json()) as Fetched;
+    } catch {
+      return null;
+    }
+  }
+
+  // --- crossing ------------------------------------------------------------
+  // Neither of these touches the video element. The picture that made you want
+  // to cross is the picture still on screen afterwards; only what happens at
+  // the end of this answer has changed.
+
+  async function lockTheme(slug: string): Promise<void> {
+    if (current < 0) return;
+    const cut = await fetchList(`${data.base}/data/cut/${slug}.json`);
+    if (!cut?.items.length) return;
+    Object.assign(data.cards, cut.cards);
+
+    const here = items[current];
+    const now = els[active].currentTime;
+    // Locking what is being said carries straight on. Locking something else
+    // has to go and find it: later in this film if this person gets to it,
+    // and otherwise at the top of the theme. That is a cut, not a stop.
+    const running = here.segments.find((x) => now >= x.start && now < x.end);
+    const seg = running?.topicId === slug
+      ? running
+      : here.segments.find((x) => x.topicId === slug && x.end > now)
+        ?? here.segments.find((x) => x.topicId === slug);
+
+    if (!seg) {
+      items = cut.items;
+      current = -1;
+      axisKind = "theme";
+      followed = slug;
+      relayout();
+      history.replaceState(null, "", `${data.base}/topic/${slug}/`);
+      axis.say();
+      dim(true);
+      await playItem(0, true);
+      report(`locked ${slug} from the top: ${items.length} turns`);
+      return;
+    }
+
+    const head: Item = {
+      ...here,
+      topicId: slug,
+      start: seg.start,
+      end: seg.end,
+      segments: [{ start: seg.start, end: seg.end, topicId: slug }],
+      cards: here.cards.filter((c) => c.time >= seg.start && c.time < seg.end),
+    };
+    const rest = cut.items.filter((x) => !(x.slug === here.slug && Math.abs(x.start - seg.start) < 1));
+
+    items = [head, ...rest];
+    current = 0;
+    axisKind = "theme";
+    followed = slug;
+    relayout();
+    if (items[1]) park(els[1 - active], items[1]);
+    // already inside it, or on the way to it
+    if (now < seg.start || now >= seg.end) els[active].currentTime = seg.start;
+    history.replaceState(null, "", `${data.base}/topic/${slug}/`);
+    axis.say();
+    report(`locked ${slug}: ${items.length} turns`);
+  }
+
+  async function stayWith(slug?: string): Promise<void> {
+    const who = slug ?? (current >= 0 ? items[current].slug : items[0].slug);
+    const film = await fetchList(`${data.base}/data/film/${who}.json`);
+    if (!film?.items.length) return;
+    Object.assign(data.cards, film.cards);
+    const sameFilm = current >= 0 && items[current].slug === who;
+    const at = sameFilm ? els[active].currentTime : film.items[0].start;
+
+    items = film.items;
+    axisKind = "speaker";
+    followed = null;
+    if (sameFilm) {
+      current = 0;
+      relayout();
+    } else {
+      current = -1;
+      relayout();
+      dim(true);
+      await playItem(0, true, at);
+    }
+    history.replaceState(null, "", `${data.base}/interview/${who}/`);
+    axis.say();
+    report(`following ${who} whole`);
+  }
+
   // --- the topic field -----------------------------------------------------
   // One word on the left is the only sign of where you are. Lean on it and the
   // rest of the archive stands up behind it — same hover grammar as a
@@ -566,23 +843,34 @@ function init(data: Data, root: HTMLElement) {
       const theirs = (data.speakerTopics[who.slug] ?? []).filter((t) => topicLabel.has(t));
       const rest = data.field.map((t) => t.slug).filter((t) => !theirs.includes(t));
 
+      // Choosing a theme from the menu is the same act as locking one on
+      // screen, so it behaves the same way: the film does not stop for it.
+      const pick = (li: HTMLLIElement, t: string) => {
+        li.querySelector("a")!.addEventListener("click", (e) => {
+          e.preventDefault();
+          closeField(true);
+          void lockTheme(t);
+        });
+        return li;
+      };
+
       fieldRow.appendChild(heading(`${who.name} on`));
       const a = list();
       for (const t of theirs)
-        a.appendChild(entry(topicLabel.get(t)!, `${data.base}/topic/${t}/`, t === data.here, i++));
+        a.appendChild(pick(entry(topicLabel.get(t)!, `${data.base}/topic/${t}/`, t === followed, i++), t));
       fieldRow.appendChild(a);
 
       fieldRow.appendChild(heading("others on"));
       const b = list();
       for (const t of rest)
-        b.appendChild(entry(topicLabel.get(t)!, `${data.base}/topic/${t}/`, t === data.here, i++));
+        b.appendChild(pick(entry(topicLabel.get(t)!, `${data.base}/topic/${t}/`, t === followed, i++), t));
       fieldRow.appendChild(b);
     } else {
       const inCut: string[] = [];
       for (const it of items) if (!inCut.includes(it.slug)) inCut.push(it.slug);
       const here = current >= 0 ? items[current].slug : null;
 
-      fieldRow.appendChild(heading(`on ${data.topic.label.toLowerCase()}`));
+      fieldRow.appendChild(heading(`on ${(themeNow()?.label ?? "this").toLowerCase()}`));
       const a = list();
       inCut.forEach((slug) => {
         const p = data.people.find((x) => x.slug === slug);
@@ -603,8 +891,16 @@ function init(data: Data, root: HTMLElement) {
 
       fieldRow.appendChild(heading("whole interviews"));
       const b = list();
-      for (const p of data.people)
-        b.appendChild(entry(p.name, `${data.base}/interview/${p.slug}/`, false, i++));
+      for (const p of data.people) {
+        const li = entry(p.name, `${data.base}/interview/${p.slug}/`,
+                         axisKind === "speaker" && p.slug === here, i++);
+        li.querySelector("a")!.addEventListener("click", (e) => {
+          e.preventDefault();
+          closeField(true);
+          void stayWith(p.slug);
+        });
+        b.appendChild(li);
+      }
       fieldRow.appendChild(b);
     }
   }
@@ -733,26 +1029,28 @@ function init(data: Data, root: HTMLElement) {
   });
 
   function report(msg: string): void {
-    console.log(`[crosscut] ${msg}`);
+    console.log(`[cpmb] ${msg}`);
     if (debug) debug.textContent = msg;
   }
 
   // Park the first two films so the opening tap is instant. playItem starts
   // on the *standby* element (els[1] while active=0), so the first item is
   // parked there and the second on els[0].
-  // On this page the theme is fixed and the speakers change under it. This has
-  // to exist before the first setTitles(), which asks it to repaint: declaring
-  // it further down left the opening call reaching into the dead zone, and the
-  // whole cross-cut died on arrival with nothing on screen to say so.
+  // The way across. This has to exist before the first setTitles(), which asks
+  // it to repaint: declaring it further down left the opening call reaching
+  // into the dead zone, and the whole player died on arrival with nothing on
+  // screen to say so.
   const axis = makeMode(root, {
-    kind: "theme",
-    base: data.base,
-    theme: { slug: data.here, label: data.topic.label, colour: data.topic.colour },
-    get speaker() {
-      const it = items[current < 0 ? 0 : current];
-      return { slug: it.slug, name: it.name };
+    kind: () => axisKind,
+    theme: themeNow,
+    speaker: speakerNow,
+    cross: () => {
+      if (axisKind === "theme") void stayWith();
+      else {
+        const t = themeNow();
+        if (t) void lockTheme(t.slug);
+      }
     },
-    at: () => els[active].currentTime,
   });
 
   park(els[1], items[0]);
@@ -762,15 +1060,15 @@ function init(data: Data, root: HTMLElement) {
   // Start on arrival. Browsers only allow unprompted sound when they judge the
   // visitor to be engaged, so: try with sound, fall back to silent rather than
   // to nothing, and let any click or key bring the sound up.
-  async function autostart(first = 0): Promise<void> {
+  async function autostart(first = 0, at?: number): Promise<void> {
     try {
-      await playItem(first, true);
+      await playItem(first, true, at);
       if (!els[active].paused) { score?.allow(); return; }
     } catch { /* fall through to muted */ }
     for (const el of els) el.muted = true;
     projection.classList.add("is-muted");
     try {
-      await playItem(first, true);
+      await playItem(first, true, at);
       report("started muted — click for sound");
     } catch {
       pendingStart = first;
@@ -801,23 +1099,14 @@ function init(data: Data, root: HTMLElement) {
     }, { capture: true });
   }
 
-  // Clicking a name jumps to that person's turn on this topic.
-  for (const chip of root.querySelectorAll<HTMLButtonElement>(".topic[data-speaker]")) {
-    chip.addEventListener("click", () => {
-      const from = current < 0 ? 0 : current;
-      // the next turn of theirs after where we are, or their first
-      const next = items.findIndex((it, n) => it.slug === chip.dataset.speaker && n > from);
-      const i = next >= 0 ? next : items.findIndex((it) => it.slug === chip.dataset.speaker);
-      if (i < 0) return;
-      dim(true);
-      void playItem(i, true);
-    });
-  }
 
   function markSpeaker(): void {
     const slug = current >= 0 ? items[current].slug : null;
     for (const chip of root.querySelectorAll<HTMLElement>(".topic[data-speaker]"))
       chip.classList.toggle("is-active", chip.dataset.speaker === slug);
+    const theme = themeNow()?.slug ?? null;
+    for (const chip of root.querySelectorAll<HTMLElement>(".topic[data-topic]"))
+      chip.classList.toggle("is-active", chip.dataset.topic === theme);
   }
 
   // Warm the rest of the cross-cut. Only the playlists — a few kB each — not
@@ -836,15 +1125,16 @@ function init(data: Data, root: HTMLElement) {
   }
   setTimeout(warmPlaylists, 1200);   // after the first frame is on screen
 
-  // Arriving from the switch: start on the speaker you were already hearing.
+  // A shared link can still name a speaker to open on, and #t= a moment.
   const from = new URLSearchParams(location.search).get("from");
   if (from) {
     const n = items.findIndex((i) => i.slug === from);
     if (n > 0) pendingStart = n;
   }
+  const at = Number(/^#t=([\d.]+)/.exec(location.hash)?.[1] ?? NaN);
 
-  layoutCards();
+  relayout();
   loading(true);          // Cedric holds the frame until a picture arrives
   score?.swell();
-  void autostart(pendingStart);
+  void autostart(pendingStart, Number.isFinite(at) ? at : undefined);
 }
