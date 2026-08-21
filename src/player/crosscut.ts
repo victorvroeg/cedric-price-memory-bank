@@ -67,6 +67,7 @@ function init(data: Data, root: HTMLElement) {
   let singleMode = false;
   let started = false;
   let advancing = false;
+  let seeking = false;
   let skipped = 0;
   let pendingStart = 0;
   const gaps: number[] = [];
@@ -172,7 +173,9 @@ function init(data: Data, root: HTMLElement) {
 
     if (!singleMode) {
       const old = els[active];
+      seeking = true;
       old.pause();
+      seeking = false;
       active = 1 - active;
       els[active].classList.add("is-front");
       old.classList.remove("is-front");
@@ -386,9 +389,11 @@ function init(data: Data, root: HTMLElement) {
     } else if (els[active].paused) {
       void els[active].play();
       projection.classList.add("is-playing");
+      score?.under();
     } else {
       els[active].pause();
       projection.classList.remove("is-playing");
+      score?.out();
     }
   });
 

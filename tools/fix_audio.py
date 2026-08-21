@@ -39,9 +39,18 @@ TARGET_LUFS = -18.0
 PEAK_CEILING = -1.0     # dBTP
 DEAD_CHANNEL = 25.0     # dB below the other channel counts as not there
 
-# Peter Murray is being re-exported from the edit to lose its clip-name
-# burn-in; his audio gets the same treatment when that arrives.
-SKIP = {"11_petermurray_def_tc-check.mov"}
+SKIP: set[str] = set()
+
+# Peter Murray's export carries a clip-name burn-in (MVI_5377.MOV, changing at
+# every cut) on a semi-transparent plate. A clean re-export is coming but is a
+# long way off, so this is the interim: delogo, not a black box. Where the
+# background behind the plate is black — most of the film — delogo yields
+# black. Where his raised hand crosses it, delogo smears the surrounding
+# pixels inward, which reads as softness rather than as a hole cut in his arm.
+# Measured over all 35,314 frames; the plate sits at x668-1256, y118-222.
+BURN_IN = {
+    "11_petermurray_def_tc-check.mov": "delogo=x=668:y=118:w=588:h=104",
+}
 
 
 @dataclass
@@ -86,10 +95,12 @@ def probe(path: Path) -> Probe | None:
     integrated = float(re.findall(r"I:\s+(-?[\d.]+) LUFS", ebu)[-1])
     peak = float(re.findall(r"Peak:\s+(-?[\d.]+) dBFS", ebu)[-1])
 
+    # Full gain to target. Where that would push a transient past the ceiling
+    # a limiter catches it — these are quiet rooms with the occasional bump on
+    # the mic, and holding the whole film 15 dB down to protect one thump is
+    # the wrong trade. The limiter's work is reported, not hidden.
     gain = TARGET_LUFS - integrated
     capped = peak + gain > PEAK_CEILING
-    if capped:
-        gain = PEAK_CEILING - peak
     return Probe(path.name, channels, rms[:2], integrated, peak, source,
                  round(gain, 2), capped)
 
@@ -108,10 +119,21 @@ def pan(source: str) -> str:
 def write(path: Path, p: Probe) -> Path:
     OUT.mkdir(exist_ok=True)
     dest = OUT / path.name
-    chain = f"{pan(p.source)},volume={p.gain}dB"
+    ceiling = 10 ** (PEAK_CEILING / 20)
+    chain = (f"{pan(p.source)},volume={p.gain}dB,"
+             f"alimiter=limit={ceiling:.4f}:attack=5:release=60:level=disabled")
+
+    # The picture is copied untouched unless something has to be painted out of
+    # it, in which case it is re-encoded once, at a quality high enough that
+    # Cloudflare's own transcode is what limits the result, not this pass.
+    burn = BURN_IN.get(path.name)
+    video = (["-vf", burn, "-c:v", "libx264", "-preset", "slow", "-crf", "16",
+              "-pix_fmt", "yuv420p", "-x264-params", "keyint=50:min-keyint=25"]
+             if burn else ["-c:v", "copy"])
+
     r = subprocess.run(
         [FFMPEG, "-hide_banner", "-v", "error", "-y", "-i", str(path),
-         "-map", "0:v:0", "-map", "0:a:0", "-c:v", "copy",
+         "-map", "0:v:0", "-map", "0:a:0", *video,
          "-af", chain, "-c:a", "aac", "-b:a", "192k", "-ac", "1",
          "-movflags", "+faststart", str(dest)],
         capture_output=True, text=True)
@@ -143,7 +165,7 @@ def main() -> None:
             p = asdict(got)
             probes[f.name] = p
             STATE.write_text(json.dumps(probes, indent=2))
-        flag = "  capped" if p["capped"] else ""
+        flag = "  limiter engages" if p["capped"] else ""
         print(f"{f.name[:44]:44} {p['channels']:>3} {p['source']:>6} "
               f"{p['integrated']:9.1f} {p['gain']:+7.2f} {p['true_peak']:7.1f}{flag}")
 
