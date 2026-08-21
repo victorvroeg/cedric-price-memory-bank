@@ -121,7 +121,40 @@ function init(data: ScreenData, root: HTMLElement) {
     projection.classList.remove("is-playing");
     stopBloom();
   });
-  projection.querySelector(".projection__frame")?.addEventListener("click", togglePlay);
+  projection.querySelector(".projection__frame")?.addEventListener("click", () => {
+    // While it is silent the frame means one thing: turn the sound on.
+    if (projection.classList.contains("is-muted")) { unmute(); return; }
+    togglePlay();
+  });
+
+  function unmute(): void {
+    if (!projection.classList.contains("is-muted")) return;
+    video!.muted = false;
+    projection.classList.remove("is-muted");
+  }
+  for (const ev of ["pointerdown", "keydown"] as const) {
+    addEventListener(ev, (e) => {
+      const t = e.target;
+      if (t instanceof Element && t.closest(".projection__frame")) return;
+      unmute();
+    }, { capture: true });
+  }
+
+  // Nobody should have to ask an archive to start. Try with sound; if the
+  // browser refuses, play silent rather than not at all and say so.
+  async function autostart(): Promise<void> {
+    try {
+      await video!.play();
+      return;
+    } catch { /* fall through */ }
+    video!.muted = true;
+    projection.classList.add("is-muted");
+    try { await video!.play(); } catch { /* leave it to the visitor */ }
+  }
+  video.addEventListener("canplay", function once() {
+    video!.removeEventListener("canplay", once);
+    void autostart();
+  }, { once: true });
 
   // Every cut passes through darkness: dim, move, undim.
   function seekTo(t: number) {

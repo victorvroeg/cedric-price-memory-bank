@@ -41,10 +41,17 @@ FILMS = {
     "cedric_price_memory_bank_-_paul_finch_v1 (1080p)": "paul-finch",
     "cedric_price_memory_bank_-_hans_ulrich_obrist_v1 (1080p)": "hans-ulrich-obrist",
 }
-INTRO = "cedric_price_memory_bank_-_trailer_v1"
+# The opening film Victor re-cut on 2026-08-21, 24.8s. The 2014 trailer
+# (cedric_price_memory_bank_-_trailer_v1) is a separate thing and is not the
+# front door any more.
+INTRO = "cpmb-opening-video"
 # Kees Christiaanse has film but no topic map yet — he goes live through the
 # ingest pass, not through this script.
 HOLD = {"kees christiaanse v02": "kees-christiaanse"}
+
+# Uploaded, kept, but nothing on the site points at it. The 2014 trailer is the
+# film Jan Nauta showed in his talk; it is archive material rather than a page.
+UNUSED = {"cedric_price_memory_bank_-_trailer_v1"}
 
 TOLERANCE = 2.0
 
@@ -80,6 +87,19 @@ def main() -> int:
         "duration": v.get("d"),
     } for v in videos]
 
+    # A re-upload leaves the old copy in the account under the same name. Keep
+    # only the newest of each, or the archive would be wired to whichever
+    # duplicate the API happened to list first.
+    newest: dict[str, dict] = {}
+    for v in videos:
+        n = (v.get("meta", {}).get("name") or v.get("meta", {}).get("filename") or "")
+        if n not in newest or (v.get("created", "") > newest[n].get("created", "")):
+            newest[n] = v
+    dropped = len(videos) - len(newest)
+    if dropped:
+        print(f"({dropped} older duplicate{'s' if dropped != 1 else ''} ignored)\n")
+    videos = list(newest.values())
+
     wired, held, problems, missing = [], [], [], dict(FILMS)
 
     for v in videos:
@@ -105,6 +125,10 @@ def main() -> int:
             if not dry:
                 p.write_text(json.dumps(d, indent=2, ensure_ascii=False) + "\n")
             wired.append(f"intro  {round(duration or 0, 2)}s")
+            continue
+
+        if key in UNUSED:
+            held.append(f"{stem} ({state}) — kept, not used by any page")
             continue
 
         slug = FILMS.get(key)
