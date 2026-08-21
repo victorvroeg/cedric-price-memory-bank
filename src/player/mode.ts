@@ -26,48 +26,39 @@ export function makeMode(root: HTMLElement, view: ModeView): { update(): void; s
   const said = root.querySelector<HTMLElement>(".modesay");
   let timers: number[] = [];
 
-  // The line says where you are before it offers anywhere else: a plain
-  // sentence naming what is being followed, then the way across after it.
-  const state = document.createElement("p");
-  state.className = "modeswitch__state";
+  // Two rows of the deck below the film: where you are, then the way across.
+  // Each is a label and a value, and the deck's grid does the aligning.
   const lead = document.createElement("span");
-  lead.className = "modeswitch__lead";
+  lead.className = "deck__label";
   const held = document.createElement("span");
-  held.className = "modeswitch__held";
-  state.append(lead, held);
+  held.className = "deck__value modeswitch__held";
 
+  const verb = document.createElement("span");
+  verb.className = "deck__label";
   const button = document.createElement("button");
   button.type = "button";
-  button.className = "modeswitch__cross";
-  const verb = document.createElement("span");
-  verb.className = "modeswitch__verb";
-  const what = document.createElement("span");
-  what.className = "modeswitch__value";
-  button.append(verb, what);
+  button.className = "deck__value modeswitch__cross";
   button.addEventListener("click", () => view.cross());
-  el?.replaceChildren(state, button);
+  el?.replaceChildren(lead, held, verb, button);
 
   function update(): void {
+    lead.textContent = "staying with";
+    verb.textContent = "or hear";
     if (view.kind() === "theme") {
       const t = view.theme();
       const s = view.speaker();
-      lead.textContent = "Staying with this topic:";
       held.textContent = t?.label ?? "";
       held.style.color = t?.colour ?? "";
-      verb.textContent = "or hear";
-      what.textContent = `${s.name}'s whole interview`;
-      what.style.color = "";
+      button.textContent = `${s.name}'s whole interview`;
+      button.style.color = "";
       button.title = `${s.name}'s whole interview, carrying on from here`;
       button.disabled = false;
     } else {
       const t = view.theme();
-      const s = view.speaker();
-      lead.textContent = "Staying with:";
-      held.textContent = s.name;
+      held.textContent = view.speaker().name;
       held.style.color = "";
-      verb.textContent = "or hear";
-      what.textContent = t ? `everyone on ${t.label}` : "everyone on this theme";
-      what.style.color = t?.colour ?? "";
+      button.textContent = t ? `everyone on ${t.label}` : "everyone on this theme";
+      button.style.color = t?.colour ?? "";
       button.title = t ? `everyone in the archive on ${t.label}` : "";
       button.disabled = !t;
     }

@@ -158,10 +158,14 @@ const clientData = {
             <button class="cardpanel__more" type="button">read the full reference →</button>
           </aside>
 
-          <nav class="modeswitch" aria-label="Follow a theme, or follow a speaker" />
-
-          <div class="nowline">
-            <span class="nowline__card" />
+          {/* One block under the film: where you are, the way across, and
+              whatever has just been named. One label column, one value column,
+              so the three read as a set rather than three loose lines. */}
+          <div class="deck" role="group" aria-label="Where you are, and the way across">
+            <div class="modeswitch" />
+            <div class="nowline">
+              <span class="nowline__card" />
+            </div>
             <button class="captions-toggle" type="button" aria-pressed="false"
                     title="automatic transcription, uncorrected">captions</button>
           </div>
