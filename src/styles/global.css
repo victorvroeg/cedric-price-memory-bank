@@ -351,6 +351,32 @@ a:hover {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.captions-toggle {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  opacity: 0.6;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 160ms ease, color 160ms ease;
+}
+.captions-toggle:hover,
+.captions-toggle:focus-visible { opacity: 1; }
+.captions-toggle.is-on {
+  color: var(--fg);
+  opacity: 1;
+  border-bottom: 1px solid var(--fg);
+}
+video::cue {
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  font-family: inherit;
+}
 .nowline__time {
   color: var(--fg-dim);
   font-variant-numeric: tabular-nums;

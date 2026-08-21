@@ -11,7 +11,7 @@
 // because both change when the axis changes and a second server-side version
 // of the same drawing would drift out of step with the first.
 import type { Interview, Topic } from "../lib/content";
-import { topics as allTopics } from "../lib/content";
+import { topics as allTopics, transcripts } from "../lib/content";
 import { crossCut, published, wholeFilm } from "../lib/crosscut";
 import { cardsFor, themeIndex } from "../lib/payload";
 import { musicTracks, seedOf } from "../lib/music";
@@ -78,6 +78,9 @@ const clientData = {
     .sort((a, b) => a.name.localeCompare(b.name)),
   music: { tracks: musicTracks(), seed: seedOf(topic?.slug ?? interview?.slug ?? "") },
   cards: cardsFor(items, base),
+  captioned: published()
+    .filter((iv) => transcripts.has(iv.slug))
+    .map((iv) => iv.slug),
 };
 ---
 
@@ -158,6 +161,8 @@ const clientData = {
 
           <div class="nowline">
             <span class="nowline__card" />
+            <button class="captions-toggle" type="button" aria-pressed="false"
+                    title="automatic transcription, uncorrected">captions</button>
           </div>
         </>
       )

@@ -54,6 +54,8 @@ interface Data {
     also: { slug: string; name: string; time: number; topicId: string | null; topicLabel: string | null }[];
   }>;
   music: { tracks: string[]; seed: number };
+  /** slugs that have a captions VTT built for them */
+  captioned: string[];
   field: { slug: string; label: string; voices: number }[];
   speakerTopics: Record<string, string[]>;
   people: { slug: string; name: string; jobtitle: string }[];
@@ -116,6 +118,53 @@ function init(data: Data, root: HTMLElement) {
   let lastSpeaker: string | null = null;
   const gaps: number[] = [];
 
+  // --- captions ------------------------------------------------------------
+  // The transcript rides along as a native text track, one VTT per interview
+  // in the film's own clock, swapped whenever the element changes films.
+  const captioned = new Set(data.captioned ?? []);
+  const capToggle = root.querySelector<HTMLButtonElement>(".captions-toggle");
+  let captionsOn = false;
+  try { captionsOn = localStorage.getItem("cpmb-captions") === "on"; } catch { /* private mode */ }
+
+  function applyCaptionMode(): void {
+    for (const el of els)
+      for (const t of el.textTracks) t.mode = captionsOn ? "showing" : "hidden";
+    capToggle?.setAttribute("aria-pressed", String(captionsOn));
+    capToggle?.classList.toggle("is-on", captionsOn);
+  }
+
+  function setTrack(el: HTMLVideoElement, slug: string): void {
+    if (!captioned.has(slug)) {
+      el.querySelector("track")?.remove();
+      return;
+    }
+    let track = el.querySelector<HTMLTrackElement>("track");
+    if (!track) {
+      track = document.createElement("track");
+      track.kind = "captions";
+      track.srclang = "en";
+      track.label = "English (automatic transcription)";
+      track.addEventListener("load", applyCaptionMode);
+      el.appendChild(track);
+    }
+    const src = `${data.base}/data/captions/${slug}.vtt`;
+    if (!track.src.endsWith(src)) track.src = src;
+    applyCaptionMode();
+  }
+
+  function toggleCaptions(): void {
+    captionsOn = !captionsOn;
+    try { localStorage.setItem("cpmb-captions", captionsOn ? "on" : "off"); } catch { /* private mode */ }
+    applyCaptionMode();
+  }
+  capToggle?.addEventListener("click", toggleCaptions);
+  addEventListener("keydown", (e) => {
+    if (e.key !== "c" || e.metaKey || e.ctrlKey || e.altKey) return;
+    const t = e.target;
+    if (t instanceof HTMLElement && /^(input|textarea|select)$/i.test(t.tagName)) return;
+    toggleCaptions();
+  });
+
   async function attach(el: HTMLVideoElement, url: string, at = 0): Promise<void> {
     const prev = hlsBySrc.get(el);
     if (prev?.url === url && !el.error) return; // re-attach after a media error
@@ -149,6 +198,7 @@ function init(data: Data, root: HTMLElement) {
 
   function park(el: HTMLVideoElement, item: Item): void {
     // attach + place on the in-point, paused, so starting it is instant
+    setTrack(el, item.slug);
     void attach(el, item.hls, item.start).then(() => {
       const seek = () => { el.currentTime = item.start; };
       if (el.readyState >= 1) seek();
@@ -208,6 +258,7 @@ function init(data: Data, root: HTMLElement) {
     const from = at ?? item.start;
     const standby = els[1 - active];
     const el = singleMode ? els[0] : standby;
+    setTrack(el, item.slug);
 
     if (!singleMode && !viaGesture) {
       // standby should already be parked on item.start

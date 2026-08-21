@@ -26,6 +26,7 @@ const load = (dir) => {
 const topics = load("topics");
 const interviews = load("interviews");
 const cards = load("cards");
+const transcripts = load("transcripts");
 
 const errors = [];
 const warnings = [];
@@ -38,6 +39,8 @@ for (const [slug, iv] of interviews) {
   if (!iv.draft && !/^\d{4}-\d{2}-\d{2}$/.test(iv.recorded ?? ""))
     errors.push(`${slug}: published but has no recorded date (the site shows "filmed <month year>")`);
   if (iv.draft) warnings.push(`${slug} is a DRAFT — excluded from the archive until approved`);
+  if (!iv.draft && !(transcripts.get(slug)?.cues ?? []).length)
+    warnings.push(`${slug}: published but has no transcript, so no captions`);
   else if (!(iv.segments ?? []).length) errors.push(`${slug}: published but has no segments`);
   for (const [i, s] of (iv.segments ?? []).entries()) {
     if (typeof s.start !== "number" || typeof s.end !== "number" || s.start < 0 || s.end <= s.start)

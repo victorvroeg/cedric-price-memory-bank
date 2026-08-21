@@ -67,6 +67,19 @@ export const cards = loadDir<Card>(
   import.meta.glob("../../content/cards/*.json", { eager: true }),
 );
 
+export interface Transcript {
+  slug: string;
+  language: string;
+  model: string;
+  /** false while the machine transcription has not been human-checked */
+  corrected: boolean;
+  cues: { start: number; end: number; text: string }[];
+}
+
+export const transcripts = loadDir<Transcript>(
+  import.meta.glob("../../content/transcripts/*.json", { eager: true }),
+);
+
 export const colofon = (
   Object.values(
     import.meta.glob("../../content/pages/colofon.json", { eager: true }),
