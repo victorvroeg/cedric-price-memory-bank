@@ -887,10 +887,41 @@ a:hover {
 .peopledoor:focus-visible::after,
 .peopledoor[aria-expanded="true"]::after { opacity: 0.55; }
 
-/* Which thread are you on? The lit edge is the answer. */
+/* Which thread are you on?
+   Both edges stay readable: they are the archive's two axes and neither is
+   decoration. The answer is carried by a rule running alongside the live one,
+   in that thread's own colour, the way a margin mark shows which line you are
+   on. Dimming alone said "unimportant" when it meant "not this one". */
+.title { transition: opacity 240ms ease; }
 .title--following { opacity: 1; }
-.title--idle { opacity: 0.38; transition: opacity 240ms ease; }
-.title--idle:hover { opacity: 0.7; }
+/* the right edge is set dim by default; when it is the live thread it is not */
+.title--right.title--following { color: var(--fg); }
+.title--idle { opacity: 0.62; }
+.title--idle:hover,
+.title--idle:focus-within { opacity: 0.95; }
+
+.title--following::before {
+  content: "";
+  position: absolute;
+  left: -0.62em;
+  top: -0.1em;
+  bottom: -0.1em;
+  width: 2px;
+  background: currentColor;
+  border-radius: 1px;
+  animation: thread-mark 320ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes thread-mark {
+  from { transform: scaleY(0); opacity: 0; }
+  to { transform: scaleY(1); opacity: 1; }
+}
+.title--following::before { transform-origin: 50% 0; }
+/* the right edge reads downwards, so its mark grows from the other end */
+.title--right.title--following::before { transform-origin: 50% 100%; }
+
+@media (prefers-reduced-motion: reduce) {
+  .title--following::before { animation: none; }
+}
 
 .stage--crosscut.is-fielded .scrub,
 .stage--crosscut.is-fielded .nowline,
