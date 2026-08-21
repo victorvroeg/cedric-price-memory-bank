@@ -108,16 +108,6 @@ const clientData = {
             </span>
             <span class="nowline__card" />
             <span class="nowline__time">1 / {playable.length}</span>
-            <span class="controls">
-              <button class="controls__sound" aria-pressed="false"
-                      title="sound is off — click to turn it on">
-                <span aria-hidden="true">🔇</span><span class="controls__label">sound</span>
-              </button>
-              <button class="controls__score" hidden aria-pressed="true"
-                      title="music bed on — click to silence it">
-                <span aria-hidden="true">♪</span><span class="controls__label">music</span>
-              </button>
-            </span>
           </div>
         </>
       )
@@ -137,7 +127,7 @@ const clientData = {
   </div>
 
   <nav class="topicfield" id="topicfield" hidden aria-label="Every topic in the archive">
-    <p class="topicfield__lead">cut sideways</p>
+    <button class="topicfield__close" aria-label="close">×</button>
     <ul class="topicfield__list">
       {field.map((t, n) => (
         <li>

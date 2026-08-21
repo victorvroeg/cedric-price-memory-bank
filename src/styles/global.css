@@ -800,39 +800,7 @@ a:hover {
 .cardpanel.is-pinned .cardpanel__close,
 .cardpanel:hover .cardpanel__close { opacity: 1; }
 
-/* Sound is never a riddle: the state is on screen and the switch does not move.
-   Left of it, the bed's own switch. */
-.controls {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  white-space: nowrap;
-}
-.controls button {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: none;
-  border: 0;
-  padding: 2px 0;
-  font: inherit;
-  font-size: 13px;
-  line-height: 1;
-  color: var(--fg-dim);
-  cursor: pointer;
-  transition: color 160ms ease, opacity 160ms ease;
-}
-.controls button:hover,
-.controls button:focus-visible { color: var(--fg); }
-.controls__label {
-  font-size: 11px;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-}
-/* sound off is a fault to be fixed, not a setting to be admired */
-.controls__sound.is-off { color: var(--fg); }
-.controls button.is-off .controls__label { text-decoration: line-through; }
-.controls__score.is-off { opacity: 0.4; }
+
 
 /* ——— the topic field: the whole archive standing behind one word ——— */
 
@@ -890,8 +858,30 @@ a:hover {
   background:
     radial-gradient(120% 90% at 50% 50%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.93) 72%);
   overflow-y: auto;
-  animation: field-in 260ms ease both;
+  animation: field-in 300ms ease both;
 }
+.topicfield.is-leaving { animation: field-out 300ms ease both; }
+@keyframes field-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.topicfield__close {
+  position: absolute;
+  top: clamp(12px, 3vh, 34px);
+  right: clamp(16px, 4vw, 46px);
+  background: none;
+  border: 0;
+  padding: 6px 10px;
+  font: inherit;
+  font-size: 26px;
+  line-height: 1;
+  color: var(--fg-dim);
+  cursor: pointer;
+  transition: color 160ms ease;
+}
+.topicfield__close:hover,
+.topicfield__close:focus-visible { color: var(--fg); }
 .topicfield[hidden] { display: none; }
 @keyframes field-in {
   from { opacity: 0; }
@@ -914,42 +904,54 @@ a:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
-  gap: 0.42em 1.05em;
-  max-width: 66ch;
+  gap: 0.3em 0.85em;
+  max-width: 74ch;
 }
 
+/* The topic colours are the design's colours. They are fresh on black and
+   they stay fresh — no opacity, no wash. Weight is carried by size alone,
+   the way it is on a poster. */
 .topicfield__item {
   display: inline-block;
   color: var(--c);
-  opacity: 0.52;
+  border-bottom: 0;          /* the global link hairline would fence every word */
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
-  letter-spacing: 1px;
-  /* weight is voices: a topic four people circle stands larger */
-  font-size: clamp(14px, calc(12px + var(--n) * 0.42vw), 34px);
-  line-height: 1.05;
-  transition: opacity 180ms ease, transform 180ms ease;
-  animation: field-item-in 300ms ease both;
-  animation-delay: calc(var(--i) * 11ms);
+  letter-spacing: 0.5px;
+  /* voices, steeply: one voice is a footnote, thirteen is a headline */
+  font-size: clamp(13px, calc(9px + var(--n) * var(--n) * 0.055vw + var(--n) * 0.28vw), 84px);
+  line-height: 0.98;
+  transform-origin: 50% 60%;
+  transition: transform 200ms cubic-bezier(0.2, 0.9, 0.25, 1), filter 200ms ease;
+  animation: field-item-in 420ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--i) * 13ms);
 }
 @keyframes field-item-in {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 0.52; transform: none; }
+  from { opacity: 0; transform: translateY(14px) scale(0.94); filter: blur(3px); }
+  to { opacity: 1; transform: none; filter: none; }
+}
+/* leaving is the same move, reversed and quicker */
+.topicfield.is-leaving .topicfield__item {
+  animation: field-item-out 260ms ease both;
+  animation-delay: calc(var(--i) * 5ms);
+}
+@keyframes field-item-out {
+  from { opacity: 1; transform: none; filter: none; }
+  to { opacity: 0; transform: translateY(-10px) scale(0.97); filter: blur(4px); }
 }
 .topicfield__item:hover,
 .topicfield__item:focus-visible {
-  opacity: 1;
-  transform: translateY(-2px);
+  transform: scale(1.06);
+  filter: brightness(1.25);
 }
 .topicfield__item.is-current {
-  opacity: 1;
   text-decoration: underline;
-  text-underline-offset: 5px;
-  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
 }
 .topicfield__item sup {
-  font-size: 0.42em;
+  font-size: 0.3em;
   font-weight: 400;
   letter-spacing: 0;
   margin-left: 0.25em;
@@ -959,7 +961,8 @@ a:hover {
 
 @media (prefers-reduced-motion: reduce) {
   .topicfield,
-  .topicfield__item { animation: none; }
-  .topicfield__item { opacity: 0.52; }
+  .topicfield__item,
+  .topicfield.is-leaving,
+  .topicfield.is-leaving .topicfield__item { animation: none; }
   .projection.is-recessed { transition: none; }
 }

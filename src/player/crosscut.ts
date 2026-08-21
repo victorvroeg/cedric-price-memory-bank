@@ -288,17 +288,9 @@ function init(data: Data, root: HTMLElement) {
   // Music the tool steers: up while a film is being fetched, under while
   // somebody talks. Nothing is baked into the video.
   const score = makeScore(data.music?.tracks ?? [], data.music?.seed ?? 0);
-  const scoreBtn = root.querySelector<HTMLButtonElement>(".controls__score");
-  if (debug) (window as unknown as { cpmbScore: unknown }).cpmbScore = score;
-  if (score && scoreBtn) {
-    scoreBtn.hidden = false;
-    const paint = (on: boolean) => {
-      scoreBtn.setAttribute("aria-pressed", String(on));
-      scoreBtn.classList.toggle("is-off", !on);
-      scoreBtn.title = on ? "music bed on — click to silence it" : "music bed off — click to bring it back";
-    };
-    paint(score.wanted);
-    scoreBtn.addEventListener("click", () => paint(score.toggle()));
+  if (debug) {
+    (window as unknown as { cpmbScore: unknown }).cpmbScore = score;
+    setInterval(() => score && report(`bed ${JSON.stringify(score.state)}`), 2000);
   }
 
   // --- the topic field -----------------------------------------------------
@@ -316,19 +308,28 @@ function init(data: Data, root: HTMLElement) {
     clearTimeout(fieldTimer);
     if (pin) fieldPinned = true;
     if (fieldEl.hidden) fieldOpenedAt = performance.now();
+    clearTimeout(leaving);
+    fieldEl.classList.remove("is-leaving");
     fieldEl.hidden = false;
     door.setAttribute("aria-expanded", "true");
     projection.classList.add("is-recessed");
     root.classList.add("is-fielded");
   }
+  let leaving: number | undefined;
   function closeField(force = false): void {
     if (!fieldEl || !door || fieldEl.hidden) return;
     if (fieldPinned && !force) return;
-    fieldEl.hidden = true;
     fieldPinned = false;
     door.setAttribute("aria-expanded", "false");
     projection.classList.remove("is-recessed");
     root.classList.remove("is-fielded");
+    // let it go the way it came, then take it out of the page
+    fieldEl.classList.add("is-leaving");
+    clearTimeout(leaving);
+    leaving = window.setTimeout(() => {
+      fieldEl.hidden = true;
+      fieldEl.classList.remove("is-leaving");
+    }, 300);
   }
   function closeFieldSoon(): void {
     clearTimeout(fieldTimer);
@@ -347,6 +348,11 @@ function init(data: Data, root: HTMLElement) {
   });
   fieldEl?.addEventListener("pointerenter", () => clearTimeout(fieldTimer));
   fieldEl?.addEventListener("pointerleave", closeFieldSoon);
+  fieldEl?.querySelector(".topicfield__close")?.addEventListener("click", () => closeField(true));
+  // anywhere that is not a topic is a way out
+  fieldEl?.addEventListener("click", (e) => {
+    if (!(e.target as Element).closest(".topicfield__item")) closeField(true);
+  });
   addEventListener("keydown", (e) => { if (e.key === "Escape") closeField(true); });
 
   // --- bloom ---------------------------------------------------------------
@@ -440,29 +446,10 @@ function init(data: Data, root: HTMLElement) {
     }
   }
 
-  const soundBtn = root.querySelector<HTMLButtonElement>(".controls__sound");
-  function paintSound(): void {
-    if (!soundBtn) return;
-    const off = projection.classList.contains("is-muted");
-    soundBtn.setAttribute("aria-pressed", String(!off));
-    soundBtn.classList.toggle("is-off", off);
-    soundBtn.title = off ? "sound is off — click to turn it on" : "sound is on — click to mute";
-    soundBtn.querySelector("span[aria-hidden]")!.textContent = off ? "🔇" : "🔊";
-  }
-  soundBtn?.addEventListener("click", () => {
-    if (projection.classList.contains("is-muted")) unmute();
-    else {
-      for (const el of els) el.muted = true;
-      projection.classList.add("is-muted");
-      paintSound();
-    }
-  });
-
   function unmute(): void {
     if (!projection.classList.contains("is-muted")) return;
     for (const el of els) el.muted = false;
     projection.classList.remove("is-muted");
-    paintSound();
     score?.allow();
     // Whatever was said while the page was silent was not heard. If we are
     // still near the top of this turn, take it from the top; deeper in, leave
@@ -517,5 +504,5 @@ function init(data: Data, root: HTMLElement) {
   setTimeout(warmPlaylists, 1200);   // after the first frame is on screen
 
   score?.swell();
-  void autostart().then(paintSound);
+  void autostart();
 }
