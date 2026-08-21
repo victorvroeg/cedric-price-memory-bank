@@ -135,11 +135,16 @@ function init(data: Data, root: HTMLElement) {
 
   // The topic (left title) is the constant of the page; the speaker (right
   // title) changes with every cut — the "change of slide".
+  const barName = root.querySelector<HTMLElement>(".titlebar__name");
+  const barJob = root.querySelector<HTMLElement>(".titlebar__job");
+
   function setTitles(item: Item): void {
     // write into the door, not over it
     const label = titleR?.querySelector<HTMLElement>(".peopledoor") ?? titleR;
     if (label) label.textContent = item.name;
-    if (nowSpeaker) nowSpeaker.textContent = `${item.name} — ${item.jobtitle}`;
+    if (barName) barName.textContent = item.name;
+    if (barJob) barJob.textContent = item.jobtitle;
+
   }
 
   async function playItem(i: number, viaGesture = false, at?: number): Promise<void> {

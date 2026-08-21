@@ -1183,11 +1183,42 @@ a:hover {
 }
 .projection.is-loading .projection__loader { opacity: 0.9; }
 
-/* Say which thread you are on, in words, where the eye already is. */
-.nowline__following {
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--fg-dim);
-  white-space: nowrap;
+/* The 2014 title card: who is speaking, what they are, and what they are on,
+   set over the top of the picture rather than labelled at the edges. Its own
+   words are the state; nothing has to announce it. */
+.titlebar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: clamp(14px, 3.2vh, 44px);
+  z-index: 5;
+  text-align: center;
+  pointer-events: none;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85);
 }
+.titlebar__name {
+  margin: 0 0 4px;
+  font-size: clamp(20px, 3.1vw, 48px);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: 0;
+  color: #fff;
+}
+.titlebar__job {
+  margin: 0 0 6px;
+  font-size: clamp(11px, 1vw, 14px);
+  color: #999;
+}
+.titlebar__on {
+  margin: 0;
+  font-size: clamp(13px, 1.25vw, 18px);
+  line-height: 1.55;
+}
+.titlebar__prep { color: var(--fg-dim); }
+.titlebar__topic {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-left: 0.45em;
+}
+.stage--crosscut.is-fielded .titlebar { opacity: 0; transition: opacity 260ms ease; }

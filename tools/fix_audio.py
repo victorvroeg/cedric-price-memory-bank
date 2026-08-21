@@ -48,9 +48,7 @@ SKIP: set[str] = set()
 # black. Where his raised hand crosses it, delogo smears the surrounding
 # pixels inward, which reads as softness rather than as a hole cut in his arm.
 # Measured over all 35,314 frames; the plate sits at x668-1256, y118-222.
-BURN_IN = {
-    "11_petermurray_def_tc-check.mov": "delogo=x=668:y=118:w=588:h=104",
-}
+BURN_IN: dict[str, str] = {}
 
 
 @dataclass
