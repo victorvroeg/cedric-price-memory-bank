@@ -26,6 +26,16 @@ export function makeMode(root: HTMLElement, view: ModeView): { update(): void; s
   const said = root.querySelector<HTMLElement>(".modesay");
   let timers: number[] = [];
 
+  // The line says where you are before it offers anywhere else: a plain
+  // sentence naming what is being followed, then the way across after it.
+  const state = document.createElement("p");
+  state.className = "modeswitch__state";
+  const lead = document.createElement("span");
+  lead.className = "modeswitch__lead";
+  const held = document.createElement("span");
+  held.className = "modeswitch__held";
+  state.append(lead, held);
+
   const button = document.createElement("button");
   button.type = "button";
   button.className = "modeswitch__cross";
@@ -35,23 +45,28 @@ export function makeMode(root: HTMLElement, view: ModeView): { update(): void; s
   what.className = "modeswitch__value";
   button.append(verb, what);
   button.addEventListener("click", () => view.cross());
-  el?.replaceChildren(button);
+  el?.replaceChildren(state, button);
 
   function update(): void {
-    // No names here. Both of them are already set down the edges, and naming
-    // one again put the same two words on screen three times over. This says
-    // only what the click gets you; the theme's colour does the pointing.
     if (view.kind() === "theme") {
+      const t = view.theme();
       const s = view.speaker();
-      verb.textContent = "hear";
-      what.textContent = "this whole interview";
+      lead.textContent = "Staying with this topic:";
+      held.textContent = t?.label ?? "";
+      held.style.color = t?.colour ?? "";
+      verb.textContent = "or hear";
+      what.textContent = `${s.name}'s whole interview`;
       what.style.color = "";
       button.title = `${s.name}'s whole interview, carrying on from here`;
       button.disabled = false;
     } else {
       const t = view.theme();
-      verb.textContent = "hear";
-      what.textContent = "everyone on this theme";
+      const s = view.speaker();
+      lead.textContent = "Staying with:";
+      held.textContent = s.name;
+      held.style.color = "";
+      verb.textContent = "or hear";
+      what.textContent = t ? `everyone on ${t.label}` : "everyone on this theme";
       what.style.color = t?.colour ?? "";
       button.title = t ? `everyone in the archive on ${t.label}` : "";
       button.disabled = !t;

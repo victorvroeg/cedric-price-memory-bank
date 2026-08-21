@@ -405,7 +405,13 @@ function init(data: Data, root: HTMLElement) {
         nowCard.dataset.title = title;
         nowCard.textContent = "";
         if (title) {
-          // A name raised in passing is a door: open it without losing the film.
+          // A name raised in passing is a door: open it without losing the
+          // film. It says what it is, so it cannot be read as a control for
+          // the topic being followed.
+          const lead = document.createElement("span");
+          lead.className = "nowline__lead";
+          lead.textContent = "raised just now:";
+          nowCard.appendChild(lead);
           const b = document.createElement("button");
           b.className = "nowline__cardlink";
           b.textContent = title;
