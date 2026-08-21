@@ -10,6 +10,15 @@ interface ScreenData {
   cards: { time: number; cardId: string }[];
   topics: Record<string, { label: string; colour: string }>;
   cardTitles: Record<string, string>;
+  cardData: Record<string, {
+    slug: string;
+    body: string;
+    subtitle: string | null;
+    image: string | null;
+    external: string | null;
+    location: string | null;
+    also: { slug: string; name: string; time: number; topicId: string | null; topicLabel: string | null }[];
+  }>;
   basis: number; // seconds represented by the scrub track at build time
   base: string;
   here: string;
@@ -28,7 +37,6 @@ function init(data: ScreenData, root: HTMLElement) {
   const bloom = root.querySelector<HTMLCanvasElement>(".projection__bloom");
   const scrub = root.querySelector<HTMLElement>(".scrub");
   const playhead = root.querySelector<HTMLElement>(".scrub__playhead");
-  const nowTopic = root.querySelector<HTMLElement>(".nowline__topic");
   const titleCard = makeTitleCard(root);
   const edgeTopic = root.querySelector<HTMLElement>(".title--left");
   const barTopic = root.querySelector<HTMLElement>(".titlebar__topic");
@@ -93,11 +101,24 @@ function init(data: ScreenData, root: HTMLElement) {
       track.appendChild(el);
       cursor = scaled.end;
     }
+    // Every reference this film raises, standing where it is raised, and
+    // clickable: ahead of the playhead something coming, behind it something
+    // already said.
     for (const el of scrub.querySelectorAll<HTMLElement>(".scrub__card")) el.remove();
     for (const c of data.cards) {
-      const tick = document.createElement("span");
+      const title = data.cardTitles[c.cardId] ?? c.cardId;
+      const at = (c.time / data.basis) * basis;
+      const tick = document.createElement("button");
       tick.className = "scrub__card";
-      tick.style.left = `${(((c.time / data.basis) * basis) / basis) * 100}%`;
+      tick.style.left = `${(at / basis) * 100}%`;
+      tick.title = title;
+      tick.setAttribute("aria-label", title);
+      tick.dataset.at = String(at);
+      tick.addEventListener("click", (e) => {
+        e.stopPropagation();
+        seekTo(Math.max(at - 4, 0));
+      });
+      wireCard(tick, title);
       scrub.appendChild(tick);
     }
   }
@@ -203,10 +224,6 @@ function init(data: ScreenData, root: HTMLElement) {
 
     const seg = data.segments.find((s) => tArchive >= s.start && tArchive < s.end);
     const topic = seg ? data.topics[seg.topicId] : null;
-    if (nowTopic) {
-      nowTopic.textContent = topic?.label ?? "";
-      nowTopic.style.color = topic?.colour ?? "";
-    }
     // The left edge and the title card both name whatever is being said now.
     for (const el of [edgeTopic, barTopic]) {
       if (!el) continue;
@@ -217,13 +234,27 @@ function init(data: ScreenData, root: HTMLElement) {
       }
       el.style.color = topic?.colour ?? "";
     }
+    for (const el of root.querySelectorAll<HTMLElement>(".scrub__card"))
+      el.classList.toggle("is-past", Number(el.dataset.at ?? 0) < t - 0.2);
     for (const el of root.querySelectorAll<HTMLElement>(".scrub__segment[data-topic]"))
       el.classList.toggle("is-active", !!seg && el.dataset.start === String((seg.start / data.basis) * basis));
     for (const chip of root.querySelectorAll<HTMLButtonElement>(".topic"))
       chip.classList.toggle("is-active", !!seg && chip.dataset.topic === seg.topicId);
 
     const card = [...data.cards].reverse().find((c) => c.time <= tArchive);
-    if (nowCard) nowCard.textContent = card ? data.cardTitles[card.cardId] ?? "" : "";
+    const title = card ? data.cardTitles[card.cardId] ?? "" : "";
+    if (nowCard && nowCard.dataset.title !== title) {
+      if (pinned) return;
+      nowCard.dataset.title = title;
+      nowCard.textContent = "";
+      if (title) {
+        const b = document.createElement("button");
+        b.className = "nowline__cardlink";
+        b.textContent = title;
+        wireCard(b, title);
+        nowCard.appendChild(b);
+      }
+    }
   });
 
   // --- the same two doors the cross-cut has --------------------------------
@@ -338,7 +369,6 @@ function init(data: ScreenData, root: HTMLElement) {
     },
     speaker: { slug: data.here, name: data.speakerName },
     at: () => video!.currentTime,
-    count: { n: Object.keys(data.topics).length, noun: "theme" },
   });
 
   // A theme chip moves the playhead, it does not change what you are
@@ -356,6 +386,151 @@ function init(data: ScreenData, root: HTMLElement) {
       const next = runs.find((r) => r.start > now + 0.5) ?? runs[0];
       seekTo((next.start / data.basis) * basis);
     });
+  }
+
+  // --- references ----------------------------------------------------------
+  // Same behaviour as the cross-cut: hovering a name shows enough to decide,
+  // asking for the whole thing holds the film until you close it.
+  const panel = document.querySelector<HTMLElement>(".cardpanel");
+  const sheet = document.querySelector<HTMLElement>(".reference");
+  let pinned = false;
+  let held = false;
+  let panelTimer: number | undefined;
+  const clock = (t: number) =>
+    `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, "0")}`;
+
+  function openCard(title: string, pin = false): void {
+    const card = data.cardData?.[title];
+    if (!panel || !card) return;
+    clearTimeout(panelTimer);
+    if (pin) pinned = true;
+    panel.dataset.card = title;
+    panel.querySelector<HTMLElement>(".cardpanel__title")!.textContent = title;
+    panel.querySelector<HTMLElement>(".cardpanel__body")!.innerHTML = card.body;
+
+    const also = panel.querySelector<HTMLElement>(".cardpanel__also")!;
+    also.textContent = "";
+    const others = card.also.filter(
+      (a) => !(a.slug === data.here && Math.abs(a.time - (video!.currentTime / basis) * data.basis) < 30),
+    );
+    if (others.length) {
+      const lead = document.createElement("p");
+      lead.className = "cardpanel__alsolead";
+      lead.textContent = others.length === 1 ? "also raised by" : `also raised by ${others.length} others`;
+      also.appendChild(lead);
+      for (const a of others.slice(0, 6)) {
+        const mine = a.slug === data.here;
+        const node = document.createElement(mine ? "button" : "a");
+        node.className = mine ? "cardpanel__jump" : "cardpanel__jump cardpanel__jump--away";
+        const mk = (cls: string, text: string) => {
+          const n = document.createElement("span");
+          n.className = cls;
+          n.textContent = text;
+          return n;
+        };
+        node.append(mk("cardpanel__who", a.name));
+        if (a.topicLabel) node.append(mk("cardpanel__topic", a.topicLabel));
+        node.append(mk("cardpanel__at", clock(a.time)));
+        if (mine) {
+          node.addEventListener("click", () => {
+            closeCard(true);
+            seekTo(((a.time - 4) / data.basis) * basis);
+          });
+        } else {
+          (node as HTMLAnchorElement).href =
+            `${data.base}/interview/${a.slug}/#t=${a.time.toFixed(1)}`;
+        }
+        also.appendChild(node);
+      }
+      if (others.length > 6) {
+        const rest = document.createElement("a");
+        rest.className = "cardpanel__jump cardpanel__rest";
+        rest.textContent = `and ${others.length - 6} more`;
+        rest.href = `${data.base}/card/${card.slug}/`;
+        also.appendChild(rest);
+      }
+    }
+    panel.hidden = false;
+    panel.classList.toggle("is-pinned", pinned);
+  }
+  function closeCard(force = false): void {
+    if (!panel || panel.hidden) return;
+    if (pinned && !force) return;
+    panel.hidden = true;
+    pinned = false;
+    panel.classList.remove("is-pinned");
+  }
+  const closeCardSoon = () => {
+    clearTimeout(panelTimer);
+    panelTimer = window.setTimeout(() => closeCard(), 320);
+  };
+
+  function openReference(title: string): void {
+    const card = data.cardData?.[title];
+    if (!sheet || !card) return;
+    sheet.querySelector<HTMLElement>(".reference__title")!.textContent = title;
+    sheet.querySelector<HTMLElement>(".reference__body")!.innerHTML = card.body;
+    const sub = sheet.querySelector<HTMLElement>(".reference__sub")!;
+    sub.textContent = card.subtitle ?? "";
+    sub.hidden = !card.subtitle;
+    const fig = sheet.querySelector<HTMLElement>(".reference__figure")!;
+    const img = sheet.querySelector<HTMLImageElement>(".reference__img")!;
+    if (card.image) {
+      img.src = card.image;
+      img.alt = title;
+      fig.hidden = false;
+    } else fig.hidden = true;
+
+    const links = sheet.querySelector<HTMLElement>(".reference__links")!;
+    links.textContent = "";
+    for (const [href, label] of [[card.external, "more about this"], [card.location, "where it is"]] as const) {
+      if (!href) continue;
+      const a = document.createElement("a");
+      a.className = "reference__link";
+      a.href = href.replace(/^http:\/\//, "https://");
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.textContent = label;
+      links.appendChild(a);
+    }
+    links.hidden = !links.childElementCount;
+
+    sheet.hidden = false;
+    closeCard(true);
+    if (!video!.paused) {
+      held = true;
+      video!.pause();
+    }
+  }
+  function closeReference(): void {
+    if (!sheet || sheet.hidden) return;
+    sheet.hidden = true;
+    if (held) {
+      held = false;
+      void video!.play();
+    }
+  }
+  panel?.addEventListener("pointerenter", () => clearTimeout(panelTimer));
+  panel?.addEventListener("pointerleave", closeCardSoon);
+  panel?.querySelector(".cardpanel__close")?.addEventListener("click", () => closeCard(true));
+  panel?.querySelector(".cardpanel__more")
+    ?.addEventListener("click", () => openReference(panel.dataset.card ?? ""));
+  sheet?.querySelector(".reference__close")?.addEventListener("click", closeReference);
+  sheet?.addEventListener("click", (e) => {
+    if (!(e.target as Element).closest(".reference__sheet")) closeReference();
+  });
+  addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    closeReference();
+    closeCard(true);
+  });
+
+  // the name in the now-line, and every mark on the timeline
+  function wireCard(el: HTMLElement, title: string): void {
+    el.addEventListener("pointerenter", () => openCard(title));
+    el.addEventListener("pointerleave", closeCardSoon);
+    el.addEventListener("focus", () => openCard(title));
+    el.addEventListener("click", () => openCard(title, true));
   }
 
   layoutScrub();

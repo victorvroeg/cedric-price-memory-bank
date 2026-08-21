@@ -1376,57 +1376,38 @@ a:hover {
 
 /* ——— which way you are moving: caption, switch, announcement ——— */
 
-/* What the timeline is a picture of. Its meaning changes completely between
-   the two modes and it never used to say so. */
-.scrubcaption {
-  width: calc(100% - 2 * clamp(48px, 7vw, 110px));
-  margin: 0 auto 6px;
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--fg-dim);
-}
-
-/* The two axes, with the live one held and the other reachable. */
+/* Not a description of where you are, which both edges already give: the one
+   thing that is nowhere else on screen, which is the way to the other axis. */
 .modeswitch {
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
   width: calc(100% - 2 * clamp(48px, 7vw, 110px));
   margin: 12px auto 0;
   font-size: 13px;
 }
-.modeswitch__side {
+.modeswitch__cross {
   display: inline-flex;
   align-items: baseline;
-  gap: 7px;
+  gap: 8px;
   padding: 3px 0;
   color: var(--fg-dim);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: color 160ms ease, border-color 160ms ease;
 }
-a.modeswitch__side:hover,
-a.modeswitch__side:focus-visible {
+.modeswitch__cross:hover,
+.modeswitch__cross:focus-visible {
   color: var(--fg);
   border-bottom-color: var(--hairline);
 }
-.modeswitch__axis {
+.modeswitch__verb {
   font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  opacity: 0.75;
 }
 .modeswitch__value {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.6px;
 }
-/* the side you are on is stated, not offered */
-.modeswitch__side.is-live { color: var(--fg); }
-.modeswitch__side.is-live .modeswitch__value { color: var(--c, var(--fg)); }
-.modeswitch__side.is-live .modeswitch__axis { opacity: 1; }
-.modeswitch__sep { color: var(--fg-dim); }
 
 /* Said once or twice, then never again. */
 .modesay {

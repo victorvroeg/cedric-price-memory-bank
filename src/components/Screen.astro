@@ -2,6 +2,7 @@
 import type { Interview } from "../lib/content";
 import { topics, cards } from "../lib/content";
 import { published, crossCut } from "../lib/crosscut";
+import { safeBody, appearances } from "../lib/cards";
 import { resolveVideoSource } from "../lib/resolveVideoSource";
 
 interface Props {
@@ -52,6 +53,30 @@ const clientData = {
   cardTitles: Object.fromEntries(
     interview.cards.map((c) => [c.cardId, cards.get(c.cardId)?.title ?? c.cardId]),
   ),
+  // the references this film raises, with everywhere else they are raised
+  cardData: Object.fromEntries(
+    [...new Set(interview.cards.map((c) => c.cardId))]
+      .map((id) => cards.get(id))
+      .filter((c): c is NonNullable<typeof c> => !!c)
+      .map((c) => [
+        c.title,
+        {
+          slug: c.slug,
+          body: safeBody(c.body),
+          subtitle: c.subtitle ?? null,
+          image: c.image ? `${base}${c.image}` : null,
+          external: c.external ?? null,
+          location: c.location ?? null,
+          also: appearances(c.slug).map((a) => ({
+            slug: a.slug,
+            name: a.name,
+            time: a.time,
+            topicId: a.topicId,
+            topicLabel: a.topicId ? (topics.get(a.topicId)?.label ?? a.topicId) : null,
+          })),
+        },
+      ]),
+  ),
   basis,
   base,
   here: interview.slug,
@@ -99,7 +124,6 @@ const clientData = {
       </div>
     </figure>
 
-    <p class="scrubcaption"></p>
   <div class="scrub" role="slider" aria-label="Timeline" tabindex="0">
       <div class="scrub__track">
         {
@@ -119,7 +143,6 @@ const clientData = {
     <nav class="modeswitch" aria-label="Follow a theme, or follow a speaker"></nav>
 
   <div class="nowline">
-      <span class="nowline__topic"></span>
       <span class="nowline__card"></span>
     </div>
 
@@ -139,6 +162,26 @@ const clientData = {
         ))
       }
     </nav>
+  </div>
+
+  <aside class="cardpanel" hidden>
+    <button class="cardpanel__close" aria-label="close">×</button>
+    <h2 class="cardpanel__title"></h2>
+    <div class="cardpanel__body"></div>
+    <div class="cardpanel__also"></div>
+    <button class="cardpanel__more" type="button">read the full reference →</button>
+  </aside>
+
+  <div class="reference" hidden role="dialog" aria-modal="true" aria-label="Reference">
+    <article class="reference__sheet">
+      <button class="reference__close" aria-label="close and carry on watching">×</button>
+      <figure class="reference__figure" hidden><img class="reference__img" alt="" /></figure>
+      <h2 class="reference__title"></h2>
+      <p class="reference__sub"></p>
+      <div class="reference__body"></div>
+      <p class="reference__links" hidden></p>
+      <p class="reference__resume">close to carry on watching</p>
+    </article>
   </div>
 
   <nav class="topicfield" id="topicfield" hidden aria-label="Themes and speakers">

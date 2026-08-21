@@ -831,7 +831,6 @@ function init(data: Data, root: HTMLElement) {
       return { slug: it.slug, name: it.name };
     },
     at: () => els[active].currentTime,
-    count: { n: new Set(items.map((i) => i.slug)).size, noun: "speaker" },
   });
 
   // Arriving from the switch: start on the speaker you were already hearing.
