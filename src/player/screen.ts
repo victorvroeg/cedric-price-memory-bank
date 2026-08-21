@@ -33,7 +33,6 @@ function init(data: ScreenData, root: HTMLElement) {
   const edgeTopic = root.querySelector<HTMLElement>(".title--left");
   const barTopic = root.querySelector<HTMLElement>(".titlebar__topic");
   const nowCard = root.querySelector<HTMLElement>(".nowline__card");
-  const nowTime = root.querySelector<HTMLElement>(".nowline__time");
   if (!video || !data.source) return; // wounded state: static page stands
 
   let basis = data.basis;
@@ -197,14 +196,10 @@ function init(data: ScreenData, root: HTMLElement) {
   });
 
   // --- now playing --------------------------------------------------------
-  const fmt = (t: number) =>
-    `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, "0")}`;
-
   video.addEventListener("timeupdate", () => {
     const t = video.currentTime;
     const tArchive = (t / basis) * data.basis; // back into archive time
     if (playhead) playhead.style.left = `${(t / basis) * 100}%`;
-    if (nowTime) nowTime.textContent = fmt(t);
 
     const seg = data.segments.find((s) => tArchive >= s.start && tArchive < s.end);
     const topic = seg ? data.topics[seg.topicId] : null;
