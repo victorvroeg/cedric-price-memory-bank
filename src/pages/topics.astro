@@ -20,13 +20,13 @@ for (const iv of published())
       watchable.set(s.topicId, (watchable.get(s.topicId) ?? 0) + 1);
 ---
 
-<Base title="Themes — Cedric Price Memory Bank" current="topics">
+<Base title="Topics — Cedric Price Memory Bank" current="topics">
   <main class="prose prose--wide">
-    <h1>Themes</h1>
+    <h1>Topics</h1>
     <p style="color:var(--fg-dim)">
       Click an idea and everyone takes a turn at it, cut across the films.
     </p>
-    <nav class="topicindex" aria-label="All themes">
+    <nav class="topicindex" aria-label="All topics">
       {
         rows.map((t) => (
           <a class="topicindex__item" href={`${base}/topic/${t.slug}/`} style={`--topic-colour:${t.colour}`}>

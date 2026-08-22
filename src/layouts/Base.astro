@@ -17,7 +17,7 @@ const href = (p: string) => (import.meta.env.BASE_URL + "/" + p).replace(/\/+/g,
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
-    <meta name="description" content="The Cedric Price Memory Bank — interviews with the network of Cedric Price, cut sideways by theme." />
+    <meta name="description" content="The Cedric Price Memory Bank — interviews with the network of Cedric Price, cut sideways by topic." />
     <!-- CP / MB, recovered from the 2014 site: same mark, same archive -->
     <link rel="icon" type="image/png" sizes="32x32" href={href("/favicon-32x32.png")} />
     <link rel="icon" type="image/png" sizes="16x16" href={href("/favicon-16x16.png")} />
@@ -39,7 +39,7 @@ const href = (p: string) => (import.meta.env.BASE_URL + "/" + p).replace(/\/+/g,
       <button class="menu__mark" aria-expanded="false" aria-controls="menu-items">Memory Bank</button>
       <div class="menu__items" id="menu-items" hidden>
         <button class="menu__about" aria-controls="colofon">About</button>
-        <a href={href("/topics/")} aria-current={current === "topics" ? "page" : undefined}>Themes</a>
+        <a href={href("/topics/")} aria-current={current === "topics" ? "page" : undefined}>Topics</a>
         <a href={href("/cards/")} aria-current={current === "cards" ? "page" : undefined}>References</a>
       </div>
     </nav>
@@ -58,7 +58,7 @@ const href = (p: string) => (import.meta.env.BASE_URL + "/" + p).replace(/\/+/g,
     <script>
       // The colofon is a thing you look at, not a place you go. Nothing that
       // is playing stops for it. The mark unfolds the three doors out of the
-      // player: About, Themes, References.
+      // player: About, Topics, References.
       const mark = document.querySelector<HTMLButtonElement>(".menu__mark");
       const items = document.querySelector<HTMLElement>(".menu__items");
       const about = document.querySelector<HTMLButtonElement>(".menu__about");

@@ -729,7 +729,7 @@ function init(data: Data, root: HTMLElement) {
 
     if (axisKind === "theme") {
       const theme = themeOf(followed) ?? themeNow();
-      if (chipLead) chipLead.textContent = "Also on this theme:";
+      if (chipLead) chipLead.textContent = "Also on this topic:";
       const seen: string[] = [];
       items.forEach((it) => { if (!seen.includes(it.slug)) seen.push(it.slug); });
       for (const slug of seen) {
@@ -753,7 +753,7 @@ function init(data: Data, root: HTMLElement) {
       }
     } else {
       const it = items[current < 0 ? 0 : current];
-      if (chipLead) chipLead.textContent = "Themes in this interview:";
+      if (chipLead) chipLead.textContent = "Topics in this interview:";
       const seen: string[] = [];
       for (const seg of it.segments) if (!seen.includes(seg.topicId)) seen.push(seg.topicId);
       for (const slug of seen) {

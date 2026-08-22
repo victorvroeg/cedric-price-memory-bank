@@ -26,41 +26,53 @@ export function makeMode(root: HTMLElement, view: ModeView): { update(): void; s
   const said = root.querySelector<HTMLElement>(".modesay");
   let timers: number[] = [];
 
-  // Two rows of the deck below the film: where you are, then the way across.
-  // Each is a label and a value, and the deck's grid does the aligning.
-  const lead = document.createElement("span");
-  lead.className = "deck__label";
-  const held = document.createElement("span");
-  held.className = "deck__value modeswitch__held";
+  // Two rows of the deck below the film, one per axis: the topic, then the
+  // person. Each is a label and a value, and the deck's grid aligns them.
+  // Whichever axis is not being followed is the live one: it is the way
+  // across. Pinning a topic is that crossing, said in the visitor's terms.
+  const topicLabel = document.createElement("span");
+  topicLabel.className = "deck__label";
+  const topicValue = document.createElement("button");
+  topicValue.type = "button";
+  topicValue.className = "deck__value modeswitch__topic";
 
-  const verb = document.createElement("span");
-  verb.className = "deck__label";
-  const button = document.createElement("button");
-  button.type = "button";
-  button.className = "deck__value modeswitch__cross";
-  button.addEventListener("click", () => view.cross());
-  el?.replaceChildren(lead, held, verb, button);
+  const whoLabel = document.createElement("span");
+  whoLabel.className = "deck__label";
+  const whoValue = document.createElement("button");
+  whoValue.type = "button";
+  whoValue.className = "deck__value modeswitch__who";
+
+  for (const b of [topicValue, whoValue])
+    b.addEventListener("click", () => { if (!b.classList.contains("is-held")) view.cross(); });
+  el?.replaceChildren(topicLabel, topicValue, whoLabel, whoValue);
+
+  /** the row for the axis being followed: a statement, not a control */
+  function hold(button: HTMLButtonElement, on: boolean): void {
+    button.classList.toggle("is-held", on);
+    button.disabled = on;
+  }
 
   function update(): void {
-    lead.textContent = "staying with";
-    verb.textContent = "or hear";
+    const t = view.theme();
+    const s = view.speaker();
+    topicValue.textContent = t?.label ?? "";
+    topicValue.style.color = t?.colour ?? "";
+    whoValue.textContent = s.name;
+
     if (view.kind() === "theme") {
-      const t = view.theme();
-      const s = view.speaker();
-      held.textContent = t?.label ?? "";
-      held.style.color = t?.colour ?? "";
-      button.textContent = `${s.name}'s whole interview`;
-      button.style.color = "";
-      button.title = `${s.name}'s whole interview, carrying on from here`;
-      button.disabled = false;
+      topicLabel.textContent = "pinned topic";
+      hold(topicValue, true);
+      topicValue.title = `everyone in the archive on ${t?.label ?? "this topic"}`;
+      whoLabel.textContent = "whole interview";
+      hold(whoValue, false);
+      whoValue.title = `${s.name}'s whole interview, carrying on from here`;
     } else {
-      const t = view.theme();
-      held.textContent = view.speaker().name;
-      held.style.color = "";
-      button.textContent = t ? `everyone on ${t.label}` : "everyone on this theme";
-      button.style.color = t?.colour ?? "";
-      button.title = t ? `everyone in the archive on ${t.label}` : "";
-      button.disabled = !t;
+      topicLabel.textContent = "pin topic";
+      hold(topicValue, !t);
+      topicValue.title = t ? `pin ${t.label} and hear everyone on it` : "";
+      whoLabel.textContent = "whole interview";
+      hold(whoValue, true);
+      whoValue.title = "";
     }
   }
 

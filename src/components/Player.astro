@@ -96,7 +96,7 @@ const clientData = {
     <h1 class:list={["title", "title--left", axis === "theme" ? "title--following" : "title--idle"]}
         style={opening ? `color:${opening.colour}` : undefined}>
       <button class="topicdoor" aria-expanded="false" aria-controls="topicfield"
-              title="every theme in the archive">{opening?.label ?? ""}</button>
+              title="every topic in the archive">{opening?.label ?? ""}</button>
     </h1>
     <p class:list={["title", "title--right", axis === "speaker" ? "title--following" : "title--idle"]}>
       <button class="peopledoor" aria-expanded="false" aria-controls="topicfield"
@@ -190,7 +190,7 @@ const clientData = {
     </article>
   </div>
 
-  <nav class="topicfield" id="topicfield" hidden aria-label="Every theme in the archive">
+  <nav class="topicfield" id="topicfield" hidden aria-label="Every topic in the archive">
     <button class="topicfield__close" aria-label="close">×</button>
     <div class="topicfield__row"></div>
   </nav>

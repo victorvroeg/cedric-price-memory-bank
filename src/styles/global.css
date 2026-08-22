@@ -339,7 +339,7 @@ a:hover {
   display: grid;
   /* the label column is fixed, not max-content: an arriving or departing
      reference must never shift the value column sideways */
-  grid-template-columns: 112px minmax(0, 1fr) max-content;
+  grid-template-columns: 132px minmax(0, 1fr) max-content;
   column-gap: 20px;
   row-gap: 7px;
   align-items: baseline;
@@ -357,11 +357,11 @@ a:hover {
 }
 .deck__label {
   grid-column: 1;
-  font-size: 10px;
+  font-size: 11px;
   line-height: 1.6;
-  letter-spacing: 1.8px;
+  letter-spacing: 0.7px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.38);
+  color: rgba(255, 255, 255, 0.62);
   white-space: nowrap;
 }
 .deck__value {
@@ -408,10 +408,11 @@ a:hover {
    inset far enough to clear the titles, and nothing is truncated.
    (After the rules above, deliberately: same specificity, later wins.) */
 @media (max-width: 720px) {
+  /* flush with the scrub above it and the chips below: one left edge for
+     everything under the film */
   .deck {
     grid-template-columns: minmax(0, 1fr);
     row-gap: 0;
-    padding: 0 20px;
     min-height: 140px;
   }
   .deck__label {
@@ -1559,16 +1560,13 @@ a:hover {
 
 /* Not a description of where you are, which both edges already give: the one
    thing that is nowhere else on screen, which is the way to the other axis. */
-/* row one: the answer to "where am I", and the loudest thing in the deck */
-.modeswitch__held {
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.1px;
-}
-/* row two: the way across is offered, not announced */
-.modeswitch__cross {
+/* Both rows are buttons: the axis you are on is held, which means it states
+   rather than offers, and the other one is the way across. */
+.modeswitch__topic,
+.modeswitch__who {
   padding: 0;
-  /* it crosses in place rather than loading a page, so it is a button now */
+  /* crossing happens in place rather than loading a page, so these are
+     buttons even when they look like text */
   background: none;
   border: 0;
   font: inherit;
@@ -1576,17 +1574,34 @@ a:hover {
   cursor: pointer;
   color: var(--fg-dim);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid var(--hairline);
   transition: color 160ms ease, border-color 160ms ease;
 }
-.modeswitch__cross[disabled] {
+.modeswitch__topic:hover,
+.modeswitch__topic:focus-visible,
+.modeswitch__who:hover,
+.modeswitch__who:focus-visible {
+  color: var(--fg);
+  border-bottom-color: var(--fg);
+}
+/* the pinned axis: the loudest thing in the deck, and not a control */
+.modeswitch__topic.is-held,
+.modeswitch__who.is-held {
+  border-bottom-color: transparent;
+  cursor: default;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  color: var(--fg);
+}
+.modeswitch__topic.is-held[disabled],
+.modeswitch__who.is-held[disabled] {
+  opacity: 1;
+}
+/* nothing to pin: the row keeps its space but says nothing */
+.modeswitch__topic[disabled]:not(.is-held) {
   opacity: 0;
   pointer-events: none;
-}
-.modeswitch__cross:hover,
-.modeswitch__cross:focus-visible {
-  color: var(--fg);
-  border-bottom-color: var(--hairline);
 }
 
 /* Said once or twice, then never again. */
