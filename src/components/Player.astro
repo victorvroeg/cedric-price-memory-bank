@@ -12,6 +12,7 @@
 // of the same drawing would drift out of step with the first.
 import type { Interview, Topic } from "../lib/content";
 import { topics as allTopics, transcripts } from "../lib/content";
+import { LANGUAGES, transcriptKey } from "../lib/languages";
 import { crossCut, published, wholeFilm } from "../lib/crosscut";
 import { cardsFor, themeIndex } from "../lib/payload";
 import { musicTracks, seedOf } from "../lib/music";
@@ -78,9 +79,15 @@ const clientData = {
     .sort((a, b) => a.name.localeCompare(b.name)),
   music: { tracks: musicTracks(), seed: seedOf(topic?.slug ?? interview?.slug ?? "") },
   cards: cardsFor(items, base),
-  captioned: published()
-    .filter((iv) => transcripts.has(iv.slug))
-    .map((iv) => iv.slug),
+  // which interviews have captions, and in which languages
+  captioned: Object.fromEntries(
+    published()
+      .filter((iv) => transcripts.has(iv.slug))
+      .map((iv) => [
+        iv.slug,
+        LANGUAGES.filter((l) => transcripts.has(transcriptKey(iv.slug, l.code))).map((l) => l.code),
+      ]),
+  ),
 };
 ---
 
@@ -166,8 +173,13 @@ const clientData = {
             <div class="nowline">
               <span class="nowline__card" />
             </div>
-            <button class="captions-toggle" type="button" aria-pressed="false"
-                    title="automatic transcription, uncorrected">captions</button>
+            <div class="capbar">
+              <button class="captions-toggle" type="button" aria-pressed="false"
+                      title="automatic transcription, uncorrected">captions</button>
+              <select class="captions-lang" aria-label="Caption language" hidden>
+                {LANGUAGES.map((l) => <option value={l.code}>{l.label}</option>)}
+              </select>
+            </div>
           </div>
         </>
       )

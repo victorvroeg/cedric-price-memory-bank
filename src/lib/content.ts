@@ -68,14 +68,16 @@ export const cards = loadDir<Card>(
 );
 
 export interface Transcript {
+  /** "brett-steele" for the spoken English, "brett-steele.ja" for a translation */
   slug: string;
   language: string;
   model: string;
-  /** false while the machine transcription has not been human-checked */
+  /** false while the machine transcription or translation is unchecked */
   corrected: boolean;
   cues: { start: number; end: number; text: string }[];
 }
 
+/** Keyed by interview slug for English, and slug.lang for every translation. */
 export const transcripts = loadDir<Transcript>(
   import.meta.glob("../../content/transcripts/*.json", { eager: true }),
 );

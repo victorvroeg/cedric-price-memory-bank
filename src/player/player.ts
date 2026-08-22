@@ -54,8 +54,8 @@ interface Data {
     also: { slug: string; name: string; time: number; topicId: string | null; topicLabel: string | null }[];
   }>;
   music: { tracks: string[]; seed: number };
-  /** slugs that have a captions VTT built for them */
-  captioned: string[];
+  /** slug -> the language codes it has captions in */
+  captioned: Record<string, string[]>;
   field: { slug: string; label: string; voices: number }[];
   speakerTopics: Record<string, string[]>;
   people: { slug: string; name: string; jobtitle: string }[];
@@ -121,11 +121,24 @@ function init(data: Data, root: HTMLElement) {
   // --- captions ------------------------------------------------------------
   // The transcript rides along as a native text track, one VTT per interview
   // in the film's own clock, swapped whenever the element changes films.
-  const captioned = new Set(data.captioned ?? []);
+  const captioned = data.captioned ?? {};
   const capToggle = root.querySelector<HTMLButtonElement>(".captions-toggle");
+  const capLang = root.querySelector<HTMLSelectElement>(".captions-lang");
   const capText = root.querySelector<HTMLElement>(".projection__captions");
   let captionsOn = false;
-  try { captionsOn = localStorage.getItem("cpmb-captions") === "on"; } catch { /* private mode */ }
+  let lang = "en";
+  try {
+    captionsOn = localStorage.getItem("cpmb-captions") === "on";
+    lang = localStorage.getItem("cpmb-captions-lang") || "en";
+  } catch { /* private mode */ }
+  if (capLang) capLang.value = lang;
+
+  /** the language to use for this speaker: their own, or English as the fallback */
+  function langFor(slug: string): string | null {
+    const have = captioned[slug];
+    if (!have?.length) return null;
+    return have.includes(lang) ? lang : have.includes("en") ? "en" : have[0];
+  }
 
   function applyCaptionMode(): void {
     // Tracks stay hidden either way: cues fire, the browser never draws them.
@@ -135,6 +148,8 @@ function init(data: Data, root: HTMLElement) {
     if (!captionsOn && capText) { capText.hidden = true; capText.textContent = ""; }
     capToggle?.setAttribute("aria-pressed", String(captionsOn));
     capToggle?.classList.toggle("is-on", captionsOn);
+    // the language is only worth offering once captions are actually on
+    if (capLang) capLang.hidden = !captionsOn;
   }
 
   function paintCaption(el: HTMLVideoElement): void {
@@ -147,7 +162,8 @@ function init(data: Data, root: HTMLElement) {
   }
 
   function setTrack(el: HTMLVideoElement, slug: string): void {
-    if (!captioned.has(slug)) {
+    const use = langFor(slug);
+    if (!use) {
       el.querySelector("track")?.remove();
       return;
     }
@@ -155,14 +171,23 @@ function init(data: Data, root: HTMLElement) {
     if (!track) {
       track = document.createElement("track");
       track.kind = "captions";
-      track.srclang = "en";
-      track.label = "English (automatic transcription)";
       track.addEventListener("load", applyCaptionMode);
       el.appendChild(track);
     }
-    const src = `${data.base}/data/captions/${slug}.vtt`;
+    track.srclang = use;
+    const src = `${data.base}/data/captions/${use}/${slug}.vtt`;
     if (!track.src.endsWith(src)) track.src = src;
     applyCaptionMode();
+  }
+
+  /** re-point both elements at the language now chosen */
+  function retrack(): void {
+    for (const el of els) {
+      const slug = el === els[active] && current >= 0 ? items[current].slug : null;
+      const which = slug ?? items[Math.max(current, 0)]?.slug;
+      if (which) setTrack(el, which);
+    }
+    if (capText) capText.textContent = "";
   }
 
   function toggleCaptions(): void {
@@ -171,6 +196,11 @@ function init(data: Data, root: HTMLElement) {
     applyCaptionMode();
   }
   capToggle?.addEventListener("click", toggleCaptions);
+  capLang?.addEventListener("change", () => {
+    lang = capLang.value;
+    try { localStorage.setItem("cpmb-captions-lang", lang); } catch { /* private mode */ }
+    retrack();
+  });
   addEventListener("keydown", (e) => {
     if (e.key !== "c" || e.metaKey || e.ctrlKey || e.altKey) return;
     const t = e.target;

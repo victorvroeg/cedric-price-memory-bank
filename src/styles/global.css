@@ -379,19 +379,36 @@ a:hover {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-.captions-toggle {
+.capbar {
   grid-column: 3;
   grid-row: 1;
   justify-self: end;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.captions-lang {
   background: none;
   border: 0;
   padding: 0;
   font: inherit;
-  font-size: 10px;
-  letter-spacing: 1.8px;
+  font-size: 11px;
+  color: var(--fg-dim);
+  cursor: pointer;
+}
+.captions-lang:hover { color: var(--fg); }
+.captions-lang[hidden] { display: none; }
+.captions-lang option { color: #111; }
+.captions-toggle {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 11px;
+  letter-spacing: 0.7px;
   text-transform: uppercase;
   color: var(--fg-dim);
-  opacity: 0.6;
+  opacity: 0.75;
   cursor: pointer;
   white-space: nowrap;
   transition: opacity 160ms ease, color 160ms ease;
@@ -425,7 +442,7 @@ a:hover {
     overflow: visible;
     line-height: 1.4;
   }
-  .captions-toggle {
+  .capbar {
     grid-column: 1;
     grid-row: auto;
     justify-self: start;
@@ -813,6 +830,20 @@ a:hover {
   outline: none;
   border-bottom: 1px solid transparent;
   cursor: text;
+}
+/* the English a translation is being checked against: present, not competing */
+.cue__source {
+  flex: 1;
+  color: var(--fg-dim);
+  opacity: 0.7;
+  font-size: 0.92em;
+}
+.cue:has(.cue__source) {
+  flex-wrap: wrap;
+}
+.cue:has(.cue__source) .cue__text {
+  flex-basis: 100%;
+  margin-left: 3.4em;
 }
 .cue__text:hover { border-bottom-color: var(--hairline); }
 .cue__text:focus {

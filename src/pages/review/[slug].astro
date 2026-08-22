@@ -2,6 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import { interviews, topics, cards } from "../../lib/content";
 import { resolveVideoSource } from "../../lib/resolveVideoSource";
+import { LANGUAGES } from "../../lib/languages";
 
 // The review tool is published with the site so the maintainer can reach it
 // from anywhere. It is deliberately still a static page: it reads the archive
@@ -17,8 +18,17 @@ const source = resolveVideoSource(interview);
 
 // The transcript is optional: an interview can be reviewed without one.
 const transcripts = import.meta.glob("../../../content/transcripts/*.json", { eager: true });
-const tr = transcripts[`../../../content/transcripts/${interview.slug}.json`] as
-  { default: { cues: { start: number; end: number; text: string }[]; corrected?: boolean } } | undefined;
+type Tr = { default: { cues: { start: number; end: number; text: string }[]; corrected?: boolean } };
+const tr = transcripts[`../../../content/transcripts/${interview.slug}.json`] as Tr | undefined;
+
+// Every translation of it, so they can be corrected against the English and
+// against the film, which is the only way a machine translation gets better.
+const translations: Record<string, { cues: { text: string }[]; corrected: boolean }> = {};
+for (const l of LANGUAGES) {
+  if (l.code === "en") continue;
+  const t = transcripts[`../../../content/transcripts/${interview.slug}.${l.code}.json`] as Tr | undefined;
+  if (t) translations[l.code] = { cues: t.default.cues, corrected: t.default.corrected ?? false };
+}
 
 const data = {
   slug: interview.slug,
@@ -30,6 +40,8 @@ const data = {
   cards: interview.cards,
   cues: tr?.default.cues ?? [],
   corrected: tr?.default.corrected ?? false,
+  translations,
+  languages: LANGUAGES,
   topics: [...topics.values()]
     .map((t) => ({ id: t.slug, label: t.label, colour: t.colour }))
     .sort((a, b) => a.label.localeCompare(b.label)),
@@ -75,6 +87,13 @@ const data = {
         <div class="review__bar">
           <strong>Transcript</strong>
           <span class="dim">click the time to play · click the words to correct them</span>
+          <select id="lang" title="which language to correct">
+            {LANGUAGES.map((l) => (
+              <option value={l.code} disabled={l.code !== "en" && !translations[l.code]}>
+                {l.english}{l.code !== "en" && !translations[l.code] ? " — not translated yet" : ""}
+              </option>
+            ))}
+          </select>
         </div>
         <div class="review__find">
           <input id="find" placeholder="find (e.g. Fuxas)" size="14" />
@@ -89,6 +108,7 @@ const data = {
     <footer class="review__foot">
       <button id="propose" class="primary">Approve and send to memory bank</button>
       <button id="download">Download file</button>
+      <button id="dlcaptions">Download this language</button>
       <button id="export">Copy JSON</button>
       <button id="revert">Discard my changes</button>
       <span id="status" class="dim"></span>

@@ -7,6 +7,8 @@ interface Data {
   jobtitle: string; recorded: string;
   segments: Seg[]; cards: { time: number; cardId: string }[];
   cues: { start: number; end: number; text: string }[];
+  translations: Record<string, { cues: { text: string }[]; corrected: boolean }>;
+  languages: { code: string; label: string; english: string }[];
   topics: { id: string; label: string; colour: string }[];
   cardTitles: Record<string, string>;
 }
@@ -58,6 +60,14 @@ function start(d: Data) {
 
   let segs: Seg[] = d.segments.map((s) => ({ ...s }));
   const cues = d.cues.map((c) => ({ ...c }));
+
+  // Translations share the English cue times exactly: only the words differ,
+  // so a corrected translation drops straight back in beside the English.
+  const langEl = document.getElementById("lang") as HTMLSelectElement | null;
+  const translated: Record<string, string[]> = {};
+  for (const [code, tr] of Object.entries(d.translations ?? {}))
+    translated[code] = cues.map((_, i) => tr.cues[i]?.text ?? "");
+  let lang = "en";
   let dirty = false;
   let transcriptCorrected = d.corrected;
   const jobtitleEl = document.getElementById("jobtitle") as HTMLInputElement;
@@ -201,7 +211,7 @@ function start(d: Data) {
 
   function drawCues() {
     cueBox.innerHTML = "";
-    for (const c of cues) {
+    cues.forEach((c, i) => {
       const p = document.createElement("p");
       p.className = "cue";
       p.dataset.start = String(c.start);
@@ -212,24 +222,63 @@ function start(d: Data) {
       t.title = "play from here";
       t.onclick = () => { video.currentTime = c.start; void video.play(); };
 
+      // In a translation the English stays on screen above the line being
+      // corrected: a translation is checked against its source, not alone.
+      if (lang !== "en") {
+        const src = document.createElement("span");
+        src.className = "cue__source";
+        src.textContent = c.text;
+        p.append(t, src);
+      } else {
+        p.append(t);
+      }
+
       const text = document.createElement("span");
       text.className = "cue__text";
       text.contentEditable = "true";
       text.spellcheck = true;
-      text.textContent = c.text;
-      // Whisper mangles exactly the proper nouns this archive is about, so the
-      // transcript is meant to be corrected here, by ear, against the film.
+      text.lang = lang;
+      text.textContent = lang === "en" ? c.text : (translated[lang]?.[i] ?? "");
+      // Whisper mangles exactly the proper nouns this archive is about, and a
+      // machine translation mangles them again, so both are corrected here,
+      // by ear, against the film.
       text.addEventListener("input", () => {
-        c.text = text.textContent ?? "";
+        const v = text.textContent ?? "";
+        if (lang === "en") c.text = v;
+        else if (translated[lang]) translated[lang][i] = v;
         dirty = true;
         markDirty();
       });
       text.addEventListener("focus", () => { video.currentTime = c.start; });
 
-      p.append(t, text);
+      p.append(text);
       cueBox.appendChild(p);
-    }
+    });
   }
+
+  langEl?.addEventListener("change", () => {
+    lang = langEl.value;
+    drawCues();
+  });
+
+  // A corrected language leaves as the file the archive keeps, ready to drop
+  // into content/transcripts/.
+  document.getElementById("dlcaptions")!.onclick = () => {
+    const name = lang === "en" ? `${d.slug}.json` : `${d.slug}.${lang}.json`;
+    const body = lang === "en"
+      ? { slug: d.slug, language: "en", model: "mlx-community/whisper-large-v3-mlx",
+          corrected: true,
+          cues: cues.map((c) => ({ start: c.start, end: c.end, text: c.text.trim() })) }
+      : { slug: `${d.slug}.${lang}`, language: lang, model: "claude-fable-5",
+          source: "en", corrected: true,
+          cues: cues.map((c, i) => ({ start: c.start, end: c.end,
+                                      text: (translated[lang]?.[i] ?? "").trim() })) };
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([JSON.stringify(body, null, 1)], { type: "application/json" }));
+    a.download = name;
+    a.click();
+    status.textContent = `downloaded ${name} — drop it in content/transcripts/`;
+  };
 
   // find and replace across the whole transcript — one pass fixes a name that
   // Whisper got wrong every time it occurs.
@@ -241,11 +290,14 @@ function start(d: Data) {
     const bounded = /^[\w\s'-]+$/.test(from) ? `\\b${esc}\\b` : esc;
     const rx = new RegExp(bounded, "gi");
     let n = 0;
-    for (const c of cues) {
-      const before = c.text;
-      c.text = c.text.replace(rx, to);
-      if (c.text !== before) n += (before.match(rx) || []).length;
-    }
+    const target = lang === "en" ? null : translated[lang];
+    cues.forEach((c, i) => {
+      const before = target ? (target[i] ?? "") : c.text;
+      const after = before.replace(rx, to);
+      if (after === before) return;
+      if (target) target[i] = after; else c.text = after;
+      n += (before.match(rx) || []).length;
+    });
     if (n) { dirty = true; drawCues(); markDirty(); }
     return n;
   }

@@ -1,0 +1,1209 @@
+{
+ "slug": "brett-steele.fr",
+ "language": "fr",
+ "model": "claude-fable-5",
+ "source": "en",
+ "corrected": false,
+ "cues": [
+  {
+   "start": 0.0,
+   "end": 15.0,
+   "text": "Je crois que la question la plus intéressante à propos de Cedric Price porterait sur la façon dont il est encore, dont Cedric fait encore partie de la culture architecturale aujourd'hui, selon vous. Ce serait une question possible."
+  },
+  {
+   "start": 15.0,
+   "end": 24.24,
+   "text": "et selon moi Cedric est une sorte de figure qui hante l'architecture dans sa vie contemporaine."
+  },
+  {
+   "start": 24.24,
+   "end": 31.02,
+   "text": "Cedric imaginait l'architecture au XXIe siècle comme quelque chose de fondamentalement différent"
+  },
+  {
+   "start": 31.02,
+   "end": 37.48,
+   "text": "de ce qu'elle est devenue. Je crois que sa carrière, ses principes, son instinct, c'était de voir l'architecture"
+  },
+  {
+   "start": 37.48,
+   "end": 44.58,
+   "text": "comme une culture d'idées et parfois presque comme des expériences de pensée sur ce que le monde pourrait être, et"
+  },
+  {
+   "start": 44.58,
+   "end": 52.84,
+   "text": "et qu'une partie du travail de l'architecture était de poser des questions sur le monde que nous connaissons."
+  },
+  {
+   "start": 53.14,
+   "end": 58.26,
+   "text": "Je crois qu'en ce sens il hante l'architecture et ce qu'elle est devenue"
+  },
+  {
+   "start": 58.26,
+   "end": 63.24,
+   "text": "à cause de la professionnalisation croissante et effrénée de l'architecture,"
+  },
+  {
+   "start": 63.6,
+   "end": 69.92,
+   "text": "de sa réalité commerciale, et de ce que j'appelle parfois presque sa condition industrielle aujourd'hui."
+  },
+  {
+   "start": 69.92,
+   "end": 74.92,
+   "text": "L'architecture s'industrialise d'une manière parfois presque monstrueuse, je dirais."
+  },
+  {
+   "start": 74.92,
+   "end": 78.92,
+   "text": "Elle devient meilleure à faire plus et à penser moins."
+  },
+  {
+   "start": 78.92,
+   "end": 83.92,
+   "text": "Autrement dit, l'architecture ressemble de moins en moins à Cedric, bien plus que la plupart d'entre nous n'auraient pu l'imaginer."
+  },
+  {
+   "start": 83.92,
+   "end": 88.92,
+   "text": "Ma première impression, que je garderai toujours, c'est que c'était un Anglais."
+  },
+  {
+   "start": 88.92,
+   "end": 94.92,
+   "text": "Et cela avait deux propriétés bien distinctes, disons, pour un Américain grossier comme moi."
+  },
+  {
+   "start": 94.92,
+   "end": 102.36,
+   "text": "comme moi. La première, c'est l'esprit et le côté joueur immédiats de Cedric, que les gens ont trop"
+  },
+  {
+   "start": 102.36,
+   "end": 111.86,
+   "text": "souvent mis en avant comme la qualité première de sa personnalité. C'était un homme très spirituel."
+  },
+  {
+   "start": 111.86,
+   "end": 119.24,
+   "text": "En surface, il avait l'air très blagueur et très joueur, mais bien sûr ce qu'il faisait"
+  },
+  {
+   "start": 119.24,
+   "end": 124.74,
+   "text": "avec le genre de blagues qu'il faisait, et les expériences et les jeux auxquels il se livrait, c'était"
+  },
+  {
+   "start": 124.74,
+   "end": 129.64,
+   "text": "d'interroger vraiment les habitudes et les présupposés des architectes. C'était en fait un travail terriblement, terriblement"
+  },
+  {
+   "start": 129.64,
+   "end": 135.92,
+   "text": "sérieux, mais présenté de la manière la plus anglaise, la plus discrète qui soit, je crois. Une méthode"
+  },
+  {
+   "start": 135.92,
+   "end": 143.06,
+   "text": "critique d'une intelligence incroyable. Le côté joueur était sans doute le trait le plus distinctif,"
+  },
+  {
+   "start": 143.06,
+   "end": 149.72,
+   "text": "mais l'autre, en tout cas à mesure que j'ai découvert l'ensemble de son œuvre, à laquelle aujourd'hui encore je"
+  },
+  {
+   "start": 149.72,
+   "end": 157.84,
+   "text": "pense souvent. Le revers de cette anglicité, c'est en fait une sensibilité profondément londonienne, qui"
+  },
+  {
+   "start": 157.84,
+   "end": 164.98,
+   "text": "consiste à voir l'architecture dans sa culture mondiale et à savoir exactement où en est l'architecture moderne"
+  },
+  {
+   "start": 164.98,
+   "end": 173.34,
+   "text": "à chaque instant de sa vie. Et je ne sais pas d'où venait cette capacité, mais je crois"
+  },
+  {
+   "start": 173.34,
+   "end": 180.34,
+   "text": "qu'elle tenait en grande partie au fait d'être dans un lieu profondément connecté"
+  },
+  {
+   "start": 180.8,
+   "end": 185.52,
+   "text": "à ce que l'architecture faisait à tout moment. Londres, rappelez-vous, est une culture architecturale"
+  },
+  {
+   "start": 185.52,
+   "end": 192.52,
+   "text": "incroyablement singulière. Elle est très ouverte sur le monde, et depuis des décennies. Une de mes photos absolument préférées"
+  },
+  {
+   "start": 192.66,
+   "end": 198.8,
+   "text": "parmi celles que j'ai d'événements à l'AA, et que j'utilise dans mes conférences partout dans le monde depuis toujours,"
+  },
+  {
+   "start": 198.8,
+   "end": 206.8,
+   "text": "c'est une photo prise à la fin des années 1950, en bas, dans ce qui est aujourd'hui notre amphithéâtre,"
+  },
+  {
+   "start": 206.8,
+   "end": 212.8,
+   "text": "et qui, à l'époque, devait être une sorte d'espace réservé aux membres de l'association."
+  },
+  {
+   "start": 212.8,
+   "end": 217.8,
+   "text": "Et au milieu du grand mur qui donne sur la place, il y a un vieux,"
+  },
+  {
+   "start": 217.8,
+   "end": 222.8,
+   "text": "et il me semble très grognon, Walter Gropius, en train de donner une conférence"
+  },
+  {
+   "start": 222.8,
+   "end": 227.8,
+   "text": "devant une assemblée de dames et de messieurs installés à des tables de dîner."
+  },
+  {
+   "start": 227.8,
+   "end": 231.92,
+   "text": "Et c'est une très belle photo, Gropius a ses notes et ses lunettes de lecture,"
+  },
+  {
+   "start": 231.92,
+   "end": 235.1,
+   "text": "et il énonce une déclaration sur ce qu'est l'architecture moderne."
+  },
+  {
+   "start": 235.2,
+   "end": 240.3,
+   "text": "Et au premier plan de cette photo, assis un peu de biais et le regard baissé vers le sol,"
+  },
+  {
+   "start": 240.38,
+   "end": 245.18,
+   "text": "il y a un jeune Cedric Price, la seule personne dans la salle qui ne regarde pas Gropius."
+  },
+  {
+   "start": 245.78,
+   "end": 251.88,
+   "text": "Et ce que fait Cedric, c'est fixer le vide et manifestement digérer ce que Gropius est en train de dire,"
+  },
+  {
+   "start": 251.88,
+   "end": 254.38,
+   "text": "mais sans suivre en aucune façon le grand maître"
+  },
+  {
+   "start": 254.38,
+   "end": 259.48,
+   "text": "comme toutes les autres personnes présentes dans la salle le font visiblement."
+  },
+  {
+   "start": 259.9,
+   "end": 263.62,
+   "text": "Cedric est déjà, et on n'est qu'à deux ou trois ans de son diplôme,"
+  },
+  {
+   "start": 264.04,
+   "end": 266.18,
+   "text": "en train de penser l'architecture dans d'autres directions,"
+  },
+  {
+   "start": 266.34,
+   "end": 268.96,
+   "text": "et je trouve que c'est une trace assez extraordinaire de cette capacité"
+  },
+  {
+   "start": 268.96,
+   "end": 271.3,
+   "text": "dès le tout début de sa carrière."
+  },
+  {
+   "start": 271.88,
+   "end": 275.54,
+   "text": "Encore une fois, je crois que ce qui lui permet surtout de faire ça,"
+  },
+  {
+   "start": 275.54,
+   "end": 277.48,
+   "text": "ce n'est pas seulement une forme d'intelligence personnelle,"
+  },
+  {
+   "start": 277.48,
+   "end": 285.48,
+   "text": "mais le fait qu'il était exposé à tout un éventail d'idées dans la culture architecturale moderne, ici, dans les années 1950,"
+  },
+  {
+   "start": 286.36,
+   "end": 292.76,
+   "text": "dans une ville qui se mondialise déjà et qui est internationale comme peu d'autres endroits l'étaient."
+  },
+  {
+   "start": 293.16,
+   "end": 299.14,
+   "text": "Il n'est pas inédit que certaines carrières aient de l'influence par d'autres activités que la construction."
+  },
+  {
+   "start": 300.42,
+   "end": 302.44,
+   "text": "Cedric en est un exemple extrême."
+  },
+  {
+   "start": 302.44,
+   "end": 306.94,
+   "text": "Je suppose que la réponse immédiate que beaucoup de gens donneraient,"
+  },
+  {
+   "start": 306.94,
+   "end": 309.92,
+   "text": "c'est que les idées avaient une importance telle"
+  },
+  {
+   "start": 309.92,
+   "end": 312.94,
+   "text": "qu'elles ont rassemblé autour d'elles d'autres esprits qui ont ensuite produit du travail"
+  },
+  {
+   "start": 312.94,
+   "end": 316.3,
+   "text": "et qu'on a pu voir alors une influence s'exercer"
+  },
+  {
+   "start": 316.3,
+   "end": 319.14,
+   "text": "et c'est une généalogie déjà bien rodée"
+  },
+  {
+   "start": 319.14,
+   "end": 320.56,
+   "text": "que je n'ai pas besoin de répéter ici"
+  },
+  {
+   "start": 320.56,
+   "end": 325.14,
+   "text": "les idées de Cedric deviennent la base d'une sorte d'architecture high-tech"
+  },
+  {
+   "start": 325.14,
+   "end": 328.6,
+   "text": "qui est ensuite commercialisée, construite par une génération"
+  },
+  {
+   "start": 328.6,
+   "end": 329.62,
+   "text": "qui vient après lui"
+  },
+  {
+   "start": 329.62,
+   "end": 334.9,
+   "text": "Mais je crois que l'autre raison pour laquelle on peut suivre cette influence dans sa carrière,"
+  },
+  {
+   "start": 335.04,
+   "end": 338.14,
+   "text": "et à laquelle j'adhère et je crois absolument,"
+  },
+  {
+   "start": 338.26,
+   "end": 343.26,
+   "text": "c'est que ce que nous appelons l'influence n'est possible sous cette forme"
+  },
+  {
+   "start": 343.26,
+   "end": 345.9,
+   "text": "qu'à cette période du XXe siècle en particulier,"
+  },
+  {
+   "start": 346.6,
+   "end": 349.54,
+   "text": "c'est-à-dire à un moment où on ne construisait pas énormément,"
+  },
+  {
+   "start": 349.78,
+   "end": 353.42,
+   "text": "quand les choses commencent à se calmer après la ruée de la reconstruction d'après-guerre en Angleterre."
+  },
+  {
+   "start": 354.2,
+   "end": 358.02,
+   "text": "En fait, la culture architecturale des années 1960 et 1970"
+  },
+  {
+   "start": 358.02,
+   "end": 361.46,
+   "text": "est vraiment un monde de non-construction."
+  },
+  {
+   "start": 362.58,
+   "end": 365.04,
+   "text": "Je veux dire, terriblement, on pourrait presque le dire."
+  },
+  {
+   "start": 365.2,
+   "end": 367.7,
+   "text": "Après le grand boom des années 1950,"
+  },
+  {
+   "start": 367.84,
+   "end": 371.58,
+   "text": "quand l'Angleterre d'après-guerre et une grande partie de l'Europe"
+  },
+  {
+   "start": 371.58,
+   "end": 373.82,
+   "text": "doivent se reconstruire après leur destruction,"
+  },
+  {
+   "start": 374.38,
+   "end": 377.76,
+   "text": "cette activité commence à retomber à la fin des années 1950,"
+  },
+  {
+   "start": 377.76,
+   "end": 380.78,
+   "text": "exactement au moment où la carrière de Cedric commence à émerger."
+  },
+  {
+   "start": 382.72,
+   "end": 386.58,
+   "text": "Et l'architecture devient, vous savez,"
+  },
+  {
+   "start": 386.58,
+   "end": 389.5,
+   "text": "et l'AA en est un témoignage formidable,"
+  },
+  {
+   "start": 389.76,
+   "end": 394.24,
+   "text": "l'architecture devient une discussion d'idées et de principes"
+  },
+  {
+   "start": 394.24,
+   "end": 398.84,
+   "text": "et de projets possibles, qu'on voit bien sûr ensuite réalisés,"
+  },
+  {
+   "start": 398.84,
+   "end": 402.9,
+   "text": "mais seulement une fois que l'activité économique et le reste commencent à s'accélérer."
+  },
+  {
+   "start": 403.42,
+   "end": 410.14,
+   "text": "Donc, vous savez, la capacité de Cedric à distiller cette possibilité"
+  },
+  {
+   "start": 410.14,
+   "end": 413.36,
+   "text": "arrive exactement au moment où cela devient le mode dominant"
+  },
+  {
+   "start": 413.36,
+   "end": 416.2,
+   "text": "de transmission de ce que vous et moi appellerions l'influence."
+  },
+  {
+   "start": 416.2,
+   "end": 420.26,
+   "text": "La situation exactement inverse est celle d'aujourd'hui, où tout le monde construit,"
+  },
+  {
+   "start": 421.14,
+   "end": 427.0,
+   "text": "et où essayer d'imaginer comment une influence pourrait s'exercer par un ensemble de principes ou d'idées devient presque inconcevable."
+  },
+  {
+   "start": 427.18,
+   "end": 429.46,
+   "text": "En fait, cela redevient un projet vraiment intéressant aujourd'hui,"
+  },
+  {
+   "start": 429.56,
+   "end": 434.36,
+   "text": "et c'est pour ça, je crois, que parler de Cedric serait si important, disons, en 2014."
+  },
+  {
+   "start": 435.38,
+   "end": 439.66,
+   "text": "Je trouve que c'est une question intéressante : quel serait le projet le plus important de Cedric ?"
+  },
+  {
+   "start": 439.66,
+   "end": 444.12,
+   "text": "et ma réponse serait son agence,"
+  },
+  {
+   "start": 444.72,
+   "end": 446.22,
+   "text": "la création de son agence"
+  },
+  {
+   "start": 446.22,
+   "end": 448.62,
+   "text": "et non les projets particuliers"
+  },
+  {
+   "start": 448.62,
+   "end": 451.76,
+   "text": "de l'une ou l'autre de ses 160 propositions."
+  },
+  {
+   "start": 453.18,
+   "end": 455.02,
+   "text": "Si je ne me trompe pas, le chiffre est de l'ordre de"
+  },
+  {
+   "start": 455.02,
+   "end": 457.32,
+   "text": "150 ou 160 projets qu'il réalise"
+  },
+  {
+   "start": 457.32,
+   "end": 459.8,
+   "text": "au fil de ses quatre ou cinq décennies de travail."
+  },
+  {
+   "start": 461.18,
+   "end": 462.64,
+   "text": "Tout le monde sur cette planète aujourd'hui"
+  },
+  {
+   "start": 462.64,
+   "end": 464.72,
+   "text": "qui adore le Fun Palace à la folie"
+  },
+  {
+   "start": 464.72,
+   "end": 466.34,
+   "text": "veut dire qu'il y a des projets"
+  },
+  {
+   "start": 466.34,
+   "end": 467.54,
+   "text": "qui comptent plus que d'autres."
+  },
+  {
+   "start": 467.54,
+   "end": 472.84,
+   "text": "Un moment comme le nôtre m'inquiète, où tout le monde peut être aussi universellement"
+  },
+  {
+   "start": 472.84,
+   "end": 476.84,
+   "text": "d'accord pour dire que le Fun Palace de Cedric est le bâtiment le plus important du"
+  },
+  {
+   "start": 476.84,
+   "end": 480.44,
+   "text": "XXe siècle. Ça me paraît juste bizarre qu'on puisse soudain tous être d'accord là-dessus."
+  },
+  {
+   "start": 480.9,
+   "end": 484.88,
+   "text": "Je vous le dis, je peux enchaîner les jurys toute la semaine à l'AA et tout le monde ne fera rien d'autre"
+  },
+  {
+   "start": 484.88,
+   "end": 488.84,
+   "text": "qu'encenser sans fin le Fun Palace. Je crois que ça le terrifierait, comme une sorte de"
+  },
+  {
+   "start": 490.12,
+   "end": 492.02,
+   "text": "condition générationnelle."
+  },
+  {
+   "start": 493.1,
+   "end": 496.78,
+   "text": "Je voudrais, juste pour proposer un point de vue un peu différent sur cette question,"
+  },
+  {
+   "start": 496.78,
+   "end": 499.72,
+   "text": "et croyez-moi, j'aime le Fun Palace pour toutes les raisons que tout le monde a,"
+  },
+  {
+   "start": 500.04,
+   "end": 505.16,
+   "text": "mais je crois qu'en réalité la façon dont il conçoit son agence"
+  },
+  {
+   "start": 505.16,
+   "end": 506.72,
+   "text": "devient incroyablement importante"
+  },
+  {
+   "start": 506.72,
+   "end": 510.7,
+   "text": "parce qu'il crée le modèle d'une agence qui est un réservoir d'idées"
+  },
+  {
+   "start": 510.7,
+   "end": 514.48,
+   "text": "bien plus qu'une usine à produire des bâtiments."
+  },
+  {
+   "start": 515.92,
+   "end": 520.04,
+   "text": "Et ça, je le sais grâce au travail que Samantha Hardingham"
+  },
+  {
+   "start": 520.04,
+   "end": 522.0,
+   "text": "et d'autres collègues ont fait"
+  },
+  {
+   "start": 522.0,
+   "end": 526.3,
+   "text": "sur l'organisation des archives de son agence,"
+  },
+  {
+   "start": 526.3,
+   "end": 529.64,
+   "text": "qu'il voyait comme l'un de ses nombreux projets de conception."
+  },
+  {
+   "start": 530.3,
+   "end": 532.32,
+   "text": "Et bien sûr, ce qu'on comprend ensuite avec le recul,"
+  },
+  {
+   "start": 532.32,
+   "end": 535.74,
+   "text": "c'est que Cedric avait compris depuis toujours que l'organisation du savoir,"
+  },
+  {
+   "start": 535.82,
+   "end": 537.66,
+   "text": "y compris de sa propre expérience d'architecte,"
+  },
+  {
+   "start": 538.24,
+   "end": 542.9,
+   "text": "est quelque chose dont il faut être conscient et qu'il faut articuler dans son travail d'architecte."
+  },
+  {
+   "start": 543.52,
+   "end": 546.8,
+   "text": "Très, très peu d'architectes ont ce degré de conscience de soi."
+  },
+  {
+   "start": 547.62,
+   "end": 551.04,
+   "text": "La plupart voient ça comme le simple lieu où ils font leur vrai travail,"
+  },
+  {
+   "start": 551.08,
+   "end": 554.22,
+   "text": "et le vrai travail sera toujours ces bâtiments ou ces propositions"
+  },
+  {
+   "start": 554.22,
+   "end": 558.16,
+   "text": "or Cedric, pour une raison ou une autre,"
+  },
+  {
+   "start": 558.26,
+   "end": 560.72,
+   "text": "avait un niveau de conscience de soi et de lucidité"
+  },
+  {
+   "start": 560.72,
+   "end": 562.44,
+   "text": "qui lui a permis de voir que la création"
+  },
+  {
+   "start": 562.44,
+   "end": 566.66,
+   "text": "de cet espace très particulier entre tous les espaces architecturaux,"
+  },
+  {
+   "start": 566.78,
+   "end": 568.1,
+   "text": "c'est-à-dire l'atelier de conception,"
+  },
+  {
+   "start": 568.68,
+   "end": 571.54,
+   "text": "doit être intégrée à la façon dont on pense sa carrière."
+  },
+  {
+   "start": 571.78,
+   "end": 574.64,
+   "text": "Et il l'a fait jusqu'à un niveau presque obsessionnel"
+  },
+  {
+   "start": 574.64,
+   "end": 579.52,
+   "text": "de catalogage, d'organisation et de classement de dessins,"
+  },
+  {
+   "start": 579.82,
+   "end": 583.22,
+   "text": "de notes, de croquis, de cartes postales, de coupures de presse,"
+  },
+  {
+   "start": 583.22,
+   "end": 588.52,
+   "text": "de coupures, pour en faire quelque chose que vous et moi qualifierions aujourd'hui presque d'obsession"
+  },
+  {
+   "start": 588.52,
+   "end": 595.26,
+   "text": "de conservateur. Et je trouve que c'est une des qualités les moins commentées de sa carrière, qui est"
+  },
+  {
+   "start": 595.26,
+   "end": 599.22,
+   "text": "juste, vous savez, les conversations qu'on a eues sur le rôle de l'archive aujourd'hui, un modèle incroyablement"
+  },
+  {
+   "start": 599.22,
+   "end": 603.68,
+   "text": "intéressant, disons, pour ce que les architectes pourraient envisager pour l'avenir. Je trouve que c'est une"
+  },
+  {
+   "start": 603.68,
+   "end": 609.32,
+   "text": "question intéressante de savoir comment Cedric arrive à une idée qu'on lui cite souvent, à savoir qu'un"
+  },
+  {
+   "start": 609.32,
+   "end": 615.92,
+   "text": "architecte est un facilitateur et non un constructeur. Et ce qu'il désigne, c'est ce qui, au milieu du"
+  },
+  {
+   "start": 615.92,
+   "end": 620.96,
+   "text": "XXe siècle, est une réalité professionnelle, à savoir que les architectes deviennent surtout des organisateurs et des"
+  },
+  {
+   "start": 620.96,
+   "end": 626.94,
+   "text": "gestionnaires du flux d'informations et d'idées autour, par exemple, de la construction de bâtiments,"
+  },
+  {
+   "start": 627.04,
+   "end": 633.28,
+   "text": "mais aussi de beaucoup d'autres activités. Et cela a été dit par d'autres dans les mêmes années où"
+  },
+  {
+   "start": 633.28,
+   "end": 637.18,
+   "text": "Cedric fait partie de l'école de l'AA, mais que"
+  },
+  {
+   "start": 637.18,
+   "end": 640.36,
+   "text": "l'architecte occupe une position très singulière en tant que profession,"
+  },
+  {
+   "start": 640.36,
+   "end": 644.34,
+   "text": "celle de se tenir au centre de toutes sortes de formes d'expertise, et"
+  },
+  {
+   "start": 644.34,
+   "end": 648.46,
+   "text": "c'est lui ou elle qui doit gérer ça, gérer ce flux d'informations."
+  },
+  {
+   "start": 649.46,
+   "end": 652.48,
+   "text": "Mais l'autre chose qu'il fait, disons, plus"
+  },
+  {
+   "start": 652.48,
+   "end": 658.38,
+   "text": "idéologiquement, c'est de dire, écoutez, l'architecture n'est pas égale à la construction."
+  },
+  {
+   "start": 658.88,
+   "end": 661.8,
+   "text": "Ce sont deux mondes très différents."
+  },
+  {
+   "start": 661.8,
+   "end": 665.8,
+   "text": "Les bâtiments sont importants et ils jouent souvent un rôle dans la culture architecturale,"
+  },
+  {
+   "start": 665.8,
+   "end": 669.8,
+   "text": "mais la culture architecturale est vraiment un monde d'idées."
+  },
+  {
+   "start": 669.8,
+   "end": 675.8,
+   "text": "Et les idées peuvent être exprimées, découvertes et développées sous des formes très diverses"
+  },
+  {
+   "start": 675.8,
+   "end": 677.8,
+   "text": "et pas seulement par la construction réelle."
+  },
+  {
+   "start": 677.8,
+   "end": 680.8,
+   "text": "La fabrication de dessins, la représentation de la façon dont on se déplace dans l'espace"
+  },
+  {
+   "start": 680.8,
+   "end": 682.8,
+   "text": "et toutes ces activités-là."
+  },
+  {
+   "start": 682.8,
+   "end": 688.8,
+   "text": "Rem a dit un jour que l'intention de Price était de rendre l'architecture indiscernable de l'ordinaire,"
+  },
+  {
+   "start": 688.8,
+   "end": 694.08,
+   "text": "c'est-à-dire que l'architecture n'est pas séparée des vies et des espaces quotidiens de la ville."
+  },
+  {
+   "start": 694.24,
+   "end": 698.2,
+   "text": "Je crois que c'est bien plus une projection de Rem que l'ambition de Cedric."
+  },
+  {
+   "start": 699.2,
+   "end": 702.82,
+   "text": "Il est possible que Cedric ait beaucoup voulu vivre de cette façon"
+  },
+  {
+   "start": 702.82,
+   "end": 707.68,
+   "text": "et qu'il ait voulu être vraiment indiscernable du monde merveilleux dans lequel il vivait"
+  },
+  {
+   "start": 707.68,
+   "end": 710.54,
+   "text": "et dont il faisait partie, et qui était bien plus vaste que la culture architecturale."
+  },
+  {
+   "start": 711.18,
+   "end": 715.86,
+   "text": "Mais c'est très différent que d'essayer de soutenir que c'est ce que l'architecture devrait devenir."
+  },
+  {
+   "start": 715.86,
+   "end": 719.96,
+   "text": "En fait, je crois qu'une des qualités les plus intéressantes de Cedric,"
+  },
+  {
+   "start": 719.96,
+   "end": 723.34,
+   "text": "c'est qu'il a fui l'instinct"
+  },
+  {
+   "start": 723.34,
+   "end": 725.82,
+   "text": "qu'incarnent Kuhlhaus et beaucoup d'autres aujourd'hui,"
+  },
+  {
+   "start": 725.92,
+   "end": 730.28,
+   "text": "qui est de voir l'architecture comme un ensemble de principes à grande échelle"
+  },
+  {
+   "start": 730.28,
+   "end": 732.62,
+   "text": "qui s'appliquent à des publics très larges"
+  },
+  {
+   "start": 732.62,
+   "end": 734.32,
+   "text": "et pas seulement à des carrières individuelles."
+  },
+  {
+   "start": 734.9,
+   "end": 737.58,
+   "text": "Je crois qu'une partie du génie de la carrière de Cedric,"
+  },
+  {
+   "start": 737.58,
+   "end": 741.4,
+   "text": "c'est qu'elle a toujours été pensée en termes très intimes et très personnels."
+  },
+  {
+   "start": 741.96,
+   "end": 744.4,
+   "text": "Au point, presque, qu'il serait très difficile"
+  },
+  {
+   "start": 744.4,
+   "end": 747.64,
+   "text": "pour vous et moi d'appliquer quoi que ce soit de ce qu'il fait à nos propres vies."
+  },
+  {
+   "start": 748.6,
+   "end": 752.2,
+   "text": "Ce qui est un modèle très, très différent de ce qu'on pourrait appeler le modernisme"
+  },
+  {
+   "start": 752.2,
+   "end": 756.24,
+   "text": "classique de la position de Kuhlhaus, qui consiste à dire, ce que je fais"
+  },
+  {
+   "start": 756.24,
+   "end": 760.3,
+   "text": "devient un modèle pour ce que l'architecture devrait devenir. Un débat très intéressant et"
+  },
+  {
+   "start": 760.3,
+   "end": 764.5,
+   "text": "complexe là-dessus, et ce genre de choses. C'est peut-être la seule leçon de Cedric"
+  },
+  {
+   "start": 764.5,
+   "end": 767.5,
+   "text": "que ne retiennent pas souvent ses adeptes par ailleurs profondément"
+  },
+  {
+   "start": 767.5,
+   "end": 771.76,
+   "text": "convaincus par ce qu'il défendait."
+  },
+  {
+   "start": 771.76,
+   "end": 778.36,
+   "text": "C'est une question intéressante que beaucoup de gens posent : quelle pourrait bien être la pertinence de Cedric pour l'architecture de notre temps."
+  },
+  {
+   "start": 779.02,
+   "end": 785.46,
+   "text": "Et je dirais qu'il faut en apprendre à distance, ne pas essayer d'incarner ce projet, ne pas essayer de le prolonger."
+  },
+  {
+   "start": 786.66,
+   "end": 797.32,
+   "text": "Je crois que, pour moi, une des questions les plus troublantes de la carrière de Cedric aujourd'hui, c'est comment et pourquoi elle survit de la façon dont elle survit,"
+  },
+  {
+   "start": 797.32,
+   "end": 805.7,
+   "text": "c'est-à-dire largement oubliée et littéralement enterrée dans le sol froid sous Montréal, au CCA,"
+  },
+  {
+   "start": 806.2,
+   "end": 809.1,
+   "text": "ce que je trouve parfois choquant."
+  },
+  {
+   "start": 810.1,
+   "end": 817.26,
+   "text": "C'est une œuvre tellement importante et déjà si éloignée de là où en est l'architecture"
+  },
+  {
+   "start": 817.26,
+   "end": 822.8,
+   "text": "que je crois, comme beaucoup de gens, et je sais que c'est votre cas en faisant un film comme celui-ci,"
+  },
+  {
+   "start": 822.8,
+   "end": 826.2,
+   "text": "que notre spéculation sur la manière de ramener ces idées"
+  },
+  {
+   "start": 826.2,
+   "end": 828.96,
+   "text": "est en fait un projet incroyablement important."
+  },
+  {
+   "start": 829.46,
+   "end": 831.56,
+   "text": "Je n'ai pas de réponse sur la façon de le faire aujourd'hui."
+  },
+  {
+   "start": 831.68,
+   "end": 835.24,
+   "text": "Je crois qu'à un niveau personnel, par exemple, en tant qu'éditeur,"
+  },
+  {
+   "start": 836.14,
+   "end": 842.2,
+   "text": "je ne pourrais pas être plus heureux que d'avoir aidé des gens comme vous,"
+  },
+  {
+   "start": 842.2,
+   "end": 845.08,
+   "text": "pas seulement sur ce projet, mais aussi sur le travail brillant que vous avez fait"
+  },
+  {
+   "start": 845.08,
+   "end": 848.86,
+   "text": "il y a quelques années, en rassemblant les écrits de Cedric."
+  },
+  {
+   "start": 848.86,
+   "end": 855.66,
+   "text": "Je crois que la monographie définitive en deux volumes de Samantha"
+  },
+  {
+   "start": 855.66,
+   "end": 859.98,
+   "text": "sur une carrière restée cachée, qui paraîtra à la fin de cette année"
+  },
+  {
+   "start": 859.98,
+   "end": 863.26,
+   "text": "et qui documentera 50 ans de découvertes architecturales,"
+  },
+  {
+   "start": 863.26,
+   "end": 865.98,
+   "text": "sera le livre de notre époque."
+  },
+  {
+   "start": 866.4,
+   "end": 869.18,
+   "text": "Il n'y aura pas de livre plus important publié à notre époque."
+  },
+  {
+   "start": 871.24,
+   "end": 874.5,
+   "text": "Pas seulement parce qu'il révélera l'ampleur d'une carrière"
+  },
+  {
+   "start": 874.5,
+   "end": 876.28,
+   "text": "que très peu de gens connaissent réellement,"
+  },
+  {
+   "start": 876.28,
+   "end": 877.8,
+   "text": "autrement que par une ou deux images,"
+  },
+  {
+   "start": 877.8,
+   "end": 883.3,
+   "text": "mais aussi parce qu'on en verra la véritable étendue, des conférences, des performances, des installations,"
+  },
+  {
+   "start": 883.62,
+   "end": 886.36,
+   "text": "à la conception de bâtiments, à la création d'une agence,"
+  },
+  {
+   "start": 886.54,
+   "end": 890.36,
+   "text": "à une carrière d'enseignant, à ses activités de critique."
+  },
+  {
+   "start": 891.04,
+   "end": 892.28,
+   "text": "Tout cela sera important."
+  },
+  {
+   "start": 893.34,
+   "end": 895.88,
+   "text": "Mais ce ne sont, je crois, que les débuts des manières"
+  },
+  {
+   "start": 895.88,
+   "end": 898.02,
+   "text": "dont on peut vraiment faire émerger les questions plus larges,"
+  },
+  {
+   "start": 898.02,
+   "end": 900.54,
+   "text": "à savoir comment on peut rendre des carrières comme celle-là"
+  },
+  {
+   "start": 900.54,
+   "end": 904.76,
+   "text": "à nouveau vivantes pour une génération d'architectes qui émerge aujourd'hui,"
+  },
+  {
+   "start": 904.76,
+   "end": 908.48,
+   "text": "et disponibles pour leur réinvention et leur redécouverte"
+  },
+  {
+   "start": 908.48,
+   "end": 910.52,
+   "text": "et leur appropriation et leur usage."
+  },
+  {
+   "start": 910.64,
+   "end": 914.38,
+   "text": "Et je crois que Cedric dirait toujours leur mésusage par ceux qui viennent après."
+  },
+  {
+   "start": 914.62,
+   "end": 918.18,
+   "text": "Je crois que la dernière chose qu'il voudrait de nous, c'est qu'on le vénère."
+  },
+  {
+   "start": 919.02,
+   "end": 920.84,
+   "text": "Je crois qu'il s'est donné du mal, en fait,"
+  },
+  {
+   "start": 920.9,
+   "end": 922.4,
+   "text": "pour s'assurer que ça n'arrive jamais."
+  },
+  {
+   "start": 922.62,
+   "end": 926.78,
+   "text": "Et je crois qu'il faut se rappeler qu'il faisait ça à une époque"
+  },
+  {
+   "start": 926.78,
+   "end": 929.24,
+   "text": "où l'architecte comme une sorte de figure culte,"
+  },
+  {
+   "start": 930.28,
+   "end": 933.32,
+   "text": "designer, célébrité, système d'exploitation propriétaire,"
+  },
+  {
+   "start": 933.32,
+   "end": 935.88,
+   "text": "était en train d'émerger dans les dernières décennies du XXe siècle,"
+  },
+  {
+   "start": 936.36,
+   "end": 938.26,
+   "text": "il a fait tout ce qu'il pouvait faire"
+  },
+  {
+   "start": 938.26,
+   "end": 941.0,
+   "text": "pour être sûr de ne jamais être ce genre de figure."
+  },
+  {
+   "start": 942.4,
+   "end": 944.24,
+   "text": "Encore une fois, sans doute juste de l'instinct"
+  },
+  {
+   "start": 944.24,
+   "end": 947.12,
+   "text": "et une très bonne touche, légère et magique,"
+  },
+  {
+   "start": 947.12,
+   "end": 949.46,
+   "text": "dans la façon de vivre correctement dans le monde."
+  },
+  {
+   "start": 950.36,
+   "end": 952.98,
+   "text": "Mais je crois qu'il a vu les horreurs"
+  },
+  {
+   "start": 952.98,
+   "end": 954.6,
+   "text": "de ce que l'architecture était en train de devenir,"
+  },
+  {
+   "start": 954.82,
+   "end": 956.72,
+   "text": "aussi brillantes qu'aient été ses propositions"
+  },
+  {
+   "start": 956.72,
+   "end": 958.12,
+   "text": "au début du XXe siècle."
+  },
+  {
+   "start": 959.3,
+   "end": 961.16,
+   "text": "Dans les dernières décennies du XXe siècle,"
+  },
+  {
+   "start": 961.28,
+   "end": 963.08,
+   "text": "il a vu l'activité professionnelle,"
+  },
+  {
+   "start": 963.32,
+   "end": 967.02,
+   "text": "l'enseignement de l'architecture, le journalisme d'architecture,"
+  },
+  {
+   "start": 967.02,
+   "end": 970.1,
+   "text": "toutes ces choses s'industrialiser littéralement"
+  },
+  {
+   "start": 970.1,
+   "end": 972.66,
+   "text": "en grosses activités commerciales à grande échelle"
+  },
+  {
+   "start": 972.66,
+   "end": 975.98,
+   "text": "qui ne proposaient plus vraiment d'idées"
+  },
+  {
+   "start": 975.98,
+   "end": 978.4,
+   "text": "sur lesquelles le monde puisse spéculer et réfléchir,"
+  },
+  {
+   "start": 978.4,
+   "end": 980.26,
+   "text": "mais se contentaient de se maintenir en vie"
+  },
+  {
+   "start": 980.26,
+   "end": 981.74,
+   "text": "comme de petites choses qui s'autoalimentent."
+  },
+  {
+   "start": 981.74,
+   "end": 984.48,
+   "text": "Et je crois que ce qu'il nous demande vraiment à tous,"
+  },
+  {
+   "start": 984.48,
+   "end": 988.28,
+   "text": "c'est de prendre du recul par rapport à cette activité de temps en temps"
+  },
+  {
+   "start": 988.28,
+   "end": 990.32,
+   "text": "et de repenser aux façons dont,"
+  },
+  {
+   "start": 990.32,
+   "end": 993.24,
+   "text": "même au niveau le plus individuel, le plus personnel,"
+  },
+  {
+   "start": 993.24,
+   "end": 998.96,
+   "text": "on peut proposer ou imaginer des alternatives à ce genre de réalité."
+  },
+  {
+   "start": 999.74,
+   "end": 1001.7,
+   "text": "Et je crois que c'est la seule chose qu'il voudrait qu'on fasse aujourd'hui"
+  },
+  {
+   "start": 1001.7,
+   "end": 1005.4,
+   "text": "et qu'on devrait tous essayer de faire pour Cedric, à défaut de le faire pour nous-mêmes."
+  }
+ ]
+}
