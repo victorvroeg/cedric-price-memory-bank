@@ -74,6 +74,26 @@ for (let i = 0; i < entries.length; i++)
       warnings.push(`topics "${a.label}" (${sa}) and "${b.label}" (${sb}) look like duplicates`);
   }
 
+// A translation borrows the English timings, so it must have the same cues in
+// the same order. One dropped line and every later caption is on the wrong
+// sentence, which is invisible unless you speak the language.
+for (const [key, tr] of transcripts) {
+  const dot = key.lastIndexOf(".");
+  if (dot < 0) continue;
+  const [slug, lang] = [key.slice(0, dot), key.slice(dot + 1)];
+  const en = transcripts.get(slug);
+  if (!en) { errors.push(`transcript "${key}" translates an interview with no English transcript`); continue; }
+  if (tr.cues?.length !== en.cues.length) {
+    errors.push(`transcript "${key}": ${tr.cues?.length ?? 0} cues, English has ${en.cues.length}`);
+    continue;
+  }
+  const drift = tr.cues.findIndex((c, i) => c.start !== en.cues[i].start || c.end !== en.cues[i].end);
+  if (drift >= 0) errors.push(`transcript "${key}" cue ${drift}: times differ from the English`);
+  const empty = tr.cues.filter((c) => !String(c.text ?? "").trim()).length;
+  if (empty) warnings.push(`transcript "${key}": ${empty} empty cues`);
+  if (tr.language !== lang) warnings.push(`transcript "${key}" says language "${tr.language}"`);
+}
+
 for (const t of topics.keys()) if (!usedTopics.has(t)) warnings.push(`topic "${t}" is unused`);
 for (const c of cards.keys()) if (!usedCards.has(c)) warnings.push(`card "${c}" is never placed`);
 
